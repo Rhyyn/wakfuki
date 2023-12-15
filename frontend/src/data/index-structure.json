@@ -1,0 +1,80 @@
+{
+    "states.json": {
+        "indexes": [
+            {
+                "name": "indexByTitleFr",
+                "keyPath": [
+                    "title.fr"
+                ]
+            },
+            {
+                "name": "indexById",
+                "keyPath": [
+                    "definition.id"
+                ]
+            }
+        ]
+    },
+    "items.json": {
+        "indexes": [
+            {
+                "name": "itemsIndexById",
+                "keyPath": [
+                    "definition.item.id"
+                ]
+            },
+            {
+                "name": "itemsIndexByLevel",
+                "keyPath": [
+                    "definition.item.level"
+                ]
+            },
+            {
+                "name": "itemsIndexByTypeId",
+                "keyPath": [
+                    "definition.item.baseParameters.itemTypeId"
+                ]
+            },
+            {
+                "name": "itemsIndexByRarity",
+                "keyPath": [
+                    "definition.item.baseParameters.rarity"
+                ]
+            },
+            {
+                "name": "itemsIndexByRarity",
+                "keyPath": [
+                    "definition.item.graphicParameters.gfxId"
+                ]
+            },
+            {
+                "name": "itemsIndexByEquipEffects",
+                "keyPath": [
+                    "definition.equipEffects"
+                ]
+            },
+            {
+                "name": "itemsIndexByTitleFr",
+                "keyPath": [
+                    "title.fr"
+                ]
+            }
+        ]
+    },
+    "itemStats.json": {
+        "indexes": [
+            {
+                "name": "actionsIndexById",
+                "keyPath": [
+                    "definition.id"
+                ]
+            },
+            {
+                "name": "actionsIndexByDescFr",
+                "keyPath": [
+                    "description.fr"
+                ]
+            }
+        ]
+    }
+}
