@@ -4,9 +4,9 @@ import { useState } from "react";
 // import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
-import fetchItemsById from "../components/queryItemTypes.jsx";
+import fetchItemsById from "../components/query-item-types.jsx";
 import Card from "../components/card.jsx";
-import ItemList from "../components/itemList.jsx";
+import ItemList from "../components/items-list.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +23,7 @@ export default function Home() {
     const handleTypeFilter = (types) => {
         console.log("Filtering items by types:", types);
         setSelectedType(types);
+        // fetchItemsById(types);
     };
 
     return (
@@ -60,7 +61,7 @@ export default function Home() {
                     <button className="cat-buttons" onClick={() => handleTypeFilter(138)}>Epaulettes</button>
                     <button className="cat-buttons" onClick={() => handleTypeFilter(136)}>Plastron</button>
                 </div>
-                {selectedType && <ItemList selectedType={selectedType} />}
+                {selectedType != null && <ItemList key={selectedType.toString()} selectedType={selectedType} />}
             </main>
         </>
     );

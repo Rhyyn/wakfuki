@@ -61,7 +61,7 @@
             }
         ]
     },
-    "itemStats.json": {
+    "itemsStats.json": {
         "indexes": [
             {
                 "name": "actionsIndexById",

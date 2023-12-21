@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import "@/styles/globals.scss";
-// import fetchAndStoreData from "../components/dataService.jsx"; // Adjust the path accordingly
-import { initializeDexieDatabase } from "../components/dataService.jsx";
-import fetchItemsByItemTypeId from "../components/queryItemTypes.jsx";
-// import openDatabase from "../components/databaseService.jsx";
+import {initializeDexieDatabase} from "../components/data-service.jsx";
 
 function MyApp({ Component, pageProps }) {
     // const fileNames = [
@@ -24,16 +21,15 @@ function MyApp({ Component, pageProps }) {
     //     "itemProperties.json",
     // ];
 
-    const fileNames = [
-        "states.json",
-        "items.json",
-        "itemStats.json"
-    ];
+    const fileNames = ["states.json", "items.json", "itemsStats.json"];
 
     useEffect(() => {
-        // fetchAndStoreData(fileNames);
+        console.log("MyApp component is mounting or updating...");
+
         initializeDexieDatabase(fileNames);
-    }, []);
+
+        console.log("MyApp component rendering complete.");
+    }, [fileNames]);
 
     return <Component {...pageProps} />;
 }
