@@ -123,90 +123,11 @@ a {
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* ---CARD--- */
-
-.card {
-    width: 340px;
-    height: 100%;
-    border-radius: 12px;
-    background-color: $background-2;
-    color: $text;
-    margin-bottom: 50px;
-}
-
-.top-card-container {
-  height: 85px;
-  padding-top: 8px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 65% 35%;
-}
-
-.left-top-card-container {
-    padding: 0 12px 0 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.right-top-card-container {
-  padding: 0 12px 0 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.image-square {
-  width: 75px;
-  height: 75px;
-  background-color: $background-3;
-  border: 2px solid $background;
-}
-
-.item-name {
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.item-type-level{
-  font-size: 16px;
-  color: $text-2;
+  grid-gap: 40px 20px;
+  margin-bottom: 200px;
 }
 
 
-.middle-card-container {
-  height: calc(100% - 165px);
-  padding: 0 12px 0 12px;
-}
-
-.item-stat-container {
-  display: flex;
-  align-items: center;
-  padding: 3px 0 3px 0;
-}
-
-.temp-stat-image {
-  width: 24px;
-  height: 24px;
-  background-color: $background-3;
-}
-
-.item-stat {
-  padding-left: 8px;
-  font-size: 16px;
-}
-
-
-.bottom-card-container {
-  height: 80px;
-  background-color: $background-3;
-  border-radius: 0 0 12px 12px;
-}
-
-/* ---CARD ENDS--- */
 
 @media (prefers-color-scheme: dark) {
     html {

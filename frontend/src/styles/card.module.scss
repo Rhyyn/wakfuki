@@ -1,0 +1,173 @@
+@use 'variables' as v;
+
+/* ---TOP CONTAINER STARTS--- */
+
+.card {
+    width: 340px;
+    height: 100%;
+    border-radius: 12px;
+    background-color: v.$background-2;
+    color: v.$text;
+    // margin-bottom: 20px;
+}
+
+.top-card-container {
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: v.$background-4;
+    border-radius: 12px 12px 0 0;
+}
+
+.left-top-card-container {
+    padding: 0 12px 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.right-top-card-container {
+    padding: 0 12px 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-name-container {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.image-square {
+    width: 75px;
+    height: 75px;
+    background-color: v.$background-3;
+    border: 2px solid v.$background;
+}
+
+.item-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.item-type-level-container {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+}
+
+.item-type-icon-container {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-type-level-text {
+    font-size: 16px;
+    color: v.$text-2;
+    padding-left: 2px;
+}
+
+.item-rarity-container {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+}
+
+.item-rarity-icon-container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// .rarity-icon {
+//     background: url();
+// }
+
+.item-rarity-text {
+    font-size: 16px;
+    color: v.$legendaire;
+    padding-left: 4px;
+}
+/* ---TOP CONTAINER ENDS--- */
+
+/* ---MIDDLE CONTAINER STARTS--- */
+// calc(100% - 205px);
+.middle-card-container {
+    padding: 15px 12px 15px 12px;
+}
+
+.item-stat-container {
+    display: flex;
+    align-items: center;
+    padding: 3px 0 3px 0;
+}
+
+.temp-stat-image {
+    width: 20px;
+    height: 20px;
+    // background-color: v.$background-3;
+    background-image: url(../../public/stats/maitriseCritiqueWhite.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item-stat {
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+/* ---MIDDLE CONTAINER ENDS--- */
+
+/* ---BOTTOM CONTAINER STARTS--- */
+
+.bottom-card-container {
+    max-width: 340px;
+    height: 80px;
+    background-color: v.$background-3;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// .temp-toggle-container {
+//     background-color: v.$background-on;
+// }
+
+.bottom-toggle-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+}
+
+.toggle-drop-img {
+    opacity: 0.3;
+}
+
+.cardFilterIcon {
+    opacity: 1;
+    width: 56px;
+    height: 56px;
+    background-image: url(../../public/toggleShowStatsOn.png);
+    background-repeat: no-repeat;
+}
+
+.toggle-craft-img {
+    opacity: 0.3;
+}
+
+/* ---BOTTOM CONTAINER ENDS--- */

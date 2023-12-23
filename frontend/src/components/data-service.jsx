@@ -3,6 +3,7 @@
 import Dexie from "dexie";
 import indexStructure from "../data/index-structure.json";
 
+
 let isDbInitialized = false;
 const db = new Dexie("WakfuKiDatabase");
 

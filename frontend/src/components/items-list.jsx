@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 // import dbInstance from "./database-open.jsx";
 import { waitForDbInitialization, db } from "./data-service.jsx";
@@ -80,7 +81,7 @@ const ItemList = ({ selectedType }) => {
     return (
         <div className="cards-container">
             {items.map((item) => (
-                <Card key={item.definition.item.id} item={item} />
+                <Card key={item.definition.item.id} item={item}/>
             ))}
             {isLoading && <p>Loading...</p>}
         </div>
