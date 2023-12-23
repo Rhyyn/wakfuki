@@ -8,12 +8,33 @@ const Card = ({ item }) => {
     // const combinedClasses = classNames(...[cardCSS.cardFilterIcon, cardCSS.toggleStatImg]);
     // const combinedClasses = classNames("cardFilterIcon")
 
+    const rarities = {
+        1: "Commun",
+        2: "Rare",
+        3: "Mythique",
+        4: "Légendaire",
+        5: "Épique",
+        6: "Souvenir",
+        7: "Relique",
+    };
+
+    // console.log(item);
+    const rarity = rarities[item.baseParams.rarity];
+    const rarityIcon = `/rarities/${item.baseParams.rarity}.png`;
+    // console.log(rarity);
+
+    item.equipEffects.map((effect, index) =>
+        console.log(effect.effect.stats.display.fr)
+    );
+
     return (
         <div className={cardCSS["card-container"]}>
             <div className={cardCSS.card}>
                 <div className={cardCSS["top-card-container"]}>
                     <div className={cardCSS["left-top-card-container"]}>
-                        <div className={`${cardCSS["item-name-container"]} ${cardCSS["test"]}`}>
+                        <div
+                            className={`${cardCSS["item-name-container"]} ${cardCSS["test"]}`}
+                        >
                             <a
                                 href="/fr/encyclopedie/objet/120/8222"
                                 className={cardCSS["item-name"]}
@@ -34,7 +55,7 @@ const Card = ({ item }) => {
                                 href="/fr/encyclopedie/objet/120/8222"
                                 className={cardCSS["item-type-level-text"]}
                             >
-                                Amulette - {item.definition.item.level}
+                                Amulette - {item.level}
                             </a>
                         </div>
                         <div className={cardCSS["item-rarity-container"]}>
@@ -44,12 +65,14 @@ const Card = ({ item }) => {
                                 }
                             >
                                 <img
-                                    src="/rarities/3.png"
+                                    src={rarityIcon}
                                     className={cardCSS["rarity-icon"]}
                                 ></img>
                             </div>
-                            <span className={cardCSS["item-rarity-text"]}>
-                                Légendaire
+                            <span
+                                className={`${cardCSS["item-rarity-text"]} ${cardCSS[rarity]}`}
+                            >
+                                {rarity}
                             </span>
                         </div>
                     </div>
@@ -58,56 +81,16 @@ const Card = ({ item }) => {
                     </div>
                 </div>
                 <div className={cardCSS["middle-card-container"]}>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>{item.id}</span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>1 Portée</span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>220 PV</span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>17 Tacle</span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>17 Esquive</span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>
-                            71 Maîtrise sur 3 éléments aléatoires
-                        </span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>
-                            24 Maîtrise Distance
-                        </span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>
-                            4% Coup critique
-                        </span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>
-                            20 Résistance Élémentaire
-                        </span>
-                    </div>
-                    <div className={cardCSS["item-stat-container"]}>
-                        <div className={cardCSS["temp-stat-image"]}></div>
-                        <span className={cardCSS["item-stat"]}>
-                            20 Résistance Élémentaire
-                        </span>
-                    </div>
+                    {item.equipEffects.map((effect, index) => (
+                        <div
+                            key={index}
+                            className={cardCSS["item-stat-container"]}
+                        >
+                            <span className={cardCSS["item-stat"]}>
+                                {effect.effect.stats.display.fr}
+                            </span>
+                        </div>
+                    ))}
                 </div>
                 <div className={cardCSS["bottom-card-container"]}>
                     <div className={cardCSS["bottom-toggle-icon-container"]}>

@@ -15,48 +15,54 @@
             }
         ]
     },
-    "items.json": {
+    "formatedItems.json": {
         "indexes": [
+            {
+                "name": "itemsIndexByTitleFr",
+                "keyPath": [
+                    "title.fr"
+                ]
+            },
             {
                 "name": "itemsIndexById",
                 "keyPath": [
-                    "definition.item.id"
+                    "id"
                 ]
             },
             {
                 "name": "itemsIndexByLevel",
                 "keyPath": [
-                    "definition.item.level"
+                    "level"
                 ]
             },
             {
                 "name": "itemsIndexByTypeId",
                 "keyPath": [
-                    "definition.item.baseParameters.itemTypeId"
+                    "baseParams.itemTypeId"
                 ]
             },
             {
                 "name": "itemsIndexByRarity",
                 "keyPath": [
-                    "definition.item.baseParameters.rarity"
+                    "baseParams.rarity"
                 ]
             },
             {
-                "name": "itemsIndexByRarity",
+                "name": "itemsIndexByGfxId",
                 "keyPath": [
-                    "definition.item.graphicParameters.gfxId"
+                    "gfxId"
                 ]
             },
             {
                 "name": "itemsIndexByEquipEffects",
                 "keyPath": [
-                    "definition.equipEffects"
+                    "equipEffects"
                 ]
             },
             {
-                "name": "itemsIndexByTitleFr",
+                "name": "itemsIndexByDropRates",
                 "keyPath": [
-                    "title.fr"
+                    "droprates"
                 ]
             }
         ]

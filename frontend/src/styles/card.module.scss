@@ -95,9 +95,38 @@
 
 .item-rarity-text {
     font-size: 16px;
-    color: v.$legendaire;
+    // color: v.$legendaire;
     padding-left: 4px;
 }
+
+.Commun {
+    color: #989898;
+}
+
+.Rare {
+    color: #70dd77;
+}
+
+.Mythique {
+    color: #E97E19;
+}
+
+.Légendaire {
+    color: #f5d44a;
+}
+
+.Épique {
+    color: #e862e9;
+}
+
+.Souvenir {
+    color: #83bfd9;
+}
+
+.Relique {
+    color: #db77a2;
+}
+
 /* ---TOP CONTAINER ENDS--- */
 
 /* ---MIDDLE CONTAINER STARTS--- */

@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     //     "itemProperties.json",
     // ];
 
-    const fileNames = ["states.json", "items.json", "itemsStats.json"];
+    const fileNames = ["states.json", "formatedItems.json", "itemsStats.json"];
 
     useEffect(() => {
         console.log("MyApp component is mounting or updating...");

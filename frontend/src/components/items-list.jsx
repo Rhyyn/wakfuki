@@ -26,17 +26,17 @@ const ItemList = ({ selectedType }) => {
 
             setIsLoading(true);
 
-            let itemsQuery = db.table("items.json");
-
+            let itemsQuery = db.table("formatedItems.json");
             if (selectedType.length > 1) {
                 itemsQuery = itemsQuery
-                    .where("definition.item.baseParameters.itemTypeId")
+                    .where("baseParams.itemTypeId")
                     .anyOf(selectedType);
             } else {
                 itemsQuery = itemsQuery
-                    .where("definition.item.baseParameters.itemTypeId")
+                    .where("baseParams.itemTypeId")
                     .equals(selectedType);
             }
+
 
             const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
 
@@ -44,6 +44,8 @@ const ItemList = ({ selectedType }) => {
                 .offset(startIndex)
                 .limit(ITEMS_PER_PAGE)
                 .toArray();
+
+            // console.log(itemsData);
 
             setItems((prevItems) => [...prevItems, ...itemsData]);
         } catch (error) {
@@ -81,7 +83,7 @@ const ItemList = ({ selectedType }) => {
     return (
         <div className="cards-container">
             {items.map((item) => (
-                <Card key={item.definition.item.id} item={item}/>
+                <Card key={item.id} item={item} />
             ))}
             {isLoading && <p>Loading...</p>}
         </div>

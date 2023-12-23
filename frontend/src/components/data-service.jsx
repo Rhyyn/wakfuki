@@ -51,6 +51,7 @@ const initializeDexieDatabase = async function (fileNames) {
 
         for (const fileName of fileNames) {
             console.log(fileNames);
+            console.log(fileName);
             const index = fileNames.indexOf(fileName) + 1;
             const structure = indexStructure[fileName];
 
