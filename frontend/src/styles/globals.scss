@@ -78,7 +78,7 @@ $primary: #ceadac;
 $secondary: #436c40;
 $accent: #7bb198;
 $background-2: #34302b;
-$background-3: #3f3b35;
+$background-3: #302e2b;
 
 
 * {
@@ -95,7 +95,7 @@ body {
 
 body {
     color: rgb(var(--foreground-rgb));
-    background-color: $background;
+    background-color: $background-3;
 }
 
 a {
@@ -123,10 +123,10 @@ a {
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 40px 20px;
   margin-bottom: 200px;
 }
-
 
 
 @media (prefers-color-scheme: dark) {

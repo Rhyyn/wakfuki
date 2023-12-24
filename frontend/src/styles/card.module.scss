@@ -1,38 +1,38 @@
-@use 'variables' as v;
+@use "variables" as v;
+
+
 
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
     width: 340px;
-    height: 100%;
+    height: 460px;
     border-radius: 12px;
     background-color: v.$background-2;
     color: v.$text;
+    box-shadow: 5px 5px 5px v.$background;
     // margin-bottom: 20px;
 }
-
 .top-card-container {
-    height: 120px;
     width: 100%;
+}
+
+.header-top-row {
+    width: 100%;
+    height: 58px;
     display: grid;
     grid-template-columns: 70% 30%;
     background-color: v.$background-4;
-    border-radius: 12px 12px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
-.left-top-card-container {
-    padding: 0 12px 0 12px;
+.header-left-top-container {
+    // padding: 0 0 0 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 10px;
-}
-
-.right-top-card-container {
-    padding: 0 12px 0 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 60px;
+    // padding-top: 10px;
 }
 
 .item-name-container {
@@ -41,16 +41,60 @@
     align-items: center;
 }
 
-.image-square {
-    width: 75px;
+/* --- header-right-top-container STARTS---*/
+.header-right-top-container {
+    // padding: 0 0 0 12px;
+    position: relative;
     height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+}
+
+.image-square {
+    width: 56px;
+    height: 56px;
     background-color: v.$background-3;
-    border: 2px solid v.$background;
+    border: 3px solid v.$background;
+}
+/* --- header-right-top-container ENDS---*/
+
+/* --- header-bottom-row STARTS--- */
+.header-bottom-row {
+    width: 100%;
+    height: 62px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 200px 140px;
+    background-color: v.$background-4;
+}
+
+.header-bottom-row:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 250px;
+    height: 1px;
+    width: 202px;
+    border-bottom: 3px solid v.$background;
+    margin: 0 auto;
+}
+/* --- header-bottom-row ENDS--- */
+
+/* --- header-left-bottom-container STARTS---*/
+.header-left-bottom-container {
+    max-width: 220px;
 }
 
 .item-name {
     font-size: 17px;
     font-weight: 600;
+    padding-left: 8px;
 }
 
 .item-type-level-container {
@@ -58,6 +102,7 @@
     flex-direction: row;
     height: 30px;
     align-items: center;
+    padding-left: 5px;
 }
 
 .item-type-icon-container {
@@ -71,7 +116,7 @@
 .item-type-level-text {
     font-size: 16px;
     color: v.$text-2;
-    padding-left: 2px;
+    padding-left: 4px;
 }
 
 .item-rarity-container {
@@ -79,6 +124,8 @@
     flex-direction: row;
     height: 30px;
     align-items: center;
+    padding-left: 5px;
+    margin-bottom: 2px;
 }
 
 .item-rarity-icon-container {
@@ -89,14 +136,10 @@
     align-items: center;
 }
 
-// .rarity-icon {
-//     background: url();
-// }
-
 .item-rarity-text {
     font-size: 16px;
     // color: v.$legendaire;
-    padding-left: 4px;
+    padding-left: 9px;
 }
 
 .Commun {
@@ -108,7 +151,7 @@
 }
 
 .Mythique {
-    color: #E97E19;
+    color: #e97e19;
 }
 
 .Légendaire {
@@ -126,13 +169,67 @@
 .Relique {
     color: #db77a2;
 }
+/* --- header-left-bottom-container ENDS---*/
 
+/* --- header-right-bottom-container STARTS---*/
+.header-right-bottom-container {
+    position: relative;
+    height: 45px;
+    align-self: end;
+}
+
+.toggle-tabs-container {
+    background-color: v.$background-2;
+    border: 3px solid v.$background;
+    border-bottom: none;
+    border-radius: 10px 0 0 0;
+    height: 45px;
+    width: 140px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // display: grid;
+    // grid-template-columns: 36px 36px 28px;
+    padding: 0 5px 0 5px;
+}
+
+.drop-icon {
+    width: 37px;
+    height: 37px;
+    background-image: url(../../public/toggleDropOn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-icon {
+    width: 37px;
+    height: 37px;
+    background-image: url(../../public/toggleShowStatsOn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recipe-icon {
+    width: 32px;
+    height: 37px;
+    background-image: url(../../public/toggleCraftOnFixed.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* --- header-right-bottom-container ENDS---*/
 /* ---TOP CONTAINER ENDS--- */
 
 /* ---MIDDLE CONTAINER STARTS--- */
 // calc(100% - 205px);
 .middle-card-container {
+    background-color: v.$background-2;
+    height: 340px;
     padding: 15px 12px 15px 12px;
+    border-left: 3px solid v.$background;
+    border-right: 3px solid v.$background;
+    border-bottom: 3px solid v.$background;
 }
 
 .item-stat-container {
@@ -181,6 +278,14 @@
     width: 56px;
     height: 56px;
     border-radius: 10px;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.opacity-30 {
+    opacity: 0.3;
 }
 
 .toggle-drop-img {
