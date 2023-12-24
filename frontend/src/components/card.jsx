@@ -9,6 +9,7 @@ const Card = ({ item }) => {
 
     const handleTriToggleClick = (e) => {
         setTriToggle(e);
+        console.log(triToggle);
     };
     // const combinedClasses = classNames(...[cardCSS.cardFilterIcon, cardCSS.toggleStatImg]);
     // const combinedClasses = classNames("cardFilterIcon")
@@ -23,7 +24,7 @@ const Card = ({ item }) => {
         7: "Relique",
     };
 
-    console.log(item);
+    // console.log(item.droprates);
     const rarity = rarities[item.baseParams.rarity];
     const rarityIcon = `/rarities/${item.baseParams.rarity}.png`;
     // console.log(rarity);
@@ -31,8 +32,6 @@ const Card = ({ item }) => {
     // item.equipEffects.map((effect, index) =>
     //     console.log(effect.effect.stats.display.fr)
     // );
-
-
 
     return (
         <div className={cardCSS["card-container"]}>
@@ -137,45 +136,36 @@ const Card = ({ item }) => {
                 </div>
                 <div
                     className={`${cardCSS["middle-card-container"]} ${
-                        triToggle === 0
-                            ? cardCSS["visible"]
-                            : cardCSS["hidden"]
+                        triToggle === 0 ? cardCSS["visible"] : cardCSS["hidden"]
                     }`}
                 >
-                    {item.equipEffects.map((effect, index) => (
-                        <div
-                            key={index}
-                            className={cardCSS["item-stat-container"]}
-                        >
-                            <span className={cardCSS["item-stat"]}>
-                                {effect.effect.stats.display.fr}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-                {/* <div
-                    className={`${cardCSS["middle-card-container"]} ${
-                        triToggle === 1
-                            ? cardCSS["visible"]
-                            : cardCSS["hidden"]
-                    }`}
-                >
-                    {item.equipEffects.map((effect, index) => (
-                        <div
-                            key={index}
-                            className={cardCSS["item-stat-container"]}
-                        >
-                            <span className={cardCSS["item-stat"]}>
-                                {effect.effect.stats.display.fr}
-                            </span>
-                        </div>
-                    ))}
+                    {item.droprates ? (
+                        Object.entries(item.droprates).map(
+                            ([key, value], index) => (
+                                <div
+                                    key={index}
+                                    className={cardCSS["item-drop-container"]}
+                                >
+                                    <span
+                                        className={cardCSS["item-drop"]}
+                                    >{`${key}: ${value}`}</span>
+                                </div>
+                            )
+                        )
+                    ) : (
+                        <span>No droprates available</span>
+                    )}
                 </div>
                 <div
                     className={`${cardCSS["middle-card-container"]} ${
-                        triToggle === 2
-                            ? cardCSS["visible"]
-                            : cardCSS["hidden"]
+                        triToggle === 1 ? cardCSS["visible"] : cardCSS["hidden"]
+                    }`}
+                >
+                    <span>Pas de recette!</span>
+                </div>
+                <div
+                    className={`${cardCSS["middle-card-container"]} ${
+                        triToggle === 2 ? cardCSS["visible"] : cardCSS["hidden"]
                     }`}
                 >
                     {item.equipEffects.map((effect, index) => (
@@ -188,7 +178,7 @@ const Card = ({ item }) => {
                             </span>
                         </div>
                     ))}
-                </div> */}
+                </div>
                 {/* <div className={cardCSS["bottom-card-container"]}> */}
                 {/* <div className={cardCSS["bottom-toggle-icon-container"]}>
                         <img

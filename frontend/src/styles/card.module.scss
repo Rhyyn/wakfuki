@@ -1,7 +1,5 @@
 @use "variables" as v;
 
-
-
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
@@ -230,6 +228,13 @@
     border-left: 3px solid v.$background;
     border-right: 3px solid v.$background;
     border-bottom: 3px solid v.$background;
+}
+.visible {
+    display: block; /* or any other style to make it visible */
+}
+
+.hidden {
+    display: none;
 }
 
 .item-stat-container {
