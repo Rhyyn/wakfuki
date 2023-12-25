@@ -97,7 +97,7 @@ const fetchAndStoreData = async (db, fileName) => {
     try {
         console.log(`fetchAndStoreData called for fileName: ${fileName}`);
         const response = await fetch(
-            `http://localhost:3001/api/stream/${fileName}`
+            `https://wakfuki.vercel.app/api/stream/${fileName}`
         );
         const compressedData = await response.arrayBuffer();
         const decompressedBlob = await DecompressBlob(compressedData);
