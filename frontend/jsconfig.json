@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true
+  },
+  "paths": {
+    "@/components/*": ["frontend/src/components/*"],
+    "@/styles/*": ["frontend/src/styles/*"]
   }
 }
