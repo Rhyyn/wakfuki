@@ -153,7 +153,7 @@ const Card = ({ item }) => {
                             )
                         )
                     ) : (
-                        <span>No droprates available</span>
+                        <span>Pas obtenable sur des monstres!</span>
                     )}
                 </div>
                 <div
