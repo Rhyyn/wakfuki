@@ -1,5 +1,5 @@
 {
-    "routes": [
+    "rewrites": [
         {
             "src": "/api/(.*)",
             "dest": "/backend/api/$1"
