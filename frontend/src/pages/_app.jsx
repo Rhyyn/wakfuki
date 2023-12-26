@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "@/styles/globals.scss";
+import "../../styles/globals.scss";
 import {initializeDexieDatabase} from "../components/data-service.jsx";
 
 function MyApp({ Component, pageProps }) {
