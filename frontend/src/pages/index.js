@@ -1,11 +1,9 @@
 // index.js
 import Head from "next/head";
 import { useState } from "react";
-// import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import fetchItemsById from "../components/query-item-types.jsx";
-import Card from "../components/card.jsx";
 import ItemList from "../components/items-list.jsx";
 
 const inter = Inter({ subsets: ["latin"] });

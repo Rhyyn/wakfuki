@@ -1,6 +1,6 @@
 "use client";
-import styles from "@/styles/Home.module.scss";
-import cardCSS from "../styles/card.module.scss";
+import styles from "../../styles/Home.module.scss";
+import cardCSS from "../../styles/card.module.scss";
 import { clsx } from "clsx";
 import { useState } from "react";
 
