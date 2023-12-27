@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import dbInstance from "./database-open.jsx";
-import { waitForDbInitialization, db } from "./data-service.jsx";
-import Card from "./card.jsx";
+import { waitForDbInitialization, db } from "../../services/data-service.jsx";
+import Card from "../Card/Card.jsx";
 
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
@@ -13,6 +13,7 @@ const ItemList = ({ selectedType }) => {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const isInitialMount = useRef(true);
+    const [isFetching, setIsFetching] = useState(false);
 
     const fetchItems = async () => {
         console.log("ding");
@@ -36,7 +37,6 @@ const ItemList = ({ selectedType }) => {
                     .where("baseParams.itemTypeId")
                     .equals(selectedType);
             }
-
 
             const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
 
@@ -68,8 +68,17 @@ const ItemList = ({ selectedType }) => {
         const handleScroll = () => {
             const { scrollTop, clientHeight, scrollHeight } =
                 document.documentElement;
-            if (scrollTop + clientHeight >= scrollHeight - SCROLL_THRESHOLD) {
+            if (
+                scrollTop + clientHeight >= scrollHeight - SCROLL_THRESHOLD &&
+                !isFetching
+            ) {
+                console.log("scrolled", isFetching);
                 setCurrentPage((prevPage) => prevPage + 1);
+                setIsFetching(true);
+
+                setTimeout(() => {
+                    setIsFetching(false);
+                }, 20000);
             }
         };
 
@@ -78,7 +87,7 @@ const ItemList = ({ selectedType }) => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [isFetching]);
 
     return (
         <div className="cards-container">

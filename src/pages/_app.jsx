@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../../styles/globals.scss";
-import {initializeDexieDatabase} from "../components/data-service.jsx";
+import {initializeDexieDatabase} from "../services/data-service.jsx";
 
 function MyApp({ Component, pageProps }) {
     // const fileNames = [

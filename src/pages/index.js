@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Inter } from "next/font/google";
 import styles from "../../styles/Home.module.scss";
 import fetchItemsById from "../components/query-item-types.jsx";
-import ItemList from "../components/items-list.jsx";
+import ItemList from "../components/ItemList/ItemsList.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
