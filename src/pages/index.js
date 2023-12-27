@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { Inter } from "next/font/google";
 import styles from "../../styles/Home.module.scss";
-import fetchItemsById from "../components/query-item-types.jsx";
+import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
 import ItemList from "../components/ItemList/ItemsList.jsx";
 
 const inter = Inter({ subsets: ["latin"] });

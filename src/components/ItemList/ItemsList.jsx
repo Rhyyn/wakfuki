@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 // import dbInstance from "./database-open.jsx";
 import { waitForDbInitialization, db } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
+import cssModule from "./ItemList.module.scss";
 
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
@@ -16,7 +17,7 @@ const ItemList = ({ selectedType }) => {
     const [isFetching, setIsFetching] = useState(false);
 
     const fetchItems = async () => {
-        console.log("ding");
+        console.log("Fetching...");
         await waitForDbInitialization();
         await db.open().then(() => {
             console.log(db._allTables);
@@ -52,6 +53,7 @@ const ItemList = ({ selectedType }) => {
             console.error("Error fetching items:", error);
         } finally {
             setIsLoading(false);
+            console.log(".. Fetching completed");
         }
     };
 
@@ -90,7 +92,7 @@ const ItemList = ({ selectedType }) => {
     }, [isFetching]);
 
     return (
-        <div className="cards-container">
+        <div className={cssModule["cards-container"]}>
             {items.map((item) => (
                 <Card key={item.id} item={item} />
             ))}
