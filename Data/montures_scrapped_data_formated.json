@@ -1,0 +1,2296 @@
+[
+  {
+    "title": {
+      "fr": "Mulou Féroxe",
+      "en": "Feroxxors Boowolf"
+    },
+    "description": {
+      "fr": "Seul un Elu des Mérydes peut prétendre chevaucher cette imposante monture de Destruction. Sa puissante musculature fait de lui une monture impressionnante.",
+      "en": "Only a Meridian Star can claim the right to ride this impressive Destruction mount. Its rippling muscles cut an imposing figure."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 14422,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 4
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119555,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 170642
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 170643
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/14422"
+  },
+  {
+    "title": {
+      "fr": "Dragodinde",
+      "en": "Dragoturkey"
+    },
+    "description": {
+      "fr": "Une dragodinde entraînée pour les combats.",
+      "en": "A dragoturkey trained for combat."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18682,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118682,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119202
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119215
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18682"
+  },
+  {
+    "title": {
+      "fr": "Dragodinde",
+      "en": "Dragoturkey"
+    },
+    "description": {
+      "fr": "Une dragodinde entraînée pour les combats.",
+      "en": "A dragoturkey trained for combat."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18704,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118704,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119717
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119718
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18704"
+  },
+  {
+    "title": {
+      "fr": "Dragodinde",
+      "en": "Dragoturkey"
+    },
+    "description": {
+      "fr": "Une dragodinde spécialisée dans les combats.",
+      "en": "A dragoturkey specialized in the art of fighting."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18705,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118705,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119719
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119720
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18705"
+  },
+  {
+    "title": {
+      "fr": "Dragodinde",
+      "en": "Dragoturkey"
+    },
+    "description": {
+      "fr": "Une dragodinde entraînée pour les combats.",
+      "en": "A dragoturkey trained for combat."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18706,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118706,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119721
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119722
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18706"
+  },
+  {
+    "title": {
+      "fr": "Drago-Destrier",
+      "en": "Dragosteed"
+    },
+    "description": {
+      "fr": "Une drago-destrier spécialisée dans les combats contre un ennemi unique.",
+      "en": "A Dragosteed specialized in single combat."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18709,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118709,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119749
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119748
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18709"
+  },
+  {
+    "title": {
+      "fr": "Drago-Destrier de Destruction",
+      "en": "Destruction Dragosteed"
+    },
+    "description": {
+      "fr": "Une drago-destrier entraînée contre les ennemis regroupés.",
+      "en": "A Dragosteed trained against enemies grouped together."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18710,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118710,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119751
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119750
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18710"
+  },
+  {
+    "title": {
+      "fr": "Drago-Destrier",
+      "en": "Dragosteed"
+    },
+    "description": {
+      "fr": "Une drago-destrier spécialisée dans les combats de mêlée.",
+      "en": "A dragosteed specialized in the art of melee fighting."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18711,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118711,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119753
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119752
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18711"
+  },
+  {
+    "title": {
+      "fr": "Drago-Destrier",
+      "en": "Dragosteed"
+    },
+    "description": {
+      "fr": "Une drago-destrier entraînée pour les combats à distance.",
+      "en": "A Dragosteed trained for long-range combat."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18712,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61118712,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 119755
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 119754
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/18712"
+  },
+  {
+    "title": {
+      "fr": "Bouftou de Guerre",
+      "en": "Gobball War Chief"
+    },
+    "description": {
+      "fr": "Un Bouftou de Guerre entraîné contre les ennemis regroupés.",
+      "en": "A Gobball War Chief trained to fight groups of enemies."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19274,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119274,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 151618
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 151617
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19274"
+  },
+  {
+    "title": {
+      "fr": "Bouftou de Guerre",
+      "en": "Gobball War Chief"
+    },
+    "description": {
+      "fr": "Un Bouftou de Guerre entraîné pour les combats à distance.",
+      "en": "A Gobball War Chief trained to fight from a distance."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19275,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119275,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 151619
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 151620
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19275"
+  },
+  {
+    "title": {
+      "fr": "Bouftou de Guerre",
+      "en": "Gobball War Chief"
+    },
+    "description": {
+      "fr": "Un Bouftou de Guerre spécialisé dans les combats de mêlée.",
+      "en": "A gobball war chief specialized in the art of melee fighting."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19276,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119276,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 151622
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 151621
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19276"
+  },
+  {
+    "title": {
+      "fr": "Bouftou de Guerre",
+      "en": "Gobball War Chief"
+    },
+    "description": {
+      "fr": "Un Bouftou de Guerre spécialisé dans les combats contre un ennemi unique.",
+      "en": "A Gobball War Chief trained to fight against a single enemy."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19277,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119277,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 151623
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 151624
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19277"
+  },
+  {
+    "title": {
+      "fr": "Mulou",
+      "en": "Boowolf"
+    },
+    "description": {
+      "fr": "Un Mulou entraîné contre les ennemis regroupés.",
+      "en": "A Boowolf trained to fight groups of enemies."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19555,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119555,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 155298
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 155299
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19555"
+  },
+  {
+    "title": {
+      "fr": "Mulou",
+      "en": "Boowolf"
+    },
+    "description": {
+      "fr": "Un Mulou entraîné pour les combats à distance.",
+      "en": "A Boowolf trained to fight from a distance."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19556,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119556,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 155300
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 155301
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19556"
+  },
+  {
+    "title": {
+      "fr": "Mulou",
+      "en": "Boowolf"
+    },
+    "description": {
+      "fr": "Un Mulou spécialisé dans les combats de mêlée.",
+      "en": "A boowolf specialized in the art of melee fighting."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19557,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119557,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 155302
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 155303
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19557"
+  },
+  {
+    "title": {
+      "fr": "Mulou",
+      "en": "Boowolf"
+    },
+    "description": {
+      "fr": "Un Mulou spécialisé dans les combats contre un ennemi unique.",
+      "en": "A Boowolf trained to fight against a single enemy."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19558,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119558,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 155304
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 155305
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19558"
+  },
+  {
+    "title": {
+      "fr": "Mulou Féroxe",
+      "en": "Feroxxors Boowolf"
+    },
+    "description": {
+      "fr": "Seul un Elu des Mérydes peut prétendre chevaucher cette imposante monture de Distance. Sa puissante musculature fait de lui une monture impressionnante.",
+      "en": "Only a Meridian Star can claim the right to ride this impressive Distance mount. Its rippling muscles cut an imposing figure."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19724,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 4
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119556,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 170644
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 170645
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19724"
+  },
+  {
+    "title": {
+      "fr": "Mulou Féroxe",
+      "en": "Feroxxors Boowolf"
+    },
+    "description": {
+      "fr": "Seul un Elu des Mérydes peut prétendre chevaucher cette imposante monture de Mêlée. Sa puissante musculature fait de lui une monture impressionnante.",
+      "en": "Only a Meridian Star can claim the right to ride this impressive Melee mount. Its rippling muscles cut an imposing figure."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19725,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 4
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119557,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 170646
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 170647
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19725"
+  },
+  {
+    "title": {
+      "fr": "Mulou Féroxe",
+      "en": "Feroxxors Boowolf"
+    },
+    "description": {
+      "fr": "Seul un Elu des Mérydes peut prétendre chevaucher cette imposante monture. Sa puissante musculature fait de lui une monture impressionnante.",
+      "en": "Only a Meridian Star can claim the right to ride this impressive mount. Its rippling muscles cut an imposing figure."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19726,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 4
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61119558,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 170648
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 170649
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/19726"
+  },
+  {
+    "title": {
+      "fr": "Phorreur",
+      "en": "Drheller"
+    },
+    "description": {
+      "fr": "Un Phorreur spécialisé dans les combats contre un ennemi unique.",
+      "en": "A Drheller trained to fight against a single enemy."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20741,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120741,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 185296
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 185297
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20741"
+  },
+  {
+    "title": {
+      "fr": "Phorreur",
+      "en": "Drheller"
+    },
+    "description": {
+      "fr": "Une Phorreur entraîné contre les ennemis regroupés.",
+      "en": "A Drheller trained to fight groups of enemies."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20742,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120742,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 185298
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 185299
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20742"
+  },
+  {
+    "title": {
+      "fr": "Phorreur",
+      "en": "Drheller"
+    },
+    "description": {
+      "fr": "Un Phorreur spécialisé dans les combats de mêlée.",
+      "en": "A drheller specialized in the art of melee fighting."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20743,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120743,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 185300
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 185301
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20743"
+  },
+  {
+    "title": {
+      "fr": "Phorreur",
+      "en": "Drheller"
+    },
+    "description": {
+      "fr": "Un Phorreur entraîné pour les combats à distance.",
+      "en": "A Drheller trained to fight from a distance."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20744,
+    "level": 35,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120744,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 185302
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 185303
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20744"
+  },
+  {
+    "title": {
+      "fr": "Dragominus",
+      "en": "Dragominus"
+    },
+    "description": {
+      "fr": "Un petit Dragon de Précision lazurite capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A little Lazurite Dragon of Precision, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20760,
+    "level": 45,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120760,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 185493
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187009
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20760"
+  },
+  {
+    "title": {
+      "fr": "Dragominus",
+      "en": "Dragominus"
+    },
+    "description": {
+      "fr": "Un petit Dragon de Destruction lazurite capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A little Lazurite Dragon of Destruction, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20811,
+    "level": 45,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120811,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187011
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187012
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20811"
+  },
+  {
+    "title": {
+      "fr": "Dragominus",
+      "en": "Dragominus"
+    },
+    "description": {
+      "fr": "Un petit Dragon de Mêlée lazurite capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A little Lazurite Dragon of Melee, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20812,
+    "level": 45,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120812,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187014
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187013
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20812"
+  },
+  {
+    "title": {
+      "fr": "Dragominus",
+      "en": "Dragominus"
+    },
+    "description": {
+      "fr": "Un petit Dragon de Distance lazurite capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A little Lazurite Dragon of Distance, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20813,
+    "level": 45,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120813,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187015
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187016
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20813"
+  },
+  {
+    "title": {
+      "fr": "Gradon",
+      "en": "Gradon"
+    },
+    "description": {
+      "fr": "Un gros Gradon de Précision capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A big Precision Gradon, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20916,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120916,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187628
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187629
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20916"
+  },
+  {
+    "title": {
+      "fr": "Gradon",
+      "en": "Gradon"
+    },
+    "description": {
+      "fr": "Un gros Gradon de Destruction capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A big Destruction Gradon, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20917,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120917,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187630
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187631
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20917"
+  },
+  {
+    "title": {
+      "fr": "Gradon",
+      "en": "Gradon"
+    },
+    "description": {
+      "fr": "Un gros Gradon de Mêlée capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A big Melee Gradon, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20918,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120918,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187632
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187633
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20918"
+  },
+  {
+    "title": {
+      "fr": "Gradon",
+      "en": "Gradon"
+    },
+    "description": {
+      "fr": "Un gros Gradon de Distance capable de survoler de petites falaises balayées par les vents stasifiés.",
+      "en": "A big Distance Gradon, capable of flying over small cliffs swept by the Stasified winds."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20919,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61120919,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187634
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187635
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/20919"
+  },
+  {
+    "title": {
+      "fr": "Monture Tofu",
+      "en": "Tofu Mount"
+    },
+    "description": {
+      "fr": "Ce Tofu bat si vite des ailes qu'on pourrait croire voler en le montant. Il n'en est rien mais la montée vaut tout de même le détour !",
+      "en": "This Tofu flaps its wings so fast that you'd almost think you were flying when you get on its back. You're not, of course, but it's still worth a ride!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24161,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61124161,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 239285
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 239284
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/24161"
+  },
+  {
+    "title": {
+      "fr": "Monture Chacha",
+      "en": "Bow Meow Mount"
+    },
+    "description": {
+      "fr": "Ce Chacha est si mignon qu'il donne envie de... monter dessus ?! Mais quelle idée saugrenue !",
+      "en": "This Bow Meow is so cute that you can't help wanting to… climb on its back?! How absurd!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24162,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61124162,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 239287
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 239286
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/24162"
+  },
+  {
+    "title": {
+      "fr": "Monture Boune",
+      "en": "Boon Mount"
+    },
+    "description": {
+      "fr": "Le Boune est le compagnon idéal pour les aventures naissantes. Cependant, sa prévenance et ses longues explications peuvent devenir fatigantes à la longue.",
+      "en": "This Boon is the perfect companion for brand-new adventures. Its extreme attentiveness and long-winded explanations can get a bit annoying over time, though."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24163,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61124163,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 239289
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 239288
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/24163"
+  },
+  {
+    "title": {
+      "fr": "Monture Godron",
+      "en": "Godron Mount"
+    },
+    "description": {
+      "fr": "Ne rêvez pas trop, ce Godron ne peut pas voler. Mais il peut courir très vite avec ses pattes musclées !",
+      "en": "Don't get too excited. This Godron can't fly. But it can sure run fast with those powerful legs!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24860,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61124860,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 252930
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 252929
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/24860"
+  },
+  {
+    "title": {
+      "fr": "Méka",
+      "en": "Mecha"
+    },
+    "description": {
+      "fr": "Le petit bijou de technologie Steamer est revisité, avec des pièces plus légères mais tout aussi résistantes. Succombez aux charmes du Montilier Méka, et vos ennemis succomberont sous ses pas.",
+      "en": "This jewel of Foggernaut technology has been given a cutting-edge makeover using lighter but equally resistant materials. Succumb to the charms of the Mecha petsmount, and your enemies will succumb under its feet."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26884,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 611,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 61126884,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 281257
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Maîtrise Élémentaire",
+              "en": "0 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 281258
+          },
+          "stats": {
+            "display": {
+              "fr": "",
+              "en": ""
+            },
+            "property": 0,
+            "values": []
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/montures/26884"
+  }
+]

@@ -1,0 +1,7700 @@
+[
+  {
+    "title": {
+      "fr": "Chachagora",
+      "en": "Angora Bow Meow"
+    },
+    "description": {
+      "fr": "Selon une chanson populaire, \"ce mimi Chacha, l'eau il aime ça\". On peut vous garantir que ce n'est pas le cas : l'eau le fait ressembler à un Chienchien mouillé.",
+      "en": "How now Bow Meow?"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 12127,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212127,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93142
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 57242
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Initiative",
+              "en": "10 Initiative"
+            },
+            "property": 171,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12127"
+  },
+  {
+    "title": {
+      "fr": "Chacha",
+      "en": "Bow Meow"
+    },
+    "description": {
+      "fr": "Ce Chacha frôle la perfection ! Contrairement à ses petits camarades, il est un peu moins égoïste, grognon et fainéant. Un vrai cadeau !  ",
+      "en": "This Bow Meow is on the verge of perfection! He's very slightly less grumpy, selfish and lazy than most Bow Meows. Count yourself lucky!  "
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "2.5%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "2.5%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 12128,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212128,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93140
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 57371
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Tacle",
+              "en": "10 Lock"
+            },
+            "property": 173,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12128"
+  },
+  {
+    "title": {
+      "fr": "Tofu",
+      "en": "Tofu"
+    },
+    "description": {
+      "fr": "Un petit Tofu tout doux, tellement chou qu’on en mangerait !",
+      "en": "A cuddly little Tofu that's so cute you could eat it!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 12129,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212129,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93165
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 57244
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12129"
+  },
+  {
+    "title": {
+      "fr": "Tofu Touffu",
+      "en": "Tufty Tofu"
+    },
+    "description": {
+      "fr": "Ce Tofu au nom imprononçable a longtemps servi pour les exercices de diction Iop.",
+      "en": "This tongue-twisting Tofu has served useful for many an elocution lesson for the Iops of this World."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 12130,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212130,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93167
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 57243
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Esquive",
+              "en": "10 Dodge"
+            },
+            "property": 175,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12130"
+  },
+  {
+    "title": {
+      "fr": "Chacha Tigré",
+      "en": "Striped Bow Meow"
+    },
+    "description": {
+      "fr": "Les Chachas Tigrés sont tous issus de croisements entre plusieurs espèces de Chachas. Il semblerait qu’ils soient plus intelligents et plus téméraires que les autres !",
+      "en": "Striped Bow Meows are all crossbreeds of several species of Bow Meow. Bow Meow specialists believe this species are a lot more intelligent and daring than the others."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 12131,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212131,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 57245
+          },
+          "stats": {
+            "display": {
+              "fr": "180 PV",
+              "en": "180 HP"
+            },
+            "property": 20,
+            "values": 180
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12131"
+  },
+  {
+    "title": {
+      "fr": "Dot",
+      "en": "Dot"
+    },
+    "description": {
+      "fr": "Ce petit Gélutin est plein de vie et très turbulent. Mémé Pâle, n'étant plus toute jeune, vous le confie pour qu'il vous accompagne dans votre aventure.",
+      "en": "This little Gemlin is full of life and very boisterous. Since Mammy Pal's not that young anymore, she gave it to you so that it could accompany you on your adventures."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 12237,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212237,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 57372
+          },
+          "stats": {
+            "display": {
+              "fr": "110 PV",
+              "en": "110 HP"
+            },
+            "property": 20,
+            "values": 110
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12237"
+  },
+  {
+    "title": {
+      "fr": "Bébé Slek",
+      "en": "Baby Schnek"
+    },
+    "description": {
+      "fr": "La Reine Slek vous a légué une de ses nombreuses progénitures.",
+      "en": "The Queen Schnek has passed on one of her many offspring."
+    },
+    "droprates": {
+      "fr": {
+        "Le Slek Sy": {
+          "drop_rate": "0.3%",
+          "monster_id": "4280"
+        }
+      },
+      "en": {
+        "Schnek Sy": {
+          "drop_rate": "0.3%",
+          "monster_id": "4280"
+        }
+      }
+    },
+    "id": 12804,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58212804,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 69546
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Esquive",
+              "en": "10 Dodge"
+            },
+            "property": 175,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113731
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Tacle",
+              "en": "10 Lock"
+            },
+            "property": 173,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/12804"
+  },
+  {
+    "title": {
+      "fr": "KoinKoin",
+      "en": "Quaquack"
+    },
+    "description": {
+      "fr": "Au-delà du Tofu, du Bouftou ou encore du Iop, le KoinKoin excelle dans la crétinerie. ",
+      "en": "Tofus, Gobballs and even Iops can't hold a candle to the Quaquack when it comes to sheer idiocy. "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 13637,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58213637,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 67205
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 327192
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Dos",
+              "en": "20 Rear Mastery"
+            },
+            "property": 180,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/13637"
+  },
+  {
+    "title": {
+      "fr": "Milimeulou",
+      "en": "Milimoowolf"
+    },
+    "description": {
+      "fr": "Tout mignon, tout doux, tout Milimeulou !",
+      "en": "So sweet and cute and Milimoowolfy!"
+    },
+    "droprates": {
+      "fr": {
+        "Milkar le Meulou": {
+          "drop_rate": "1.333%",
+          "monster_id": "1987"
+        },
+        "Mimic Domestique": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Milkar the Moowolf": {
+          "drop_rate": "1.333%",
+          "monster_id": "1987"
+        },
+        "Domestic Mimic": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 14147,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214147,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 69628
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Parade",
+              "en": "0% Block"
+            },
+            "property": 875,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 70485
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Élémentaire",
+              "en": "0 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93154
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14147"
+  },
+  {
+    "title": {
+      "fr": "Arakne",
+      "en": "Arachnee"
+    },
+    "description": {
+      "fr": "Cette petite Arakne est très rapide et peut rapidement esquiver vos calins.",
+      "en": "This little Arachnee will very quickly dodge your huggles."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 14152,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214152,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 70583
+          },
+          "stats": {
+            "display": {
+              "fr": "2{[~2]?%:} [#3]",
+              "en": "2{[~2]?%:} [#3]"
+            },
+            "property": 39,
+            "values": 2
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93136
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14152"
+  },
+  {
+    "title": {
+      "fr": "Tourtobot",
+      "en": "Clawbot"
+    },
+    "description": {
+      "fr": "Plus fidèle qu'un familier organique, il vous suivra partout à la trace.",
+      "en": "More loyal than an organic pet, the Clawbot will follow you absolutely everywhere."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 14157,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214157,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 69703
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 69704
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Élémentaire",
+              "en": "0 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93168
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14157"
+  },
+  {
+    "title": {
+      "fr": "Krosmunster Eau",
+      "en": "Water Krosmunster"
+    },
+    "description": {
+      "fr": "Krosmunster est un familier d'origine controlée ! Ses bonus sont puissants, mais il dégage quand même une petite odeur familière...",
+      "en": "The World of Twelve is still trying to determine if this little critter is related to Hel Munster of the erstwhile Treechnid Forest. All that is known is that if you're kind enough, it'll bring you monstrous bonuses!"
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 14335,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214335,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 112911
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Eau",
+              "en": "26 Eau Mastery"
+            },
+            "property": 124,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14335"
+  },
+  {
+    "title": {
+      "fr": "Krosmunster Terre",
+      "en": "Earth Krosmunster"
+    },
+    "description": {
+      "fr": "Krosmunster est un familier d'origine controlée ! Ses bonus sont puissants, mais il dégage quand même une petite odeur familière...",
+      "en": "The World of Twelve is still trying to determine if this little critter is related to Hel Munster of the erstwhile Treechnid Forest. All that is known is that if you're kind enough, it'll bring you monstrous bonuses!"
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 14525,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214525,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 112913
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Terre",
+              "en": "26 Terre Mastery"
+            },
+            "property": 123,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14525"
+  },
+  {
+    "title": {
+      "fr": "Krosmunster Air",
+      "en": "Air Krosmunster"
+    },
+    "description": {
+      "fr": "Krosmunster est un familier d'origine controlée ! Ses bonus sont puissants, mais il dégage quand même une petite odeur familière...",
+      "en": "The World of Twelve is still trying to determine if this little critter is related to Hel Munster of the erstwhile Treechnid Forest. All that is known is that if you're kind enough, it'll bring you monstrous bonuses!"
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 14526,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214526,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 112910
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Air",
+              "en": "26 Air Mastery"
+            },
+            "property": 125,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14526"
+  },
+  {
+    "title": {
+      "fr": "Krosmunster Feu",
+      "en": "Fire Krosmunster"
+    },
+    "description": {
+      "fr": "Krosmunster est un familier d'origine controlée ! Ses bonus sont puissants, mais il dégage quand même une petite odeur familière...",
+      "en": "The World of Twelve is still trying to determine if this little critter is related to Hel Munster of the erstwhile Treechnid Forest. All that is known is that if you're kind enough, it'll bring you monstrous bonuses!"
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "0.5%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 14527,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214527,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 112912
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Feu",
+              "en": "26 Feu Mastery"
+            },
+            "property": 122,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14527"
+  },
+  {
+    "title": {
+      "fr": "Peroucan",
+      "en": "Macawker"
+    },
+    "description": {
+      "fr": "Bien qu'un peu trop bavard, ce Peroucan vous accompagnera partout aussi discrètement qu'il le peut !",
+      "en": "Although a bit too chatty, this Macawker will accompany you anywhere as discreetly as he is able!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 14887,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58214887,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 81005
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93157
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/14887"
+  },
+  {
+    "title": {
+      "fr": "Snouffle",
+      "en": "Snoofle"
+    },
+    "description": {
+      "fr": "Planquez bien votre boubourse avant de vous promener avec votre Snouffle. Il prendrait un malin plaisir à taper dedans!",
+      "en": "The Snoofle is clean-living, honest, and loyal. All the same, keep your Pouches out of sight when it's around."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 15098,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215098,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 80994
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15098"
+  },
+  {
+    "title": {
+      "fr": "Wapin",
+      "en": "Wodent"
+    },
+    "description": {
+      "fr": "Heuweusement que les Cawotes sont toujours pwésentes dans le Monde des 12, Le Wapin n'aurait pas aussi bonne mine sinon.",
+      "en": "Thank goodness Ogrest's Chaos didn't destroy Cawwots. Where would you be without your bouncy little buddy?"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 15099,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215099,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 80995
+          },
+          "stats": {
+            "display": {
+              "fr": "125 PV",
+              "en": "125 HP"
+            },
+            "property": 20,
+            "values": 125
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 128064
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Contrôle",
+              "en": "0 Control"
+            },
+            "property": 184,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15099"
+  },
+  {
+    "title": {
+      "fr": "Moomouche",
+      "en": "Moofly"
+    },
+    "description": {
+      "fr": "Cette Moomouche aime la crotte, la bouse, la vraie... Prévoyez un sac anti-odeur... Juste un conseil d'ami que je vous donne",
+      "en": "This Moofly is very affectionate, as long as you keep it next to things that have been digested at least once. Provide for it as you will."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 15100,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215100,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 80983
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 81002
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15100"
+  },
+  {
+    "title": {
+      "fr": "Jambes de Chafer",
+      "en": "Chafer Legs"
+    },
+    "description": {
+      "fr": "Il arrive que les Jambes de Chafer, dépourvues de leurs parties têtales, se lient d’amitié avec les aventuriers de passage.",
+      "en": "Sometimes, Chafer Legs that have been forcibly separated from their original owners develop a liking for passing adventurers and engage them in involuntary three-legged races."
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Chaferfu, roi Chafer": {
+          "drop_rate": "0.5%",
+          "monster_id": "4739"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Chaferfu, Chafer King": {
+          "drop_rate": "0.5%",
+          "monster_id": "4739"
+        }
+      }
+    },
+    "id": 15388,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215388,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93147
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93170
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93174
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15388"
+  },
+  {
+    "title": {
+      "fr": "Chacha des Glaces",
+      "en": "Snow Bow Meow"
+    },
+    "description": {
+      "fr": "Ce petit Chacha est né sur Frigost, afin de résister au froid son pelage est devenu d'un bleu glacé immaculé, ce qui le rend très discret sur la banquise. Il aurait été importé sur Amakna, pendant l’ère de Dofus, pour lutter contre la prolifération des Wabbits. Mais celui-ci ne semble pas avoir connu la terre ferme !",
+      "en": "This little Bow Meow was born on Frigost, and its coat evolved to its immaculate ice-blue hue to better withstand the cold. This attribute also serves as camouflage amidst the ice. The Bow Meow may have been imported to Amakna during the Dofus Age to fight against the proliferation of Wabbits, but this sub-species seems never to have known terra firma!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 15818,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215818,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 87210
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Soin",
+              "en": "20 Healing Mastery"
+            },
+            "property": 26,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93134
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15818"
+  },
+  {
+    "title": {
+      "fr": "Araknomeka",
+      "en": "Araknomecha"
+    },
+    "description": {
+      "fr": "Elle est petite, mais fait un bruit énorme à cause de ses rouages très peu graissés ! ",
+      "en": "It may be small, but it makes a tremendous racket on account of its poorly lubricated machinery! "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 15819,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215819,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93132
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113733
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Parade",
+              "en": "0% Block"
+            },
+            "property": 875,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113734
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Tacle",
+              "en": "10 Lock"
+            },
+            "property": 173,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15819"
+  },
+  {
+    "title": {
+      "fr": "Yech'ti’Wawa",
+      "en": "YeCh'Ti'Wawa"
+    },
+    "description": {
+      "fr": "Vous tournerez, marcherez et allez courir dans tous les sens avec ce petit pet. Il vous fera mordre la poussière !",
+      "en": "You'll be running round like a headless chicken after this little pest. He'll make you bite the dust in the end!"
+    },
+    "droprates": {
+      "fr": {
+        "Yech'Ti'Wawa": {
+          "drop_rate": "0.25%",
+          "monster_id": "2368"
+        },
+        "Mimic Domestique": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "YeCh'Ti'Wawa": {
+          "drop_rate": "0.25%",
+          "monster_id": "2368"
+        },
+        "Domestic Mimic": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 15820,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58215820,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 87213
+          },
+          "stats": {
+            "display": {
+              "fr": "15 Maîtrise Critique",
+              "en": "15 Critical Mastery"
+            },
+            "property": 149,
+            "values": 15
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93135
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/15820"
+  },
+  {
+    "title": {
+      "fr": "Caillasse",
+      "en": "Krakotte"
+    },
+    "description": {
+      "fr": "Serait-ce monsieur Caillou ?",
+      "en": "A brand new friend for yabba dabba doo times galore."
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Craqueleur Ancestral": {
+          "drop_rate": "0.1%",
+          "monster_id": "4510"
+        },
+        "Craqueleur": {
+          "drop_rate": "0.1%",
+          "monster_id": "4511"
+        },
+        "Craqueboule": {
+          "drop_rate": "0.1%",
+          "monster_id": "4512"
+        },
+        "Craqueleur de la Mine Ancestral": {
+          "drop_rate": "0.1%",
+          "monster_id": "4878"
+        },
+        "Craqueleur de la Mine": {
+          "drop_rate": "0.1%",
+          "monster_id": "4879"
+        },
+        "Craqueboule de la Mine": {
+          "drop_rate": "0.1%",
+          "monster_id": "4880"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Ancestral Crackler": {
+          "drop_rate": "0.1%",
+          "monster_id": "4510"
+        },
+        "Crackler": {
+          "drop_rate": "0.1%",
+          "monster_id": "4511"
+        },
+        "Crackrock": {
+          "drop_rate": "0.1%",
+          "monster_id": "4512"
+        },
+        "Ancestral Mine Crackler": {
+          "drop_rate": "0.1%",
+          "monster_id": "4878"
+        },
+        "Mine Crackler": {
+          "drop_rate": "0.1%",
+          "monster_id": "4879"
+        },
+        "Mine Crackrock": {
+          "drop_rate": "0.1%",
+          "monster_id": "4880"
+        }
+      }
+    },
+    "id": 16697,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216697,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 94541
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Terre",
+              "en": "26 Terre Mastery"
+            },
+            "property": 123,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16697"
+  },
+  {
+    "title": {
+      "fr": "Marcassinet",
+      "en": "Young Wild Sow"
+    },
+    "description": {
+      "fr": "Il n'y a que du bon dans le cochon !",
+      "en": "What's the pig idea?"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16708,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216708,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93637
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Air",
+              "en": "26 Air Mastery"
+            },
+            "property": 125,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16708"
+  },
+  {
+    "title": {
+      "fr": "Scarafon",
+      "en": "Scarafly"
+    },
+    "description": {
+      "fr": "Cet adorable petit familier vous roulera chaque jour de jolis cadeaux de bouse séchée !",
+      "en": "This adorable little pet will delight you each day with gifts of dungballs!"
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Scaraboss": {
+          "drop_rate": "0.1%",
+          "monster_id": "4909"
+        },
+        "Scarafon": {
+          "drop_rate": "0.1%",
+          "monster_id": "4910"
+        },
+        "Scaramel": {
+          "drop_rate": "0.1%",
+          "monster_id": "4911"
+        },
+        "Scarabruni": {
+          "drop_rate": "0.1%",
+          "monster_id": "4912"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Scaraboss": {
+          "drop_rate": "0.1%",
+          "monster_id": "4909"
+        },
+        "Scarafly": {
+          "drop_rate": "0.1%",
+          "monster_id": "4910"
+        },
+        "Scaramel": {
+          "drop_rate": "0.1%",
+          "monster_id": "4911"
+        },
+        "Scaralady": {
+          "drop_rate": "0.1%",
+          "monster_id": "4912"
+        }
+      }
+    },
+    "id": 16719,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216719,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93175
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Feu",
+              "en": "26 Feu Mastery"
+            },
+            "property": 122,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16719"
+  },
+  {
+    "title": {
+      "fr": "Surimi",
+      "en": "Surimi"
+    },
+    "description": {
+      "fr": "L'obsession du bon !",
+      "en": "Just make sure you put it on a leash when you're walking through the fish market, or you'll find yourself one pet down."
+    },
+    "droprates": {
+      "fr": {
+        "Mimic Domestique": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Cwalbator": {
+          "drop_rate": "0.1%",
+          "monster_id": "4749"
+        },
+        "Père Cwabtor": {
+          "drop_rate": "0.1%",
+          "monster_id": "4750"
+        },
+        "Salbatroce": {
+          "drop_rate": "0.1%",
+          "monster_id": "4751"
+        }
+      },
+      "en": {
+        "Domestic Mimic": {
+          "drop_rate": "1%",
+          "monster_id": "4195"
+        },
+        "Cwablock": {
+          "drop_rate": "0.1%",
+          "monster_id": "4749"
+        },
+        "Father Cwabstix": {
+          "drop_rate": "0.1%",
+          "monster_id": "4750"
+        },
+        "Albatrocious": {
+          "drop_rate": "0.1%",
+          "monster_id": "4751"
+        }
+      }
+    },
+    "id": 16730,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216730,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 94538
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Eau",
+              "en": "26 Eau Mastery"
+            },
+            "property": 124,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16730"
+  },
+  {
+    "title": {
+      "fr": "Fotome",
+      "en": "Ghast"
+    },
+    "description": {
+      "fr": "Ce Fotome ne vous fait pas peur, car c'est un gentil petit Fotome qui vous accompagne comme votre âme.",
+      "en": "You ain't afraid o' no Ghast! Besides, it's an adorable little one."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16736,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216736,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 113751
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Esquive",
+              "en": "20 Dodge"
+            },
+            "property": 175,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16736"
+  },
+  {
+    "title": {
+      "fr": "Caillasse d'Or",
+      "en": "Golden Krakotte"
+    },
+    "description": {
+      "fr": "Bien qu'elle soit toute petite, cette Caillasse pèse une brique et vaut son pesant d'or !",
+      "en": "Even though it might be small, this Krakotte weighs a ton and is worth its weight in gold!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16850,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216850,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93659
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93661
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Terre",
+              "en": "12 Terre Mastery"
+            },
+            "property": 123,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93663
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 93662
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Air",
+              "en": "12 Air Mastery"
+            },
+            "property": 125,
+            "values": 12
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16850"
+  },
+  {
+    "title": {
+      "fr": "Scarafon d'Or",
+      "en": "Golden Scarafly"
+    },
+    "description": {
+      "fr": "Il est très rare de voir un Scarafon d'Or pointer le bout de sa corne ! Vous en avez de la chance !",
+      "en": "It's pretty rare to see a Golden Scarafly around these parts! You lucky devil, you!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16852,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216852,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93631
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113743
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Air",
+              "en": "12 Air Mastery"
+            },
+            "property": 125,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113742
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Feu",
+              "en": "12 Feu Mastery"
+            },
+            "property": 122,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113744
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16852"
+  },
+  {
+    "title": {
+      "fr": "Marcassinet d'Or",
+      "en": "Golden Young Wild Sow"
+    },
+    "description": {
+      "fr": "Une tirelire sur pattes ! Rien de plus économe que de glisser vos Kamas par l'orifice.",
+      "en": "A walking piggy bank! Putting money in's easier than getting it back out..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16854,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216854,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93639
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113739
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Air",
+              "en": "12 Air Mastery"
+            },
+            "property": 125,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113741
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113740
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Eau",
+              "en": "12 Eau Mastery"
+            },
+            "property": 124,
+            "values": 12
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16854"
+  },
+  {
+    "title": {
+      "fr": "Surimi d'Or",
+      "en": "Golden Surimi"
+    },
+    "description": {
+      "fr": "Il est bon, il est frais, il est GRAND !",
+      "en": "It's nice, it's fresh, and it's almost enough for a snack!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16855,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216855,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 93653
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113745
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Feu",
+              "en": "12 Feu Mastery"
+            },
+            "property": 122,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113747
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113746
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Terre",
+              "en": "12 Terre Mastery"
+            },
+            "property": 123,
+            "values": 12
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16855"
+  },
+  {
+    "title": {
+      "fr": "Chienchien",
+      "en": "Bow Wow"
+    },
+    "description": {
+      "fr": "Ce pet adorable, vous sera fidèle dans toutes vos aventures, même les plus folles !",
+      "en": "This adorable pet will be loyal even in your craziest adventures!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 16929,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58216929,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 113749
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Élémentaire",
+              "en": "0 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113748
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 327191
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/16929"
+  },
+  {
+    "title": {
+      "fr": "Bilby",
+      "en": "Bilby"
+    },
+    "description": {
+      "fr": "Cette petite Gelée saura vous suivre partout où vous allez tout en discrétion colorée.",
+      "en": "This little Jelly will follow you everywhere you go, a splash of color in your otherwise dull existence."
+    },
+    "droprates": {
+      "fr": {
+        "Empereur Gelax": {
+          "drop_rate": "0.3%",
+          "monster_id": "1345"
+        },
+        "Mimic Domestique": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      },
+      "en": {
+        "Emperor Jellix": {
+          "drop_rate": "0.3%",
+          "monster_id": "1345"
+        },
+        "Domestic Mimic": {
+          "drop_rate": "0.25%",
+          "monster_id": "4195"
+        }
+      }
+    },
+    "id": 17021,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58217021,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 94572
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 327189
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/17021"
+  },
+  {
+    "title": {
+      "fr": "Croum",
+      "en": "Croum"
+    },
+    "description": {
+      "fr": "Rien ne vaut un bon petit soldat de plomb à ses côtés.",
+      "en": "This pet reminds you of a lead balloon."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 17026,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58217026,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 94633
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 95754
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 113732
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Élémentaire",
+              "en": "0 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/17026"
+  },
+  {
+    "title": {
+      "fr": "Dragoune",
+      "en": "Dragoone"
+    },
+    "description": {
+      "fr": "Cette Dragoune est un très bon compagnon qui fera tout pour vous faire voir la vie en rose…",
+      "en": "A fantastic companion who will do everything they can to help you see the world through rose-tinted glasses…"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 17037,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58217037,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 113753
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 327190
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/17037"
+  },
+  {
+    "title": {
+      "fr": "Phénix",
+      "en": "Phoenix"
+    },
+    "description": {
+      "fr": "La légende raconte que cet oiseau renaîtrait de ces cendres une fois sa vie terminée. Mais, il vit tellement vieux que vous ne le verrez jamais le faire.",
+      "en": "The legend says the Phoenix burns up and is reborn from the ashes. But it lives for so long that you'll never get to see that happen."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 17577,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58217577,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 100637
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 100638
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/17577"
+  },
+  {
+    "title": {
+      "fr": "Abomination Apprivoisée",
+      "en": "Tamed Abomination"
+    },
+    "description": {
+      "fr": "Elle est mignonne comme tout. Oui mais attention elle mord !",
+      "en": "It's as cute as anything... But it bites!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18049,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58218049,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 108655
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 108657
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 108656
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Contrôle",
+              "en": "0 Control"
+            },
+            "property": 184,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/18049"
+  },
+  {
+    "title": {
+      "fr": "Boufton",
+      "en": "Gobbly"
+    },
+    "description": {
+      "fr": "Vous pourrez jouer à saute-Boufton avec votre familier.",
+      "en": "Now you can play Leap-Gobball with your pet."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18389,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58218365,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 236951
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Tacle",
+              "en": "0 Lock"
+            },
+            "property": 173,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 236950
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 236949
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/18389"
+  },
+  {
+    "title": {
+      "fr": "Chacha d'Or",
+      "en": "Golden Bow Meow"
+    },
+    "description": {
+      "fr": "Un Chacha d'Or réel, parce que vous le valez bien !",
+      "en": "A real Golden Bow Meow, because you're worth it!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18736,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58218736,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 121021
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Eau",
+              "en": "12 Eau Mastery"
+            },
+            "property": 124,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121020
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121023
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121022
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Terre",
+              "en": "12 Terre Mastery"
+            },
+            "property": 123,
+            "values": 12
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/18736"
+  },
+  {
+    "title": {
+      "fr": "Chienchien d'Or",
+      "en": "Golden Bow Wow"
+    },
+    "description": {
+      "fr": "Qu'il est mignon le Chienchien à dorer.",
+      "en": "This little Golden Bow Wow is so cute."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 18737,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58218737,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 121025
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Feu",
+              "en": "12 Feu Mastery"
+            },
+            "property": 122,
+            "values": 12
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121024
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121027
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Initiative",
+              "en": "0 Initiative"
+            },
+            "property": 171,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 121026
+          },
+          "stats": {
+            "display": {
+              "fr": "12 Maîtrise Eau",
+              "en": "12 Eau Mastery"
+            },
+            "property": 124,
+            "values": 12
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/18737"
+  },
+  {
+    "title": {
+      "fr": "Drakopin",
+      "en": "Friendrake"
+    },
+    "description": {
+      "fr": "Votre plus fidèle copain !",
+      "en": "Your most loyal companion!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19111,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58219111,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 146750
+          },
+          "stats": {
+            "display": {
+              "fr": "2% Parade",
+              "en": "2% Block"
+            },
+            "property": 875,
+            "values": 2
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 146749
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/19111"
+  },
+  {
+    "title": {
+      "fr": "Corbac",
+      "en": "Crobak"
+    },
+    "description": {
+      "fr": "Un petit Corbac pour vous accompagner là où vous le voulez !",
+      "en": "A little Crobak to follow you wherever you go!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19266,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58219266,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 152598
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 152597
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Dos",
+              "en": "10 Rear Mastery"
+            },
+            "property": 180,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/19266"
+  },
+  {
+    "title": {
+      "fr": "Chauffe-Souris",
+      "en": "Borbat"
+    },
+    "description": {
+      "fr": "Cette petite Chauffe-Souris vous suivra partout où le sang de vos ennemis coulera !",
+      "en": "This little Borbat will follow you anywhere your enemies' blood is flowing."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19577,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58219577,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 156707
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Distance",
+              "en": "10 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 156708
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/19577"
+  },
+  {
+    "title": {
+      "fr": "Aboon",
+      "en": "Aboon"
+    },
+    "description": {
+      "fr": "Plus malicieux qu'intelligent, ce petit singe vous en fera voir de toutes les couleurs.",
+      "en": "More mischievous than intelligent, this little monkey will give you a hard time."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 19739,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58219739,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 171084
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Tacle",
+              "en": "10 Lock"
+            },
+            "property": 173,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 171085
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Résistance Élémentaire",
+              "en": "5 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/19739"
+  },
+  {
+    "title": {
+      "fr": "Pupuce",
+      "en": "Flea Love"
+    },
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20045,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58220045,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 174167
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 174168
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/20045"
+  },
+  {
+    "title": {
+      "fr": "Tirubim",
+      "en": "Kerubaby"
+    },
+    "description": {
+      "fr": "L'est-y pô mignion ??",
+      "en": "Look how cute he is!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20274,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58220274,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 178102
+          },
+          "stats": {
+            "display": {
+              "fr": "30 PV",
+              "en": "30 HP"
+            },
+            "property": 20,
+            "values": 30
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 178103
+          },
+          "stats": {
+            "display": {
+              "fr": "30 Maîtrise Élémentaire",
+              "en": "30 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/20274"
+  },
+  {
+    "title": {
+      "fr": "Petit Citrouillé",
+      "en": "Small Pumpkind"
+    },
+    "description": {
+      "fr": "Un bonbon ou une face citrouillée ?!",
+      "en": "Is this a candy or a pumpkinned face?!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20548,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58220548,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 181850
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 181849
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/20548"
+  },
+  {
+    "title": {
+      "fr": "Dragounga Loragran",
+      "en": "Dragoonga Loragran"
+    },
+    "description": {
+      "fr": "Cette espèce très prisée de Dragoune tire son nom de sa ressemblance avec Grougaloragran, mais pas ses pouvoirs. Espérons que cela suffise à impressionner vos adversaires !",
+      "en": "This highly prized species of Dragoone draws its name from its resemblance to Grougaloragran, but not its powers. Let's hope it's enough to impress your opponents!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 20809,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58220809,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 187003
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Soin",
+              "en": "20 Healing Mastery"
+            },
+            "property": 26,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 187004
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/20809"
+  },
+  {
+    "title": {
+      "fr": "Dauge",
+      "en": "Dauge"
+    },
+    "description": {
+      "fr": "Le Dauge vous sera fidèle tout au long de votre aventure.",
+      "en": "Dauge will be your best friend throughout your adventure."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 22034,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58222034,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 197673
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 197672
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Berserk",
+              "en": "20 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/22034"
+  },
+  {
+    "title": {
+      "fr": "Gobgob",
+      "en": "Gobgob"
+    },
+    "description": {
+      "fr": "Ce Gobgob vous a pris pour son Osamodas !",
+      "en": "This Gobgob thinks you're its Osamodas!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 22551,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58222551,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 327193
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/22551"
+  },
+  {
+    "title": {
+      "fr": "Noxine",
+      "en": "Noxine"
+    },
+    "description": {
+      "fr": "Que peut bien être cette étrange créature mécanique ? Elle semble attirée par tout ce qui est vivant en tout cas. A-do-ra-ble !",
+      "en": "What could this strange mechanical creature be? In any case, it seems to be attracted to anything living. So cute!!!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23881,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223881,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 254711
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254710
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254709
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254708
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254713
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254712
+          },
+          "stats": {
+            "display": {
+              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23881"
+  },
+  {
+    "title": {
+      "fr": "Tofu Mesuré",
+      "en": "Measured Tofu"
+    },
+    "description": {
+      "fr": "Mesuré, comme le suivi que vous avez fait de votre Tofu, et on peut dire que vous avez réussi avec brio !",
+      "en": "Measured, like the choices you've made in evolving your Tofu. It looks like you've succeeded brilliantly!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23886,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223886,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 217100
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233525
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23886"
+  },
+  {
+    "title": {
+      "fr": "Tofu Ventru",
+      "en": "Paunchy Tofu"
+    },
+    "description": {
+      "fr": "Il semblerait que vous avez donné un peu trop à manger à votre Tofu...",
+      "en": "Don't look now, but you may have been overfeeding your Tofu a bit…"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23887,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223887,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233529
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233528
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Berserk",
+              "en": "20 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23887"
+  },
+  {
+    "title": {
+      "fr": "Tofu Poisseux",
+      "en": "Icky Tofu"
+    },
+    "description": {
+      "fr": "Votre Tofu n'a pas eu de chance... de vous avoir comme maître !",
+      "en": "Your Tofu was doomed to lifelong ickiness… once you became its owner!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23888,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223888,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 358363
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Esquive",
+              "en": "20 Dodge"
+            },
+            "property": 175,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 358362
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23888"
+  },
+  {
+    "title": {
+      "fr": "Tofu Bontarien",
+      "en": "Bontarian Tofu"
+    },
+    "description": {
+      "fr": "C'est un Tofu des plus nobles que vous avez là.",
+      "en": "This is one truly fine Tofu."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23889,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223889,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233531
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233530
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Soin",
+              "en": "20 Healing Mastery"
+            },
+            "property": 26,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23889"
+  },
+  {
+    "title": {
+      "fr": "Tofu Charmant",
+      "en": "Charming Tofu"
+    },
+    "description": {
+      "fr": "Votre Tofu est une diva, pas cantatrice mais précieux !",
+      "en": "Your Tofu is a diva, and not the kind that sings, but a star just the same!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23890,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223890,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233535
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233534
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Distance",
+              "en": "10 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23890"
+  },
+  {
+    "title": {
+      "fr": "Tofu Brâkmarien",
+      "en": "Brakmarian Tofu"
+    },
+    "description": {
+      "fr": "Hargneux et acariâtre, votre Tofu a dû manquer sérieusement d'amour pendant sa jeunesse.",
+      "en": "Aggressive and irritable, your Tofu must have been seriously deprived of love when it was young."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23891,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223891,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 358337
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Tacle",
+              "en": "20 Lock"
+            },
+            "property": 173,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 358336
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23891"
+  },
+  {
+    "title": {
+      "fr": "Chacha Mesuré",
+      "en": "Measured Bow Meow"
+    },
+    "description": {
+      "fr": "Le développement de votre Chacha s'est fait tout à fait normalement grâce à votre suivi efficace.",
+      "en": "Your Bow Meow has developed in a perfectly normal manner thanks to your disciplined supervision."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23892,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223892,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 217111
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 217112
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23892"
+  },
+  {
+    "title": {
+      "fr": "Chacha Ventru",
+      "en": "Paunchy Bow Meow"
+    },
+    "description": {
+      "fr": "Un Chacha aussi énorme n'a aucun bon côté. En effet, il est tout courbé. Comme Julien.",
+      "en": "A Bow Meow this huge will be the butt of a thousand jokes. When this thing sits around the house… it really sits AROUND the house."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23893,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223893,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233551
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233550
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23893"
+  },
+  {
+    "title": {
+      "fr": "Chacha Poisseux",
+      "en": "Icky Bow Meow"
+    },
+    "description": {
+      "fr": "Vous avez cruellement manqué d'attention à l'hygiène de votre Chacha. Honte à vous.",
+      "en": "Your lack of attention to your Bow Meow's hygiene borders on criminal neglect. Shame on you."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23894,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223894,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233554
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233553
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23894"
+  },
+  {
+    "title": {
+      "fr": "Chacha Bontarien",
+      "en": "Bontarian Bow Meow"
+    },
+    "description": {
+      "fr": "Votre Chacha est sage et juste, à l'image de l'éducation que vous lui avez donnée.",
+      "en": "Your Bow Meow is obedient and kind, thanks to the training you've given it."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23895,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223895,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 217118
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233556
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Contrôle",
+              "en": "0 Control"
+            },
+            "property": 184,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23895"
+  },
+  {
+    "title": {
+      "fr": "Chacha Charmant",
+      "en": "Charming Bow Meow"
+    },
+    "description": {
+      "fr": "Votre Chacha a un charme et un charisme exceptionnel qui fera chavirer toutes les chachattes.",
+      "en": "Your Charming Bow Meow bows and meows most bewitchingly, making Bow Meowettes' hearts melt and lashes bat twitchingly."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23896,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223896,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233558
+          },
+          "stats": {
+            "display": {
+              "fr": "0 PW",
+              "en": "0 WP"
+            },
+            "property": 191,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233557
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23896"
+  },
+  {
+    "title": {
+      "fr": "Chacha Brâkmarien",
+      "en": "Brakmarian Bow Meow"
+    },
+    "description": {
+      "fr": "C'est un Chacha des plus inapprochable que vous avez là, et quelle teigne !",
+      "en": "This is one seriously unapproachable Bow Meow. What a nasty piece of work!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23897,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223897,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233562
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Dos",
+              "en": "20 Rear Mastery"
+            },
+            "property": 180,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233561
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23897"
+  },
+  {
+    "title": {
+      "fr": "Boune Mesuré",
+      "en": "Measured Boon"
+    },
+    "description": {
+      "fr": "Vous avez montré une grande dextérité dans l'évolution de votre Boune.",
+      "en": "You've shown great skill in guiding your Boon's evolution."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23898,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223898,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 217123
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 217124
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Critique",
+              "en": "0 Critical Resistance"
+            },
+            "property": 988,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23898"
+  },
+  {
+    "title": {
+      "fr": "Boune Ventru",
+      "en": "Paunchy Boon"
+    },
+    "description": {
+      "fr": "On peut dire que votre Boune a toujours pu manger à sa faim.",
+      "en": "Safe to say that your Boon has never had to go hungry."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23899,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223899,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233575
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Air",
+              "en": "0 Air Resistance"
+            },
+            "property": 85,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233574
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23899"
+  },
+  {
+    "title": {
+      "fr": "Boune Poisseux",
+      "en": "Icky Boon"
+    },
+    "description": {
+      "fr": "Ce n'est pas de votre faut si votre Boune était allergique à la propreté !",
+      "en": "It's not your fault if your Boon is allergic to cleanliness!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23900,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223900,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233577
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Terre",
+              "en": "0 Terre Resistance"
+            },
+            "property": 84,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233576
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23900"
+  },
+  {
+    "title": {
+      "fr": "Boune Bontarien",
+      "en": "Bontarian Boon"
+    },
+    "description": {
+      "fr": "Votre Boune est toujours heureux de vous voir, mais ne le délaissez pas un instant.",
+      "en": "Your Boon is always happy to see you, but don't leave it alone for a second."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23901,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223901,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233579
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Eau",
+              "en": "0 Eau Resistance"
+            },
+            "property": 83,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233578
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23901"
+  },
+  {
+    "title": {
+      "fr": "Boune Charmant",
+      "en": "Charming Boon"
+    },
+    "description": {
+      "fr": "Qui eût cru qu'un Boune pouvait être aussi mignon ?",
+      "en": "Who would have thought that a Boon could be so cute?"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23902,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223902,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233583
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Dos",
+              "en": "0 Rear Resistance"
+            },
+            "property": 71,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233582
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23902"
+  },
+  {
+    "title": {
+      "fr": "Boune Brâkmarien",
+      "en": "Brakmarian Boon"
+    },
+    "description": {
+      "fr": "Un Boune râleur mais autonome, on croirait voir un Deuldeu.",
+      "en": "What a whiny but independent Boon. You'd swear you were looking at a Deuldeu."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23903,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223903,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 233581
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Feu",
+              "en": "0 Feu Resistance"
+            },
+            "property": 82,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 233580
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23903"
+  },
+  {
+    "title": {
+      "fr": "Bébé Phorreur",
+      "en": "Young Drheller"
+    },
+    "description": {
+      "fr": "Ce bébé phorreur est un boute-en-train tel qu'il n'aura de cesse de chercher des trésors pour son maître.",
+      "en": "This Young Drheller is such a joker that it will never stop looking for treasure for its master."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 23958,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58223958,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 235994
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Tacle",
+              "en": "20 Lock"
+            },
+            "property": 173,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/23958"
+  },
+  {
+    "title": {
+      "fr": "Yugofu le Tofugo",
+      "en": "Yugofu the Tofugo"
+    },
+    "description": {
+      "fr": "Yu-Go-Fu! C'est l'heure du du-du-de-de marcher des kilomètres avec vos amis pour attraper les To(f)us !",
+      "en": "Yu-Go-Fu! It's time to walk miles with your friends to catch them all! All of the Tofus, that is..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24031,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224031,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 236995
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 236994
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24031"
+  },
+  {
+    "title": {
+      "fr": "Pingwii",
+      "en": "Pingwii"
+    },
+    "description": {
+      "fr": "Ce Pingwii est tellement frais !",
+      "en": "This Pingwii is so fresh!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24245,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224245,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242587
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Esquive",
+              "en": "10 Dodge"
+            },
+            "property": 175,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242586
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242599
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24245"
+  },
+  {
+    "title": {
+      "fr": "Godron Charmant",
+      "en": "Charming Godron"
+    },
+    "description": {
+      "fr": "Un Godron tellement charmant qu'il pourrait être un prince !",
+      "en": "This Godron is so charming he could be a prince!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24259,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224259,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242987
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Soin",
+              "en": "10 Healing Mastery"
+            },
+            "property": 26,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242986
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242985
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24259"
+  },
+  {
+    "title": {
+      "fr": "Godron Bontarien",
+      "en": "Bontarian Godron"
+    },
+    "description": {
+      "fr": "Ce Godron ne garde pas de donjon mais l'ordre et la tranquillité.",
+      "en": "Instead of guarding a dungeon, this Godron maintains order and tranquility."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24260,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224260,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242990
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Contrôle",
+              "en": "0 Control"
+            },
+            "property": 184,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242989
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Distance",
+              "en": "10 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242988
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24260"
+  },
+  {
+    "title": {
+      "fr": "Godron Brâkmarien",
+      "en": "Brakmarian Godron"
+    },
+    "description": {
+      "fr": "Ce Godron ne fait pas que mordre, il griffe et crache du feu. Une vraie furie !",
+      "en": "This Godron doesn't just bite: He claws and breathes fire too! What a beast!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24261,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224261,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242995
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Berserk",
+              "en": "10 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242994
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242993
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24261"
+  },
+  {
+    "title": {
+      "fr": "Godron Mesuré",
+      "en": "Measured Godron"
+    },
+    "description": {
+      "fr": "Ce Godron n'a rien de spécial, mais grâce à vous, il est gentil !",
+      "en": "There's nothing special about this Godron, but thanks to you, he is very nice!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24262,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224262,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242998
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Élémentaire",
+              "en": "0 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242997
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 242996
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24262"
+  },
+  {
+    "title": {
+      "fr": "Godron Poisseux",
+      "en": "Icky Godron"
+    },
+    "description": {
+      "fr": "Avec vous, ce Godron a pris de... sales habitudes !",
+      "en": "This Godron has learned some filthy habits from you!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24263,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224263,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 242999
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 243001
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Esquive",
+              "en": "5 Dodge"
+            },
+            "property": 175,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 243000
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24263"
+  },
+  {
+    "title": {
+      "fr": "Godron Ventru",
+      "en": "Paunchy Godron"
+    },
+    "description": {
+      "fr": "Si vous ne l'aviez pas nourri, ce Godron serait allé se servir de toute façon !",
+      "en": "If you hadn't fed it, this Godron would have found something to eat in any case!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24264,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224264,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 358359
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 358361
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Tacle",
+              "en": "5 Lock"
+            },
+            "property": 173,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 358360
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24264"
+  },
+  {
+    "title": {
+      "fr": "Tofu Trépamort",
+      "en": "Veriun Dead Tofu"
+    },
+    "description": {
+      "fr": "Ce tofu était la mascotte d'un grand groupe de musique nommé Adécédé, avant qu'il ne meure et soit assez décédé.",
+      "en": "This Tofu was the poster boy for a great music group called the Dead Dennekies, before he kicked the bucket, thus dying."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24837,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224837,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 248641
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Berserk",
+              "en": "20 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 248640
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24837"
+  },
+  {
+    "title": {
+      "fr": "Cocodrille",
+      "en": "Cocodrile"
+    },
+    "description": {
+      "fr": "Ce familier n'est pas très futé, heureusement qu'il n'est pas encore assez grand pour se mordre la queue.",
+      "en": "This pet isn't especially smart. Good thing it's not big enough yet to bite its own tail."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 24859,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58224859,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 252927
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 252928
+          },
+          "stats": {
+            "display": {
+              "fr": "15 Maîtrise Critique",
+              "en": "15 Critical Mastery"
+            },
+            "property": 149,
+            "values": 15
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/24859"
+  },
+  {
+    "title": {
+      "fr": "Pitistro",
+      "en": "Tinystro"
+    },
+    "description": {
+      "fr": "Ce mini-sinistro vous fera perdre moins de temps qu'un vrai sinistro, mais il demande tout de même qu'on lui administre beaucoup d'attention et d'entretien.",
+      "en": "This Mini-Sinistro will save you more time than a real Sinistro, but he nevertheless requires you to give him a lot of attention and upkeep."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 25051,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58225051,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 254821
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254820
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/25051"
+  },
+  {
+    "title": {
+      "fr": "Téléflix",
+      "en": "Teleflix"
+    },
+    "description": {
+      "fr": "Cet adorable tas de boulons vous suivra pour passer en boucle les génériques de vos séries favorites. Si ça c'est pas de l'amour à l'état pur !",
+      "en": "This adorable bucket of bolts will follow you to show you the credits of your favorite series over and over. If that isn't love in its purest state!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 25052,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58225052,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 254823
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 254822
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Dos",
+              "en": "10 Rear Mastery"
+            },
+            "property": 180,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/25052"
+  },
+  {
+    "title": {
+      "fr": "Shushu Mineur",
+      "en": "Minor Shushu"
+    },
+    "description": {
+      "fr": "Désespoir, mort, mauvaise humeur ! Ce shushu du carnage là va avoir besoin de votre aide s'il veut détruire quoi que ce soit.",
+      "en": "Despair, death, a bad mood... This Shushu of carnage will need your help if it wants to destroy anything whatsoever."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26284,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226284,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 269376
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 269377
+          },
+          "stats": {
+            "display": {
+              "fr": "15 Maîtrise Mêlée",
+              "en": "15 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 15
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26284"
+  },
+  {
+    "title": {
+      "fr": "Drathrosk",
+      "en": "Dratathrosk"
+    },
+    "description": {
+      "fr": "Ce petit dragon à peine sorti de l'œuf possède déjà un fort caractère ! Vous allez devoir résister à l'envie de le caresser si vous ne voulez pas finir avec les doigts carbonisés.",
+      "en": "This little dragon just out of the egg is already a bit temperamental! You'll have to resist petting it if you don't want your fingers scorched."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26382,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226382,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 271100
+          },
+          "stats": {
+            "display": {
+              "fr": "15 Maîtrise Mêlée",
+              "en": "15 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 15
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 271098
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26382"
+  },
+  {
+    "title": {
+      "fr": "Gélutin Combattant",
+      "en": "Fighter Gemlin"
+    },
+    "description": {
+      "fr": "Votre Gélutin a évolué en vous observant combattre. Doté d'une nouvelle couleur orangée, il semble bien plus assuré et résistant qu'avant, vous renforçant par la même occasion.",
+      "en": "Your Gemlin has evolved after watching you fight. Now a new orangish color, it seems much more confident and resistant than before, strengthening you by the same occasion."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26673,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226673,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 272860
+          },
+          "stats": {
+            "display": {
+              "fr": "1 Résistance Élémentaire",
+              "en": "1 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 1
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272858
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272859
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Mêlée",
+              "en": "5 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26673"
+  },
+  {
+    "title": {
+      "fr": "Gélutin Soigneur",
+      "en": "Healer Gemlin"
+    },
+    "description": {
+      "fr": "Votre Gélutin a évolué en vous observant combattre. Doté d'une nouvelle couleur violacée, il semble capable de vous aider à concentrer vos pouvoirs curatifs.",
+      "en": "Your Gemlin has evolved after watching you fight. Now a new purplish color, it seems able to help you focus your curative powers."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26674,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226674,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 272888
+          },
+          "stats": {
+            "display": {
+              "fr": "65 PV",
+              "en": "65 HP"
+            },
+            "property": 20,
+            "values": 65
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272889
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Soin",
+              "en": "10 Healing Mastery"
+            },
+            "property": 26,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26674"
+  },
+  {
+    "title": {
+      "fr": "Gélutin Chasseur",
+      "en": "Hunter Gemlin"
+    },
+    "description": {
+      "fr": "Votre Gélutin a évolué en vous observant combattre. Doté d'une nouvelle couleur bleutée, il semble posséder une acuité visuelle accrue, vous aidant à mieux viser avec vos sorts.",
+      "en": "Your Gemlin has evolved after watching you fight. Now a new bluish color, it seems to possess heightened vision to help you target your spells better."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26675,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226675,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 272892
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Distance",
+              "en": "10 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272890
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272891
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Critique",
+              "en": "5 Critical Mastery"
+            },
+            "property": 149,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26675"
+  },
+  {
+    "title": {
+      "fr": "Gélutin Berserker",
+      "en": "Berserker Gemlin"
+    },
+    "description": {
+      "fr": "Votre Gélutin a évolué en vous observant combattre. Doté d'une nouvelle couleur rougeâtre, il semble animé d'une rage profonde renforçant votre propre puissance destructrice. ",
+      "en": "Your Gemlin has evolved after watching you fight. Now a new reddish color, it seems full of deep-seated rage that fuels your own destructive power. "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26676,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226676,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 272893
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272894
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Berserk",
+              "en": "10 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26676"
+  },
+  {
+    "title": {
+      "fr": "Gélutin Aventurier",
+      "en": "Adventurer Gemlin"
+    },
+    "description": {
+      "fr": "Votre Gélutin a évolué en vous observant combattre. Doté d'une nouvelle couleur verdâtre, il prête une attention particulière à son environnement vous permettant de ne rien louper sur votre route. ",
+      "en": "Your Gemlin has evolved after watching you fight. Now a new greenish color, it pays particularly close attention to its surroundings so you won't miss anything along your path. "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26677,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226677,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 272900
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 272901
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Élémentaire",
+              "en": "5 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 327188
+          },
+          "stats": {
+            "display": {
+              "fr": "1 Résistance Élémentaire",
+              "en": "1 Elemental Resistance"
+            },
+            "property": 80,
+            "values": 1
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26677"
+  },
+  {
+    "title": {
+      "fr": "Kometh",
+      "en": "Komet"
+    },
+    "description": {
+      "fr": "Un fabuleux familier, fidèle et affectueux.",
+      "en": "This is one faithful, friendly and absolutely fabulous pet."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 26716,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58226716,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 279536
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 279537
+          },
+          "stats": {
+            "display": {
+              "fr": "15 Maîtrise Distance",
+              "en": "15 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 15
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/26716"
+  },
+  {
+    "title": {
+      "fr": "Kokulte",
+      "en": "Snailmate"
+    },
+    "description": {
+      "fr": "Cette petite créature est plus résistante qu'elle en a l'air. Prenez garde, vous ne serez pas la première personne à vous fracturer les orteils en voulant mettre un coup de pied dedans...",
+      "en": "This little creature is more powerful than it looks. Watch out! Many a grumpy adventurer has broken a toe trying to give it a little kick..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27077,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227077,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 282113
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Parade",
+              "en": "0% Block"
+            },
+            "property": 875,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 282114
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27077"
+  },
+  {
+    "title": {
+      "fr": "Bébé Pandawa",
+      "en": "Pandawa Cub"
+    },
+    "description": {
+      "fr": "Cet adorable bébé Pandawa adorera vous suivre partout pour découvrir le monde de ses grands yeux ronds.",
+      "en": "This cute Pandawa cub will follow you everywhere, discovering the world's mysteries with its big round eyes."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27205,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227205,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 289824
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289825
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Critique",
+              "en": "10 Critical Mastery"
+            },
+            "property": 149,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289848
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Distance",
+              "en": "5 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27205"
+  },
+  {
+    "title": {
+      "fr": "Minithar",
+      "en": "Minithar"
+    },
+    "description": {
+      "fr": "Un jour, il deviendra un vil shushu, tourmentant sans fin les âmes des aventuriers du Monde des Douze. Mais pour le moment, il s'agit d'une adorable créature sans défense.",
+      "en": "One day it'll become a vile Shushu, endlessly tormenting the souls of adventurers from the World of Twelve. But for now, it's just an adorable, defenseless creature."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27206,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227206,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 289826
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289849
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Critique",
+              "en": "10 Critical Mastery"
+            },
+            "property": 149,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289850
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Maîtrise Mêlée",
+              "en": "5 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27206"
+  },
+  {
+    "title": {
+      "fr": "Boufrogounet",
+      "en": "Gobbalroglet"
+    },
+    "description": {
+      "fr": "On dirait qu'il vous a pris pour sa mère.",
+      "en": "It seems to think you're its mother."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27207,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227207,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 289828
+          },
+          "stats": {
+            "display": {
+              "fr": "5 PV",
+              "en": "5 HP"
+            },
+            "property": 20,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289829
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Résistance Feu",
+              "en": "5 Feu Resistance"
+            },
+            "property": 82,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289852
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Résistance Air",
+              "en": "5 Air Resistance"
+            },
+            "property": 85,
+            "values": 5
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289851
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Résistance Terre",
+              "en": "5 Terre Resistance"
+            },
+            "property": 84,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27207"
+  },
+  {
+    "title": {
+      "fr": "Titcham",
+      "en": "Ratchams"
+    },
+    "description": {
+      "fr": "On confond souvent les Titchams avec des rats à cause de leur queue, leurs longues oreilles et leur corps sans poil, mais il suffit d’en adopter un pour se rendre compte à quel point le petit prédateur sur pattes n’a rien à voir avec un rongeur. Câlin comme pas deux, il vous lèchera souvent le visage, et vous pourrez découvrir à cette occasion que non, les Titchams ne sont pas totalement dépourvus de poils.",
+      "en": "Ratchams are often mistaken for rats, due to their tail, long ears, and lack of body hair. But if you adopt one, you'll soon find out how little this pawed predator has in common with a rodent. As cuddly as they come, it'll lick your face, and you'll discover that Ratchams are, in fact, not completely lacking in hair."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27208,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227208,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 289830
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Soin",
+              "en": "10 Healing Mastery"
+            },
+            "property": 26,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 289831
+          },
+          "stats": {
+            "display": {
+              "fr": "5 Volonté",
+              "en": "5 Force of Will"
+            },
+            "property": 177,
+            "values": 5
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27208"
+  },
+  {
+    "title": {
+      "fr": "Picar",
+      "en": "Prespiver"
+    },
+    "description": {
+      "fr": "Cette espèce de Prespic apprivoisé a été sélectionnée par les disciples Crâ pour servir de carquois ambulant.\r\nS'il coûte trop cher à nourrir, il pourra servir de cible d'entraînement.",
+      "en": "Cra's disciples have chosen this domesticated species of Prespic to be their walking quivers.\nIf they ever get to expensive to feed, they can also be used as training targets."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27310,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227310,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 290548
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27310"
+  },
+  {
+    "title": {
+      "fr": "Geist",
+      "en": "Geist"
+    },
+    "description": {
+      "fr": "Ses longues mains viendront vous chatouiller pendant vos nuits, vous gratter pendant vos siestes, et vous pincer le reste du temps.",
+      "en": "Its long hands will tickle you at night, scratch you when you nap, and pinch you the rest of the time."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27311,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227311,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 290549
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27311"
+  },
+  {
+    "title": {
+      "fr": "Kalypsor",
+      "en": "Kalypsor"
+    },
+    "description": {
+      "fr": "Il sera peut-être contraint de dévorer son propriétaire pour survivre à la fin du monde des douze.",
+      "en": "It may be forced to eat its owner to survive the end of the World of Twelve."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27540,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227540,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 293999
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27540"
+  },
+  {
+    "title": {
+      "fr": "Sakoch",
+      "en": "Satchull"
+    },
+    "description": {
+      "fr": "Cette poupée en laine tricotée est lavable à la main jusqu'à quarante degrés.",
+      "en": "This knitted wool dolly can be washed by hand up to 104 degrees."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27541,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227541,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 294000
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
+              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27541"
+  },
+  {
+    "title": {
+      "fr": "Gerbichon",
+      "en": "Gerbichon"
+    },
+    "description": {
+      "fr": "Il est interdit de s'en servir comme projectile.\r\nSauf pour se défendre.",
+      "en": "Not to be used as a projectile.\nUnless you have no other way to defend yourself."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27895,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227895,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 297996
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 297995
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Mêlée",
+              "en": "10 Melee Mastery"
+            },
+            "property": 1052,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27895"
+  },
+  {
+    "title": {
+      "fr": "Krapidon",
+      "en": "Kralocupid"
+    },
+    "description": {
+      "fr": "Difficile de déterminer s'il est visqueux, collant, poisseux, gluant, ou tout simplement glaireux.\nCeux qui l'ont mordu estiment qu'il est mucilagineux.",
+      "en": "Hard to say whether it's viscous, sticky, clammy, slimy, or just snotty.\nThose with a large vocabulary would describe it as mucilaginous."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27896,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227896,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 297997
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Distance",
+              "en": "10 Distance Mastery"
+            },
+            "property": 1053,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 297998
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27896"
+  },
+  {
+    "title": {
+      "fr": "Wabajoie",
+      "en": "Pawtypoopew"
+    },
+    "description": {
+      "fr": "Cette petite boule de poils arrogante vous regardera de travers même lorsque vous la regarderez droit dans les yeux.",
+      "en": "This arrogant little furball will always look at you sideways, even when you're looking it straight in the eyes."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27897,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227897,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 298000
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Dos",
+              "en": "10 Rear Mastery"
+            },
+            "property": 180,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 298001
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27897"
+  },
+  {
+    "title": {
+      "fr": "Gargoule",
+      "en": "Garghoul"
+    },
+    "description": {
+      "fr": "Cette petite créature de pierre ne vous laissera pas de marbre.",
+      "en": "Keep this little stone creature a stone's throw away."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27898,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227898,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 298002
+          },
+          "stats": {
+            "display": {
+              "fr": "10 Maîtrise Élémentaire",
+              "en": "10 Elemental Mastery"
+            },
+            "property": 120,
+            "values": 10
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 298003
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27898"
+  },
+  {
+    "title": {
+      "fr": "Raklure",
+      "en": "Ratabble"
+    },
+    "description": {
+      "fr": "Mieux vaut être mal accompagné que sans familier.",
+      "en": "A bad pet is better than no pet."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27899,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227899,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 298004
+          },
+          "stats": {
+            "display": {
+              "fr": "20 Maîtrise Berserk",
+              "en": "20 Berserk Mastery"
+            },
+            "property": 1055,
+            "values": 20
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 298005
+          },
+          "stats": {
+            "display": {
+              "fr": "0% Coup critique",
+              "en": "0% Critical Hit"
+            },
+            "property": 150,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27899"
+  },
+  {
+    "title": {
+      "fr": "Keunotte",
+      "en": "Baybitoot"
+    },
+    "description": {
+      "fr": "Le poil luisant et les canines acérées, cette petite créature a vraiment tout pour plaire.",
+      "en": "With shiny fur and sharp fangs, this little creature has it all."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27972,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227972,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299758
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299759
+          },
+          "stats": {
+            "display": {
+              "fr": "0 PW",
+              "en": "0 WP"
+            },
+            "property": 191,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27972"
+  },
+  {
+    "title": {
+      "fr": "Salar",
+      "en": "Salar"
+    },
+    "description": {
+      "fr": "Ce petit dragon a parfois des idées noires.",
+      "en": "This little dragon has sinister ideas sometimes."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27973,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227973,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299760
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299761
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Feu",
+              "en": "0 Feu Resistance"
+            },
+            "property": 82,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27973"
+  },
+  {
+    "title": {
+      "fr": "Rafal",
+      "en": "Rafal"
+    },
+    "description": {
+      "fr": "Un dragon avec des plumes et un bec... Ce vendeur du marché vous a probablement arnaqué.",
+      "en": "A dragon with feathers and a beak... The vendor in the market most likely swindled you."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27974,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227974,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299762
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299763
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Air",
+              "en": "0 Air Resistance"
+            },
+            "property": 85,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27974"
+  },
+  {
+    "title": {
+      "fr": "Brial",
+      "en": "Brial"
+    },
+    "description": {
+      "fr": "Ce dragon cyclope ne dort que d'un œil.",
+      "en": "This dragon sleeps with one eye open."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27975,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227975,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299764
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299765
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Eau",
+              "en": "0 Eau Resistance"
+            },
+            "property": 83,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27975"
+  },
+  {
+    "title": {
+      "fr": "Dakal",
+      "en": "Dakal"
+    },
+    "description": {
+      "fr": "Trop mignon pour être honnête, ce spécimen de dragon cache probablement un terrible secret, comme une passion pour la couture ou les collections de cartes postales.",
+      "en": "Too cute to be honest, this particular dragon is probably hiding a terrible secret, like a passion for sewing or collecting post cards."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27976,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227976,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299766
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299767
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Terre",
+              "en": "0 Terre Resistance"
+            },
+            "property": 84,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27976"
+  },
+  {
+    "title": {
+      "fr": "Kourial",
+      "en": "Kourial"
+    },
+    "description": {
+      "fr": "Le cervelet de ce dragon est semblable à celui d'un galliforme.\r\nÀ vos côtés, il vous permettra de doubler votre quotient intellectuel.",
+      "en": "This dragon's little brain is similar to that of fowl.\nWith it by your side, you'll double your IQ."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27977,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227977,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299768
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299769
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Dos",
+              "en": "0 Rear Resistance"
+            },
+            "property": 71,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27977"
+  },
+  {
+    "title": {
+      "fr": "Mikhal",
+      "en": "Mikhal"
+    },
+    "description": {
+      "fr": "Son regard en dit long. Mais sur quoi ?\r\nÀ vous de le découvrir.",
+      "en": "His gaze says a lot. But about what?\nIt's up to you to find out."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 27978,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58227978,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 299770
+          },
+          "stats": {
+            "display": {
+              "fr": "60 PV",
+              "en": "60 HP"
+            },
+            "property": 20,
+            "values": 60
+          }
+        }
+      },
+      {
+        "effect": {
+          "definition": {
+            "id": 299771
+          },
+          "stats": {
+            "display": {
+              "fr": "0 Résistance Critique",
+              "en": "0 Critical Resistance"
+            },
+            "property": 988,
+            "values": 0
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/27978"
+  },
+  {
+    "title": {
+      "fr": "Bourrasque",
+      "en": "Gust"
+    },
+    "description": {
+      "fr": "Seule certitude, il ne manque pas d'air.",
+      "en": "It might still leave you gasping for air."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 28368,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58228368,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 309145
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Air",
+              "en": "26 Air Mastery"
+            },
+            "property": 125,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/28368"
+  },
+  {
+    "title": {
+      "fr": "Moellon",
+      "en": "Stone Block"
+    },
+    "description": {
+      "fr": "Moellon qui roule n'amasse pas mousse.",
+      "en": "Looks like you're stuck between a stone block and a hard place."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 28369,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58228369,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 309146
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Terre",
+              "en": "26 Terre Mastery"
+            },
+            "property": 123,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/28369"
+  },
+  {
+    "title": {
+      "fr": "Drache",
+      "en": "Downpour"
+    },
+    "description": {
+      "fr": "Il n'est pas né de la dernière pluie.",
+      "en": "It's gonna rain Bow Meows and Bow Wows..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 28370,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58228370,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 309147
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Eau",
+              "en": "26 Eau Mastery"
+            },
+            "property": 124,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/28370"
+  },
+  {
+    "title": {
+      "fr": "Fournaise",
+      "en": "Furnace"
+    },
+    "description": {
+      "fr": "Vous brûlez d'envie de domestiquer cette créature.",
+      "en": "You might get your fingers burned domesticating this creature."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 28371,
+    "level": 0,
+    "baseParams": {
+      "itemTypeId": 582,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 58228371,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 309148
+          },
+          "stats": {
+            "display": {
+              "fr": "26 Maîtrise Feu",
+              "en": "26 Feu Mastery"
+            },
+            "property": 122,
+            "values": 26
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/familiers/28371"
+  }
+]

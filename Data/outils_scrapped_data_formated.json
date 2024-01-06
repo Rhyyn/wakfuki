@@ -1,0 +1,848 @@
+[
+  {
+    "title": {
+      "fr": "Faux",
+      "en": "Scythe"
+    },
+    "description": {
+      "fr": "Le fil de son bois est aussi effilé qu'une feuille de papier. Ça devrait suffire pour faucher du Blé. ",
+      "en": "This scythe's handle is about as sturdy as a piece of paper. You should just about manage to harvest some Wheat with it. "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 2292,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 1012292,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177273
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 64",
+              "en": "10% Harvesting Quantity in 64"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/2292"
+  },
+  {
+    "title": {
+      "fr": "Pioche",
+      "en": "Pick"
+    },
+    "description": {
+      "fr": "À tous les détenteurs de pelles en bois, cette pioche complètera votre attirail du parfait petit Creuseur. Vous n'aurez plus d' excuses pour ne pas faire de jolis trous.",
+      "en": "Enutrof expressions have a unique simplicity... for example 'Make sure you bring a pick with you when you go digging.' Simple but true. Oh so true."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 2293,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 1142293,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177270
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 73",
+              "en": "10% Harvesting Quantity in 73"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/2293"
+  },
+  {
+    "title": {
+      "fr": "Hache en Bois",
+      "en": "Wooden Hatchet"
+    },
+    "description": {
+      "fr": "Comme on vous l'a dit : \"ça écrase plus que ça ne coupe…\"",
+      "en": "About as sharp as a sack of wet mice, but just as heavy."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 2408,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2382261,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177264
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 71",
+              "en": "10% Harvesting Quantity in 71"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/2408"
+  },
+  {
+    "title": {
+      "fr": "Coutelas",
+      "en": "Cutlass"
+    },
+    "description": {
+      "fr": "Ce coutelas est en fait un bout de craqueleur trouvé par terre et couvert de peintures rupestres pour faire plus viril.",
+      "en": "This cutlass is actually a piece of Crackler that was found on the floor and decorated with rock art to make it appear more manly."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8051,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2558051,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177276
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 74",
+              "en": "10% Harvesting Quantity in 74"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8051"
+  },
+  {
+    "title": {
+      "fr": "Serpe",
+      "en": "Billhook"
+    },
+    "description": {
+      "fr": "Un outil savamment étudié pour … Couper. Oui, mais avec deux lames, pour plus de précision et pour tailler au plus près !  ",
+      "en": "A tool cleverly designed to...  Cut. Yes, but with two blades, for greater accuracy and closeness!  "
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8052,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 4548052,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177269
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 72",
+              "en": "10% Harvesting Quantity in 72"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8052"
+  },
+  {
+    "title": {
+      "fr": "Canne à Pêche",
+      "en": "Fishing Rod"
+    },
+    "description": {
+      "fr": "Ça mord ? Ça mord pas ? Ohh !!! Un cookillage !",
+      "en": "Do they bite? Not a bite? Ohh! I got a Chefish!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8077,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 1
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 4568077,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177279
+          },
+          "stats": {
+            "display": {
+              "fr": "10% Quantité Récolte en 75",
+              "en": "10% Harvesting Quantity in 75"
+            },
+            "property": 2001,
+            "values": 10
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8077"
+  },
+  {
+    "title": {
+      "fr": "Canne à Pêche en Bois",
+      "en": "Wooden Fishing Rod"
+    },
+    "description": {
+      "fr": "Une Canne en Bois, c'est mieux qu'en Bambou, ça pêche plus loin... Mais c'est pas encore le top, sachez-le !",
+      "en": "A wooden rod is better than a bamboo one because it fishes further... You can do even better, though!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8264,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 4568264,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177280
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 75",
+              "en": "20% Harvesting Quantity in 75"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8264"
+  },
+  {
+    "title": {
+      "fr": "Coutelas Racroft",
+      "en": "Coonan Cutlass"
+    },
+    "description": {
+      "fr": "Un coutelas indépendant, jeune et avec des talents acrobatiques indéniables. N'est-ce pas surprenant ?",
+      "en": "Tiger! Upper Cutlass!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8265,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2558265,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177277
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 74",
+              "en": "20% Harvesting Quantity in 74"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8265"
+  },
+  {
+    "title": {
+      "fr": "Faux Rakor",
+      "en": "Broocefore Scythe"
+    },
+    "description": {
+      "fr": "Epaisse, cette faux permet de ramener un peu plus de graines lors des récoltes. UN PEU plus on vous dit !",
+      "en": "Nice to scythe you, to scythe you nice! This scythe will allow you to collect A FEW more grains per harvest."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8266,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2398266,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177275
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 64",
+              "en": "20% Harvesting Quantity in 64"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8266"
+  },
+  {
+    "title": {
+      "fr": "Hachette du Forestier",
+      "en": "Lumberjack Hatchet"
+    },
+    "description": {
+      "fr": "Autant l'autre écrasait plus qu'elle ne coupait, autant celle-ci broie plus qu'elle n'écrase...",
+      "en": "Your last one was better at crushing than cutting, and this one's better at smashing than crushing..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8267,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2388267,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177265
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 71",
+              "en": "20% Harvesting Quantity in 71"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8267"
+  },
+  {
+    "title": {
+      "fr": "Pic Mine",
+      "en": "Goldigger's Pick"
+    },
+    "description": {
+      "fr": "Minez, piochez puis, en ramenant vos récoltes, laissez-vous aller : \"Heigh-ho, Heigh-ho, on rentre du boulot !\"",
+      "en": "Mine, pick, then, as you carry the fruits of your labor home, sing: \"Hi-ho, hi-ho, it's home from work we go!\""
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8268,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2418268,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177271
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 73",
+              "en": "20% Harvesting Quantity in 73"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8268"
+  },
+  {
+    "title": {
+      "fr": "Serpe Aisk",
+      "en": "Esk Billhook"
+    },
+    "description": {
+      "fr": "Il est dit que Panoramist utilisait cette serpe pour récolter ses propres poils de nez. Il n'est pas dit ce qu'il confectionnait avec...",
+      "en": "It is claimed that Getafiks used this billhook to harvest his own nasal hair. No one knows what he did with it..."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 8269,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 2
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 4548269,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177268
+          },
+          "stats": {
+            "display": {
+              "fr": "20% Quantité Récolte en 72",
+              "en": "20% Harvesting Quantity in 72"
+            },
+            "property": 2001,
+            "values": 20
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/8269"
+  },
+  {
+    "title": {
+      "fr": "Serpe Hier",
+      "en": "Banana Billhook"
+    },
+    "description": {
+      "fr": "Cette serpe a beau avoir été conçue hier, elle n'est pas non plus de la dernière pluie !",
+      "en": "This Billhook was not created on a banana boat. Nor was it made yesterday!"
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 9626,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 4549626,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177267
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 72",
+              "en": "30% Harvesting Quantity in 72"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/9626"
+  },
+  {
+    "title": {
+      "fr": "Coutelas des Âges Farouches",
+      "en": "Upper Cutlass"
+    },
+    "description": {
+      "fr": "Un coutelas inspiré de celui qu'utilisait le célèbre Grrrahan, fils des femmes farouches.",
+      "en": "This cutlass is based on the one used by Coonan the Beastbarian."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 9629,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2559629,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177278
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 74",
+              "en": "30% Harvesting Quantity in 74"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/9629"
+  },
+  {
+    "title": {
+      "fr": "Faux Dell",
+      "en": "Psilo Scythe"
+    },
+    "description": {
+      "fr": "Equipé de cette faux, Dell n'a jamais oublié sa paie, car c'est à Amakna qu'il est né.",
+      "en": "Equipping this tool/weapon can lead to disturbing hallucinations, although some find it very pleasant and eye-opening."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 9630,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 2399630,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177274
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 64",
+              "en": "30% Harvesting Quantity in 64"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/9630"
+  },
+  {
+    "title": {
+      "fr": "Canne Iboul",
+      "en": "Hotte Rod"
+    },
+    "description": {
+      "fr": "Si cette canne est aussi efficace, c'est à cause de l'hameçon accroché au bout. C'est une invention subtile et efficace.",
+      "en": "This rod is highly effective thanks to the hook on the end of it. It's a subtle but useful invention."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 10609,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 45610609,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177281
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 75",
+              "en": "30% Harvesting Quantity in 75"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/10609"
+  },
+  {
+    "title": {
+      "fr": "Toumouwouk",
+      "en": "Toomoowook"
+    },
+    "description": {
+      "fr": "Le tranchant de cette hache manque tant affûtage qu'il est impossible d'envisager couper proprement du bois avec.",
+      "en": "This ax's blade is so blunt that you couldn't cut wood with it properly if your life depended on it."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 10610,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 23810610,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177266
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 71",
+              "en": "30% Harvesting Quantity in 71"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/10610"
+  },
+  {
+    "title": {
+      "fr": "La Bonne Pioche",
+      "en": "The Right Pick"
+    },
+    "description": {
+      "fr": "Toujours prête au dos de son propriétaire, pour les parties de cartes un peu trop serrées à son goût.",
+      "en": "Always ready at its owner's back for card games that aren't going in the right direction."
+    },
+    "droprates": {
+      "fr": {},
+      "en": {}
+    },
+    "id": 10611,
+    "level": 1,
+    "baseParams": {
+      "itemTypeId": 537,
+      "itemSetId": 0,
+      "rarity": 3
+    },
+    "useParams": {
+      "useCostAp": 0,
+      "useCostMp": 0,
+      "useCostWp": 0,
+      "useRangeMin": 0,
+      "useRangeMax": 0
+    },
+    "gfxId": 24110611,
+    "equipEffects": [
+      {
+        "effect": {
+          "definition": {
+            "id": 177272
+          },
+          "stats": {
+            "display": {
+              "fr": "30% Quantité Récolte en 73",
+              "en": "30% Harvesting Quantity in 73"
+            },
+            "property": 2001,
+            "values": 30
+          }
+        }
+      }
+    ],
+    "item_url": "https://www.wakfu.com/fr/mmorpg/encyclopedie/accessoires/10611"
+  }
+]
