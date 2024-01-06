@@ -1,0 +1,11 @@
+@use "../../../styles/variables.scss" as v;
+
+
+.filter-container {
+    max-width: 230px;
+    background-color: v.$background-light;
+    position: fixed;
+    top: 80px;
+    height: 100vh;
+    overflow-y: auto;
+}

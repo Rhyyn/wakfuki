@@ -1,0 +1,12 @@
+@use "../../../styles/variables.scss" as v;
+
+.header-container {
+    height: 80px;
+    width: 100%;
+    background-color: v.$primary-yellow;
+    position: fixed;
+}
+
+.h1 {
+    font-size: 3.5rem;
+}
