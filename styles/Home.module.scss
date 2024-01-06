@@ -1,11 +1,25 @@
+@use "./variables.scss" as v;
+
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // min-height: 100vh;
 }
 
 .cat-buttons {
-  margin: 2rem;
+    margin: 2rem;
+}
+
+.global-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.item-list {
+    background-color: v.$background-deep;
+    flex-grow: 1;
+    height: 2000px;
 }

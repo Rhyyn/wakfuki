@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import filesLength from "../../../public/files_length.json";
 // import dbInstance from "./database-open.jsx";
 import { waitForDbInitialization, db } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
@@ -16,12 +17,62 @@ const ItemList = ({ selectedType }) => {
     const isInitialMount = useRef(true);
     const [isFetching, setIsFetching] = useState(false);
 
-    const fetchItems = async () => {
-        console.log("Fetching...");
+    const length_recipes = async () => {
         await waitForDbInitialization();
         await db.open().then(() => {
             console.log(db._allTables);
         });
+
+        try {
+            if (isLoading) return;
+
+            setIsLoading(true);
+
+            let itemsQuery = db.table("recipes.json");
+            const expectedItemCount = filesLength["recipes.json"] || 0;
+            itemsQuery
+                .count()
+                .then((count) => {
+                    if (count == expectedItemCount) {
+                        // maybe check for random object?
+                        console.log(
+                            `Number of records in "recipes.json" table: ${count}, expected: ${expectedItemCount}`
+                        );
+                    }
+                })
+                .catch((error) => {
+                    console.error(`Error getting count: ${error}`);
+                });
+            // if (selectedType.length > 1) {
+            //     itemsQuery = itemsQuery
+            //         .where("baseParams.itemTypeId")
+            //         .anyOf(selectedType);
+            // } else {
+            //     itemsQuery = itemsQuery
+            //         .where("baseParams.itemTypeId")
+            //         .equals(selectedType);
+            // }
+
+            // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+
+            // const itemsData = await itemsQuery
+            //     .offset(startIndex)
+            //     .limit(ITEMS_PER_PAGE)
+            //     .toArray();
+
+            // console.log(itemsData);
+
+            // setItems((prevItems) => [...prevItems, ...itemsData]);
+        } catch (error) {
+            console.error("Error fetching items:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const fetchItems = async () => {
+        console.log("Fetching...");
+        await waitForDbInitialization();
 
         try {
             if (isLoading) return;
@@ -80,7 +131,7 @@ const ItemList = ({ selectedType }) => {
 
                 setTimeout(() => {
                     setIsFetching(false);
-                }, 20000);
+                }, 5000);
             }
         };
 

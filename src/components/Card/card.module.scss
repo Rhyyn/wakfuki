@@ -6,9 +6,9 @@
     width: 340px;
     height: 460px;
     border-radius: 12px;
-    background-color: v.$background-2;
-    color: v.$text;
-    box-shadow: 5px 5px 5px v.$background;
+    background-color: v.$background;
+    color: v.$text-offwhite;
+    box-shadow: 5px 5px 5px v.$primary-yellow;
     // margin-bottom: 20px;
 }
 .top-card-container {
@@ -20,7 +20,7 @@
     height: 58px;
     display: grid;
     grid-template-columns: 70% 30%;
-    background-color: v.$background-4;
+    background-color: v.$background-light;
     border-radius: 10px 10px 0 0;
 }
 
@@ -56,7 +56,7 @@
 .image-square {
     width: 56px;
     height: 56px;
-    background-color: v.$background-3;
+    background-color: v.$background-deep;
     border: 3px solid v.$background;
 }
 /* --- header-right-top-container ENDS---*/
@@ -68,7 +68,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 200px 140px;
-    background-color: v.$background-4;
+    background-color: v.$background-light;
 }
 
 .header-bottom-row:after {
@@ -113,7 +113,7 @@
 
 .item-type-level-text {
     font-size: 16px;
-    color: v.$text-2;
+    color: v.$text-offwhite;
     padding-left: 4px;
 }
 
@@ -177,7 +177,7 @@
 }
 
 .toggle-tabs-container {
-    background-color: v.$background-2;
+    background-color: v.$background-light;
     border: 3px solid v.$background;
     border-bottom: none;
     border-radius: 10px 0 0 0;
@@ -222,7 +222,7 @@
 /* ---MIDDLE CONTAINER STARTS--- */
 // calc(100% - 205px);
 .middle-card-container {
-    background-color: v.$background-2;
+    background-color: v.$background-light;
     height: 340px;
     padding: 15px 12px 15px 12px;
     border-left: 3px solid v.$background;
@@ -247,7 +247,7 @@
     width: 20px;
     height: 20px;
     // background-color: v.$background-3;
-    background-image: url(../../../public/stats/maitriseCritiqueWhite.png);
+    background-image: url(../../../public/stats/maitriseCritique.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -264,7 +264,7 @@
 .bottom-card-container {
     max-width: 340px;
     height: 80px;
-    background-color: v.$background-3;
+    background-color: v.$background-deep;
     border-radius: 0 0 12px 12px;
     display: flex;
     flex-direction: row;
