@@ -4,7 +4,10 @@ import { useState } from "react";
 import { Inter } from "next/font/google";
 import styles from "../../styles/Home.module.scss";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
-import ItemList from "../components/ItemList/ItemsList.jsx";
+import { ItemList, length_recipes } from "../components/ItemList/ItemsList.jsx";
+import { store_file } from "../services/data-service.jsx";
+import { Filter } from "../components/Filter/Filter.jsx";
+import { Header } from "../components/Header/Header.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,27 +42,19 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={`${styles.main} ${inter.className}`}>
-                <div>
-                    <button onClick={handleLogClick}>Log Data</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter([254, 108, 110, 115, 113])}>
-                        Arme à 1 main
-                    </button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter([223, 114, 101, 111, 253, 117])}>
-                        Arme à 2 mains
-                    </button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter([112, 189])}>
-                        Seconde Main
-                    </button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(120)}>Amulette</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(103)}>Anneau</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(119)}>Bottes</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(132)}>Cape</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(134)}>Casque</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(133)}>Ceinture</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(138)}>Epaulettes</button>
-                    <button className="cat-buttons" onClick={() => handleTypeFilter(136)}>Plastron</button>
+                <Header></Header>
+                <div className={styles["global-container"]}>
+                    <Filter handleLogClick={handleLogClick} length_recipes={length_recipes} store_file={store_file} handleTypeFilter={handleTypeFilter}></Filter>
+                    <div className={styles["item-list"]}>
+                        <h3>Item lists</h3>
+                        {selectedType != null && (
+                            <ItemList
+                                key={selectedType.toString()}
+                                selectedType={selectedType}
+                            />
+                        )}
+                    </div>
                 </div>
-                {selectedType != null && <ItemList key={selectedType.toString()} selectedType={selectedType} />}
             </main>
         </>
     );
