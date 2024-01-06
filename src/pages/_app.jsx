@@ -3,25 +3,8 @@ import "../../styles/globals.scss";
 import {initializeDexieDatabase} from "../services/data-service.jsx";
 
 function MyApp({ Component, pageProps }) {
-    // const fileNames = [
-    //     "harvestLoots.json",
-    //     "items.json",
-    //     "jobsItems.json",
-    //     "recipeIngredients.json",
-    //     "recipeResults.json",
-    //     "recipes.json",
-    //     "resources.json",
-    //     "states.json",
-    //     "itemTypes.json",
-    //     "actions.json",
-    //     "equipmentItemTypes.json",
-    //     "blueprints.json",
-    //     "recipeCategories.json",
-    //     "resourceTypes.json",
-    //     "itemProperties.json",
-    // ];
 
-    const fileNames = ["states.json", "formatedItems.json", "itemsStats.json"];
+    const fileNames = ["states.json", "actions.json", "blueprints.json", "equipmentItemTypes.json", "harvestLoots.json", "recipes.json", "recipeIngredients.json", "recipeResults.json", "recipeCategories.json", "amulette_scrapped_data_formated.json", "anneau_scrapped_data_formated.json", "cape_scrapped_data_formated.json", "bottes_scrapped_data_formated.json", "casque_scrapped_data_formated.json", "ceinture_scrapped_data_formated.json", "epaulettes_scrapped_data_formated.json", "plastron_scrapped_data_formated.json", "familiers_scrapped_data_formated.json", "arme1main_scrapped_data_formated.json", "arme2main_scrapped_data_formated.json", "secondemain_scrapped_data_formated.json", "emblemes_scrapped_data_formated.json", "montures_scrapped_data_formated.json", "outils_scrapped_data_formated.json", ];
 
     useEffect(() => {
         console.log("MyApp component is mounting or updating...");
