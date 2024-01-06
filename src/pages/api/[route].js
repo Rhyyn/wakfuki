@@ -2,15 +2,16 @@ import { promises as fs } from "fs";
 import path from "path";
 import zlib from "zlib";
 
+// This needs to be secured
+
 export default async function handler(req, res) {
     try {
         const route = req.query.route;
         console.log('Handling request for route:', route);
-        const fileName = req.query.fileName;
+        // const fileName = req.query.fileName;
         const filePath = path.join(process.cwd(), "Data", route);
 
-        // Check if the file exists
-        const stats = await fs.stat(filePath);
+        // const stats = await fs.stat(filePath);
         const fileContent = await fs.readFile(filePath, "utf-8");
         const compressedData = zlib.deflateSync(fileContent);
 
