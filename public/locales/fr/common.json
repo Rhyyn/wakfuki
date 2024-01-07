@@ -1,3 +1,14 @@
 {
-    "Filtres": "Filtres"
+    "Filtres": "Filtres",
+    "Chercher": "Chercher..",
+    "Mise à zéro des Filtres": "Mise à zéro des Filtres",
+    "Trier par": "Trier par",
+    "0": "Qualité commune",
+    "1": "Inhabituel",
+    "2": "Rare",
+    "3": "Mythique",
+    "4": "Légendaire",
+    "5": "Relique",
+    "6": "Souvenir",
+    "7": "Épique"
 }

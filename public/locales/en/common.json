@@ -1,3 +1,14 @@
 {
-    "Filtres": "Filters"
+    "Filtres": "Filters",
+    "Chercher": "Search..",
+    "Mise à zéro des Filtres": "Reset the Filters",
+    "Trier par": "Sort by",
+    "0": "Common",
+    "1": "Unusual",
+    "2": "Rare",
+    "3": "Mythical",
+    "4": "Legendary",
+    "5": "Relic",
+    "6": "Souvenir",
+    "7": "Epic"
 }
