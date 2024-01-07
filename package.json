@@ -12,9 +12,13 @@
     "clsx": "^2.0.0",
     "dexie": "^3.2.4",
     "dexie-react-hooks": "^1.1.7",
+    "js-cookie": "^3.0.5",
     "next": "14.0.3",
+    "next-i18next": "^15.2.0",
+    "next-translate": "^2.6.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^14.0.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {

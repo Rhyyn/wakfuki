@@ -9,3 +9,34 @@
     height: 100vh;
     overflow-y: auto;
 }
+
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 60px;
+    align-items: center;
+}
+
+.header-title {
+    flex-grow: 1;
+    padding-left: 25px;
+    color: v.$text-offwhite
+}
+
+.header-icons-container{
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.vertical-separator {
+    width: 3px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: v.$background-deep;
+    margin: 0 4px 0 4px;
+}

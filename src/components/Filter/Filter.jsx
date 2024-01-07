@@ -1,5 +1,9 @@
 import React from "react";
 import cssModule from "./Filter.module.scss";
+import Image from "next/image";
+// import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -11,16 +15,23 @@ const Filter = ({
     store_file,
     handleTypeFilter,
 }) => {
+    const { t, i18n } = useTranslation();
     return (
         <div className={cssModule["filter-container"]}>
             <div className={cssModule["header-container"]}>
-                <h2 className={cssModule["header-title"]}>Filtres</h2>
+                <h2 className={cssModule["header-title"]}>{t('Filtres')}</h2>
+                <div className={cssModule["header-icons-container"]}>
+                    {/* <Image src="/reset_icon_yellow.png" width={32} height={32} unoptimized alt="reset-icon"/> */}
+                    <div className={cssModule["vertical-separator"]}></div>
+                    <Image src="/sort_icon_yellow.png" width={32} height={32} unoptimized alt="sort-icon"/>
+                </div>
             </div>
             <button onClick={handleLogClick}>Log Data</button>
             <button onClick={() => store_file("bottes_scrapped_data_formated.json")}>
                 TEST CALL
             </button>
             <button onClick={() => length_recipes()}>TEST CALL LENGTH</button>
+            <LanguageSwitch />
 
             {/* <button
                 className="cat-buttons"
