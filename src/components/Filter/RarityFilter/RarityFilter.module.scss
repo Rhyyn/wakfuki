@@ -1,0 +1,47 @@
+@use "../../../../styles/variables" as v;
+
+
+
+.rarity-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    background-color: v.$background;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 2px 2px v.$primary-yellow;
+    margin-top: 20px;
+}
+
+.row {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.image-container {
+    width: 35px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rarity-item {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin: 2px;
+    @include v.no-select();
+}
+
+.selected {
+    background-color: v.$background-light;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px v.$text-offwhite;
+}

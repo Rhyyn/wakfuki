@@ -1,0 +1,47 @@
+@use "../../../../styles/variables" as v;
+
+
+.search-bar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.input {
+    background-color: v.$background-deep;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    border: 3px solid v.$background;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Poppins';
+    scale: 0.9;
+    transition: width 0.3s ease;
+
+    &:focus {
+        scale: 1;
+        width: 100%;
+        outline: none;
+        border: 4px solid v.$primary-yellow;
+        border-radius: 10px;
+        color: v.$text-offwhite;
+        text-decoration: none;
+    }
+
+    &:not(:placeholder-shown) {
+        scale: 1;
+        width: 100%;
+        outline: none;
+        border: 4px solid v.$primary-yellow;
+        border-radius: 10px;
+        color: v.$text-offwhite;
+        text-decoration: none;
+    }
+}

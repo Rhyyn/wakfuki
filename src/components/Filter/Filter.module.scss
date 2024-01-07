@@ -6,8 +6,12 @@
     background-color: v.$background-light;
     position: fixed;
     top: 80px;
+    left: 0px;
     height: 100vh;
     overflow-y: auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
 }
 
 
@@ -17,6 +21,18 @@
     margin-top: 20px;
     height: 60px;
     align-items: center;
+}
+
+.horizontal-separator {
+    width: 200px;
+    height: 3px;
+    background-color: v.$primary-yellow;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.header-icon {
+    cursor: pointer;
 }
 
 .header-title {
