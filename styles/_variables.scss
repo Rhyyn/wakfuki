@@ -1,5 +1,12 @@
-$primary-yellow: #F9BE25;
-$text-offwhite: #EBDCB8;
-$background-light: #615A49;
-$background: #514A39;
+$primary-yellow: #f9be25;
+$text-offwhite: #ebdcb8;
+$background-light: #615a49;
+$background: #514a39;
 $background-deep: #292621;
+
+@mixin no-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
