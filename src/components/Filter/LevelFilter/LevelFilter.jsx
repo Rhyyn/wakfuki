@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import cssModule from "./LevelFilter.module.scss";
-import { Slider } from "@radix-ui/themes";
-
+import RangeSlider from "./RangeSlider";
 
 const LevelFilter = () => {
-
-
     return (
-        <div>
-            <h2>Level Filter</h2>
-            <Slider defaultValue={[0, 230]} />
+        <div className={cssModule["level-filter-container"]}>
+            <RangeSlider />
         </div>
     );
 };

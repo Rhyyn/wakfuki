@@ -25,6 +25,11 @@
     scale: 0.9;
     transition: width 0.3s ease;
 
+    &:hover {
+        border: 2px solid v.$text-offwhite;
+        border-radius: 10px;
+    }
+
     &:focus {
         scale: 1;
         width: 100%;

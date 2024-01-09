@@ -1,0 +1,79 @@
+.range_container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.sliders_control {
+    position: relative;
+    min-height: 50px;
+}
+
+.form_control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #635a5a;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #c6c6c6;
+    cursor: pointer;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #c6c6c6;
+    cursor: pointer;
+}
+
+.range-input::-webkit-slider-thumb:hover {
+    // background: #f7f7f7;
+    background-color: red;
+}
+
+.range-input::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+}
+
+.form_control_container__time__input {
+    color: #8a8383;
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+}
+
+.form_control_container__time__input::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.form_control_container__time__input::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #c6c6c6;
+    pointer-events: none;
+}
+
+

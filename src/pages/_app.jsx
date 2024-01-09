@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "../../styles/globals.scss";
-import '@radix-ui/themes/styles.css';
 import { initializeDexieDatabase } from "../services/data-service.jsx";
 import LanguageSwitch from "../components/LanguageSwitch/LanguageSwitch";
 import { appWithTranslation } from 'next-i18next';
