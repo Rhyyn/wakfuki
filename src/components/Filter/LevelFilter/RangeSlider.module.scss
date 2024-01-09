@@ -1,3 +1,6 @@
+@use "../../../../styles/variables" as v;
+
+
 .range_container {
     display: flex;
     flex-direction: column;
@@ -34,7 +37,7 @@
     pointer-events: all;
     width: 24px;
     height: 24px;
-    background-color: #fff;
+    background-color: v.$primary-yellow;
     border-radius: 50%;
     box-shadow: 0 0 0 1px #c6c6c6;
     cursor: pointer;
@@ -42,17 +45,17 @@
 
 .range-input::-webkit-slider-thumb:hover {
     // background: #f7f7f7;
-    background-color: red;
+    background-color: v.$background-light;
 }
 
 .range-input::-webkit-slider-thumb:active {
-    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
-    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    box-shadow: inset 0 0 3px v.$primary-yellow, 0 0 9px v.$primary-yellow;
+    -webkit-box-shadow: inset 0 0 3px v.$primary-yellow, 0 0 9px v.$primary-yellow;
 }
 
 .form_control_container__time__input {
     color: #8a8383;
-    width: 50px;
+    width: 100px;
     height: 30px;
     font-size: 20px;
     border: none;
@@ -77,3 +80,7 @@
 }
 
 
+.thumb-1 {
+  z-index: 1;
+  // scale: 0.8;
+}

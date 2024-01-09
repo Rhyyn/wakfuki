@@ -13,11 +13,18 @@ const RangeSlider = () => {
     ) => {
         const [from, to] = getParsed(fromInput, toInput);
         fillSlider(fromInput, toInput, "#C6C6C6", "#292621", controlSlider);
+
         if (from > to) {
             fromSlider.defaultValue = to;
             fromInput.defaultValue = to;
         } else {
             fromSlider.value = from;
+            fromInput.defaultValue = from;
+        }
+
+        if (parseInt(fromInput.value, 10) > to) {
+            fromInput.value = to;
+            fromSlider.value = to;
         }
     };
 
@@ -25,7 +32,6 @@ const RangeSlider = () => {
         const [from, to] = getParsed(fromInput, toInput);
         fillSlider(fromInput, toInput, "#C6C6C6", "#292621", controlSlider);
         setToggleAccessible(toInput);
-        console.log(toInput);
 
         if (from <= to) {
             toSlider.defaultValue = to;
@@ -33,21 +39,29 @@ const RangeSlider = () => {
         } else {
             toInput.defaultValue = from;
         }
+
+        toInput.onchange = () => {
+            const inputValue = parseInt(toInput.value, 10);
+            if (inputValue < from) {
+                toInput.value = from;
+                toSlider.value = from;
+            } else if (inputValue > to) {
+                toInput.value = to;
+                toSlider.value = to;
+            }
+        };
     };
 
     const controlFromSlider = (fromSlider, toSlider, fromInput) => {
-        console.log("controlFromSlider called"); // Add this line
         const [from, to] = getParsed(fromSlider, toSlider);
         fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
 
-        setFromInputValue(from); // Set the state value
+        setFromInputValue(from);
 
         if (from > to) {
             fromSlider.defaultValue = to;
-            console.log("fromSlider.value", fromSlider.value);
             fromInput.defaultValue = to;
         } else {
-            console.log("fromSlider.value", fromSlider.value);
             fromInput.defaultValue = from;
         }
     };
@@ -56,11 +70,10 @@ const RangeSlider = () => {
         const [from, to] = getParsed(fromSlider, toSlider);
         fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
         setToggleAccessible(toSlider);
-        setToInputValue(to); // Set the state value
+        setToInputValue(to);
 
         if (from <= to) {
             toSlider.defaultValue = to;
-            console.log("toSlider.value", toSlider.value);
             toInput.defaultValue = to;
         } else {
             toInput.defaultValue = from;
@@ -107,12 +120,34 @@ const RangeSlider = () => {
         const toSlider = document.querySelector("#toSlider");
         const fromInput = document.querySelector("#fromInput");
         const toInput = document.querySelector("#toInput");
+
         fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
         setToggleAccessible(toSlider);
 
-        fromSlider.oninput = () =>
+        fromSlider.oninput = () => {
+            const fromValue = parseInt(fromSlider.value, 10);
+            const toValue = parseInt(toSlider.value, 10);
+
+            // Ensure the left thumb cannot go past the right thumb
+            if (fromValue >= toValue) {
+                fromSlider.value = toValue;
+            }
+
             controlFromSlider(fromSlider, toSlider, fromInput);
-        toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+        };
+
+        toSlider.oninput = () => {
+            const fromValue = parseInt(fromSlider.value, 10);
+            const toValue = parseInt(toSlider.value, 10);
+
+            // Ensure the right thumb cannot go past the left thumb
+            if (toValue <= fromValue) {
+                toSlider.value = fromValue;
+            }
+
+            controlToSlider(fromSlider, toSlider, toInput);
+        };
+
         fromInput.oninput = () =>
             controlFromInput(fromSlider, fromInput, toInput, toSlider);
         toInput.oninput = () =>
@@ -123,7 +158,7 @@ const RangeSlider = () => {
         <div className={cssModule["range_container"]}>
             <div className={cssModule["sliders_control"]}>
                 <input
-                    className={cssModule["range-input"]}
+                    className={`${cssModule["range-input"]} ${cssModule["thumb-1"]}`}
                     id="fromSlider"
                     style={{
                         height: 0,
