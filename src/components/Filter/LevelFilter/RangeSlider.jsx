@@ -57,6 +57,10 @@ const RangeSlider = () => {
         const [from, to] = getParsed(fromSlider, toSlider);
         fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
 
+        // console.log("from", from);
+        // console.log("to", to);
+        // console.log("fromInput", fromInput);
+
         setFromInputValue(from);
 
         if (from > to) {
@@ -72,7 +76,9 @@ const RangeSlider = () => {
         fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
         setToggleAccessible(toSlider);
         setToInputValue(to);
-
+        // console.log("fromSlider", from);
+        // console.log("toSlider", to);
+        // console.log("toInput", toInput);
         if (from <= to) {
             toSlider.defaultValue = to;
             toInput.defaultValue = to;

@@ -10,10 +10,12 @@
     width: 80%;
     margin: 0px auto;
     margin-top: 20px;
+    outline: none;
 }
 
 .sliders_control {
     position: relative;
+    outline: none;
     // min-height: 0px;
 }
 
@@ -23,6 +25,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    outline: none;
 }
 
 
@@ -38,6 +41,10 @@
     // box-shadow: 0 0 0 1px v.$background-deep;
     cursor: pointer;
     border: none;
+}
+
+.range-input:focus {
+    outline: none;
 }
 
 .range-input::-moz-range-thumb:hover {
@@ -97,6 +104,7 @@
     // appearance: textfield; /* Standard */
     outline: none;
     background: none;
+    text-shadow: 3px 1px 3px rgba(41, 38, 33, 0.7);
 }
 
 .form_control_container__time__input::-webkit-inner-spin-button {
@@ -134,7 +142,7 @@
 .range-input {
     -webkit-appearance: none;
     appearance: none;
-    height: 2px;
+    height: 4px;
     width: 100%;
     position: absolute;
     background-color: #b41f1f;
@@ -148,5 +156,5 @@
 
 .thumb-2 {
     position: absolute;
-    top: -1px;
+    top: -2px;
 }

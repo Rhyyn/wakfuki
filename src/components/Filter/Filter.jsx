@@ -7,6 +7,8 @@ import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import { RarityFilter } from "./RarityFilter/RarityFilter";
 import { SearchBar } from "./SearchBar/SearchBar";
 import LevelFilter  from "./LevelFilter/LevelFilter";
+import TypeFilter from "./TypeFilter/TypeFilter";
+import StatsFilter from "./StatsFilter/StatsFilter"
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -56,6 +58,8 @@ const Filter = ({
             <div className={cssModule["horizontal-separator"]}></div>
             <LevelFilter />
             <LanguageSwitch />
+            <TypeFilter />
+            <StatsFilter />
 
             {/* <button
                 className="cat-buttons"

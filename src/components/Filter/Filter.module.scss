@@ -2,7 +2,7 @@
 
 
 .filter-container {
-    max-width: 230px;
+    width: 230px;
     background-color: v.$background-light;
     position: fixed;
     top: 80px;
@@ -24,7 +24,7 @@
 }
 
 .horizontal-separator {
-    width: 200px;
+    width: 180px;
     height: 3px;
     background-color: v.$primary-yellow;
     border-radius: 12px;

@@ -1,0 +1,65 @@
+@use "../../../../styles/variables" as v;
+
+.type-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.type-title {
+    margin-bottom: 10px;
+    color: v.$text-offwhite;
+    text-shadow: 2px 2px 3px rgba(41, 38, 33, 0.75);
+}
+
+.horizontal-separator {
+    width: 180px;
+    height: 3px;
+    background-color: v.$primary-yellow;
+    border-radius: 12px;
+    margin: 0 auto;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.type-row-icon-container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3px 0 3px 0;
+}
+
+.top-row {
+    margin-top: 20px;
+}
+
+.icon-container {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    &:hover {
+        cursor: pointer;
+        background-color: v.$background;
+    }
+}
+
+.selected {
+    border: 3px solid v.$primary-yellow;
+    background-color: v.$background;
+}
+
+// .icon {
+    
+// }
