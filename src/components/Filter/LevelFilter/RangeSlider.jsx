@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./RangeSlider.module.scss";
+import Image from "next/image";
 
 const RangeSlider = () => {
     const [fromInputValue, setFromInputValue] = useState(0);
@@ -12,7 +13,7 @@ const RangeSlider = () => {
         controlSlider
     ) => {
         const [from, to] = getParsed(fromInput, toInput);
-        fillSlider(fromInput, toInput, "#C6C6C6", "#292621", controlSlider);
+        fillSlider(fromInput, toInput, "#615a49", "#292621", controlSlider);
 
         if (from > to) {
             fromSlider.defaultValue = to;
@@ -30,7 +31,7 @@ const RangeSlider = () => {
 
     const controlToInput = (toSlider, fromInput, toInput, controlSlider) => {
         const [from, to] = getParsed(fromInput, toInput);
-        fillSlider(fromInput, toInput, "#C6C6C6", "#292621", controlSlider);
+        fillSlider(fromInput, toInput, "#615a49", "#292621", controlSlider);
         setToggleAccessible(toInput);
 
         if (from <= to) {
@@ -54,7 +55,7 @@ const RangeSlider = () => {
 
     const controlFromSlider = (fromSlider, toSlider, fromInput) => {
         const [from, to] = getParsed(fromSlider, toSlider);
-        fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
+        fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
 
         setFromInputValue(from);
 
@@ -68,7 +69,7 @@ const RangeSlider = () => {
 
     const controlToSlider = (fromSlider, toSlider, toInput) => {
         const [from, to] = getParsed(fromSlider, toSlider);
-        fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
+        fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
         setToggleAccessible(toSlider);
         setToInputValue(to);
 
@@ -121,7 +122,7 @@ const RangeSlider = () => {
         const fromInput = document.querySelector("#fromInput");
         const toInput = document.querySelector("#toInput");
 
-        fillSlider(fromSlider, toSlider, "#C6C6C6", "#292621", toSlider);
+        fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
         setToggleAccessible(toSlider);
 
         fromSlider.oninput = () => {
@@ -155,36 +156,9 @@ const RangeSlider = () => {
     }, []);
 
     return (
-        <div className={cssModule["range_container"]}>
-            <div className={cssModule["sliders_control"]}>
-                <input
-                    className={`${cssModule["range-input"]} ${cssModule["thumb-1"]}`}
-                    id="fromSlider"
-                    style={{
-                        height: 0,
-                        zIndex: 1,
-                    }}
-                    type="range"
-                    value={fromInputValue} // Use value instead of defaultValue
-                    min="0"
-                    max="230"
-                    onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
-                />
-                <input
-                    className={cssModule["range-input"]}
-                    id="toSlider"
-                    type="range"
-                    value={toInputValue} // Use value instead of defaultValue
-                    min="0"
-                    max="230"
-                    onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
-                />
-            </div>
+        <div className={cssModule["level-filter-container"]}>
             <div className={cssModule["form_control"]}>
                 <div className={cssModule["form_control_container__time"]}>
-                    <div className={cssModule["form_control_container__time"]}>
-                        Min
-                    </div>
                     <input
                         className={
                             cssModule["form_control_container__time__input"]
@@ -197,16 +171,40 @@ const RangeSlider = () => {
                         onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
                     />
                 </div>
-                <div className={cssModule["form_control_container"]}>
-                    <div className={cssModule["form_control_container__time"]}>
-                        Max
-                    </div>
+                <div className={cssModule["form_control_container__time"]}>
                     <input
                         className={
                             cssModule["form_control_container__time__input"]
                         }
+                        dir="rtl"
                         type="number"
                         id="toInput"
+                        value={toInputValue} // Use value instead of defaultValue
+                        min="0"
+                        max="230"
+                        onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
+                    />
+                </div>
+            </div>
+            <div className={cssModule["range_container"]}>
+                <div className={cssModule["sliders_control"]}>
+                    <input
+                        className={`${cssModule["range-input"]} ${cssModule["thumb-1"]}`}
+                        id="fromSlider"
+                        style={{
+                            height: 0,
+                            zIndex: 1,
+                        }}
+                        type="range"
+                        value={fromInputValue} // Use value instead of defaultValue
+                        min="0"
+                        max="230"
+                        onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
+                    />
+                    <input
+                        className={`${cssModule["range-input"]} ${cssModule["thumb-2"]}`}
+                        id="toSlider"
+                        type="range"
                         value={toInputValue} // Use value instead of defaultValue
                         min="0"
                         max="230"

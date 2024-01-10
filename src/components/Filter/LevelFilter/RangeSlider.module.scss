@@ -1,73 +1,135 @@
 @use "../../../../styles/variables" as v;
 
+.level-filter-container {
+    width: 100%;
+}
 
 .range_container {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 100px auto;
+    margin: 0px auto;
+    margin-top: 20px;
 }
 
 .sliders_control {
     position: relative;
-    min-height: 50px;
+    // min-height: 0px;
 }
 
 .form_control {
+    width: 205px;
+    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: space-between;
-    font-size: 24px;
-    color: #635a5a;
 }
 
-.range-input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    pointer-events: all;
-    width: 24px;
-    height: 24px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px #c6c6c6;
-    cursor: pointer;
-}
 
-.range-input::-webkit-slider-thumb {
-    -webkit-appearance: none;
+
+/* MOZILLA STUFF */
+.range-input::-moz-range-thumb {
+    -moz-appearance: none;
     pointer-events: all;
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
     background-color: v.$primary-yellow;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px #c6c6c6;
+    // box-shadow: 0 0 0 1px v.$background-deep;
+    cursor: pointer;
+    border: none;
+}
+
+.range-input::-moz-range-thumb:hover {
+    // background: #f7f7f7;
+    background-color: v.$background-deep;
+}
+
+.range-input::-moz-range-thumb:active {
+    background-color: v.$background-deep;
+    box-shadow: inset 0 0 3px v.$primary-yellow, 0 0 9px v.$primary-yellow;
+    -webkit-box-shadow: inset 0 0 3px v.$primary-yellow,
+        0 0 9px v.$primary-yellow;
+}
+/* MOZILLA STUFF */
+
+
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 26px;
+    height: 26px;
+    background-color: v.$primary-yellow;
+    border-radius: 50%;
+    // box-shadow: 0 0 0 1px #c6c6c6;
     cursor: pointer;
 }
 
 .range-input::-webkit-slider-thumb:hover {
     // background: #f7f7f7;
-    background-color: v.$background-light;
+    background-color: v.$background-deep;
 }
 
 .range-input::-webkit-slider-thumb:active {
+    background-color: v.$background-deep;
     box-shadow: inset 0 0 3px v.$primary-yellow, 0 0 9px v.$primary-yellow;
-    -webkit-box-shadow: inset 0 0 3px v.$primary-yellow, 0 0 9px v.$primary-yellow;
+    -webkit-box-shadow: inset 0 0 3px v.$primary-yellow,
+        0 0 9px v.$primary-yellow;
 }
 
+.form_control_container__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
 .form_control_container__time__input {
-    color: #8a8383;
-    width: 100px;
+    color: v.$text-offwhite;
+    width: 60px;
     height: 30px;
     font-size: 20px;
     border: none;
+    text-align: center;
+    // -webkit-appearance: none;  /* Chrome, Safari, Opera */
+    // -moz-appearance: textfield; /* Firefox */
+    // appearance: textfield; /* Standard */
+    outline: none;
+    background: none;
 }
 
 .form_control_container__time__input::-webkit-inner-spin-button {
     opacity: 1;
+    background-color: #ffff;
+    // -webkit-appearance: none; /* Safari and Chrome */
+    // -moz-appearance: textfield; /* Firefox */
+    // appearance: textfield; /* Standard */
+    // display: none;
 }
 
 .form_control_container__time__input::-webkit-outer-spin-button {
-    opacity: 1;
+    opacity: 0;
+    display: none;
 }
+
+/* MOZILLA STUFF */
+.form_control_container__time__input::-moz-inner-spin-button {
+    opacity: 1;
+    background-color: #ffff;
+    // -webkit-appearance: none; /* Safari and Chrome */
+    // -moz-appearance: textfield; /* Firefox */
+    // appearance: textfield; /* Standard */
+    // display: none;
+}
+
+.form_control_container__time__input::-moz-outer-spin-button {
+    opacity: 0;
+    display: none;
+}
+/* MOZILLA STUFF */
+
+
 
 .range-input {
     -webkit-appearance: none;
@@ -75,12 +137,16 @@
     height: 2px;
     width: 100%;
     position: absolute;
-    background-color: #c6c6c6;
+    background-color: #b41f1f;
     pointer-events: none;
 }
 
-
 .thumb-1 {
-  z-index: 1;
-  // scale: 0.8;
+    z-index: 1;
+    // scale: 0.8;
+}
+
+.thumb-2 {
+    position: absolute;
+    top: -1px;
 }
