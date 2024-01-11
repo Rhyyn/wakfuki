@@ -92,13 +92,12 @@ $background-3: #302e2b;
 html,
 body {
     max-width: 100vw;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body {
     color: rgb(var(--foreground-rgb));
     background-color: $background-3;
-    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
 }
 
 a {

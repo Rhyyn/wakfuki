@@ -3,7 +3,6 @@ import cssModule from "./Filter.module.scss";
 import Image from "next/image";
 // import { useTranslation } from 'next-i18next';
 import { useTranslation } from "react-i18next";
-import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 import { RarityFilter } from "./RarityFilter/RarityFilter";
 import { SearchBar } from "./SearchBar/SearchBar";
 import LevelFilter  from "./LevelFilter/LevelFilter";
@@ -57,7 +56,6 @@ const Filter = ({
             <SearchBar />
             <div className={cssModule["horizontal-separator"]}></div>
             <LevelFilter />
-            <LanguageSwitch />
             <TypeFilter />
             <StatsFilter />
 

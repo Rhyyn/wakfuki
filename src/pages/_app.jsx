@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import "../../styles/globals.scss";
 import { initializeDexieDatabase } from "../services/data-service.jsx";
-import LanguageSwitch from "../components/LanguageSwitch/LanguageSwitch";
-import { appWithTranslation } from 'next-i18next';
+import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 function MyApp({ Component, pageProps }) {
     const fileNames = [
@@ -42,10 +44,9 @@ function MyApp({ Component, pageProps }) {
     }, [fileNames]);
 
     return (
-        <>
-            {/* <LanguageSwitch /> */}
+        <main className={poppins.className}>
             <Component {...pageProps} />
-        </>
+        </main>
     );
 }
 

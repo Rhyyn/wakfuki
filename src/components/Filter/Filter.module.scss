@@ -5,10 +5,14 @@
     width: 230px;
     background-color: v.$background-light;
     position: fixed;
-    top: 80px;
+    // top: 80px;
+    top: 0px;
     left: 0px;
     height: 100vh;
-    overflow-y: auto;
+    // height: 1500px;
+    overflow-y: hidden;
+    z-index: 2;
+    padding: 0;
     // display: flex;
     // flex-direction: column;
     // align-items: center;

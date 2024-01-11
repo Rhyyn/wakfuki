@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useState } from "react";
-import { Poppins } from "next/font/google";
 import styles from "../../styles/Home.module.scss";
 import { useTranslation } from "next-i18next";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
@@ -10,7 +9,7 @@ import { Filter } from "../components/Filter/Filter.jsx";
 import { Header } from "../components/Header/Header.jsx";
 import "./i18n";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+
 
 const Home = () => {
     const { t } = useTranslation("common");
@@ -44,15 +43,16 @@ const Home = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={`${styles.main} ${poppins.className}`}>
-                <Header></Header>
+            <div>
+                <Filter
+                    handleLogClick={handleLogClick}
+                    length_recipes={length_recipes}
+                    store_file={store_file}
+                    handleTypeFilter={handleTypeFilter}
+                ></Filter>
+
                 <div className={styles["global-container"]}>
-                    <Filter
-                        handleLogClick={handleLogClick}
-                        length_recipes={length_recipes}
-                        store_file={store_file}
-                        handleTypeFilter={handleTypeFilter}
-                    ></Filter>
+                    <Header></Header>
                     <div className={styles["item-list"]}>
                         <h3>{t("common:Item lists")}</h3>
                         {selectedType != null && (
@@ -63,7 +63,7 @@ const Home = () => {
                         )}
                     </div>
                 </div>
-            </main>
+            </div>
         </>
     );
 };
