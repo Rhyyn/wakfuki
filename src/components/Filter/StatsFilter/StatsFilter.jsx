@@ -17,8 +17,7 @@ const TypeFilter = () => {
         "initiative",
         "maitriseElementRandom",
         "maitriseMelee",
-        ,
-        "maitriseSoins",
+        "maitriseSoin",
         "malusResdos",
         "pa",
         "pm",
@@ -30,7 +29,13 @@ const TypeFilter = () => {
         "resEau",
         "resFeu",
         "ressourceRecolte",
-        "resTerre", "sagesse", "tacle", "terre", "up", "volonte", "wakfu"
+        "resTerre",
+        "sagesse",
+        "tacle",
+        "terre",
+        "up",
+        "volonte",
+        "wakfu",
     ];
 
     const handleImageClick = (imageName) => {
@@ -47,8 +52,10 @@ const TypeFilter = () => {
         <div className={cssModule["type-container"]}>
             <h3 className={cssModule["type-title"]}>Stats</h3>
             <div className={cssModule["horizontal-separator"]}></div>
-            <div className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}>
-            {stats.map((itemName) => (
+            <div
+                className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
+            >
+                {stats.map((itemName) => (
                     <div
                         key={itemName}
                         className={`${cssModule["icon-container"]} ${
@@ -61,8 +68,8 @@ const TypeFilter = () => {
                         <Image
                             className={cssModule["icon"]}
                             src={`/stats/${itemName}.png`}
-                            width={28}
-                            height={28}
+                            width={24}
+                            height={24}
                             unoptimized
                             alt={itemName}
                         />
