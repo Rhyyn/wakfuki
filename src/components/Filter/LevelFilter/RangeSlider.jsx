@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./RangeSlider.module.scss";
 import Image from "next/image";
 
+
+// CUSTOM RANGE FOR PREDEFINED LEVELS RANGE
+
 const RangeSlider = () => {
     const [fromInputValue, setFromInputValue] = useState(0);
     const [toInputValue, setToInputValue] = useState(230);
@@ -174,6 +177,7 @@ const RangeSlider = () => {
                         value={fromInputValue} // Use value instead of defaultValue
                         min="0"
                         max="230"
+                        step={5}
                         onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
                     />
                 </div>
@@ -188,6 +192,7 @@ const RangeSlider = () => {
                         value={toInputValue} // Use value instead of defaultValue
                         min="0"
                         max="230"
+                        step={5}
                         onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
                     />
                 </div>
@@ -205,6 +210,7 @@ const RangeSlider = () => {
                         value={fromInputValue} // Use value instead of defaultValue
                         min="0"
                         max="230"
+                        step={5}
                         onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
                     />
                     <input
@@ -214,6 +220,7 @@ const RangeSlider = () => {
                         value={toInputValue} // Use value instead of defaultValue
                         min="0"
                         max="230"
+                        step={5}
                         onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
                     />
                 </div>
