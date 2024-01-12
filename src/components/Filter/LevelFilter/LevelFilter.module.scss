@@ -2,7 +2,14 @@
 
 .level-filter-container {
     width: 100%;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dropdown {
+    margin-bottom: 10px;
 }
 
 
