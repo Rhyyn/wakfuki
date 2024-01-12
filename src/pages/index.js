@@ -20,18 +20,9 @@ const Home = () => {
         stats: [],
     });
 
-    // const handleResetFilters = () => {
-    //     console.log("handleResetFilters called");
-    //     setFilterState({
-    //         searchQuery: "",
-    //         rarity: [],
-    //         levelRange: { from: 0, to: 230 },
-    //         type: [],
-    //         stats: [],
-    //     });
-    // };
+    const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
 
-    const handleResetFilters = useCallback(() => {
+    const handleResetFilters = () => {
         console.log("handleResetFilters called");
         setFilterState({
             searchQuery: "",
@@ -40,7 +31,25 @@ const Home = () => {
             type: [],
             stats: [],
         });
-    }, [filterState]);
+        setResetFiltersFlag(true);
+    };
+
+    // const handleResetFilters = useCallback(() => {
+    //     console.log("handleResetFilters called");
+    //     setFilterState({
+    //         searchQuery: "",
+    //         rarity: [],
+    //         levelRange: { from: 0, to: 230 },
+    //         type: [],
+    //         stats: [],
+    //     });
+
+    //     setResetFiltersFlag(true);
+    // }, [filterState]);
+
+    useEffect(() => {
+        setResetFiltersFlag(false);
+    }, [resetFiltersFlag]);
 
     const handleLogClick = async () => {
         try {
@@ -111,8 +120,9 @@ const Home = () => {
                     handleRarityChange={() => handleRarityChange}
                     handleTypeChange={() => handleTypeChange}
                     handleSearchChange={() => handleSearchChange}
-                    handleLevelChange={(newLevelRange) => handleLevelChange(newLevelRange)}
-                    handleResetFilters={() => handleResetFilters}
+                    handleLevelChange={() => handleLevelChange}
+                    handleResetFilters={handleResetFilters}
+                    resetFiltersFlag={resetFiltersFlag}
                 ></Filter>
 
                 <div className={styles["global-container"]}>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export const RarityFilter = ({ handleRarityChange, handleResetFilters }) => {
+export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
     const { t, i18n } = useTranslation();
     const [selectedItems, setSelectedItems] = useState([]);
     const imageFileNames = [];
@@ -29,12 +29,12 @@ export const RarityFilter = ({ handleRarityChange, handleResetFilters }) => {
         handleRarityChange(selectedItems);
     }, [selectedItems]);
 
-    // useEffect(() => {
-    //     console.log('useEffect in RarityFilter triggered');
-    //     if (selectedItems.length > 0) {
-    //         setSelectedItems([]);
-    //     }
-    // }, [handleResetFilters]);
+    useEffect(() => {
+        console.log('useEffect in RarityFilter triggered');
+        if (selectedItems.length > 0) {
+            setSelectedItems([]);
+        }
+    }, [resetFiltersFlag]);
 
     return (
         <div className={cssModule["rarity-container"]}>

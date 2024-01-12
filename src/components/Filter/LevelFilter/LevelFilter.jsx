@@ -21,6 +21,7 @@ import RangeSlider from "./RangeSlider";
 const LevelFilter = ({
     handleLevelChange,
     handleResetFilters,
+    resetFiltersFlag
 }) => {
     const [selectedRange, setSelectedRange] = useState({ from: 0, to: 230 });
     const ranges_dict = {
@@ -54,11 +55,8 @@ const LevelFilter = ({
     );
 
     useEffect(() => {
-        // console.log('useEffect in LevelFilter triggered', selectedRange, handleResetFilters);
         setSelectedRange({ from: 0, to: 230 });
-        console.log('After handleResetFilters');
-        console.trace()
-    }, []);
+    }, [resetFiltersFlag]);
 
     return (
         <div className={cssModule["level-filter-container"]}>

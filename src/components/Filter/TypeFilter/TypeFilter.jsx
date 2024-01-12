@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 
-const TypeFilter = ({ handleTypeChange, handleResetFilters }) => {
+const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
     const [selectedImages, setSelectedImages] = useState([]);
 
     const handleImageClick = (imageName) => {
@@ -19,12 +19,12 @@ const TypeFilter = ({ handleTypeChange, handleResetFilters }) => {
         handleTypeChange(selectedImages);
     }, [selectedImages]);
 
-    // useEffect(() => {
-    //     console.log('ding');
-    //     if (selectedImages.length > 0) {
-    //         setSelectedImages([]);
-    //     }
-    // }, [handleResetFilters, selectedImages]);
+    useEffect(() => {
+        console.log('useEffect in TypeFilter called');
+        if (selectedImages.length > 0) {
+            setSelectedImages([]);
+        }
+    }, [resetFiltersFlag]);
 
     return (
         <div className={cssModule["type-container"]}>

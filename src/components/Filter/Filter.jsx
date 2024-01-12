@@ -23,6 +23,7 @@ const Filter = ({
     handleSearchChange,
     handleLevelChange,
     handleResetFilters,
+    resetFiltersFlag
 }) => {
     const { t, i18n } = useTranslation();
 
@@ -56,20 +57,21 @@ const Filter = ({
             <div className={cssModule["horizontal-separator"]}></div>
             <RarityFilter
                 handleRarityChange={handleRarityChange}
-                handleResetFilters={handleResetFilters}
+                resetFiltersFlag={resetFiltersFlag}
             />
             <SearchBar
                 handleSearchChange={handleSearchChange}
-                handleResetFilters={handleResetFilters}
+                resetFiltersFlag={resetFiltersFlag}
             />
             <div className={cssModule["horizontal-separator"]}></div>
             <LevelFilter
                 handleLevelChange={handleLevelChange}
-                handleResetFilters={handleResetFilters}
+                // handleResetFilters={handleResetFilters}
+                resetFiltersFlag={resetFiltersFlag}
             />
             <TypeFilter
                 handleTypeChange={handleTypeChange}
-                handleResetFilters={handleResetFilters}
+                resetFiltersFlag={resetFiltersFlag}
             />
             <StatsFilter />
         </div>

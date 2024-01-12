@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
 
-const TypeFilter = ({ handleResetFilters }) => {
+const TypeFilter = ({ resetFiltersFlag }) => {
     const [selectedImages, setSelectedImages] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(1);
@@ -56,18 +56,18 @@ const TypeFilter = ({ handleResetFilters }) => {
         });
     };
 
-    // useEffect(() => {
-    //     console.log('useEffect in StatsFilter triggered');
-    //     setSelectedCategory(1);
-    //     if (selectedImages.length > 0) {
-    //         setSelectedImages([]);
-    //     }
+    useEffect(() => {
+        console.log('useEffect in StatsFilter triggered');
+        setSelectedCategory(1);
+        if (selectedImages.length > 0) {
+            setSelectedImages([]);
+        }
         
-    //     if (selectedItems.length > 0) {
-    //         setSelectedItems([]);
-    //     }
+        if (selectedItems.length > 0) {
+            setSelectedItems([]);
+        }
         
-    // }, [handleResetFilters]);
+    }, [resetFiltersFlag]);
 
     return (
         <div className={cssModule["type-container"]}>
