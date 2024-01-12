@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import cssModule from "./SearchBar.module.scss";
 import { useTranslation } from "react-i18next";
 
-const SearchBar = ({ handleSearchChange }) => {
+const SearchBar = ({ handleSearchChange, handleResetFilters }) => {
     const [userInput, setUserInput] = useState("");
     const { t, i18n } = useTranslation();
 
@@ -29,6 +29,13 @@ const SearchBar = ({ handleSearchChange }) => {
     const handleChange = (event) => {
         setUserInput(event.target.value);
     };
+
+    // useEffect(() => {
+    //     console.log('useEffect in SearchBar triggered');
+    //     if (userInput.length > 0) {
+    //         setUserInput([]);
+    //     }
+    // }, [handleResetFilters]);
 
     return (
         <div className={cssModule["search-bar-container"]}>

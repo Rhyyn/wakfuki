@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
 
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
 
-const TypeFilter = () => {
+const TypeFilter = ({ handleResetFilters }) => {
     const [selectedImages, setSelectedImages] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(1);
@@ -56,15 +56,30 @@ const TypeFilter = () => {
         });
     };
 
+    // useEffect(() => {
+    //     console.log('useEffect in StatsFilter triggered');
+    //     setSelectedCategory(1);
+    //     if (selectedImages.length > 0) {
+    //         setSelectedImages([]);
+    //     }
+        
+    //     if (selectedItems.length > 0) {
+    //         setSelectedItems([]);
+    //     }
+        
+    // }, [handleResetFilters]);
+
     return (
         <div className={cssModule["type-container"]}>
-            {/* <h3 className={cssModule["type-title"]}>Stats</h3> */}
             <div className={cssModule["horizontal-separator"]}></div>
             <div
                 className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
                 onClick={() => setSelectedCategory(1)}
             >
-                <span  className={cssModule["stat-title"]}> Stats Principales</span>
+                <span className={cssModule["stat-title"]}>
+                    {" "}
+                    Stats Principales
+                </span>
                 <div className={cssModule["global-icon-container"]}>
                     {selectedCategory === 1 &&
                         primary_stat.map((itemName) => (
@@ -93,7 +108,9 @@ const TypeFilter = () => {
                 className={cssModule["type-row-icon-container"]}
                 onClick={() => setSelectedCategory(2)}
             >
-                <span  className={cssModule["stat-title"]}>Stats Secondaires</span>
+                <span className={cssModule["stat-title"]}>
+                    Stats Secondaires
+                </span>
                 <div className={cssModule["global-icon-container"]}>
                     {selectedCategory === 2 &&
                         secondary_stat.map((itemName) => (

@@ -181,8 +181,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
     }, [fromInputValue, toInputValue]);
 
     useEffect(() => {
-        // This effect captures changes in selectedRange prop
-        // and updates the state values accordingly
         if (!isInitialMount.current && toSliderRef.current != null) {
             setFromInputValue(selectedRange.from);
             setToInputValue(selectedRange.to);
@@ -195,6 +193,7 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
             );
         }
     }, [selectedRange]);
+
 
     return (
         <div className={cssModule["level-filter-container"]}>

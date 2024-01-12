@@ -22,8 +22,10 @@ const Filter = ({
     handleTypeChange,
     handleSearchChange,
     handleLevelChange,
+    handleResetFilters,
 }) => {
     const { t, i18n } = useTranslation();
+
     return (
         <div className={cssModule["filter-container"]}>
             <div className={cssModule["header-container"]}>
@@ -37,6 +39,7 @@ const Filter = ({
                         unoptimized
                         alt="reset-icon"
                         title={t("Mise à zéro des Filtres")}
+                        onClick={() => handleResetFilters()}
                     />
                     <div className={cssModule["vertical-separator"]}></div>
                     <Image
@@ -51,11 +54,23 @@ const Filter = ({
                 </div>
             </div>
             <div className={cssModule["horizontal-separator"]}></div>
-            <RarityFilter handleRarityChange={handleRarityChange} />
-            <SearchBar handleSearchChange={handleSearchChange} />
+            <RarityFilter
+                handleRarityChange={handleRarityChange}
+                handleResetFilters={handleResetFilters}
+            />
+            <SearchBar
+                handleSearchChange={handleSearchChange}
+                handleResetFilters={handleResetFilters}
+            />
             <div className={cssModule["horizontal-separator"]}></div>
-            <LevelFilter handleLevelChange={handleLevelChange} />
-            <TypeFilter handleTypeChange={handleTypeChange} />
+            <LevelFilter
+                handleLevelChange={handleLevelChange}
+                handleResetFilters={handleResetFilters}
+            />
+            <TypeFilter
+                handleTypeChange={handleTypeChange}
+                handleResetFilters={handleResetFilters}
+            />
             <StatsFilter />
         </div>
     );
