@@ -29,14 +29,25 @@
 .type-row-icon-container {
     display: flex;
     width: 90%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 3px 0 3px 0;
     flex-wrap: wrap;
 }
 
 .top-row {
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.global-icon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.stat-title {
+    color: v.$text-offwhite;
+    margin: 0 auto;
 }
 
 .icon-container {
@@ -44,6 +55,8 @@
     height: 45px;
     border-radius: 8px;
     display: flex;
+    flex-direction: row;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
     -webkit-user-select: none; /* Safari */

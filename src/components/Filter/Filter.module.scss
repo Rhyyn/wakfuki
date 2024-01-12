@@ -10,7 +10,7 @@
     left: 0px;
     height: 100vh;
     // height: 1500px;
-    overflow-y: hidden;
+    overflow-y: auto;
     z-index: 2;
     padding: 0;
     // display: flex;
@@ -42,7 +42,7 @@
 .header-title {
     flex-grow: 1;
     padding-left: 25px;
-    color: v.$text-offwhite
+    color: v.$text-offwhite;
 }
 
 .header-icons-container{
