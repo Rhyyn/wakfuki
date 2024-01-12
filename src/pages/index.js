@@ -86,6 +86,8 @@ const Home = () => {
                     handleTypeFilter={handleTypeFilter}
                     handleRarityChange={handleRarityChange}
                     handleTypeChange={handleTypeChange}
+                    handleSearchChange={handleSearchChange}
+                    handleLevelChange={handleLevelChange}
                 ></Filter>
 
                 <div className={styles["global-container"]}>

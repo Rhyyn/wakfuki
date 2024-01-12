@@ -2,21 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./RangeSlider.module.scss";
 import Image from "next/image";
 
-
-// CUSTOM RANGE FOR PREDEFINED LEVELS RANGE
-
-const RangeSlider = () => {
+const RangeSlider = ({ selectedRange, setSelectedRange }) => {
+    const isInitialMount = useRef(true);
+    const fromSliderRef = useRef(null);
+    const toSliderRef = useRef(null);
+    const fromInputRef = useRef(null);
+    const toInputRef = useRef(null);
     const [fromInputValue, setFromInputValue] = useState(0);
     const [toInputValue, setToInputValue] = useState(230);
 
-    const controlFromInput = (
-        fromSlider,
-        fromInput,
-        toInput,
-        controlSlider
-    ) => {
+    // TODO : Disable string in inputs
+    const controlFromInput = (fromSlider, fromInput, toInput) => {
         const [from, to] = getParsed(fromInput, toInput);
-        fillSlider(fromInput, toInput, "#615a49", "#292621", controlSlider);
+        fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);
 
         if (from > to) {
             fromSlider.defaultValue = to;
@@ -32,9 +30,9 @@ const RangeSlider = () => {
         }
     };
 
-    const controlToInput = (toSlider, fromInput, toInput, controlSlider) => {
+    const controlToInput = (toSlider, fromInput, toInput) => {
         const [from, to] = getParsed(fromInput, toInput);
-        fillSlider(fromInput, toInput, "#615a49", "#292621", controlSlider);
+        fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);
         setToggleAccessible(toInput);
 
         if (from <= to) {
@@ -97,7 +95,7 @@ const RangeSlider = () => {
         return [from, to];
     };
 
-    const fillSlider = (from, to, sliderColor, rangeColor, controlSlider) => {
+    const fillSlider = (from, to, sliderColor, rangeColor, toSlider) => {
         const rangeDistance = to.max - to.min;
         const fromPosition = from.value - to.min;
         const toPosition = to.value - to.min;
@@ -106,7 +104,7 @@ const RangeSlider = () => {
         // console.log('rangeDistance',rangeDistance);
         // console.log('To Position:', toPosition);
 
-        controlSlider.style.background = `linear-gradient(
+        toSlider.style.background = `linear-gradient(
             to right,
             ${sliderColor} 0%,
             ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
@@ -130,6 +128,11 @@ const RangeSlider = () => {
         const toSlider = document.querySelector("#toSlider");
         const fromInput = document.querySelector("#fromInput");
         const toInput = document.querySelector("#toInput");
+
+        fromSliderRef.current = fromSlider;
+        toSliderRef.current = toSlider;
+        fromInputRef.current = fromInput;
+        toInputRef.current = toInput;
 
         fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
         setToggleAccessible(toSlider);
@@ -163,6 +166,35 @@ const RangeSlider = () => {
         toInput.oninput = () =>
             controlToInput(toSlider, fromInput, toInput, toSlider);
     }, []);
+
+    useEffect(() => {
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
+            return;
+        }
+
+        const rangeObject = {
+            from: fromInputValue,
+            to: toInputValue,
+        };
+        setSelectedRange(rangeObject);
+    }, [fromInputValue, toInputValue]);
+
+    useEffect(() => {
+        // This effect captures changes in selectedRange prop
+        // and updates the state values accordingly
+        if (!isInitialMount.current && toSliderRef.current != null) {
+            setFromInputValue(selectedRange.from);
+            setToInputValue(selectedRange.to);
+            fillSlider(
+                fromSliderRef.current,
+                toSliderRef.current,
+                "#615a49",
+                "#292621",
+                toSliderRef.current
+            );
+        }
+    }, [selectedRange]);
 
     return (
         <div className={cssModule["level-filter-container"]}>

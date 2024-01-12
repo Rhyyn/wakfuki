@@ -4,10 +4,10 @@ import Image from "next/image";
 // import { useTranslation } from 'next-i18next';
 import { useTranslation } from "react-i18next";
 import { RarityFilter } from "./RarityFilter/RarityFilter";
-import { SearchBar } from "./SearchBar/SearchBar";
-import LevelFilter  from "./LevelFilter/LevelFilter";
+import SearchBar from "./SearchBar/SearchBar";
+import LevelFilter from "./LevelFilter/LevelFilter";
 import TypeFilter from "./TypeFilter/TypeFilter";
-import StatsFilter from "./StatsFilter/StatsFilter"
+import StatsFilter from "./StatsFilter/StatsFilter";
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -19,7 +19,9 @@ const Filter = ({
     store_file,
     handleTypeFilter,
     handleRarityChange,
-    handleTypeChange
+    handleTypeChange,
+    handleSearchChange,
+    handleLevelChange,
 }) => {
     const { t, i18n } = useTranslation();
     return (
@@ -49,10 +51,10 @@ const Filter = ({
                 </div>
             </div>
             <div className={cssModule["horizontal-separator"]}></div>
-            <RarityFilter handleRarityChange={handleRarityChange}/>
-            <SearchBar />
+            <RarityFilter handleRarityChange={handleRarityChange} />
+            <SearchBar handleSearchChange={handleSearchChange} />
             <div className={cssModule["horizontal-separator"]}></div>
-            <LevelFilter />
+            <LevelFilter handleLevelChange={handleLevelChange} />
             <TypeFilter handleTypeChange={handleTypeChange} />
             <StatsFilter />
         </div>

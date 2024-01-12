@@ -28,8 +28,6 @@
     outline: none;
 }
 
-
-
 /* MOZILLA STUFF */
 .range-input::-moz-range-thumb {
     -moz-appearance: none;
@@ -60,8 +58,6 @@
 }
 /* MOZILLA STUFF */
 
-
-
 .range-input::-webkit-slider-thumb {
     -webkit-appearance: none;
     pointer-events: all;
@@ -91,7 +87,6 @@
     align-items: center;
 }
 
-
 .form_control_container__time__input {
     color: v.$text-offwhite;
     width: 60px;
@@ -105,6 +100,7 @@
     outline: none;
     background: none;
     text-shadow: 3px 1px 3px rgba(41, 38, 33, 0.7);
+    user-select: none;
 }
 
 .form_control_container__time__input::-webkit-inner-spin-button {
@@ -136,8 +132,6 @@
     display: none;
 }
 /* MOZILLA STUFF */
-
-
 
 .range-input {
     -webkit-appearance: none;
