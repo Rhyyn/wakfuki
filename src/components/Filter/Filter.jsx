@@ -18,6 +18,7 @@ const Filter = ({
     length_recipes,
     store_file,
     handleTypeFilter,
+    handleRarityChange
 }) => {
     const { t, i18n } = useTranslation();
     return (
@@ -46,85 +47,13 @@ const Filter = ({
                     />
                 </div>
             </div>
-            {/* <button onClick={handleLogClick}>Log Data</button>
-            <button onClick={() => store_file("bottes_scrapped_data_formated.json")}>
-                TEST CALL
-            </button>
-            <button onClick={() => length_recipes()}>TEST CALL LENGTH</button> */}
             <div className={cssModule["horizontal-separator"]}></div>
-            <RarityFilter />
+            <RarityFilter handleRarityChange={handleRarityChange}/>
             <SearchBar />
             <div className={cssModule["horizontal-separator"]}></div>
             <LevelFilter />
             <TypeFilter />
             <StatsFilter />
-
-            {/* <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter([254, 108, 110, 115, 113])}
-            >
-                Arme à 1 main
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter([223, 114, 101, 111, 253, 117])}
-            >
-                Arme à 2 mains
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter([112, 189])}
-            >
-                Seconde Main
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(120)}
-            >
-                Amulette
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(103)}
-            >
-                Anneau
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(119)}
-            >
-                Bottes
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(132)}
-            >
-                Cape
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(134)}
-            >
-                Casque
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(133)}
-            >
-                Ceinture
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(138)}
-            >
-                Epaulettes
-            </button>
-            <button
-                className="cat-buttons"
-                onClick={() => handleTypeFilter(136)}
-            >
-                Plastron
-            </button> */}
         </div>
     );
 };
