@@ -5,7 +5,7 @@ import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 function MyApp({ Component, pageProps }) {
     const fileNames = [

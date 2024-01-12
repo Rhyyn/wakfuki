@@ -17,7 +17,7 @@ const TypeFilter = () => {
 
     return (
         <div className={cssModule["type-container"]}>
-            <h3 className={cssModule["type-title"]}>Types</h3>
+            {/* <h3 className={cssModule["type-title"]}>Types</h3> */}
             <div className={cssModule["horizontal-separator"]}></div>
             <div
                 className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
