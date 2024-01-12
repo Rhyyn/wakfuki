@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 
-const TypeFilter = () => {
+const TypeFilter = ({ handleTypeChange }) => {
     const [selectedImages, setSelectedImages] = useState([]);
 
     const handleImageClick = (imageName) => {
@@ -14,6 +14,10 @@ const TypeFilter = () => {
             }
         });
     };
+
+    useEffect(() => {
+        handleTypeChange(selectedImages);
+    }, [selectedImages]);
 
     return (
         <div className={cssModule["type-container"]}>

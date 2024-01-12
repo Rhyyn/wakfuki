@@ -18,7 +18,8 @@ const Filter = ({
     length_recipes,
     store_file,
     handleTypeFilter,
-    handleRarityChange
+    handleRarityChange,
+    handleTypeChange
 }) => {
     const { t, i18n } = useTranslation();
     return (
@@ -52,7 +53,7 @@ const Filter = ({
             <SearchBar />
             <div className={cssModule["horizontal-separator"]}></div>
             <LevelFilter />
-            <TypeFilter />
+            <TypeFilter handleTypeChange={handleTypeChange} />
             <StatsFilter />
         </div>
     );

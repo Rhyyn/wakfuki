@@ -85,6 +85,7 @@ const Home = () => {
                     store_file={store_file}
                     handleTypeFilter={handleTypeFilter}
                     handleRarityChange={handleRarityChange}
+                    handleTypeChange={handleTypeChange}
                 ></Filter>
 
                 <div className={styles["global-container"]}>
