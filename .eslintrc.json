@@ -1,3 +1,7 @@
 {
-  "extends": ["next/babel","next/core-web-vitals"]
+  "extends": ["next"],
+  "rules": {
+    "indent": ["error", 2],
+    "react-hooks/exhaustive-deps": "off"
+  }
 }

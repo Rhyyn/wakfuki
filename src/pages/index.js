@@ -10,135 +10,135 @@ import { Header } from "../components/Header/Header.jsx";
 import "./i18n";
 
 const Home = () => {
-    const { t } = useTranslation();
-    const [selectedType, setSelectedType] = useState(null);
-    const [filterState, setFilterState] = useState({
-        searchQuery: "",
-        rarity: [],
-        levelRange: { from: 0, to: 230 },
-        type: [],
-        stats: [],
+  const { t } = useTranslation();
+  const [selectedType, setSelectedType] = useState(null);
+  const [filterState, setFilterState] = useState({
+    searchQuery: "",
+    rarity: [],
+    levelRange: { from: 0, to: 230 },
+    type: [],
+    stats: [],
+  });
+
+  const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
+
+  const handleResetFilters = () => {
+    console.log("handleResetFilters called");
+    setFilterState({
+      searchQuery: "",
+      rarity: [],
+      levelRange: { from: 0, to: 230 },
+      type: [],
+      stats: [],
     });
+    setResetFiltersFlag(true);
+  };
 
-    const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
+  // const handleResetFilters = useCallback(() => {
+  //     console.log("handleResetFilters called");
+  //     setFilterState({
+  //         searchQuery: "",
+  //         rarity: [],
+  //         levelRange: { from: 0, to: 230 },
+  //         type: [],
+  //         stats: [],
+  //     });
 
-    const handleResetFilters = () => {
-        console.log("handleResetFilters called");
-        setFilterState({
-            searchQuery: "",
-            rarity: [],
-            levelRange: { from: 0, to: 230 },
-            type: [],
-            stats: [],
-        });
-        setResetFiltersFlag(true);
-    };
+  //     setResetFiltersFlag(true);
+  // }, [filterState]);
 
-    // const handleResetFilters = useCallback(() => {
-    //     console.log("handleResetFilters called");
-    //     setFilterState({
-    //         searchQuery: "",
-    //         rarity: [],
-    //         levelRange: { from: 0, to: 230 },
-    //         type: [],
-    //         stats: [],
-    //     });
+  useEffect(() => {
+    setResetFiltersFlag(false);
+  }, [resetFiltersFlag]);
 
-    //     setResetFiltersFlag(true);
-    // }, [filterState]);
+  const handleLogClick = async () => {
+    try {
+      fetchItemsById();
+    } catch (error) {
+      console.error("Error fetching and processing data:", error);
+    }
+  };
 
-    useEffect(() => {
-        setResetFiltersFlag(false);
-    }, [resetFiltersFlag]);
+  const handleTypeFilter = (types) => {
+    console.log("Filtering items by types:", types);
+    setSelectedType(types);
+    // fetchItemsById(types);
+  };
 
-    const handleLogClick = async () => {
-        try {
-            fetchItemsById();
-        } catch (error) {
-            console.error("Error fetching and processing data:", error);
-        }
-    };
+  const handleSearchChange = (newSearchQuery) => {
+    console.log("handleSearchChange called");
+    setFilterState((prevState) => ({
+      ...prevState,
+      searchQuery: newSearchQuery,
+    }));
+  };
 
-    const handleTypeFilter = (types) => {
-        console.log("Filtering items by types:", types);
-        setSelectedType(types);
-        // fetchItemsById(types);
-    };
+  const handleRarityChange = (newRarity) => {
+    console.log("handleRarityChange called");
+    setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
+  };
 
-    const handleSearchChange = (newSearchQuery) => {
-        console.log("handleSearchChange called");
-        setFilterState((prevState) => ({
-            ...prevState,
-            searchQuery: newSearchQuery,
-        }));
-    };
+  const handleLevelChange = (newLevelRange) => {
+    console.log("handleLevelChange called");
+    setFilterState((prevState) => ({
+      ...prevState,
+      levelRange: newLevelRange,
+    }));
+  };
 
-    const handleRarityChange = (newRarity) => {
-        console.log("handleRarityChange called");
-        setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
-    };
+  const handleTypeChange = (newType) => {
+    console.log("handleTypeChange called");
+    setFilterState((prevState) => ({ ...prevState, type: newType }));
+  };
 
-    const handleLevelChange = (newLevelRange) => {
-        console.log("handleLevelChange called");
-        setFilterState((prevState) => ({
-            ...prevState,
-            levelRange: newLevelRange,
-        }));
-    };
+  const handleStatsChange = (newStats) => {
+    console.log("handleTypeChange called");
+    setFilterState((prevState) => ({ ...prevState, stats: newStats }));
+  };
 
-    const handleTypeChange = (newType) => {
-        console.log("handleTypeChange called");
-        setFilterState((prevState) => ({ ...prevState, type: newType }));
-    };
+  useEffect(() => {
+    console.log(filterState);
+  }, [filterState]);
 
-    const handleStatsChange = (newStats) => {
-        console.log("handleTypeChange called");
-        setFilterState((prevState) => ({ ...prevState, stats: newStats }));
-    };
+  return (
+    <>
+      <Head>
+        <title>WakfuKi</title>
+        <meta name="description" content={t("Titre_desc")} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div>
+        <Filter
+          handleLogClick={() => handleLogClick}
+          length_recipes={length_recipes}
+          store_file={store_file}
+          handleTypeFilter={() => handleTypeFilter}
+          handleRarityChange={() => handleRarityChange}
+          handleTypeChange={() => handleTypeChange}
+          handleSearchChange={() => handleSearchChange}
+          handleLevelChange={() => handleLevelChange}
+          handleResetFilters={handleResetFilters}
+          resetFiltersFlag={resetFiltersFlag}
+        ></Filter>
 
-    useEffect(() => {
-        console.log(filterState);
-    }, [filterState]);
-
-    return (
-        <>
-            <Head>
-                <title>WakfuKi</title>
-                <meta name="description" content={t("Titre_desc")} />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div>
-                <Filter
-                    handleLogClick={() => handleLogClick}
-                    length_recipes={length_recipes}
-                    store_file={store_file}
-                    handleTypeFilter={() => handleTypeFilter}
-                    handleRarityChange={() => handleRarityChange}
-                    handleTypeChange={() => handleTypeChange}
-                    handleSearchChange={() => handleSearchChange}
-                    handleLevelChange={() => handleLevelChange}
-                    handleResetFilters={handleResetFilters}
-                    resetFiltersFlag={resetFiltersFlag}
-                ></Filter>
-
-                <div className={styles["global-container"]}>
-                    {/* <Header></Header> */}
-                    <div className={styles["item-list"]}>
-                        {selectedType != null && (
-                            <ItemList
-                                key={selectedType.toString()}
-                                selectedType={selectedType}
-                            />
-                        )}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+        <div className={styles["global-container"]}>
+          {/* <Header></Header> */} {/* THIS GUY CAUSING BUBU RE RENDERS */}
+          <div className={styles["item-list"]}>
+            {selectedType != null && (
+              <ItemList
+                key={selectedType.toString()}
+                selectedType={selectedType}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Home;

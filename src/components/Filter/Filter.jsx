@@ -14,68 +14,68 @@ import StatsFilter from "./StatsFilter/StatsFilter";
 // ELSE GO HAM
 
 const Filter = ({
-    handleLogClick,
-    length_recipes,
-    store_file,
-    handleTypeFilter,
-    handleRarityChange,
-    handleTypeChange,
-    handleSearchChange,
-    handleLevelChange,
-    handleResetFilters,
-    resetFiltersFlag
+  handleLogClick,
+  length_recipes,
+  store_file,
+  handleTypeFilter,
+  handleRarityChange,
+  handleTypeChange,
+  handleSearchChange,
+  handleLevelChange,
+  handleResetFilters,
+  resetFiltersFlag
 }) => {
-    const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-    return (
-        <div className={cssModule["filter-container"]}>
-            <div className={cssModule["header-container"]}>
-                <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
-                <div className={cssModule["header-icons-container"]}>
-                    <Image
-                        className={cssModule["header-icon"]}
-                        src="/reset_icon_yellow.png"
-                        width={32}
-                        height={32}
-                        unoptimized
-                        alt="reset-icon"
-                        title={t("Mise à zéro des Filtres")}
-                        onClick={() => handleResetFilters()}
-                    />
-                    <div className={cssModule["vertical-separator"]}></div>
-                    <Image
-                        className={cssModule["header-icon"]}
-                        src="/sort_icon_yellow.png"
-                        width={32}
-                        height={32}
-                        unoptimized
-                        alt="sort-icon"
-                        title={t("Trier par")}
-                    />
-                </div>
-            </div>
-            <div className={cssModule["horizontal-separator"]}></div>
-            <RarityFilter
-                handleRarityChange={handleRarityChange}
-                resetFiltersFlag={resetFiltersFlag}
-            />
-            <SearchBar
-                handleSearchChange={handleSearchChange}
-                resetFiltersFlag={resetFiltersFlag}
-            />
-            <div className={cssModule["horizontal-separator"]}></div>
-            <LevelFilter
-                handleLevelChange={handleLevelChange}
-                // handleResetFilters={handleResetFilters}
-                resetFiltersFlag={resetFiltersFlag}
-            />
-            <TypeFilter
-                handleTypeChange={handleTypeChange}
-                resetFiltersFlag={resetFiltersFlag}
-            />
-            <StatsFilter />
+  return (
+    <div className={cssModule["filter-container"]}>
+      <div className={cssModule["header-container"]}>
+        <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
+        <div className={cssModule["header-icons-container"]}>
+          <Image
+            className={cssModule["header-icon"]}
+            src="/reset_icon_yellow.png"
+            width={32}
+            height={32}
+            unoptimized
+            alt="reset-icon"
+            title={t("Mise à zéro des Filtres")}
+            onClick={() => handleResetFilters()}
+          />
+          <div className={cssModule["vertical-separator"]}></div>
+          <Image
+            className={cssModule["header-icon"]}
+            src="/sort_icon_yellow.png"
+            width={32}
+            height={32}
+            unoptimized
+            alt="sort-icon"
+            title={t("Trier par")}
+          />
         </div>
-    );
+      </div>
+      <div className={cssModule["horizontal-separator"]}></div>
+      <RarityFilter
+        handleRarityChange={handleRarityChange}
+        resetFiltersFlag={resetFiltersFlag}
+      />
+      <SearchBar
+        handleSearchChange={handleSearchChange}
+        resetFiltersFlag={resetFiltersFlag}
+      />
+      <div className={cssModule["horizontal-separator"]}></div>
+      <LevelFilter
+        handleLevelChange={handleLevelChange}
+        // handleResetFilters={handleResetFilters}
+        resetFiltersFlag={resetFiltersFlag}
+      />
+      <TypeFilter
+        handleTypeChange={handleTypeChange}
+        resetFiltersFlag={resetFiltersFlag}
+      />
+      <StatsFilter />
+    </div>
+  );
 };
 
 export { Filter };
