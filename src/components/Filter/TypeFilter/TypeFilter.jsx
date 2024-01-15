@@ -17,6 +17,7 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
 
   useEffect(() => {
     handleTypeChange(selectedImages);
+    console.log("handleTypeChange(Selectedtypes)");
   }, [selectedImages]);
 
   useEffect(() => {

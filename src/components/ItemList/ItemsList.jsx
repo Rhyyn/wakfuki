@@ -1,7 +1,5 @@
-"use client";
 import React, { useState, useEffect, useRef } from "react";
 import filesLength from "../../../public/files_length.json";
-// import dbInstance from "./database-open.jsx";
 import { waitForDbInitialization, db } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
@@ -9,7 +7,7 @@ import cssModule from "./ItemList.module.scss";
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
 
-const ItemList = ({ selectedType }) => {
+const ItemList = ({ selectedType, filterState}) => {
   console.log("ItemList rendering");
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
@@ -27,22 +25,22 @@ const ItemList = ({ selectedType }) => {
       if (isLoading) return;
 
       setIsLoading(true);
-
-      let itemsQuery = db.table("recipes.json");
-      const expectedItemCount = filesLength["recipes.json"] || 0;
-      itemsQuery
-        .count()
-        .then((count) => {
-          if (count == expectedItemCount) {
-            // maybe check for random object?
-            console.log(
-              `Number of records in "recipes.json" table: ${count}, expected: ${expectedItemCount}`
-            );
-          }
-        })
-        .catch((error) => {
-          console.error(`Error getting count: ${error}`);
-        });
+      console.log("loading itemList");
+      // let itemsQuery = db.table("recipes.json");
+      // const expectedItemCount = filesLength["recipes.json"] || 0;
+      // itemsQuery
+      //   .count()
+      //   .then((count) => {
+      //     if (count == expectedItemCount) {
+      //       // maybe check for random object?
+      //       console.log(
+      //         `Number of records in "recipes.json" table: ${count}, expected: ${expectedItemCount}`
+      //       );
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.error(`Error getting count: ${error}`);
+      //   });
       // if (selectedType.length > 1) {
       //     itemsQuery = itemsQuery
       //         .where("baseParams.itemTypeId")
@@ -144,10 +142,11 @@ const ItemList = ({ selectedType }) => {
 
   return (
     <div className={cssModule["cards-container"]}>
-      {items.map((item) => (
+      <h1>HELLO INSIDE</h1>
+      {/* {items.map((item) => (
         <Card key={item.id} item={item} />
       ))}
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p>Loading...</p>} */}
     </div>
   );
 };

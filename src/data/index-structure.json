@@ -143,7 +143,7 @@
             }
         ]
     },
-    "amulette_scrapped_data_formated.json": {
+    "amulette.json": {
         "indexes": [
             {
                 "name": "amulette_indexByTitle",
@@ -189,7 +189,7 @@
             }
         ]
     },
-    "anneau_scrapped_data_formated.json": {
+    "anneau.json": {
         "indexes": [
             {
                 "name": "anneau_indexByTitle",
@@ -235,7 +235,7 @@
             }
         ]
     },
-    "cape_scrapped_data_formated.json": {
+    "cape.json": {
         "indexes": [
             {
                 "name": "cape_indexByTitle",
@@ -281,7 +281,7 @@
             }
         ]
     },
-    "bottes_scrapped_data_formated.json": {
+    "bottes.json": {
         "indexes": [
             {
                 "name": "botte_indexByTitle",
@@ -327,7 +327,7 @@
             }
         ]
     },
-    "casque_scrapped_data_formated.json": {
+    "casque.json": {
         "indexes": [
             {
                 "name": "casque_indexByTitle",
@@ -373,7 +373,7 @@
             }
         ]
     },
-    "ceinture_scrapped_data_formated.json": {
+    "ceinture.json": {
         "indexes": [
             {
                 "name": "ceinture_indexByTitle",
@@ -419,7 +419,7 @@
             }
         ]
     },
-    "epaulettes_scrapped_data_formated.json": {
+    "epaulettes.json": {
         "indexes": [
             {
                 "name": "epaulettes_indexByTitle",
@@ -465,7 +465,7 @@
             }
         ]
     },
-    "plastron_scrapped_data_formated.json": {
+    "plastron.json": {
         "indexes": [
             {
                 "name": "plastron_indexByTitle",
@@ -511,7 +511,7 @@
             }
         ]
     },
-    "familiers_scrapped_data_formated.json": {
+    "familiers.json": {
         "indexes": [
             {
                 "name": "familiers_indexByTitle",
@@ -557,7 +557,7 @@
             }
         ]
     },
-    "arme1main_scrapped_data_formated.json": {
+    "arme1main.json": {
         "indexes": [
             {
                 "name": "arme1main_indexByTitle",
@@ -603,7 +603,7 @@
             }
         ]
     },
-    "arme2main_scrapped_data_formated.json": {
+    "arme2main.json": {
         "indexes": [
             {
                 "name": "arme2main_indexByTitle",
@@ -649,7 +649,7 @@
             }
         ]
     },
-    "secondemain_scrapped_data_formated.json": {
+    "secondemain.json": {
         "indexes": [
             {
                 "name": "secondemain_indexByTitle",
@@ -695,7 +695,7 @@
             }
         ]
     },
-    "emblemes_scrapped_data_formated.json": {
+    "emblemes.json": {
         "indexes": [
             {
                 "name": "emblemes_indexByTitle",
@@ -741,7 +741,7 @@
             }
         ]
     },
-    "montures_scrapped_data_formated.json": {
+    "montures.json": {
         "indexes": [
             {
                 "name": "montures_indexByTitle",
@@ -787,7 +787,7 @@
             }
         ]
     },
-    "outils_scrapped_data_formated.json": {
+    "outils.json": {
         "indexes": [
             {
                 "name": "outils_indexByTitle",

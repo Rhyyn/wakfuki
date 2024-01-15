@@ -3,10 +3,10 @@ import { useState, useEffect, useCallback } from "react";
 import styles from "../../styles/Home.module.scss";
 import { useTranslation } from "next-i18next";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
-import { ItemList, length_recipes } from "../components/ItemList/ItemsList.jsx";
+import ItemList from "../components/ItemList/ItemsList.jsx";
 import { store_file } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
-import { Header } from "../components/Header/Header.jsx";
+import Header from "../components/Header/Header.jsx";
 import "./i18n";
 
 const Home = () => {
@@ -33,19 +33,6 @@ const Home = () => {
     });
     setResetFiltersFlag(true);
   };
-
-  // const handleResetFilters = useCallback(() => {
-  //     console.log("handleResetFilters called");
-  //     setFilterState({
-  //         searchQuery: "",
-  //         rarity: [],
-  //         levelRange: { from: 0, to: 230 },
-  //         type: [],
-  //         stats: [],
-  //     });
-
-  //     setResetFiltersFlag(true);
-  // }, [filterState]);
 
   useEffect(() => {
     setResetFiltersFlag(false);
@@ -98,6 +85,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log(filterState);
+    console.log("filterState.type.length", filterState.type.length);
   }, [filterState]);
 
   return (
@@ -105,20 +93,17 @@ const Home = () => {
       <Head>
         <title>WakfuKi</title>
         <meta name="description" content={t("Titre_desc")} />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <Filter
           handleLogClick={() => handleLogClick}
-          length_recipes={length_recipes}
+          // length_recipes={length_recipes}
           store_file={store_file}
           handleTypeFilter={() => handleTypeFilter}
           handleRarityChange={() => handleRarityChange}
-          handleTypeChange={() => handleTypeChange}
+          handleTypeChange={handleTypeChange}
           handleSearchChange={() => handleSearchChange}
           handleLevelChange={() => handleLevelChange}
           handleResetFilters={handleResetFilters}
@@ -126,12 +111,13 @@ const Home = () => {
         ></Filter>
 
         <div className={styles["global-container"]}>
-          {/* <Header></Header> */} {/* THIS GUY CAUSING BUBU RE RENDERS */}
+          {/* <Header /> THIS GUY CAUSING BAD RE RENDERS */}
           <div className={styles["item-list"]}>
-            {selectedType != null && (
+            {filterState.type && filterState.type.length !== 0 && (
               <ItemList
-                key={selectedType.toString()}
-                selectedType={selectedType}
+                key={filterState.type}
+                selectedType={filterState.type}
+                filterState={filterState}
               />
             )}
           </div>
