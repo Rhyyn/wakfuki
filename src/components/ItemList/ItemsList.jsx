@@ -15,6 +15,23 @@ const ItemList = ({ selectedType, filterState}) => {
   const isInitialMount = useRef(true);
   const [isFetching, setIsFetching] = useState(false);
 
+
+  const filename_of_types = {
+    "134" : "casque",
+    "138" : "epaulettes",
+    "120" : "amulette",
+    "136" : "plastron",
+    "132" : "cape",
+    "103" : "anneau",
+    "133" : "ceinture",
+    "119" : "bottes",
+    "254" : "arme1main",
+    "108" : "arme1main",
+    "110" : "arme1main",
+    "115" : "arme1main",
+    "113" : "arme1main",
+  }
+
   const length_recipes = async () => {
     await waitForDbInitialization();
     await db.open().then(() => {

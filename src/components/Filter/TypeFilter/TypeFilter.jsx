@@ -33,7 +33,7 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
       <div
         className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
       >
-        {["134", "138", "120", "136"].map((imageName) => (
+        {["134-casque", "138-epaulettes", "120-amulette", "136-plastron"].map((imageName) => (
           <div
             key={imageName}
             className={`${cssModule["icon-container"]} ${
@@ -49,13 +49,13 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
               width={28}
               height={28}
               unoptimized
-              alt="casque/helmet"
+              alt={imageName}
             />
           </div>
         ))}
       </div>
       <div className={cssModule["type-row-icon-container"]}>
-        {["132", "103", "133", "119"].map((imageName) => (
+        {["132-cape", "103-anneau", "133-ceinture", "119-bottes"].map((imageName) => (
           <div
             key={imageName}
             className={`${cssModule["icon-container"]} ${
@@ -71,13 +71,13 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
               width={28}
               height={28}
               unoptimized
-              alt="casque/helmet"
+              alt={imageName}
             />
           </div>
         ))}
       </div>
       <div className={cssModule["type-row-icon-container"]}>
-        {["518", "519", "571", "520"].map((imageName) => (
+        {["518-arme1main", "519-arme2main", "571-secondemain", "520-secondemain"].map((imageName) => (
           <div
             key={imageName}
             className={`${cssModule["icon-container"]} ${
@@ -93,7 +93,7 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
               width={28}
               height={28}
               unoptimized
-              alt="casque/helmet"
+              alt={imageName}
             />
           </div>
         ))}
