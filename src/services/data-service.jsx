@@ -6,6 +6,10 @@ import indexStructure from "../data/index-structure.json";
 let isDbInitialized = false;
 const db = new Dexie("WakfuKiDatabase");
 
+// TODO
+// Data validation line 52
+// Front load + loading screen line 75
+
 
 const store_file = async (fileName) => {
   try {

@@ -11,7 +11,12 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
   const [fromInputValue, setFromInputValue] = useState(0);
   const [toInputValue, setToInputValue] = useState(230);
 
-  // TODO : Disable string in inputs
+  // TODO 
+  // Disable string in inputs
+  // Fix Slider having wrong value by manually typing 
+  // toValue > fromValue
+
+  
   const controlFromInput = (fromSlider, fromInput, toInput) => {
     const [from, to] = getParsed(fromInput, toInput);
     fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);

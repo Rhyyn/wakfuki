@@ -5,6 +5,10 @@ import cssModule from "./LanguageSwitch.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+// TODO:
+// Something in this component is creating re-renders
+// for the whole app
+
 const LanguageSwitch = () => {
   const router = useRouter();
   const [flagToggle, setFlagToggle] = useState(1);

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
 
+// TODO
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
+// fix title attribute with locales
 
 const TypeFilter = ({ resetFiltersFlag }) => {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -121,6 +123,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   height={24}
                   unoptimized
                   alt={itemName}
+                  title={itemName}
                 />
               </div>
             ))}
@@ -148,35 +151,12 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   height={24}
                   unoptimized
                   alt={itemName}
+                  title={itemName}
                 />
               </div>
             ))}
         </div>
       </div>
-      {/* <div
-                className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
-            >
-                {stats.map((itemName) => (
-                    <div
-                        key={itemName}
-                        className={`${cssModule["icon-container"]} ${
-                            selectedItems.includes(itemName)
-                                ? cssModule["selected"]
-                                : ""
-                        }`}
-                        onClick={() => handleImageClick(itemName)}
-                    >
-                        <Image
-                            className={cssModule["icon"]}
-                            src={`/stats/${itemName}.png`}
-                            width={24}
-                            height={24}
-                            unoptimized
-                            alt={itemName}
-                        />
-                    </div>
-                ))}
-            </div> */}
     </div>
   );
 };

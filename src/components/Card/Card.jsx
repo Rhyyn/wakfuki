@@ -5,6 +5,8 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import Image from "next/image";
 
+
+
 const Card = ({ item }) => {
   const [triToggle, setTriToggle] = useState(2);
 
