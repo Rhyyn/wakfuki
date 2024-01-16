@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import filesLength from "../../../public/files_length.json";
 import { waitForDbInitialization, db } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
@@ -102,9 +101,9 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
     await waitForDbInitialization();
     await db.open();
     const selectedItemDict = await get_typeId_from_string(selectedItemTypes);
-    console.log("selectedItemDict", selectedItemDict[0]);
-    console.log("selectedItemDict length", selectedItemDict.length);
-    console.log("selectedItemDict[0].itemIds", parseInt(selectedItemDict[0].itemIds));
+    // console.log("selectedItemDict", selectedItemDict[0]);
+    // console.log("selectedItemDict length", selectedItemDict.length);
+    // console.log("selectedItemDict[0].itemIds", parseInt(selectedItemDict[0].itemIds));
 
     try {
       if (isLoading) return;
@@ -116,7 +115,6 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
         selectedItemDict.length === 1
       ) {
         let queryTable = db.table(selectedItemDict[0].itemTypeString + ".json");
-        console.log("queryTable",queryTable);
         let itemQuery = await queryTable
           .where("baseParams.itemTypeId")
           .equals(parseInt(selectedItemDict[0].itemIds))
@@ -124,42 +122,26 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
           .limit(ITEMS_PER_PAGE)
           .toArray();
 
-        console.log("inside");
-        console.log(itemQuery);
         refItemsValue.current = itemQuery;
-        // setItems((prevItems) => [...prevItems, ...itemQuery]);
+        forceUpdate();
       } else if (selectedItemDict && selectedItemDict > 2) {
-        let queryTable = db.table(selectedItemDict + ".json");
-        let itemsQuery = queryTable
-          .where("baseParams.itemTypeId")
-          .anyOf(selectedItemDict)
-          .offset(startIndex)
-          .limit(ITEMS_PER_PAGE)
-          .toArray();
+        for (let i = 0; i < selectedItemDict.length; i++) {
+          let queryTable = db.table(
+            selectedItemDict[0].itemTypeString + ".json"
+          );
+          let itemsQuery = await queryTable
+            .where("baseParams.itemTypeId")
+            .anyOf(parseInt(selectedItemDict.itemIds))
+            .offset(startIndex)
+            .limit(ITEMS_PER_PAGE)
+            .toArray();
 
-        setItems((prevItems) => [...prevItems, ...itemsQuery]);
+          refItemsValue.current = refItemsValue.current + itemsQuery;
+        }
+        forceUpdate();
       } else {
         console.log("Error while fetching items from the DB");
       }
-      // let itemsQuery = db.table("formatedItems.json");
-      // if (selectedItemTypes.length > 1) {
-      //   itemsQuery = itemsQuery
-      //     .where("baseParams.itemTypeId")
-      //     .anyOf(selectedItemTypes);
-      // } else {
-      //   itemsQuery = itemsQuery
-      //     .where("baseParams.itemTypeId")
-      //     .equals(selectedItemTypes);
-      // }
-
-      // const itemsData = await itemsQuery
-      //   .offset(startIndex)
-      //   .limit(ITEMS_PER_PAGE)
-      //   .toArray();
-
-      // console.log(itemsData);
-
-      // setItems((prevItems) => [...prevItems, ...itemsData]);
     } catch (error) {
       console.error("Error fetching items:", error);
     } finally {
@@ -206,8 +188,7 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
 
   return (
     <div className={cssModule["cards-container"]}>
-      <h1>HELLO INSIDE</h1>
-      {items.map((item) => (
+      {refItemsValue.current.map((item) => (
         <Card key={item.id} item={item} />
       ))}
       {isLoading && <p>Loading...</p>}
