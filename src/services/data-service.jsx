@@ -2,6 +2,7 @@
 
 import Dexie from "dexie";
 import indexStructure from "../data/index-structure.json";
+import filesLength from "../data/files_length.json";
 
 let isDbInitialized = false;
 const db = new Dexie("WakfuKiDatabase");
@@ -10,6 +11,68 @@ const db = new Dexie("WakfuKiDatabase");
 // Data validation line 52
 // Front load + loading screen line 75
 
+const check_file_length = async (fileName, db) => {
+  for (const file in filesLength) {
+    if (fileName === file) {
+      let expectedItemCount = filesLength[file];
+      console.log("expectedItemCount", expectedItemCount);
+      db.table(fileName)
+        .count()
+        .then((count) => {
+          console.log("count", count);
+          if (count == expectedItemCount) {
+            // maybe check for random object?
+            console.log(
+              `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
+            );
+            return true;
+          } else {
+            console.log(
+              `${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`
+            );
+            return false;
+          }
+        })
+        .catch((error) => {
+          console.error(`Error in check_file_length | error: ${error}`);
+        });
+      return false;
+    }
+  }
+  return false;
+};
+
+const check_data_exists = async (selectedTypes, index) => {
+  let recursionIndex = 0 + index;
+  if (recursionIndex < 3) {
+    if (selectedTypes) {
+      for (let i = 0; i < selectedTypes.length; i++) {
+        let storeName = selectedTypes[i] + ".json";
+        await db.open();
+        if (db.table(storeName)) {
+          let isDataValid = await check_file_length(storeName, db);
+          if (isDataValid) {
+            db.close();
+            return true;
+          } else {
+            await store_file(storeName);
+            let index = recursionIndex + 1;
+            check_data_exists(selectedTypes, index)
+          }
+        } else {
+          console.log("error while checking file length");
+          db.close();
+          return false;
+        }
+      }
+    }
+  } else {
+    console.log(
+      "Error while trying to fetch and store data in check_data_exists"
+    );
+    return false;
+  }
+};
 
 const store_file = async (fileName) => {
   try {
@@ -19,7 +82,7 @@ const store_file = async (fileName) => {
     const decompressedBlob = await DecompressBlob(compressedData);
     const text = await blobToText(decompressedBlob);
     const jsonDataArray = JSON.parse(text);
-    console.log("data from bottes file : ", jsonDataArray);
+    console.log(`"data from ${fileName} : ", jsonDataArray`);
     console.log("calling db.open..");
     await db.open();
     console.log("db now opened");
@@ -43,11 +106,9 @@ const store_file = async (fileName) => {
   }
 };
 
-
-
 const initializeDexieDatabase = async function (fileNames) {
   const dbExists = await Dexie.exists("WakfuKiDatabase");
-    
+
   if (dbExists) {
     console.log("Database exists:", "WakfuKiDatabase");
     // CHECK IF DATA VALID HERE
@@ -99,8 +160,6 @@ const initializeDexieDatabase = async function (fileNames) {
     console.log("Database closed.");
   }
 };
-
-
 
 const fetchAndStoreData = async (db, fileName) => {
   try {
@@ -156,4 +215,10 @@ const waitForDbInitialization = () => {
   });
 };
 
-export { initializeDexieDatabase, waitForDbInitialization, db, store_file };
+export {
+  initializeDexieDatabase,
+  waitForDbInitialization,
+  db,
+  store_file,
+  check_data_exists,
+};
