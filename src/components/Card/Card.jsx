@@ -1,21 +1,16 @@
 "use client";
-// import styles from "./card.module.scss";
 import cardCSS from "./card.module.scss";
-import { clsx } from "clsx";
 import { useState } from "react";
 import Image from "next/image";
 
-
-
 const Card = ({ item }) => {
+  // console.log(item);
   const [triToggle, setTriToggle] = useState(2);
 
   const handleTriToggleClick = (e) => {
     setTriToggle(e);
     console.log(triToggle);
   };
-    // const combinedClasses = classNames(...[cardCSS.cardFilterIcon, cardCSS.toggleStatImg]);
-    // const combinedClasses = classNames("cardFilterIcon")
 
   const rarities = {
     1: "Commun",
@@ -188,31 +183,6 @@ const Card = ({ item }) => {
             </div>
           ))}
         </div>
-        {/* <div className={cardCSS["bottom-card-container"]}> */}
-        {/* <div className={cardCSS["bottom-toggle-icon-container"]}>
-                        <img
-                            src="/toggleDropOn.png"
-                            className={
-                                cardCSS[("card-filter-icon", "toggle-drop-img")]
-                            }
-                        ></img>
-                    </div>
-                    <div className={cardCSS["bottom-toggle"]}></div>
-                    <div className={cardCSS["bottom-toggle-icon-container"]}>
-                        <img
-                            src="/toggleCraftOn.png"
-                            className={
-                                cardCSS[
-                                    ("card-filter-icon", "toggle-craft-img")
-                                ]
-                            }
-                        ></img>
-                    </div> */}
-        {/* <div
-                        className={cardCSS["left-bottom-card-container"]}
-                    ></div>
-                    <div className={cardCSS["right-bottom-card-container"]}></div> */}
-        {/* </div> */}
       </div>
     </div>
   );
