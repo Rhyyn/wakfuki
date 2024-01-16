@@ -46,14 +46,14 @@ const Home = () => {
     }
   };
 
-  const handleTypeFilter = (types) => {
-    console.log("Filtering items by types:", types);
-    setSelectedType(types);
-    // fetchItemsById(types);
-  };
+  // const handleTypeFilter = (types) => {
+  //   // console.log("Filtering items by types:", types);
+  //   setSelectedType(types);
+  //   // fetchItemsById(types);
+  // };
 
   const handleSearchChange = (newSearchQuery) => {
-    console.log("handleSearchChange called");
+    // console.log("handleSearchChange called");
     setFilterState((prevState) => ({
       ...prevState,
       searchQuery: newSearchQuery,
@@ -61,12 +61,12 @@ const Home = () => {
   };
 
   const handleRarityChange = (newRarity) => {
-    console.log("handleRarityChange called");
+    // console.log("handleRarityChange called");
     setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
   };
 
   const handleLevelChange = (newLevelRange) => {
-    console.log("handleLevelChange called");
+    // console.log("handleLevelChange called");
     setFilterState((prevState) => ({
       ...prevState,
       levelRange: newLevelRange,
@@ -74,18 +74,19 @@ const Home = () => {
   };
 
   const handleTypeChange = (newType) => {
-    console.log("handleTypeChange called");
+    // console.log("handleTypeChange called");
     setFilterState((prevState) => ({ ...prevState, type: newType }));
+    console.log("newType", newType);
   };
 
   const handleStatsChange = (newStats) => {
-    console.log("handleTypeChange called");
+    // console.log("handleTypeChange called");
     setFilterState((prevState) => ({ ...prevState, stats: newStats }));
   };
 
   useEffect(() => {
-    console.log(filterState);
-    console.log("filterState.type.length", filterState.type.length);
+    console.log("INDEX.JS -- filterState" , filterState);
+    console.log("INDEX.JS -- filterState.type.length", filterState.type.length);
   }, [filterState]);
 
   return (
@@ -116,7 +117,7 @@ const Home = () => {
             {filterState.type && filterState.type.length !== 0 && (
               <ItemList
                 key={filterState.type}
-                selectedType={filterState.type}
+                selectedItemTypes={filterState.type}
                 filterState={filterState}
               />
             )}
