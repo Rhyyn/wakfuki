@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 
+// TODO
+// Create modal for errors
+
+
 const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
   const [selectedImages, setSelectedImages] = useState([]);
 
@@ -16,12 +20,21 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
   };
 
   useEffect(() => {
-    handleTypeChange(selectedImages);
-    console.log("handleTypeChange(Selectedtypes)");
+    let newSelectedTypes = [];
+    for (let i = 0; i < selectedImages.length; i++) {
+      let temp_string = selectedImages[i].toString().split(/\-(.*)/);
+      if (typeof temp_string[1] === "string") {
+        newSelectedTypes.push(temp_string[1]);
+      } else {
+        console.log("Error while trying to set type of item");
+      }
+    }
+    console.log("newSelectedTypes", newSelectedTypes);
+    handleTypeChange(newSelectedTypes);
   }, [selectedImages]);
 
   useEffect(() => {
-    console.log('useEffect in TypeFilter called');
+    console.log("useEffect in TypeFilter called");
     if (selectedImages.length > 0) {
       setSelectedImages([]);
     }
@@ -33,57 +46,60 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
       <div
         className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
       >
-        {["134-casque", "138-epaulettes", "120-amulette", "136-plastron"].map((imageName) => (
-          <div
-            key={imageName}
-            className={`${cssModule["icon-container"]} ${
-              selectedImages.includes(imageName)
-                ? cssModule["selected"]
-                : ""
-            }`}
-            onClick={() => handleImageClick(imageName)}
-          >
-            <Image
-              className={cssModule["icon"]}
-              src={`/itemTypes/${imageName}.png`}
-              width={28}
-              height={28}
-              unoptimized
-              alt={imageName}
-            />
-          </div>
-        ))}
+        {["134-casque", "138-epaulettes", "120-amulette", "136-plastron"].map(
+          (imageName) => (
+            <div
+              key={imageName}
+              className={`${cssModule["icon-container"]} ${
+                selectedImages.includes(imageName) ? cssModule["selected"] : ""
+              }`}
+              onClick={() => handleImageClick(imageName)}
+            >
+              <Image
+                className={cssModule["icon"]}
+                src={`/itemTypes/${imageName}.png`}
+                width={28}
+                height={28}
+                unoptimized
+                alt={imageName}
+              />
+            </div>
+          )
+        )}
       </div>
       <div className={cssModule["type-row-icon-container"]}>
-        {["132-cape", "103-anneau", "133-ceinture", "119-bottes"].map((imageName) => (
-          <div
-            key={imageName}
-            className={`${cssModule["icon-container"]} ${
-              selectedImages.includes(imageName)
-                ? cssModule["selected"]
-                : ""
-            }`}
-            onClick={() => handleImageClick(imageName)}
-          >
-            <Image
-              className={cssModule["icon"]}
-              src={`/itemTypes/${imageName}.png`}
-              width={28}
-              height={28}
-              unoptimized
-              alt={imageName}
-            />
-          </div>
-        ))}
+        {["132-cape", "103-anneau", "133-ceinture", "119-bottes"].map(
+          (imageName) => (
+            <div
+              key={imageName}
+              className={`${cssModule["icon-container"]} ${
+                selectedImages.includes(imageName) ? cssModule["selected"] : ""
+              }`}
+              onClick={() => handleImageClick(imageName)}
+            >
+              <Image
+                className={cssModule["icon"]}
+                src={`/itemTypes/${imageName}.png`}
+                width={28}
+                height={28}
+                unoptimized
+                alt={imageName}
+              />
+            </div>
+          )
+        )}
       </div>
       <div className={cssModule["type-row-icon-container"]}>
-        {["518-arme1main", "519-arme2main", "571-secondemain", "520-secondemain"].map((imageName) => (
+        {[
+          "518-arme1main",
+          "519-arme2main",
+          "571-secondemain",
+          "520-bouclier",
+        ].map((imageName) => (
           <div
             key={imageName}
             className={`${cssModule["icon-container"]} ${
-              selectedImages.includes(imageName)
-                ? cssModule["selected"]
-                : ""
+              selectedImages.includes(imageName) ? cssModule["selected"] : ""
             }`}
             onClick={() => handleImageClick(imageName)}
           >
