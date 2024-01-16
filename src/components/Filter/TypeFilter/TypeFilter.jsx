@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
+import { check_data_exists } from "../../../services/data-service.jsx";
 
 // TODO
 // Create modal for errors
-
 
 const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -29,12 +29,16 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
         console.log("Error while trying to set type of item");
       }
     }
-    console.log("newSelectedTypes", newSelectedTypes);
-    handleTypeChange(newSelectedTypes);
+    if (check_data_exists(newSelectedTypes, 0)) {
+      // console.log("newSelectedTypes", newSelectedTypes);
+      handleTypeChange(newSelectedTypes);
+    } else {
+      console.log("error data does not exists");
+    }
   }, [selectedImages]);
 
   useEffect(() => {
-    console.log("useEffect in TypeFilter called");
+    // console.log("useEffect in TypeFilter called");
     if (selectedImages.length > 0) {
       setSelectedImages([]);
     }
