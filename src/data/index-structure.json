@@ -176,6 +176,12 @@
                 ]
             },
             {
+                "name": "amulette_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "amulette_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -219,6 +225,12 @@
                 "name": "anneau_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "anneau_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -268,6 +280,12 @@
                 ]
             },
             {
+                "name": "cape_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "cape_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -311,6 +329,12 @@
                 "name": "botte_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "botte_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -360,6 +384,12 @@
                 ]
             },
             {
+                "name": "casque_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "casque_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -403,6 +433,12 @@
                 "name": "ceinture_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "ceinture_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -452,6 +488,12 @@
                 ]
             },
             {
+                "name": "epaulettes_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "epaulettes_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -495,6 +537,12 @@
                 "name": "plastron_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "plastron_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -544,6 +592,12 @@
                 ]
             },
             {
+                "name": "familiers_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "familiers_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -587,6 +641,12 @@
                 "name": "arme1main_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "arme1main_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -636,6 +696,12 @@
                 ]
             },
             {
+                "name": "arme2main_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "arme2main_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -679,6 +745,12 @@
                 "name": "secondemain_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "secondemain_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
@@ -728,6 +800,12 @@
                 ]
             },
             {
+                "name": "emblemes_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "emblemes_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -774,6 +852,12 @@
                 ]
             },
             {
+                "name": "montures_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
+                ]
+            },
+            {
                 "name": "montures_indexByGfxId",
                 "keyPath": [
                     "gfxId"
@@ -817,6 +901,12 @@
                 "name": "outils_indexByBaseParams",
                 "keyPath": [
                     "baseParams"
+                ]
+            },
+            {
+                "name": "outils_indexByTypeId",
+                "keyPath": [
+                    "baseParams.itemTypeId"
                 ]
             },
             {
