@@ -3,34 +3,25 @@ import filesLength from "../../../public/files_length.json";
 import { waitForDbInitialization, db } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
+import string_to_item_types from "../../data/string_to_item_types.json";
 
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
 
-const ItemList = ({ selectedType, filterState}) => {
-  console.log("ItemList rendering");
+// need function to check if data exist and if its valid
+// call fetch and store if not
+
+const ItemList = ({ selectedItemTypes, filterState }) => {
+  // console.log("ItemList rendering");
+  // console.log("selectedItemTypes", selectedItemTypes);
+  // console.log("selectedItemTypesLength", selectedItemTypes.length);
+  // console.log("filterState", filterState);
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
+  const refItemsValue = useRef([]);
   const [isLoading, setIsLoading] = useState(false);
   const isInitialMount = useRef(true);
   const [isFetching, setIsFetching] = useState(false);
-
-
-  const filename_of_types = {
-    "134" : "casque",
-    "138" : "epaulettes",
-    "120" : "amulette",
-    "136" : "plastron",
-    "132" : "cape",
-    "103" : "anneau",
-    "133" : "ceinture",
-    "119" : "bottes",
-    "254" : "arme1main",
-    "108" : "arme1main",
-    "110" : "arme1main",
-    "115" : "arme1main",
-    "113" : "arme1main",
-  }
 
   const length_recipes = async () => {
     await waitForDbInitialization();
@@ -58,14 +49,14 @@ const ItemList = ({ selectedType, filterState}) => {
       //   .catch((error) => {
       //     console.error(`Error getting count: ${error}`);
       //   });
-      // if (selectedType.length > 1) {
+      // if (selectedItemTypes.length > 1) {
       //     itemsQuery = itemsQuery
       //         .where("baseParams.itemTypeId")
-      //         .anyOf(selectedType);
+      //         .anyOf(selectedItemTypes);
       // } else {
       //     itemsQuery = itemsQuery
       //         .where("baseParams.itemTypeId")
-      //         .equals(selectedType);
+      //         .equals(selectedItemTypes);
       // }
 
       // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -85,60 +76,116 @@ const ItemList = ({ selectedType, filterState}) => {
     }
   };
 
+  const get_typeId_from_string = async (selectedTypes) => {
+    let itemsQuery = [];
+    if (selectedTypes) {
+      for (let i = 0; i < selectedTypes.length; i++) {
+        const itemTypeString = selectedTypes[i];
+        const itemIds = string_to_item_types[itemTypeString];
+
+        if (itemIds) {
+          const itemQueryObject = {
+            itemTypeString: itemTypeString,
+            itemIds: itemIds,
+          };
+          itemsQuery.push(itemQueryObject);
+        }
+      }
+    }
+
+    return itemsQuery;
+  };
+
+  // only fetch when item types changes
   const fetchItems = async () => {
     console.log("Fetching...");
     await waitForDbInitialization();
+    await db.open();
+    const selectedItemDict = await get_typeId_from_string(selectedItemTypes);
+    console.log("selectedItemDict", selectedItemDict[0]);
+    console.log("selectedItemDict length", selectedItemDict.length);
+    console.log("selectedItemDict[0].itemIds", parseInt(selectedItemDict[0].itemIds));
 
     try {
       if (isLoading) return;
-
       setIsLoading(true);
-
-      let itemsQuery = db.table("formatedItems.json");
-      if (selectedType.length > 1) {
-        itemsQuery = itemsQuery
-          .where("baseParams.itemTypeId")
-          .anyOf(selectedType);
-      } else {
-        itemsQuery = itemsQuery
-          .where("baseParams.itemTypeId")
-          .equals(selectedType);
-      }
-
       const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      if (
+        selectedItemDict &&
+        selectedItemDict.length > 0 &&
+        selectedItemDict.length === 1
+      ) {
+        let queryTable = db.table(selectedItemDict[0].itemTypeString + ".json");
+        console.log("queryTable",queryTable);
+        let itemQuery = await queryTable
+          .where("baseParams.itemTypeId")
+          .equals(parseInt(selectedItemDict[0].itemIds))
+          .offset(startIndex)
+          .limit(ITEMS_PER_PAGE)
+          .toArray();
 
-      const itemsData = await itemsQuery
-        .offset(startIndex)
-        .limit(ITEMS_PER_PAGE)
-        .toArray();
+        console.log("inside");
+        console.log(itemQuery);
+        refItemsValue.current = itemQuery;
+        // setItems((prevItems) => [...prevItems, ...itemQuery]);
+      } else if (selectedItemDict && selectedItemDict > 2) {
+        let queryTable = db.table(selectedItemDict + ".json");
+        let itemsQuery = queryTable
+          .where("baseParams.itemTypeId")
+          .anyOf(selectedItemDict)
+          .offset(startIndex)
+          .limit(ITEMS_PER_PAGE)
+          .toArray();
+
+        setItems((prevItems) => [...prevItems, ...itemsQuery]);
+      } else {
+        console.log("Error while fetching items from the DB");
+      }
+      // let itemsQuery = db.table("formatedItems.json");
+      // if (selectedItemTypes.length > 1) {
+      //   itemsQuery = itemsQuery
+      //     .where("baseParams.itemTypeId")
+      //     .anyOf(selectedItemTypes);
+      // } else {
+      //   itemsQuery = itemsQuery
+      //     .where("baseParams.itemTypeId")
+      //     .equals(selectedItemTypes);
+      // }
+
+      // const itemsData = await itemsQuery
+      //   .offset(startIndex)
+      //   .limit(ITEMS_PER_PAGE)
+      //   .toArray();
 
       // console.log(itemsData);
 
-      setItems((prevItems) => [...prevItems, ...itemsData]);
+      // setItems((prevItems) => [...prevItems, ...itemsData]);
     } catch (error) {
       console.error("Error fetching items:", error);
     } finally {
+      console.log(refItemsValue);
       setIsLoading(false);
+      db.close();
       console.log(".. Fetching completed");
     }
   };
 
   useEffect(() => {
-    if (selectedType !== null) {
-      console.log("SelectedType changed:", selectedType);
+    if (selectedItemTypes !== null) {
+      console.log("selectedItemTypes changed:", selectedItemTypes);
       console.log("is loading ?: ", isLoading);
       // setCurrentPage(1); // Reset page to 1 when a new type is selected
       fetchItems();
     }
-  }, [currentPage, selectedType]);
+  }, [currentPage, selectedItemTypes]);
 
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } =
-                document.documentElement;
+        document.documentElement;
       if (
         scrollTop + clientHeight >= scrollHeight - SCROLL_THRESHOLD &&
-                !isFetching
+        !isFetching
       ) {
         console.log("scrolled", isFetching);
         setCurrentPage((prevPage) => prevPage + 1);
@@ -160,10 +207,10 @@ const ItemList = ({ selectedType, filterState}) => {
   return (
     <div className={cssModule["cards-container"]}>
       <h1>HELLO INSIDE</h1>
-      {/* {items.map((item) => (
+      {items.map((item) => (
         <Card key={item.id} item={item} />
       ))}
-      {isLoading && <p>Loading...</p>} */}
+      {isLoading && <p>Loading...</p>}
     </div>
   );
 };
