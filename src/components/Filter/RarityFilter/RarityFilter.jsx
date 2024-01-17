@@ -27,7 +27,7 @@ export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
 
   useEffect(() => {
     handleRarityChange(selectedItems);
-  }, [handleRarityChange]);
+  }, [selectedItems]);
 
   useEffect(() => {
     console.log('useEffect in RarityFilter triggered');
