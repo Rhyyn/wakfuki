@@ -65,7 +65,7 @@ const Card = ({ item }) => {
                   }
                 >
                   <Image
-                    src="/itemTypes/120.png"
+                    src="/itemTypes/120-amulette.png"
                     className={cardCSS["item-type-icon"]}
                     alt="amulette"
                     width={32}
