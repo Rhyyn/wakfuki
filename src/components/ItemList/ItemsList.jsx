@@ -7,14 +7,13 @@ import string_to_item_types from "../../data/string_to_item_types.json";
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
 
-// need function to check if data exist and if its valid
-// call fetch and store if not
-
-const ItemList = ({ selectedItemTypes, filterState }) => {
+const ItemList = ({ filterState }) => {
+  console.log(filterState);
   // console.log("ItemList rendering");
   // console.log("selectedItemTypes", selectedItemTypes);
   // console.log("selectedItemTypesLength", selectedItemTypes.length);
   // console.log("filterState", filterState);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const refItemsValue = useRef([]);
@@ -22,61 +21,9 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
   const isInitialMount = useRef(true);
   const [isFetching, setIsFetching] = useState(false);
 
-  const length_recipes = async () => {
-    await waitForDbInitialization();
-    await db.open().then(() => {
-      console.log(db._allTables);
-    });
-
-    try {
-      if (isLoading) return;
-
-      setIsLoading(true);
-      console.log("loading itemList");
-      // let itemsQuery = db.table("recipes.json");
-      // const expectedItemCount = filesLength["recipes.json"] || 0;
-      // itemsQuery
-      //   .count()
-      //   .then((count) => {
-      //     if (count == expectedItemCount) {
-      //       // maybe check for random object?
-      //       console.log(
-      //         `Number of records in "recipes.json" table: ${count}, expected: ${expectedItemCount}`
-      //       );
-      //     }
-      //   })
-      //   .catch((error) => {
-      //     console.error(`Error getting count: ${error}`);
-      //   });
-      // if (selectedItemTypes.length > 1) {
-      //     itemsQuery = itemsQuery
-      //         .where("baseParams.itemTypeId")
-      //         .anyOf(selectedItemTypes);
-      // } else {
-      //     itemsQuery = itemsQuery
-      //         .where("baseParams.itemTypeId")
-      //         .equals(selectedItemTypes);
-      // }
-
-      // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-
-      // const itemsData = await itemsQuery
-      //     .offset(startIndex)
-      //     .limit(ITEMS_PER_PAGE)
-      //     .toArray();
-
-      // console.log(itemsData);
-
-      // setItems((prevItems) => [...prevItems, ...itemsData]);
-    } catch (error) {
-      console.error("Error fetching items:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   const get_typeId_from_string = async (selectedTypes) => {
     let itemsQuery = [];
+    console.log("selectedTypes", selectedTypes);
     if (selectedTypes) {
       for (let i = 0; i < selectedTypes.length; i++) {
         const itemTypeString = selectedTypes[i];
@@ -94,16 +41,76 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
 
     return itemsQuery;
   };
+  // searchQuery: "",
+  //   rarity: [],
+  //   levelRange: { from: 0, to: 230 },
+  //   type: [],
+  //   stats: [],
+  const newFetchItems = async () => {
+    await waitForDbInitialization();
+    await db.open();
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    try {
+      const tableNames = filterState.type.map((type) =>
+        db.table(type + ".json")
+      );
+      const combinedItems = [];
+
+      for (const type of filterState.type) {
+        let itemsQuery = db.table(type + ".json");
+        let typeId = await get_typeId_from_string([type]);
+        itemsQuery = await itemsQuery
+          .offset(startIndex)
+          .limit(ITEMS_PER_PAGE)
+          .toArray();
+
+        // console.log("filterState.rarity", filterState.rarity);
+        const filteredItems = itemsQuery.filter((item) => {
+          // console.log(item.title.fr);
+          // console.log(item.baseParams.rarity);
+          // console.log(item.level);
+          // console.log("filterstate.rarity type", typeof filterState.rarity);
+          // console.log("filterstate.rarity :", filterState.rarity);
+          // console.log(
+          //   "item.baseParams.rarity type",
+          //   typeof item.baseParams.rarity
+          // );
+          // console.log("item.baseParams.rarity : ", item.baseParams.rarity);
+          const isSearchMatch =
+            filterState.searchQuery.length === 0 ||
+            item.title.fr
+              .toLowerCase()
+              .includes(filterState.searchQuery.toLowerCase());
+
+          const isRarityMatch =
+            filterState.rarity.length === 0 ||
+            filterState.rarity.some(
+              (rarity) => rarity === item.baseParams.rarity
+            );
+
+          return (
+            isSearchMatch &&
+            isRarityMatch &&
+            item.level >= filterState.levelRange.from &&
+            item.level <= filterState.levelRange.to
+          );
+        });
+        console.log("filteredItems", filteredItems);
+        refItemsValue.current = filteredItems;
+        console.log(refItemsValue.current);
+      }
+      setItems(refItemsValue.current);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   // only fetch when item types changes
   const fetchItems = async () => {
     console.log("Fetching...");
     await waitForDbInitialization();
     await db.open();
-    const selectedItemDict = await get_typeId_from_string(selectedItemTypes);
-    // console.log("selectedItemDict", selectedItemDict[0]);
-    // console.log("selectedItemDict length", selectedItemDict.length);
-    // console.log("selectedItemDict[0].itemIds", parseInt(selectedItemDict[0].itemIds));
+    const selectedItemDict = await get_typeId_from_string(filterState.type);
 
     try {
       if (isLoading) return;
@@ -123,7 +130,7 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
           .toArray();
 
         refItemsValue.current = itemQuery;
-        forceUpdate();
+        // forceUpdate();
       } else if (selectedItemDict && selectedItemDict > 2) {
         for (let i = 0; i < selectedItemDict.length; i++) {
           let queryTable = db.table(
@@ -138,7 +145,7 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
 
           refItemsValue.current = refItemsValue.current + itemsQuery;
         }
-        forceUpdate();
+        // forceUpdate();
       } else {
         console.log("Error while fetching items from the DB");
       }
@@ -153,13 +160,14 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
   };
 
   useEffect(() => {
-    if (selectedItemTypes !== null) {
-      console.log("selectedItemTypes changed:", selectedItemTypes);
+    if (filterState !== null) {
+      console.log("selectedItemTypes changed:", filterState.type);
       console.log("is loading ?: ", isLoading);
       // setCurrentPage(1); // Reset page to 1 when a new type is selected
-      fetchItems();
+      // fetchItems();
+      newFetchItems();
     }
-  }, [currentPage, selectedItemTypes]);
+  }, [currentPage, filterState]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -188,7 +196,7 @@ const ItemList = ({ selectedItemTypes, filterState }) => {
 
   return (
     <div className={cssModule["cards-container"]}>
-      {refItemsValue.current.map((item) => (
+      {items.map((item) => (
         <Card key={item.id} item={item} />
       ))}
       {isLoading && <p>Loading...</p>}
