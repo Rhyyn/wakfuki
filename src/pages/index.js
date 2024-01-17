@@ -61,7 +61,7 @@ const Home = () => {
   };
 
   const handleRarityChange = (newRarity) => {
-    // console.log("handleRarityChange called");
+    console.log("handleRarityChange called", newRarity);
     setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
   };
 
@@ -85,7 +85,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log("INDEX.JS -- filterState" , filterState);
+    console.log("INDEX.JS -- filterState", filterState);
     console.log("INDEX.JS -- filterState.type.length", filterState.type.length);
   }, [filterState]);
 
@@ -102,8 +102,7 @@ const Home = () => {
           handleLogClick={() => handleLogClick}
           // length_recipes={length_recipes}
           store_file={store_file}
-          handleTypeFilter={() => handleTypeFilter}
-          handleRarityChange={() => handleRarityChange}
+          handleRarityChange={handleRarityChange}
           handleTypeChange={handleTypeChange}
           handleSearchChange={() => handleSearchChange}
           handleLevelChange={() => handleLevelChange}
@@ -115,11 +114,7 @@ const Home = () => {
           {/* <Header /> THIS GUY CAUSING BAD RE RENDERS */}
           <div className={styles["item-list"]}>
             {filterState.type && filterState.type.length !== 0 && (
-              <ItemList
-                key={filterState.type}
-                selectedItemTypes={filterState.type}
-                filterState={filterState}
-              />
+              <ItemList key={filterState.type} filterState={filterState} />
             )}
           </div>
         </div>
