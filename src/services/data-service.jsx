@@ -8,35 +8,28 @@ let isDbInitialized = false;
 const db = new Dexie("WakfuKiDatabase");
 
 // TODO
-// Data validation line 52
-// Front load + loading screen line 75
+// FIX BOUCLIER
+// FIX OTHER CATEGORIES
 
 const check_file_length = async (fileName, db) => {
   for (const file in filesLength) {
     if (fileName === file) {
       let expectedItemCount = filesLength[file];
       console.log("expectedItemCount", expectedItemCount);
-      db.table(fileName)
-        .count()
-        .then((count) => {
-          console.log("count", count);
-          if (count == expectedItemCount) {
-            // maybe check for random object?
-            console.log(
-              `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
-            );
-            return true;
-          } else {
-            console.log(
-              `${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`
-            );
-            return false;
-          }
-        })
-        .catch((error) => {
-          console.error(`Error in check_file_length | error: ${error}`);
-        });
-      return false;
+      let count = await db.table(fileName).count();
+      console.log("count", count);
+      if (count == expectedItemCount) {
+        // maybe check for random object?
+        console.log(
+          `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
+        );
+        return true;
+      } else {
+        console.log(
+          `${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`
+        );
+        return false;
+      }
     }
   }
   return false;
@@ -51,13 +44,15 @@ const check_data_exists = async (selectedTypes, index) => {
         await db.open();
         if (db.table(storeName)) {
           let isDataValid = await check_file_length(storeName, db);
+          console.log("isDataValid", isDataValid);
           if (isDataValid) {
             db.close();
             return true;
           } else {
+            console.log("Data not exists/valid, now trying to store new data");
             await store_file(storeName);
             let index = recursionIndex + 1;
-            check_data_exists(selectedTypes, index)
+            check_data_exists(selectedTypes, index);
           }
         } else {
           console.log("error while checking file length");
@@ -78,11 +73,15 @@ const store_file = async (fileName) => {
   try {
     console.log("fileName received is : ", fileName);
     const response = await fetch(`/api/${fileName}`);
+    // console.log("type of response",typeof response);
     const compressedData = await response.arrayBuffer();
+    // console.log(compressedData);
     const decompressedBlob = await DecompressBlob(compressedData);
     const text = await blobToText(decompressedBlob);
+    // console.log(text.length);
     const jsonDataArray = JSON.parse(text);
-    console.log(`"data from ${fileName} : ", jsonDataArray`);
+    const jsonDataArrayLength = jsonDataArray.length;
+    console.log(`"data from ${fileName} : ", ${jsonDataArrayLength}`);
     console.log("calling db.open..");
     await db.open();
     console.log("db now opened");
@@ -186,7 +185,6 @@ const fetchAndStoreData = async (db, fileName) => {
 };
 
 async function DecompressBlob(blob) {
-  const ds = new DecompressionStream("deflate");
   const decompressedArrayBuffer = await new Response(blob).arrayBuffer();
   const decompressedText = await new Response(decompressedArrayBuffer).text();
   return new Blob([decompressedText], { type: "application/json" });
