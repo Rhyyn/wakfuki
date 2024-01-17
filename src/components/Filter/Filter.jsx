@@ -14,10 +14,6 @@ import StatsFilter from "./StatsFilter/StatsFilter";
 // ELSE GO HAM
 
 const Filter = ({
-  handleLogClick,
-  length_recipes,
-  store_file,
-  handleTypeFilter,
   handleRarityChange,
   handleTypeChange,
   handleSearchChange,
