@@ -53,17 +53,9 @@ const Card = ({ item }) => {
             </div>
           </div>
           <div className={cardCSS["header-bottom-row"]}>
-            <div
-              className={cardCSS["header-left-bottom-container"]}
-            >
-              <div
-                className={cardCSS["item-type-level-container"]}
-              >
-                <div
-                  className={
-                    cardCSS["item-type-icon-container"]
-                  }
-                >
+            <div className={cardCSS["header-left-bottom-container"]}>
+              <div className={cardCSS["item-type-level-container"]}>
+                <div className={cardCSS["item-type-icon-container"]}>
                   <Image
                     src="/itemTypes/120-amulette.png"
                     className={cardCSS["item-type-icon"]}
@@ -76,15 +68,11 @@ const Card = ({ item }) => {
                   href="/fr/encyclopedie/objet/120/8222"
                   className={cardCSS["item-type-level-text"]}
                 >
-                                    Amulette - {item.level}
+                  {item.baseParams.itemTypeId} - {item.level}
                 </a>
               </div>
               <div className={cardCSS["item-rarity-container"]}>
-                <div
-                  className={
-                    cardCSS["item-rarity-icon-container"]
-                  }
-                >
+                <div className={cardCSS["item-rarity-icon-container"]}>
                   <Image
                     src={rarityIcon}
                     className={cardCSS["rarity-icon"]}
@@ -100,9 +88,7 @@ const Card = ({ item }) => {
                 </span>
               </div>
             </div>
-            <div
-              className={cardCSS["header-right-bottom-container"]}
-            >
+            <div className={cardCSS["header-right-bottom-container"]}>
               <div className={cardCSS["toggle-tabs-container"]}>
                 <div
                   onClick={() => handleTriToggleClick(0)}
@@ -144,18 +130,13 @@ const Card = ({ item }) => {
           }`}
         >
           {item.droprates ? (
-            Object.entries(item.droprates).map(
-              ([key, value], index) => (
-                <div
-                  key={index}
-                  className={cardCSS["item-drop-container"]}
-                >
-                  <span
-                    className={cardCSS["item-drop"]}
-                  >{`${key}: ${value}`}</span>
-                </div>
-              )
-            )
+            Object.entries(item.droprates).map(([key, value], index) => (
+              <div key={index} className={cardCSS["item-drop-container"]}>
+                <span
+                  className={cardCSS["item-drop"]}
+                >{`${key}: ${value}`}</span>
+              </div>
+            ))
           ) : (
             <span>Pas obtenable sur des monstres!</span>
           )}
@@ -173,10 +154,7 @@ const Card = ({ item }) => {
           }`}
         >
           {item.equipEffects.map((effect, index) => (
-            <div
-              key={index}
-              className={cardCSS["item-stat-container"]}
-            >
+            <div key={index} className={cardCSS["item-stat-container"]}>
               <span className={cardCSS["item-stat"]}>
                 {effect.effect.stats.display.fr}
               </span>
