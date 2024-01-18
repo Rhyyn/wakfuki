@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import "../../styles/globals.scss";
-import { initializeDexieDatabase } from "../services/data-service.jsx";
+import {
+  initializeDexieDatabase,
+  setupDatabaseCloseListener,
+  waitForDbInitialization
+} from "../services/data-service.jsx";
 import { appWithTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
 
@@ -37,11 +41,14 @@ function MyApp({ Component, pageProps }) {
   console.log("MyApp component rendered.");
   useEffect(() => {
     console.log("MyApp component is mounting or updating...");
-
-    initializeDexieDatabase(fileNames);
+    const initializeApp = async () => {
+      initializeDexieDatabase();
+      await waitForDbInitialization();
+      setupDatabaseCloseListener();
+    };
+    initializeApp();
 
     console.log("MyApp component rendering complete.");
-
     // console.trace("Stack trace:");
   });
 

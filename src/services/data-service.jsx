@@ -10,6 +10,33 @@ const db = new Dexie("WakfuKiDatabase");
 // TODO
 // FIX BOUCLIER
 // FIX OTHER CATEGORIES
+// FEAT CHECK DB DATA VALID ?
+
+const get_db_instance = async function (startIndex) {
+  const dbExists = await Dexie.exists("WakfuKiDatabase");
+  if (dbExists) {
+    let currIndex = startIndex + 1;
+    if (isDbInitialized) {
+      await db.open();
+      return db.open();
+    } else if (currIndex < 5) {
+      console.log("isDbInitialized false.. retrying...", currIndex);
+      get_db_instance(currIndex + 1);
+    } else {
+      console.log("failed to open instance of DB");
+    }
+  }
+  console.log("DB Does not exists");
+};
+
+const setupDatabaseCloseListener = () => {
+  window.addEventListener("beforeunload", async () => {
+    if (db && db.isOpen()) {
+      console.log("Closing the database before unload...");
+      db.close();
+    }
+  });
+};
 
 const check_file_length = async (fileName, db) => {
   for (const file in filesLength) {
@@ -160,28 +187,18 @@ const initializeDexieDatabase = async function (fileNames) {
   }
 };
 
-const fetchAndStoreData = async (db, fileName) => {
-  try {
-    console.log(`fetchAndStoreData called for fileName: ${fileName}`);
-    const response = await fetch(`/api/${fileName}`);
-    const compressedData = await response.arrayBuffer();
-    const decompressedBlob = await DecompressBlob(compressedData);
-    const text = await blobToText(decompressedBlob);
-    const jsonDataArray = JSON.parse(text);
-    await db.transaction("rw", db[fileName], async (tx) => {
-      console.log(`fetchAndStoreData Opened transaction for ${fileName}`);
+const waitForDbInitialization = () => {
+  return new Promise((resolve) => {
+    const checkInitialization = () => {
+      if (isDbInitialized) {
+        resolve();
+      } else {
+        setTimeout(checkInitialization, 100);
+      }
+    };
 
-      await tx[fileName].clear();
-      await tx[fileName].bulkPut(jsonDataArray);
-
-      console.log(`fetchAndStoreData Data stored for ${fileName}`);
-    });
-    console.log(`fetchAndStoreData Transaction complete for ${fileName}`);
-    db.close();
-    return Promise.resolve();
-  } catch (error) {
-    console.error(`Error fetching/storing ${fileName}:`, error);
-  }
+    checkInitialization();
+  });
 };
 
 async function DecompressBlob(blob) {
@@ -199,19 +216,7 @@ async function blobToText(blob) {
   });
 }
 
-const waitForDbInitialization = () => {
-  return new Promise((resolve) => {
-    const checkInitialization = () => {
-      if (isDbInitialized) {
-        resolve();
-      } else {
-        setTimeout(checkInitialization, 100);
-      }
-    };
 
-    checkInitialization();
-  });
-};
 
 export {
   initializeDexieDatabase,
@@ -219,4 +224,6 @@ export {
   db,
   store_file,
   check_data_exists,
+  get_db_instance,
+  setupDatabaseCloseListener,
 };

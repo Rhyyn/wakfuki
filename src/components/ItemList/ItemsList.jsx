@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { waitForDbInitialization, db } from "../../services/data-service.jsx";
+import {
+  waitForDbInitialization,
+  get_db_instance,
+} from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
 import string_to_item_types from "../../data/string_to_item_types.json";
@@ -92,15 +95,14 @@ const ItemList = ({ filterState }) => {
       return data;
     }
   };
-  const newFetchItems = async () => {
+
+  const newFetchItems = async (db) => {
     if (isLoading) {
       return;
     }
     console.log("newFetchItems called..");
     console.log("isLoading...", isLoading);
     await waitForDbInitialization();
-    console.log("db.open..");
-    await db.open();
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     try {
       const tableNames = filterState.type.map((type) =>
@@ -159,15 +161,15 @@ const ItemList = ({ filterState }) => {
       console.error(error);
     } finally {
       console.log("isLoading...", isLoading);
-      db.close();
-      console.log("db closed");
     }
   };
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      await newFetchItems();
+      const db = await get_db_instance(0);
+      await waitForDbInitialization();
+      await newFetchItems(db);
       setIsLoading(false);
       //.then(setIsLoading(false));
     };
