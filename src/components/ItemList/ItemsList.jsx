@@ -7,13 +7,11 @@ import string_to_item_types from "../../data/string_to_item_types.json";
 const ITEMS_PER_PAGE = 40;
 const SCROLL_THRESHOLD = 100;
 
-const ItemList = ({ filterState }) => {
-  console.log(filterState);
-  // console.log("ItemList rendering");
-  // console.log("selectedItemTypes", selectedItemTypes);
-  // console.log("selectedItemTypesLength", selectedItemTypes.length);
-  // console.log("filterState", filterState);
+// TODO :
+// rarities does not get added on top of the list ?
+// Pages and infinite scrolling
 
+const ItemList = ({ filterState }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const refItemsValue = useRef([]);
@@ -42,11 +40,58 @@ const ItemList = ({ filterState }) => {
     return itemsQuery;
   };
 
-  // searchQuery: "",
-  //   rarity: [],
-  //   levelRange: { from: 0, to: 230 },
-  //   type: [],
-  //   stats: [],
+  const sortItemsByLevel = (data, order) => {
+    return data.sort((a, b) => {
+      const aValue = a.level;
+      const bValue = b.level;
+
+      return order === "ascending" ? aValue - bValue : bValue - aValue;
+    });
+  };
+
+  const sortItemsAlphabetically = (data, order) => {
+    return data.sort((a, b) => {
+      const aValue = a.title.fr.toLowerCase();
+      const bValue = b.title.fr.toLowerCase();
+
+      return order === "ascending"
+        ? aValue.localeCompare(bValue)
+        : bValue.localeCompare(aValue);
+    });
+  };
+
+  const sortItemsByRarity = (data, order) => {
+    return data.sort((a, b) => {
+      const aValue = a.baseParams.rarity;
+      const bValue = b.baseParams.rarity;
+
+      return order === "ascending" ? aValue - bValue : bValue - aValue;
+    });
+  };
+
+  const sortData = (data, sortOption) => {
+    if (data && sortOption) {
+      const { type, order } = sortOption;
+
+      switch (type) {
+        case "level":
+          return sortItemsByLevel(data, order);
+
+        case "alphabetical":
+          return sortItemsAlphabetically(data, order);
+
+        case "rarity":
+          return sortItemsByRarity(data, order);
+
+        default:
+          console.log("Invalid sorting type");
+          return data;
+      }
+    } else {
+      console.log("Invalid data or sort option");
+      return data;
+    }
+  };
   const newFetchItems = async () => {
     if (isLoading) {
       return;
@@ -104,6 +149,8 @@ const ItemList = ({ filterState }) => {
         }
 
         const flattenedItems = combinedItems.flat();
+        const sortedItems = sortData(flattenedItems, filterState.sortBy);
+
         refItemsValue.current = flattenedItems;
         setItems(refItemsValue.current);
         setIsLoading(false);
@@ -117,71 +164,18 @@ const ItemList = ({ filterState }) => {
     }
   };
 
-  // only fetch when item types changes
-  const fetchItems = async () => {
-    console.log("Fetching...");
-    await waitForDbInitialization();
-    await db.open();
-    const selectedItemDict = await get_typeId_from_string(filterState.type);
-
-    try {
-      if (isLoading) return;
-      setIsLoading(true);
-      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-      if (
-        selectedItemDict &&
-        selectedItemDict.length > 0 &&
-        selectedItemDict.length === 1
-      ) {
-        let queryTable = db.table(selectedItemDict[0].itemTypeString + ".json");
-        let itemQuery = await queryTable
-          .where("baseParams.itemTypeId")
-          .equals(parseInt(selectedItemDict[0].itemIds))
-          .offset(startIndex)
-          .limit(ITEMS_PER_PAGE)
-          .toArray();
-
-        refItemsValue.current = itemQuery;
-        // forceUpdate();
-      } else if (selectedItemDict && selectedItemDict > 2) {
-        for (let i = 0; i < selectedItemDict.length; i++) {
-          let queryTable = db.table(
-            selectedItemDict[0].itemTypeString + ".json"
-          );
-          let itemsQuery = await queryTable
-            .where("baseParams.itemTypeId")
-            .anyOf(parseInt(selectedItemDict.itemIds))
-            .offset(startIndex)
-            .limit(ITEMS_PER_PAGE)
-            .toArray();
-
-          refItemsValue.current = refItemsValue.current + itemsQuery;
-        }
-        // forceUpdate();
-      } else {
-        console.log("Error while fetching items from the DB");
-      }
-    } catch (error) {
-      console.error("Error fetching items:", error);
-    } finally {
-      console.log(refItemsValue);
-      setIsLoading(false);
-      db.close();
-      console.log(".. Fetching completed");
-    }
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      await newFetchItems().then(setIsLoading(false));
+      await newFetchItems();
+      setIsLoading(false);
+      //.then(setIsLoading(false));
     };
 
     if (filterState !== null) {
       console.log("selectedItemTypes changed:", filterState.type);
       console.log("is loading ?: ", isLoading);
       // setCurrentPage(1); // Reset page to 1 when a new type is selected
-      // fetchItems();
       fetchData();
     }
   }, [currentPage, filterState]);
@@ -213,10 +207,8 @@ const ItemList = ({ filterState }) => {
 
   return (
     <div className={cssModule["cards-container"]}>
-      {items.map((item) => (
-        <Card key={item.id} item={item} />
-      ))}
       {isLoading && <p>Loading...</p>}
+      {!isLoading && items.map((item) => <Card key={item.id} item={item} />)}
     </div>
   );
 };

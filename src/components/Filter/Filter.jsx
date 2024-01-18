@@ -1,7 +1,6 @@
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import cssModule from "./Filter.module.scss";
 import Image from "next/image";
-// import { useTranslation } from 'next-i18next';
 import { useTranslation } from "react-i18next";
 import { RarityFilter } from "./RarityFilter/RarityFilter";
 import SearchBar from "./SearchBar/SearchBar";
@@ -19,9 +18,69 @@ const Filter = ({
   handleSearchChange,
   handleLevelChange,
   handleResetFilters,
-  resetFiltersFlag
+  handleSortingOptionsChange,
+  resetFiltersFlag,
 }) => {
+  const [showSortDropdown, setShowSortDropdown] = useState(false);
+  const dropdownRef = useRef(null);
+  const dropdownContainerRef = useRef(null);
   const { t, i18n } = useTranslation();
+
+  const handleSortingOptionsClick = (value) => {
+    if (value) {
+      if (value == "level.ascending") {
+        handleSortingOptionsChange({ type: "level", order: "ascending" });
+      }
+      if (value == "level.descending") {
+        handleSortingOptionsChange({ type: "level", order: "descending" });
+      }
+      if (value == "alphabetical.ascending") {
+        handleSortingOptionsChange({
+          type: "alphabetical",
+          order: "ascending",
+        });
+      }
+      if (value == "alphabetical.descending") {
+        handleSortingOptionsChange({
+          type: "alphabetical",
+          order: "descending",
+        });
+      }
+      if (value == "rarity.ascending") {
+        handleSortingOptionsChange({ type: "rarity", order: "ascending" });
+      }
+      if (value == "rarity.descending") {
+        handleSortingOptionsChange({ type: "rarity", order: "descending" });
+      }
+    }
+    setShowSortDropdown(false);
+  };
+
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      if (
+        dropdownContainerRef.current &&
+        !dropdownContainerRef.current.contains(event.target) &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setShowSortDropdown(false);
+      }
+    };
+
+    if (showSortDropdown) {
+      document.addEventListener("mousedown", handleDocumentClick);
+    } else {
+      document.removeEventListener("mousedown", handleDocumentClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleDocumentClick);
+    };
+  }, []);
+
+  const handleSortingOptionsDropdown = () => {
+    setShowSortDropdown(!showSortDropdown);
+  };
 
   return (
     <div className={cssModule["filter-container"]}>
@@ -47,7 +106,52 @@ const Filter = ({
             unoptimized
             alt="sort-icon"
             title={t("Trier par")}
+            onClick={handleSortingOptionsDropdown}
+            ref={dropdownRef}
           />
+          <div
+            className={`${cssModule["sorting-options-container"]} ${
+              showSortDropdown ? cssModule["selected"] : cssModule["hide"]
+            }`}
+            ref={dropdownContainerRef}
+          >
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("level.ascending")}
+            >
+              Level ascending
+            </span>
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("level.descending")}
+            >
+              Level descending
+            </span>
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("alphabetical.ascending")}
+            >
+              Name ascending
+            </span>
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("alphabetical.descending")}
+            >
+              Name descending
+            </span>
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("rarity.ascending")}
+            >
+              Rarity ascending
+            </span>
+            <span
+              className={cssModule["sorting-option"]}
+              onClick={() => handleSortingOptionsClick("rarity.descending")}
+            >
+              Rarity descending
+            </span>
+          </div>
         </div>
       </div>
       <div className={cssModule["horizontal-separator"]}></div>

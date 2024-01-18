@@ -18,6 +18,7 @@ const Home = () => {
     levelRange: { from: 0, to: 230 },
     type: [],
     stats: [],
+    sortBy: { type: "level", order: "ascending" },
   });
 
   const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
@@ -30,6 +31,7 @@ const Home = () => {
       levelRange: { from: 0, to: 230 },
       type: [],
       stats: [],
+      sortBy: { type: "level", order: "ascending" },
     });
     setResetFiltersFlag(true);
   };
@@ -46,11 +48,14 @@ const Home = () => {
     }
   };
 
-  // const handleTypeFilter = (types) => {
-  //   // console.log("Filtering items by types:", types);
-  //   setSelectedType(types);
-  //   // fetchItemsById(types);
-  // };
+  const handleSortingOptionsChange = (newSortingOption) => {
+    console.log(newSortingOption);
+    setFilterState((prevState) => ({
+      ...prevState,
+      sortBy: newSortingOption
+    }));
+    console.log(filterState.sortBy);
+  }
 
   const handleSearchChange = (newSearchQuery) => {
     // console.log("handleSearchChange called");
@@ -100,13 +105,13 @@ const Home = () => {
       <div>
         <Filter
           handleLogClick={() => handleLogClick}
-          // length_recipes={length_recipes}
           store_file={store_file}
           handleRarityChange={handleRarityChange}
           handleTypeChange={handleTypeChange}
           handleSearchChange={handleSearchChange}
           handleLevelChange={handleLevelChange}
           handleResetFilters={handleResetFilters}
+          handleSortingOptionsChange={handleSortingOptionsChange}
           resetFiltersFlag={resetFiltersFlag}
         ></Filter>
 
