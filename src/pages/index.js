@@ -89,10 +89,10 @@ const Home = () => {
     setFilterState((prevState) => ({ ...prevState, stats: newStats }));
   };
 
-  useEffect(() => {
-    console.log("INDEX.JS -- filterState", filterState);
-    console.log("INDEX.JS -- filterState.type.length", filterState.type.length);
-  }, [filterState]);
+  // useEffect(() => {
+  //   console.log("INDEX.JS -- filterState", filterState);
+  //   console.log("INDEX.JS -- filterState.type.length", filterState.type.length);
+  // }, [filterState]);
 
   return (
     <>
