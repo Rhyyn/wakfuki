@@ -152,8 +152,8 @@ const ItemList = ({ filterState }) => {
 
         const flattenedItems = combinedItems.flat();
         const sortedItems = sortData(flattenedItems, filterState.sortBy);
-
-        refItemsValue.current = flattenedItems;
+        console.log("sorted items");
+        refItemsValue.current = sortedItems;
         setItems(refItemsValue.current);
         setIsLoading(false);
       });

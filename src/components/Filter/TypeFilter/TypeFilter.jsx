@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { check_data_exists } from "../../../services/data-service.jsx";
@@ -8,17 +8,65 @@ import _ from "lodash";
 // Create modal for errors
 
 const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
+  const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedImages, setSelectedImages] = useState([]);
+  const selectedTypesRef = useRef([]);
 
+  // maybe use a ref that we pass to handleImageClick
+  // add clas seleted to that ref if it doesnt have it
+  // otherwise remove it
   const handleImageClick = (imageName) => {
-    setSelectedImages((prevSelectedImages) => {
-      if (prevSelectedImages.includes(imageName)) {
-        return prevSelectedImages.filter((name) => name !== imageName);
-      } else {
-        return [...prevSelectedImages, imageName];
-      }
-    });
+    if (selectedTypesRef.current.includes(imageName)) {
+      selectedTypesRef.current = selectedTypesRef.current.filter(
+        (name) => name !== imageName
+      );
+    } else {
+      selectedTypesRef.current.push(imageName);
+    }
+
+    // Update the visual representation using the ref
+    const iconRef = iconRefs.current[imageName];
+    if (iconRef) {
+      iconRef.classList.toggle(cssModule["selected"]);
+    }
+
+    getNumberFromTypeString(selectedTypesRef.current);
   };
+
+
+  const getNumberFromTypeString = (selectedTypes) => {
+    let newSelectedTypes = [];
+    for (let i = 0; i < selectedTypes.length; i++) {
+      let temp_string = selectedTypes[i].toString().split(/\-(.*)/);
+      if (typeof temp_string[1] === "string") {
+        newSelectedTypes.push(temp_string[1]);
+      } else {
+        console.log("Error while trying to set type of item");
+      }
+    }
+    if (check_data_exists(newSelectedTypes, 0)) {
+      // console.log("newSelectedTypes", newSelectedTypes);
+      handlePassingTypeChange(newSelectedTypes);
+    } else {
+      console.log("error data does not exists");
+    }
+  };
+
+  let timer;
+  const handlePassingTypeChange = (newSelectedTypes) => {
+    console.log("Clearing timer");
+    clearTimeout(timer);
+    console.log("Setting new timer");
+    timer = setTimeout(() => {
+      console.log("Timer expired, calling handleTypeChange");
+      handleTypeChange(newSelectedTypes);
+      console.log("handleTypeChange called");
+    }, 500);
+  };
+
+  useEffect(() => {
+    selectedTypesRef.current = [];
+  }, [resetFiltersFlag]);
 
   // const debouncedHandleTypeChange = useCallback(
   //   _.debounce((types) => {
@@ -28,31 +76,10 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
   // );
   // DEBOUNCE TEST USING LODASH
 
-
-  useEffect(() => {
-    let newSelectedTypes = [];
-    for (let i = 0; i < selectedImages.length; i++) {
-      let temp_string = selectedImages[i].toString().split(/\-(.*)/);
-      if (typeof temp_string[1] === "string") {
-        newSelectedTypes.push(temp_string[1]);
-      } else {
-        console.log("Error while trying to set type of item");
-      }
-    }
-    if (check_data_exists(newSelectedTypes, 0)) {
-      // console.log("newSelectedTypes", newSelectedTypes);
-      handleTypeChange(newSelectedTypes);
-    } else {
-      console.log("error data does not exists");
-    }
-  }, [selectedImages]);
-
-  useEffect(() => {
-    // console.log("useEffect in TypeFilter called");
-    if (selectedImages.length > 0) {
-      setSelectedImages([]);
-    }
-  }, [resetFiltersFlag]);
+  const iconRefs = useRef({});
+  const setIconRef = (imageName, element) => {
+    iconRefs.current[imageName] = element;
+  };
 
   return (
     <div className={cssModule["type-container"]}>
@@ -65,9 +92,13 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
             <div
               key={imageName}
               className={`${cssModule["icon-container"]} ${
-                selectedImages.includes(imageName) ? cssModule["selected"] : ""
+                selectedTypesRef.current.includes(imageName)
+                  ? cssModule["selected"]
+                  : ""
               }`}
               onClick={() => handleImageClick(imageName)}
+              data-image-name={imageName}
+              ref={(element) => setIconRef(imageName, element)}
             >
               <Image
                 className={cssModule["icon"]}
@@ -90,6 +121,8 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
                 selectedImages.includes(imageName) ? cssModule["selected"] : ""
               }`}
               onClick={() => handleImageClick(imageName)}
+              data-image-name={imageName}
+              ref={(element) => setIconRef(imageName, element)}
             >
               <Image
                 className={cssModule["icon"]}
@@ -116,6 +149,8 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
               selectedImages.includes(imageName) ? cssModule["selected"] : ""
             }`}
             onClick={() => handleImageClick(imageName)}
+            data-image-name={imageName}
+            ref={(element) => setIconRef(imageName, element)}
           >
             <Image
               className={cssModule["icon"]}
