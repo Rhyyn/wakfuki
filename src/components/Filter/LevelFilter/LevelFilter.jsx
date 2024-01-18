@@ -21,7 +21,7 @@ import RangeSlider from "./RangeSlider";
 const LevelFilter = ({
   handleLevelChange,
   handleResetFilters,
-  resetFiltersFlag
+  resetFiltersFlag,
 }) => {
   const [selectedRange, setSelectedRange] = useState({ from: 0, to: 230 });
   const ranges_dict = {
@@ -51,8 +51,12 @@ const LevelFilter = ({
   const selectedKey = Object.keys(ranges_dict).find(
     (key) =>
       ranges_dict[key].from === selectedRange.from &&
-            ranges_dict[key].to === selectedRange.to
+      ranges_dict[key].to === selectedRange.to
   );
+
+  useEffect(() => {
+    handleLevelChange(selectedRange);
+  }, [selectedRange]);
 
   useEffect(() => {
     setSelectedRange({ from: 0, to: 230 });
