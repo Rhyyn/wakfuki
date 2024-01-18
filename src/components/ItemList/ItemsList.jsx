@@ -41,67 +41,79 @@ const ItemList = ({ filterState }) => {
 
     return itemsQuery;
   };
+
   // searchQuery: "",
   //   rarity: [],
   //   levelRange: { from: 0, to: 230 },
   //   type: [],
   //   stats: [],
   const newFetchItems = async () => {
+    if (isLoading) {
+      return;
+    }
+    console.log("newFetchItems called..");
+    console.log("isLoading...", isLoading);
     await waitForDbInitialization();
+    console.log("db.open..");
     await db.open();
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     try {
       const tableNames = filterState.type.map((type) =>
         db.table(type + ".json")
       );
-      const combinedItems = [];
 
-      for (const type of filterState.type) {
-        let itemsQuery = db.table(type + ".json");
-        let typeId = await get_typeId_from_string([type]);
-        itemsQuery = await itemsQuery
-          .offset(startIndex)
-          .limit(ITEMS_PER_PAGE)
-          .toArray();
+      await db.transaction("rw", tableNames, async () => {
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const combinedItems = [];
 
-        // console.log("filterState.rarity", filterState.rarity);
-        const filteredItems = itemsQuery.filter((item) => {
-          // console.log(item.title.fr);
-          // console.log(item.baseParams.rarity);
-          // console.log(item.level);
-          // console.log("filterstate.rarity type", typeof filterState.rarity);
-          // console.log("filterstate.rarity :", filterState.rarity);
-          // console.log(
-          //   "item.baseParams.rarity type",
-          //   typeof item.baseParams.rarity
-          // );
-          // console.log("item.baseParams.rarity : ", item.baseParams.rarity);
-          const isSearchMatch =
-            filterState.searchQuery.length === 0 ||
-            item.title.fr
-              .toLowerCase()
-              .includes(filterState.searchQuery.toLowerCase());
+        console.log("start of for loop on filterState.type");
+        for (const type of filterState.type) {
+          console.log("start of for loop on filterState.type");
+          let itemsQuery = db.table(type + ".json");
 
-          const isRarityMatch =
-            filterState.rarity.length === 0 ||
-            filterState.rarity.some(
-              (rarity) => rarity === item.baseParams.rarity
+          console.log("itemsQuery before if rarity : ", itemsQuery);
+          if (filterState.rarity.length > 0) {
+            itemsQuery = itemsQuery.filter(
+              (o) => o.baseParams.rarity == filterState.rarity[0]
             );
+          }
+          console.log("itemsQuery before if searchQuery : ", itemsQuery);
+          if (filterState.searchQuery.length > 0) {
+            itemsQuery = itemsQuery.filter(
+              (o) =>
+                o.title.fr.toLowerCase() ==
+                filterState.searchQuery.toLowerCase().count()
+            );
+          }
+          console.log("itemsQuery before if levelRange : ", itemsQuery);
+          if (
+            filterState.levelRange.from > 0 ||
+            filterState.levelRange.to < 230
+          ) {
+            itemsQuery = itemsQuery.filter(
+              (o) =>
+                o.level >= filterState.levelRange.from &&
+                o.level <= filterState.levelRange.to
+            );
+          }
+          console.log("itemsQuery before completeQuery : ", itemsQuery);
+          let completeQuery = await itemsQuery.toArray();
+          console.log("itemsQuery after completeQuery :", itemsQuery);
 
-          return (
-            isSearchMatch &&
-            isRarityMatch &&
-            item.level >= filterState.levelRange.from &&
-            item.level <= filterState.levelRange.to
-          );
-        });
-        console.log("filteredItems", filteredItems);
-        refItemsValue.current = filteredItems;
-        console.log(refItemsValue.current);
-      }
-      setItems(refItemsValue.current);
+          combinedItems.push(completeQuery);
+        }
+
+        const flattenedItems = combinedItems.flat();
+        refItemsValue.current = flattenedItems;
+        setItems(refItemsValue.current);
+        setIsLoading(false);
+      });
     } catch (error) {
       console.error(error);
+    } finally {
+      console.log("isLoading...", isLoading);
+      db.close();
+      console.log("db closed");
     }
   };
 
@@ -160,12 +172,17 @@ const ItemList = ({ filterState }) => {
   };
 
   useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      await newFetchItems().then(setIsLoading(false));
+    };
+
     if (filterState !== null) {
       console.log("selectedItemTypes changed:", filterState.type);
       console.log("is loading ?: ", isLoading);
       // setCurrentPage(1); // Reset page to 1 when a new type is selected
       // fetchItems();
-      newFetchItems();
+      fetchData();
     }
   }, [currentPage, filterState]);
 
