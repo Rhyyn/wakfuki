@@ -104,8 +104,8 @@ const Home = () => {
           store_file={store_file}
           handleRarityChange={handleRarityChange}
           handleTypeChange={handleTypeChange}
-          handleSearchChange={() => handleSearchChange}
-          handleLevelChange={() => handleLevelChange}
+          handleSearchChange={handleSearchChange}
+          handleLevelChange={handleLevelChange}
           handleResetFilters={handleResetFilters}
           resetFiltersFlag={resetFiltersFlag}
         ></Filter>
