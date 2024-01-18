@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { check_data_exists } from "../../../services/data-service.jsx";
+import _ from "lodash";
 
 // TODO
 // Create modal for errors
@@ -18,6 +19,15 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
       }
     });
   };
+
+  // const debouncedHandleTypeChange = useCallback(
+  //   _.debounce((types) => {
+  //     handleTypeChange(types);
+  //   }, 100),
+  //   [handleTypeChange]
+  // );
+  // DEBOUNCE TEST USING LODASH
+
 
   useEffect(() => {
     let newSelectedTypes = [];
