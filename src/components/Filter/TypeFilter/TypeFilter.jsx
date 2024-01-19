@@ -2,38 +2,38 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { check_data_exists } from "../../../services/data-service.jsx";
-import _ from "lodash";
+import _, { forEach } from "lodash";
 
 // TODO
 // Create modal for errors
 
 const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
-  const [selectedTypes, setSelectedTypes] = useState([]);
-  const [selectedImages, setSelectedImages] = useState([]);
-  const selectedTypesRef = useRef([]);
+  const selectedTypesRefs = useRef([]);
+  const iconsRefs = useRef({});
 
-  // maybe use a ref that we pass to handleImageClick
-  // add clas seleted to that ref if it doesnt have it
-  // otherwise remove it
+  const setIconsRefs = (imageName, element) => {
+    iconsRefs.current[imageName] = element;
+  };
+
+
   const handleImageClick = (imageName) => {
-    if (selectedTypesRef.current.includes(imageName)) {
-      selectedTypesRef.current = selectedTypesRef.current.filter(
+    if (selectedTypesRefs.current.includes(imageName)) {
+      selectedTypesRefs.current = selectedTypesRefs.current.filter(
         (name) => name !== imageName
       );
     } else {
-      selectedTypesRef.current.push(imageName);
+      selectedTypesRefs.current.push(imageName);
     }
 
-    // Update the visual representation using the ref
-    const iconRef = iconRefs.current[imageName];
+    const iconRef = iconsRefs.current[imageName];
     if (iconRef) {
       iconRef.classList.toggle(cssModule["selected"]);
     }
 
-    getNumberFromTypeString(selectedTypesRef.current);
+    getNumberFromTypeString(selectedTypesRefs.current);
   };
 
-
+  // TODO needs refactoring
   const getNumberFromTypeString = (selectedTypes) => {
     let newSelectedTypes = [];
     for (let i = 0; i < selectedTypes.length; i++) {
@@ -52,20 +52,22 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
     }
   };
 
+  // this exists to delay fetching if the user
+  // selects x types, so we get 1 request
+  // instead of x
   let timer;
   const handlePassingTypeChange = (newSelectedTypes) => {
-    console.log("Clearing timer");
     clearTimeout(timer);
-    console.log("Setting new timer");
     timer = setTimeout(() => {
-      console.log("Timer expired, calling handleTypeChange");
       handleTypeChange(newSelectedTypes);
-      console.log("handleTypeChange called");
-    }, 500);
+    }, 700);
   };
 
   useEffect(() => {
-    selectedTypesRef.current = [];
+    selectedTypesRefs.current.forEach((element) =>
+      iconsRefs.current[element].classList.toggle(cssModule["selected"])
+    );
+    selectedTypesRefs.current = [];
   }, [resetFiltersFlag]);
 
   // const debouncedHandleTypeChange = useCallback(
@@ -75,11 +77,6 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
   //   [handleTypeChange]
   // );
   // DEBOUNCE TEST USING LODASH
-
-  const iconRefs = useRef({});
-  const setIconRef = (imageName, element) => {
-    iconRefs.current[imageName] = element;
-  };
 
   return (
     <div className={cssModule["type-container"]}>
@@ -91,14 +88,10 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
           (imageName) => (
             <div
               key={imageName}
-              className={`${cssModule["icon-container"]} ${
-                selectedTypesRef.current.includes(imageName)
-                  ? cssModule["selected"]
-                  : ""
-              }`}
               onClick={() => handleImageClick(imageName)}
               data-image-name={imageName}
-              ref={(element) => setIconRef(imageName, element)}
+              ref={(element) => setIconsRefs(imageName, element)}
+              className={cssModule["icon-container"]}
             >
               <Image
                 className={cssModule["icon"]}
@@ -117,12 +110,10 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
           (imageName) => (
             <div
               key={imageName}
-              className={`${cssModule["icon-container"]} ${
-                selectedImages.includes(imageName) ? cssModule["selected"] : ""
-              }`}
+              className={cssModule["icon-container"]}
               onClick={() => handleImageClick(imageName)}
               data-image-name={imageName}
-              ref={(element) => setIconRef(imageName, element)}
+              ref={(element) => setIconsRefs(imageName, element)}
             >
               <Image
                 className={cssModule["icon"]}
@@ -145,12 +136,10 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
         ].map((imageName) => (
           <div
             key={imageName}
-            className={`${cssModule["icon-container"]} ${
-              selectedImages.includes(imageName) ? cssModule["selected"] : ""
-            }`}
+            className={cssModule["icon-container"]}
             onClick={() => handleImageClick(imageName)}
             data-image-name={imageName}
-            ref={(element) => setIconRef(imageName, element)}
+            ref={(element) => setIconsRefs(imageName, element)}
           >
             <Image
               className={cssModule["icon"]}

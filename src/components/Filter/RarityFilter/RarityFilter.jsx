@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import cssModule from "./RarityFilter.module.scss";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -8,32 +8,48 @@ export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
   const { t, i18n } = useTranslation();
   const [selectedItems, setSelectedItems] = useState([]);
   const imageFileNames = [];
+
+  const selectedRaritiesRefs = useRef([]);
+  const iconsRefs = useRef({});
+  const setIconsRefs = (rarity, element) => {
+    iconsRefs.current[rarity] = element;
+  };
+
   for (let index = 0; index < 8; index++) {
     imageFileNames.push(`${index}.png`);
   }
   const rows = [imageFileNames.slice(0, 4), imageFileNames.slice(4)];
 
-  const handleClick = (v) => {
-    const isSelected = selectedItems.includes(v);
-
-    if (isSelected) {
-      setSelectedItems((prevSelected) =>
-        prevSelected.filter((item) => item !== v)
+  const handleClick = (rarity) => {
+    if (selectedRaritiesRefs.current.includes(rarity)) {
+      selectedRaritiesRefs.current = selectedRaritiesRefs.current.filter(
+        (value) => value !== rarity
       );
     } else {
-      setSelectedItems((prevSelected) => [...prevSelected, v]);
+      selectedRaritiesRefs.current.push(rarity);
     }
+
+    const iconRef = iconsRefs.current[rarity + ".png"];
+    if (iconRef) {
+      iconRef.classList.toggle(cssModule["selected"]);
+    }
+
+    handlePassingRaritiesChange(selectedRaritiesRefs.current);
+  };
+
+  let timer;
+  const handlePassingRaritiesChange = (newSelectedRarities) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      handleRarityChange(newSelectedRarities);
+    }, 500);
   };
 
   useEffect(() => {
-    handleRarityChange(selectedItems);
-  }, [selectedItems]);
-
-  useEffect(() => {
-    console.log('useEffect in RarityFilter triggered');
-    if (selectedItems.length > 0) {
-      setSelectedItems([]);
-    }
+    selectedRaritiesRefs.current.forEach((element) =>
+      iconsRefs.current[element + ".png"].classList.toggle(cssModule["selected"])
+    );
+    selectedRaritiesRefs.current = [];
   }, [resetFiltersFlag]);
 
   return (
@@ -43,12 +59,9 @@ export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
           {row.map((imageName, index) => (
             <div
               key={index}
-              className={`${cssModule["rarity-item"]} ${
-                selectedItems.includes(index + rowIndex * 4)
-                  ? cssModule["selected"]
-                  : ""
-              }`}
               onClick={() => handleClick(index + rowIndex * 4)}
+              ref={(element) => setIconsRefs(imageName, element)}
+              className={cssModule["rarity-item"]}
             >
               <div className={cssModule["image-container"]}>
                 <Image

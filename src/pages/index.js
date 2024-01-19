@@ -66,7 +66,7 @@ const Home = () => {
   };
 
   const handleRarityChange = (newRarity) => {
-    console.log("handleRarityChange called", newRarity);
+    // console.log("handleRarityChange called", newRarity);
     setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
   };
 

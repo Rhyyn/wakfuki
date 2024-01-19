@@ -18,8 +18,8 @@ const ItemList = ({ filterState }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const refItemsValue = useRef([]);
+  const currentPageRef = useRef(0);
   const [isLoading, setIsLoading] = useState(false);
-  const isInitialMount = useRef(true);
   const [isFetching, setIsFetching] = useState(false);
 
   const get_typeId_from_string = async (selectedTypes) => {
@@ -103,28 +103,31 @@ const ItemList = ({ filterState }) => {
     console.log("newFetchItems called..");
     console.log("isLoading...", isLoading);
     await waitForDbInitialization();
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     try {
       const tableNames = filterState.type.map((type) =>
         db.table(type + ".json")
       );
 
-      await db.transaction("rw", tableNames, async () => {
-        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      await db.transaction("r", tableNames, async () => {
+        // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+        console.log("offset", offset);
         const combinedItems = [];
 
-        console.log("start of for loop on filterState.type");
         for (const type of filterState.type) {
-          console.log("start of for loop on filterState.type");
           let itemsQuery = db.table(type + ".json");
 
-          console.log("itemsQuery before if rarity : ", itemsQuery);
+          if (offset > 0) {
+            itemsQuery = itemsQuery.offset(offset)
+          }
+
           if (filterState.rarity.length > 0) {
             itemsQuery = itemsQuery.filter(
               (o) => o.baseParams.rarity == filterState.rarity[0]
             );
           }
-          console.log("itemsQuery before if searchQuery : ", itemsQuery);
+
           if (filterState.searchQuery.length > 0) {
             itemsQuery = itemsQuery.filter(
               (o) =>
@@ -132,7 +135,7 @@ const ItemList = ({ filterState }) => {
                 filterState.searchQuery.toLowerCase().count()
             );
           }
-          console.log("itemsQuery before if levelRange : ", itemsQuery);
+
           if (
             filterState.levelRange.from > 0 ||
             filterState.levelRange.to < 230
@@ -143,17 +146,24 @@ const ItemList = ({ filterState }) => {
                 o.level <= filterState.levelRange.to
             );
           }
-          console.log("itemsQuery before completeQuery : ", itemsQuery);
+
+          itemsQuery = itemsQuery.limit(ITEMS_PER_PAGE);
+
           let completeQuery = await itemsQuery.toArray();
-          console.log("itemsQuery after completeQuery :", itemsQuery);
 
           combinedItems.push(completeQuery);
         }
 
         const flattenedItems = combinedItems.flat();
         const sortedItems = sortData(flattenedItems, filterState.sortBy);
-        console.log("sorted items");
-        refItemsValue.current = sortedItems;
+        
+        if (refItemsValue.current.length > 0) {
+          refItemsValue.current.concat(sortedItems)
+        } else {
+          refItemsValue.current = sortedItems;
+        }
+        console.log("refItemsValue.current.length", refItemsValue.current.length);
+
         setItems(refItemsValue.current);
         setIsLoading(false);
       });
@@ -175,7 +185,7 @@ const ItemList = ({ filterState }) => {
     };
 
     if (filterState !== null) {
-      console.log("selectedItemTypes changed:", filterState.type);
+      // console.log("selectedItemTypes changed:", filterState.type);
       console.log("is loading ?: ", isLoading);
       // setCurrentPage(1); // Reset page to 1 when a new type is selected
       fetchData();
@@ -186,6 +196,11 @@ const ItemList = ({ filterState }) => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
+
+      console.log("scrollTop", Math.abs(scrollTop));
+      console.log("clientHeight", clientHeight);
+      console.log("scrollHeight", scrollHeight);
+      console.log(Math.abs(scrollHeight - clientHeight - scrollTop) < 1);
       if (
         scrollTop + clientHeight >= scrollHeight - SCROLL_THRESHOLD &&
         !isFetching
