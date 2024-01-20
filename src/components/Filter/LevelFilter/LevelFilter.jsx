@@ -64,7 +64,7 @@ const LevelFilter = ({
       <RangeSlider
         selectedRange={selectedRange}
         setSelectedRange={setSelectedRange}
-        handleResetFilters={handleResetFilters}
+        resetFiltersFlag={resetFiltersFlag}
       />
     </div>
   );

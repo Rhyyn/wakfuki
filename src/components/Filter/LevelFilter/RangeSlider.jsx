@@ -5,7 +5,7 @@ import Image from "next/image";
 const RangeSlider = ({
   selectedRange,
   setSelectedRange,
-  handleResetFilters,
+  resetFiltersFlag,
 }) => {
   const isInitialMount = useRef(true);
   const fromSliderRef = useRef(null);
@@ -26,6 +26,7 @@ const RangeSlider = ({
 
   const controlFromInput = (fromSlider, fromInput, toInput) => {
     const [from, to] = getParsed(fromInput, toInput);
+
     fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);
 
     if (from > to) {
@@ -44,6 +45,7 @@ const RangeSlider = ({
 
   const controlToInput = (toSlider, fromInput, toInput) => {
     const [from, to] = getParsed(fromInput, toInput);
+
     fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);
     setToggleAccessible(toInput);
 
@@ -68,12 +70,8 @@ const RangeSlider = ({
 
   const controlFromSlider = (fromSlider, toSlider, fromInput) => {
     const [from, to] = getParsed(fromSlider, toSlider);
+
     fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
-
-    // console.log("from", from);
-    // console.log("to", to);
-    // console.log("fromInput", fromInput);
-
     setFromInputValue(from);
 
     if (from > to) {
@@ -86,12 +84,11 @@ const RangeSlider = ({
 
   const controlToSlider = (fromSlider, toSlider, toInput) => {
     const [from, to] = getParsed(fromSlider, toSlider);
+
     fillSlider(fromSlider, toSlider, "#615a49", "#292621", toSlider);
     setToggleAccessible(toSlider);
     setToInputValue(to);
-    // console.log("fromSlider", from);
-    // console.log("toSlider", to);
-    // console.log("toInput", toInput);
+
     if (from <= to) {
       toSlider.defaultValue = to;
       toInput.defaultValue = to;
@@ -156,7 +153,7 @@ const RangeSlider = ({
       if (fromValue >= toValue) {
         fromSlider.value = toValue;
       }
-
+      setFromInputValue(fromInputValueRef.current);
       controlFromSlider(fromSlider, toSlider, fromInput);
     };
 
@@ -206,7 +203,13 @@ const RangeSlider = ({
   }, [selectedRange]);
 
   const handleMouseUpEvent = (e) => {
-    handleSelectedRange();
+    if (e.target.id == "fromSlider") {
+      fromInputValueRef.current = e.target.value;
+      setFromInputValue(e.target.value);
+    } else {
+      toInputValueRef.current = e.target.value;
+      setToInputValue(e.target.value);
+    }
   };
 
   const handleSelectedRange = () => {
@@ -214,39 +217,50 @@ const RangeSlider = ({
       from: fromInputValueRef.current,
       to: toInputValueRef.current,
     };
-    // console.log(toInputValueRef.current);
     setSelectedRange(rangeObject);
   };
 
-
   const handleInputOnChange = (e) => {
-    // clearTimeout(timer);
-    if (e.target.attributes.id.nodeValue == "fromInput") {
-      // console.log(e.target.value);
+    if (e.target.id == "fromInput") {
       fromInputValueRef.current = e.target.value;
       setFromInputValue(e.target.value);
     } else {
-      // console.log(e.target.value);
       toInputValueRef.current = e.target.value;
       setToInputValue(e.target.value);
     }
   };
 
-
   useEffect(() => {
-    clearTimeout(timerRef.current)
+    clearTimeout(timerRef.current);
+    fromInputValueRef.current = fromInputValue;
+    toInputValueRef.current = toInputValue
     timerRef.current = setTimeout(() => {
       handleSelectedRange();
-    }, 1000)
-  }, [fromInputValue, toInputValue])
-  
+    }, 1000);
+  }, [fromInputValue, toInputValue]);
 
-  // useEffect(() => {
-  //   fromInputValueRef.current = 0;
-  //   toInputValueRef.current = 230;
-  //   setFromInputValue(0);
-  //   setToInputValue(230);
-  // }, [handleResetFilters])
+
+  useEffect(() => {
+    const fromSlider = document.querySelector("#fromSlider");
+    const toSlider = document.querySelector("#toSlider");
+    const fromInput = document.querySelector("#fromInput");
+    const toInput = document.querySelector("#toInput");
+
+    fromSliderRef.current = fromSlider;
+    toSliderRef.current = toSlider;
+    fromInputRef.current = fromInput;
+    toInputRef.current = toInput;
+
+
+    controlFromSlider(fromSlider, toSlider, fromInput);
+    controlToSlider(fromSlider, toSlider, toInput);
+
+    setFromInputValue(0);
+    setToInputValue(230);
+    fromInputValueRef.current = 0;
+    toInputValueRef.current = 230;
+  }, [resetFiltersFlag])
+  
 
   return (
     <div className={cssModule["level-filter-container"]}>
@@ -292,7 +306,7 @@ const RangeSlider = ({
             max="230"
             step={5}
             onChange={(e) => setFromInputValue(e.target.value)}
-            onMouseUp={() => handleMouseUpEvent()}
+            onMouseUp={(e) => handleMouseUpEvent(e)}
           />
           <input
             className={`${cssModule["range-input"]} ${cssModule["thumb-2"]}`}
@@ -303,7 +317,7 @@ const RangeSlider = ({
             max="230"
             step={5}
             onChange={(e) => setToInputValue(e.target.value)}
-            onMouseUp={() => handleMouseUpEvent()}
+            onMouseUp={(e) => handleMouseUpEvent(e)}
           />
         </div>
       </div>
