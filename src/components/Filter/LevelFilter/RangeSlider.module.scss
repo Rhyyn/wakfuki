@@ -39,6 +39,7 @@
     // box-shadow: 0 0 0 1px v.$background-deep;
     cursor: pointer;
     border: none;
+    z-index: 2;
 }
 
 .range-input:focus {
