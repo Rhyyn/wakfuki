@@ -139,7 +139,7 @@ const ItemList = ({ filterState }) => {
                 filterState.searchQuery.toLowerCase().count()
             );
           }
-
+          console.log(filterState.levelRange);
           if (
             filterState.levelRange.from > 0 ||
             filterState.levelRange.to < 230
@@ -160,9 +160,14 @@ const ItemList = ({ filterState }) => {
 
         const flattenedItems = combinedItems.flat();
         const sortedItems = sortData(flattenedItems, filterState.sortBy);
+        // console.log(sortedItems);
 
         if (refItemsValue.current.length > 0) {
-          refItemsValue.current.concat(sortedItems);
+          // refItemsValue.current = refItemsValue.current.concat(sortedItems);
+          refItemsValue.current = sortedItems;
+          // refItemsValue.current.forEach(element => {
+          //   console.log(`name : ${element.title.fr}, id: ${element.id}`);
+          // });
         } else {
           refItemsValue.current = sortedItems;
         }
@@ -194,6 +199,8 @@ const ItemList = ({ filterState }) => {
       setIsLoading(true);
       // console.log(loadingRef.current);
       fetchData();
+      console.log(isLoading);
+      console.log(items);
     }
   }, [currentPage, filterState]);
 
