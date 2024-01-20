@@ -2,11 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./RangeSlider.module.scss";
 import Image from "next/image";
 
-const RangeSlider = ({
-  selectedRange,
-  setSelectedRange,
-  resetFiltersFlag,
-}) => {
+const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
   const isInitialMount = useRef(true);
   const fromSliderRef = useRef(null);
   const toSliderRef = useRef(null);
@@ -17,12 +13,16 @@ const RangeSlider = ({
   const timerRef = useRef(null);
   const [fromInputValue, setFromInputValue] = useState(0);
   const [toInputValue, setToInputValue] = useState(230);
+  const [tempFromInputValue, setTempFromInputValue] = useState(0);
+  const [tempToInputValue, setTempToInputValue] = useState(230);
+  const [manualReset, setManualReset] = useState(false);
 
   // TODO
   // Disable string in inputs
   // Disable negative values
   // Fix Slider having wrong value by manually typing
   // toValue > fromValue
+  // input value sometimes not updating after typing and using sliders
 
   const controlFromInput = (fromSlider, fromInput, toInput) => {
     const [from, to] = getParsed(fromInput, toInput);
@@ -99,15 +99,15 @@ const RangeSlider = ({
   };
 
   const getParsed = (currentFrom, currentTo) => {
-    const from = parseInt(currentFrom.value, 10);
-    const to = parseInt(currentTo.value, 10);
+    const from = parseInt(currentFrom.defaultValue, 10);
+    const to = parseInt(currentTo.defaultValue, 10);
     return [from, to];
   };
 
   const fillSlider = (from, to, sliderColor, rangeColor, toSlider) => {
-    const rangeDistance = to.max - to.min;
-    const fromPosition = from.value - to.min;
-    const toPosition = to.value - to.min;
+    const rangeDistance = to.max;
+    const fromPosition = from.value;
+    const toPosition = to.value;
 
     // console.log('From Position:', fromPosition);
     // console.log('rangeDistance',rangeDistance);
@@ -189,26 +189,33 @@ const RangeSlider = ({
   // }, [fromInputValue, toInputValue]);
 
   useEffect(() => {
-    if (!isInitialMount.current && toSliderRef.current != null) {
-      setFromInputValue(selectedRange.from);
-      setToInputValue(selectedRange.to);
-      fillSlider(
-        fromSliderRef.current,
-        toSliderRef.current,
-        "#615a49",
-        "#292621",
-        toSliderRef.current
-      );
-    }
+    // const fillSlider = (from, to, sliderColor, rangeColor, toSlider) => {
+    // && toSliderRef.current != null ?
+    let from = { value: selectedRange.from}
+    let to = {max : 230, value: selectedRange.to}
+    setFromInputValue(selectedRange.from);
+    setToInputValue(selectedRange.to);
+    fillSlider(
+      from,
+      to,
+      "#615a49",
+      "#292621",
+      toSliderRef.current
+    );
   }, [selectedRange]);
 
   const handleMouseUpEvent = (e) => {
+    // console.log(
+    //   `e.target.value after releasing click : ${e.target.value} this should be equal to ${fromInputValue}`
+    // );
     if (e.target.id == "fromSlider") {
       fromInputValueRef.current = e.target.value;
-      setFromInputValue(e.target.value);
+      setTempFromInputValue(e.target.value);
+      // setFromInputValue(e.target.value);
     } else {
-      toInputValueRef.current = e.target.value;
-      setToInputValue(e.target.value);
+      toInputValueRef.current = parseInt(e.target.value);
+      setTempToInputValue(e.target.value);
+      // setToInputValue(parseInt(e.target.value));
     }
   };
 
@@ -220,11 +227,36 @@ const RangeSlider = ({
     setSelectedRange(rangeObject);
   };
 
+  const isInputValidNumber = (input) => {
+    input = parseInt(input);
+    if (!typeof input == "number") {
+      return false;
+    } else if (input < 0) {
+      return false;
+    }
+    return true;
+  };
+
   const handleInputOnChange = (e) => {
+    // if (!isInputValidNumber(e.target.value)) {
+    //   console.log("Input is not a number");
+    //   return;
+    // }
+
     if (e.target.id == "fromInput") {
+      if (!isInputValidNumber(e.target.value)) {
+        setManualReset(true);
+        console.log("From Input is not valid");
+        return;
+      }
       fromInputValueRef.current = e.target.value;
       setFromInputValue(e.target.value);
     } else {
+      if (!isInputValidNumber(e.target.value)) {
+        setManualReset(true);
+        console.log("To Input is not valid");
+        return;
+      }
       toInputValueRef.current = e.target.value;
       setToInputValue(e.target.value);
     }
@@ -232,15 +264,13 @@ const RangeSlider = ({
 
   useEffect(() => {
     clearTimeout(timerRef.current);
-    fromInputValueRef.current = fromInputValue;
-    toInputValueRef.current = toInputValue
     timerRef.current = setTimeout(() => {
       handleSelectedRange();
     }, 1000);
-  }, [fromInputValue, toInputValue]);
-
+  }, [tempFromInputValue, tempToInputValue]);
 
   useEffect(() => {
+    setManualReset(false);
     const fromSlider = document.querySelector("#fromSlider");
     const toSlider = document.querySelector("#toSlider");
     const fromInput = document.querySelector("#fromInput");
@@ -251,7 +281,6 @@ const RangeSlider = ({
     fromInputRef.current = fromInput;
     toInputRef.current = toInput;
 
-
     controlFromSlider(fromSlider, toSlider, fromInput);
     controlToSlider(fromSlider, toSlider, toInput);
 
@@ -259,8 +288,7 @@ const RangeSlider = ({
     setToInputValue(230);
     fromInputValueRef.current = 0;
     toInputValueRef.current = 230;
-  }, [resetFiltersFlag])
-  
+  }, [resetFiltersFlag, manualReset]);
 
   return (
     <div className={cssModule["level-filter-container"]}>
@@ -270,7 +298,7 @@ const RangeSlider = ({
             className={cssModule["form_control_container__time__input"]}
             type="number"
             id="fromInput"
-            defaultValue={fromInputValueRef.current}
+            defaultValue={fromInputValue}
             min="0"
             max="230"
             step={5}
@@ -283,7 +311,7 @@ const RangeSlider = ({
             dir="rtl"
             type="number"
             id="toInput"
-            defaultValue={toInputValueRef.current}
+            defaultValue={toInputValue}
             min="0"
             max="230"
             step={5}
