@@ -81,7 +81,7 @@ const Home = () => {
   const handleTypeChange = (newType) => {
     // console.log("handleTypeChange called");
     setFilterState((prevState) => ({ ...prevState, type: newType }));
-    console.log("newType", newType);
+    // console.log("newType", newType);
   };
 
   const handleStatsChange = (newStats) => {

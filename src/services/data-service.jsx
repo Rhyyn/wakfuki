@@ -42,14 +42,12 @@ const check_file_length = async (fileName, db) => {
   for (const file in filesLength) {
     if (fileName === file) {
       let expectedItemCount = filesLength[file];
-      console.log("expectedItemCount", expectedItemCount);
       let count = await db.table(fileName).count();
-      console.log("count", count);
       if (count == expectedItemCount) {
         // maybe check for random object?
-        console.log(
-          `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
-        );
+        // console.log(
+        //   `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
+        // );
         return true;
       } else {
         console.log(
@@ -71,12 +69,12 @@ const check_data_exists = async (selectedTypes, index) => {
         await db.open();
         if (db.table(storeName)) {
           let isDataValid = await check_file_length(storeName, db);
-          console.log("isDataValid", isDataValid);
           if (isDataValid) {
             db.close();
+            console.log("Data exists and is valid");
             return true;
           } else {
-            console.log("Data not exists/valid, now trying to store new data");
+            console.log(`Data not exists/valid, now trying to store new data for ${storeName}`);
             await store_file(storeName);
             let index = recursionIndex + 1;
             check_data_exists(selectedTypes, index);
