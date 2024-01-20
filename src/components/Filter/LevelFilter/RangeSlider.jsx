@@ -8,15 +8,16 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
   const toSliderRef = useRef(null);
   const fromInputRef = useRef(null);
   const toInputRef = useRef(null);
+  const fromValueRef = useRef(0);
+  const toValueRef = useRef(230);
   const [fromInputValue, setFromInputValue] = useState(0);
   const [toInputValue, setToInputValue] = useState(230);
 
-  // TODO 
+  // TODO
   // Disable string in inputs
-  // Fix Slider having wrong value by manually typing 
+  // Fix Slider having wrong value by manually typing
   // toValue > fromValue
 
-  
   const controlFromInput = (fromSlider, fromInput, toInput) => {
     const [from, to] = getParsed(fromInput, toInput);
     fillSlider(fromInput, toInput, "#615a49", "#292621", toSlider);
@@ -145,7 +146,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
     fromSlider.oninput = () => {
       const fromValue = parseInt(fromSlider.value, 10);
       const toValue = parseInt(toSlider.value, 10);
-
       // Ensure the left thumb cannot go past the right thumb
       if (fromValue >= toValue) {
         fromSlider.value = toValue;
@@ -172,18 +172,18 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
       controlToInput(toSlider, fromInput, toInput, toSlider);
   }, []);
 
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
+  // useEffect(() => {
+  //   if (isInitialMount.current) {
+  //     isInitialMount.current = false;
+  //     return;
+  //   }
 
-    const rangeObject = {
-      from: fromInputValue,
-      to: toInputValue,
-    };
-    setSelectedRange(rangeObject);
-  }, [fromInputValue, toInputValue]);
+  //   const rangeObject = {
+  //     from: fromInputValue,
+  //     to: toInputValue,
+  //   };
+  //   setSelectedRange(rangeObject);
+  // }, [fromInputValue, toInputValue]);
 
   useEffect(() => {
     if (!isInitialMount.current && toSliderRef.current != null) {
@@ -199,37 +199,49 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
     }
   }, [selectedRange]);
 
+  const handleMouseUpEvent = (e) => {
+    const rangeObject = {
+      from: fromInputValue,
+      to: toInputValue,
+    };
+    setSelectedRange(rangeObject);
+    // if (e.target.attributes[1].nodeValue == "fromSlider") {
+    //   console.log("fromSlider");
+    //   console.log(e.target.value);
+    //   setFromInputValue(e.target.value);
+    // } else if (e.target.attributes[1].nodeValue == "toSlider") {
+    //   console.log("toSlider");
+    //   console.log(e.target.value);
+    //   setToInputValue(e.target.value);
+    // }
+  };
 
   return (
     <div className={cssModule["level-filter-container"]}>
       <div className={cssModule["form_control"]}>
         <div className={cssModule["form_control_container__time"]}>
           <input
-            className={
-              cssModule["form_control_container__time__input"]
-            }
+            className={cssModule["form_control_container__time__input"]}
             type="number"
             id="fromInput"
-            value={fromInputValue} // Use value instead of defaultValue
+            value={fromInputValue}
             min="0"
             max="230"
             step={5}
-            onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
+            onChange={(e) => setFromInputValue(e.target.value)}
           />
         </div>
         <div className={cssModule["form_control_container__time"]}>
           <input
-            className={
-              cssModule["form_control_container__time__input"]
-            }
+            className={cssModule["form_control_container__time__input"]}
             dir="rtl"
             type="number"
             id="toInput"
-            value={toInputValue} // Use value instead of defaultValue
+            value={toInputValue}
             min="0"
             max="230"
             step={5}
-            onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
+            onChange={(e) => setToInputValue(e.target.value)}
           />
         </div>
       </div>
@@ -243,21 +255,23 @@ const RangeSlider = ({ selectedRange, setSelectedRange }) => {
               zIndex: 1,
             }}
             type="range"
-            value={fromInputValue} // Use value instead of defaultValue
+            defaultValue={fromInputValue}
             min="0"
             max="230"
             step={5}
-            onChange={(e) => setFromInputValue(e.target.value)} // Handle onChange
+            onChange={(e) => setFromInputValue(e.target.value)}
+            onMouseUp={() => handleMouseUpEvent()}
           />
           <input
             className={`${cssModule["range-input"]} ${cssModule["thumb-2"]}`}
             id="toSlider"
             type="range"
-            value={toInputValue} // Use value instead of defaultValue
+            defaultValue={toInputValue}
             min="0"
             max="230"
             step={5}
-            onChange={(e) => setToInputValue(e.target.value)} // Handle onChange
+            onChange={(e) => setToInputValue(e.target.value)}
+            onMouseUp={() => handleMouseUpEvent()}
           />
         </div>
       </div>
