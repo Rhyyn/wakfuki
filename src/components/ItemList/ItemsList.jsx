@@ -21,6 +21,7 @@ const ItemList = ({ filterState }) => {
   const currentPageRef = useRef(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
+  const loadingRef = useRef(false);
 
   const get_typeId_from_string = async (selectedTypes) => {
     let itemsQuery = [];
@@ -97,11 +98,14 @@ const ItemList = ({ filterState }) => {
   };
 
   const newFetchItems = async (db) => {
-    if (isLoading) {
+    if (!loadingRef) {
+      console.log(loadingRef.current);
       return;
     }
-    console.log("newFetchItems called..");
-    console.log("isLoading...", isLoading);
+    loadingRef.current = (true);
+    // console.log("newFetchItems called..");
+    // console.log("isLoading...", isLoading);
+    // console.log(loadingRef.current);
     await waitForDbInitialization();
     // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     try {
@@ -112,14 +116,14 @@ const ItemList = ({ filterState }) => {
       await db.transaction("r", tableNames, async () => {
         // const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
         const offset = (currentPage - 1) * ITEMS_PER_PAGE;
-        console.log("offset", offset);
+        // console.log("offset", offset);
         const combinedItems = [];
 
         for (const type of filterState.type) {
           let itemsQuery = db.table(type + ".json");
 
           if (offset > 0) {
-            itemsQuery = itemsQuery.offset(offset)
+            itemsQuery = itemsQuery.offset(offset);
           }
 
           if (filterState.rarity.length > 0) {
@@ -156,38 +160,39 @@ const ItemList = ({ filterState }) => {
 
         const flattenedItems = combinedItems.flat();
         const sortedItems = sortData(flattenedItems, filterState.sortBy);
-        
+
         if (refItemsValue.current.length > 0) {
-          refItemsValue.current.concat(sortedItems)
+          refItemsValue.current.concat(sortedItems);
         } else {
           refItemsValue.current = sortedItems;
         }
-        console.log("refItemsValue.current.length", refItemsValue.current.length);
+        // console.log(
+        //   "refItemsValue.current.length",
+        //   refItemsValue.current.length
+        // );
 
         setItems(refItemsValue.current);
-        setIsLoading(false);
+        // console.log("isLoading...", isLoading);
       });
     } catch (error) {
       console.error(error);
     } finally {
-      console.log("isLoading...", isLoading);
+      loadingRef.current = (false);
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true);
       const db = await get_db_instance(0);
       await waitForDbInitialization();
       await newFetchItems(db);
-      setIsLoading(false);
-      //.then(setIsLoading(false));
     };
 
     if (filterState !== null) {
-      // console.log("selectedItemTypes changed:", filterState.type);
-      console.log("is loading ?: ", isLoading);
-      // setCurrentPage(1); // Reset page to 1 when a new type is selected
+      // setCurrentPage(1); // Reset page to 1 when a new type is selected\
+      setIsLoading(true);
+      // console.log(loadingRef.current);
       fetchData();
     }
   }, [currentPage, filterState]);
