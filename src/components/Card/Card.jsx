@@ -2,9 +2,10 @@
 import cardCSS from "./card.module.scss";
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
-const Card = ({ item }) => {
-  // console.log(item);
+const Card = ({ item, lang }) => {
+  const { t, i18n } = useTranslation();
   const [triToggle, setTriToggle] = useState(2);
 
   const handleTriToggleClick = (e) => {
@@ -44,7 +45,7 @@ const Card = ({ item }) => {
                   href="/fr/encyclopedie/objet/120/8222"
                   className={cardCSS["item-name"]}
                 >
-                  {item.title.fr}
+                  {item.title[lang]}
                 </a>
               </div>
             </div>
@@ -157,7 +158,7 @@ const Card = ({ item }) => {
           {item.equipEffects.map((effect, index) => (
             <div key={index} className={cardCSS["item-stat-container"]}>
               <span className={cardCSS["item-stat"]}>
-                {effect.effect.stats.display.fr}
+                {effect.effect.stats.display[lang]}
               </span>
             </div>
           ))}

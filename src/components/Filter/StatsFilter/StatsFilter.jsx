@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 // TODO
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
@@ -10,6 +11,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(1);
+  const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
 
   const primary_stat = [
@@ -82,7 +84,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
         onClick={() => setSelectedCategory(1)}
       >
-        <span className={cssModule["stat-title"]}>Stats Principales</span>
+        <span className={cssModule["stat-title"]}>{t("Primary Stats")}</span>
         <div className={cssModule["global-icon-container"]}>
           {selectedCategory === 1 &&
             primary_stat.map((itemName) => (
@@ -110,7 +112,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={cssModule["type-row-icon-container"]}
         onClick={() => setSelectedCategory(2)}
       >
-        <span className={cssModule["stat-title"]}>Stats Secondaires</span>
+        <span className={cssModule["stat-title"]}>{t("Secondary Stats")}</span>
         <div className={cssModule["global-icon-container"]}>
           {selectedCategory === 2 &&
             secondary_stat.map((itemName) => (
@@ -138,7 +140,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={cssModule["type-row-icon-container"]}
         onClick={() => setSelectedCategory(3)}
       >
-        <span className={cssModule["stat-title"]}>Stats Restantes</span>
+        <span className={cssModule["stat-title"]}>{t("Remaining Stats")}</span>
         <div className={cssModule["global-icon-container"]}>
           {selectedCategory === 3 &&
             remaining_stats.map((itemName) => (

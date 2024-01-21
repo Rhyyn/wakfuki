@@ -21,6 +21,7 @@ const ItemList = ({ filterState }) => {
   const [isFetching, setIsFetching] = useState(false);
   const itemsPerPage = 40;
   const scrollThreshold = 100;
+  let lang = localStorage.getItem("language")
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -73,7 +74,7 @@ const ItemList = ({ filterState }) => {
   return (
     <div className={cssModule["cards-container"]}>
       {isLoading && <p>Loading...</p>}
-      {!isLoading && items.map((item) => <Card key={item.id} item={item} />)}
+      {!isLoading && items.map((item) => <Card key={item.id} item={item} lang={lang}/>)}
     </div>
   );
 };
