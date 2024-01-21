@@ -79,6 +79,7 @@ const Card = ({ item }) => {
                     alt="rarity icon"
                     width={32}
                     height={32}
+                    style={{ height: "auto" }}
                   ></Image>
                 </div>
                 <span
