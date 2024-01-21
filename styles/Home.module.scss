@@ -21,6 +21,8 @@
 
 .item-list {
     background-color: v.$background-deep;
-    flex-grow: 1;
+    flex-grow: 0;
+    position: relative;
+    top: 80px;
     // height: 2000px;
 }
