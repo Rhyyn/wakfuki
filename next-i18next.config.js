@@ -4,7 +4,9 @@ module.exports = {
   i18n: {
     locales: ["en", "fr"],
     defaultLocale: "fr",
-    localePath: ""
+    localePath: "",
+    localeDetection: false,
   },
   react: { useSuspense: false },
+  localeDetection: false,
 };
