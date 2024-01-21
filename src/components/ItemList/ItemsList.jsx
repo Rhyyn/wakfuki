@@ -6,6 +6,7 @@ import {
 } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
+import { useTranslation } from "react-i18next";
 
 
 // TODO :
@@ -13,6 +14,7 @@ import cssModule from "./ItemList.module.scss";
 // Pages and infinite scrolling
 
 const ItemList = ({ filterState }) => {
+  const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +24,8 @@ const ItemList = ({ filterState }) => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      let DATA = await fetchData(filterState, currentPage, itemsPerPage);
+      lang = localStorage.getItem("language")
+      let DATA = await fetchData(filterState, currentPage, itemsPerPage, lang);
       setItems(DATA);
       setIsLoading(false);
     };

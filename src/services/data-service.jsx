@@ -63,7 +63,34 @@ const sortData = (data, sortOption) => {
   }
 };
 
-const fetchData = async (filterState, currentPage, itemsPerPage) => {
+const filterByRarityQuery = (itemsQuery, lang, rarity) => {
+  if (rarity.length > 0) {
+    return itemsQuery.filter((o) => o.baseParams.rarity == rarity[0]);
+  }
+  return itemsQuery;
+};
+
+const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
+  if (searchQuery.length > 0) {
+    return itemsQuery.filter((o) =>
+      o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+  return itemsQuery;
+};
+
+const filterByLevelRangeQuery = (itemsQuery, lang, levelRange) => {
+  if (levelRange.from > 0 || levelRange.to < 230) {
+    return itemsQuery.filter(
+      (o) =>
+        o.level >= levelRange.from &&
+        o.level <= levelRange.to
+    );
+  }
+  return itemsQuery;
+};
+
+const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
   let data;
   await waitForDbInitialization();
   try {
@@ -81,30 +108,21 @@ const fetchData = async (filterState, currentPage, itemsPerPage) => {
             itemsQuery = itemsQuery.offset(offset);
           }
 
-          if (filterState.rarity.length > 0) {
-            itemsQuery = itemsQuery.filter(
-              (o) => o.baseParams.rarity == filterState.rarity[0]
-            );
-          }
-
-          if (filterState.searchQuery.length > 0) {
-            itemsQuery = itemsQuery.filter(
-              (o) =>
-                o.title.fr.toLowerCase() ==
-                filterState.searchQuery.toLowerCase().count()
-            );
-          }
-          console.log(filterState.levelRange);
-          if (
-            filterState.levelRange.from > 0 ||
-            filterState.levelRange.to < 230
-          ) {
-            itemsQuery = itemsQuery.filter(
-              (o) =>
-                o.level >= filterState.levelRange.from &&
-                o.level <= filterState.levelRange.to
-            );
-          }
+          itemsQuery = filterByRarityQuery(
+            itemsQuery,
+            lang,
+            filterState.rarity
+          );
+          itemsQuery = filterBySearchQuery(
+            itemsQuery,
+            lang,
+            filterState.searchQuery
+          );
+          itemsQuery = filterByLevelRangeQuery(
+            itemsQuery,
+            lang,
+            filterState.levelRange
+          );
 
           itemsQuery = itemsQuery.limit(itemsPerPage);
 
