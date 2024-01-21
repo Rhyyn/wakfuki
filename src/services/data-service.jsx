@@ -1,32 +1,172 @@
-"use client";
-
 import Dexie from "dexie";
 import indexStructure from "../data/index-structure.json";
 import filesLength from "../data/files_length.json";
 
 let isDbInitialized = false;
-const db = new Dexie("WakfuKiDatabase");
+let db = new Dexie("WakfuKiDatabase");
 
 // TODO
 // FIX BOUCLIER
 // FIX OTHER CATEGORIES
 // FEAT CHECK DB DATA VALID ?
 
-const get_db_instance = async function (startIndex) {
+const sortItemsByLevel = (data, order) => {
+  return data.sort((a, b) => {
+    const aValue = a.level;
+    const bValue = b.level;
+
+    return order === "ascending" ? aValue - bValue : bValue - aValue;
+  });
+};
+
+const sortItemsAlphabetically = (data, order) => {
+  return data.sort((a, b) => {
+    const aValue = a.title.fr.toLowerCase();
+    const bValue = b.title.fr.toLowerCase();
+
+    return order === "ascending"
+      ? aValue.localeCompare(bValue)
+      : bValue.localeCompare(aValue);
+  });
+};
+
+const sortItemsByRarity = (data, order) => {
+  return data.sort((a, b) => {
+    const aValue = a.baseParams.rarity;
+    const bValue = b.baseParams.rarity;
+
+    return order === "ascending" ? aValue - bValue : bValue - aValue;
+  });
+};
+
+const sortData = (data, sortOption) => {
+  if (data && sortOption) {
+    const { type, order } = sortOption;
+
+    switch (type) {
+      case "level":
+        return sortItemsByLevel(data, order);
+
+      case "alphabetical":
+        return sortItemsAlphabetically(data, order);
+
+      case "rarity":
+        return sortItemsByRarity(data, order);
+
+      default:
+        console.log("Invalid sorting type");
+        return data;
+    }
+  } else {
+    console.log("Invalid data or sort option");
+    return data;
+  }
+};
+
+const fetchData = async (filterState, currentPage, itemsPerPage) => {
+  let data;
+  await waitForDbInitialization();
+  try {
+    const tableNames = filterState.type.map((type) => db.table(type + ".json"));
+    await openDB();
+    return Promise.resolve(
+      await db.transaction("r", tableNames, async () => {
+        const offset = (currentPage - 1) * itemsPerPage;
+        const combinedItems = [];
+
+        for (const type of filterState.type) {
+          let itemsQuery = db.table(type + ".json");
+
+          if (offset > 0) {
+            itemsQuery = itemsQuery.offset(offset);
+          }
+
+          if (filterState.rarity.length > 0) {
+            itemsQuery = itemsQuery.filter(
+              (o) => o.baseParams.rarity == filterState.rarity[0]
+            );
+          }
+
+          if (filterState.searchQuery.length > 0) {
+            itemsQuery = itemsQuery.filter(
+              (o) =>
+                o.title.fr.toLowerCase() ==
+                filterState.searchQuery.toLowerCase().count()
+            );
+          }
+          console.log(filterState.levelRange);
+          if (
+            filterState.levelRange.from > 0 ||
+            filterState.levelRange.to < 230
+          ) {
+            itemsQuery = itemsQuery.filter(
+              (o) =>
+                o.level >= filterState.levelRange.from &&
+                o.level <= filterState.levelRange.to
+            );
+          }
+
+          itemsQuery = itemsQuery.limit(itemsPerPage);
+
+          let completeQuery = await itemsQuery.toArray();
+
+          combinedItems.push(completeQuery);
+        }
+
+        const flattenedItems = combinedItems.flat();
+        return sortData(flattenedItems, filterState.sortBy);
+      })
+    );
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const openDB = async () => {
+  if (doesDBExists()) {
+    try {
+      if (!db.isOpen()) {
+        db = await db.open();
+      }
+      return db;
+    } catch (error) {
+      throw error;
+    }
+  }
+  return null;
+};
+
+const doesDBExists = async () => {
   const dbExists = await Dexie.exists("WakfuKiDatabase");
   if (dbExists) {
+    return true;
+  }
+  return false;
+};
+
+const getDBInstance = async function (startIndex) {
+  if (doesDBExists()) {
     let currIndex = startIndex + 1;
     if (isDbInitialized) {
-      await db.open();
-      return db.open();
+      let openedDB = openDB();
+      return openedDB;
     } else if (currIndex < 5) {
       console.log("isDbInitialized false.. retrying...", currIndex);
-      get_db_instance(currIndex + 1);
+      setTimeout(() => {
+        getDBInstance(currIndex + 1);
+      }, 500);
     } else {
       console.log("failed to open instance of DB");
     }
   }
   console.log("DB Does not exists");
+};
+
+const closeDB = () => {
+  if (doesDBExists()) {
+    db.close();
+  }
+  return null;
 };
 
 const setupDatabaseCloseListener = () => {
@@ -38,7 +178,7 @@ const setupDatabaseCloseListener = () => {
   });
 };
 
-const check_file_length = async (fileName, db) => {
+const checkFileLength = async (fileName, db) => {
   for (const file in filesLength) {
     if (fileName === file) {
       let expectedItemCount = filesLength[file];
@@ -60,7 +200,7 @@ const check_file_length = async (fileName, db) => {
   return false;
 };
 
-const check_data_exists = async (selectedTypes, index) => {
+const checkDataExists = async (selectedTypes, index) => {
   let recursionIndex = 0 + index;
   if (recursionIndex < 3) {
     if (selectedTypes) {
@@ -68,16 +208,18 @@ const check_data_exists = async (selectedTypes, index) => {
         let storeName = selectedTypes[i] + ".json";
         await db.open();
         if (db.table(storeName)) {
-          let isDataValid = await check_file_length(storeName, db);
+          let isDataValid = await checkFileLength(storeName, db);
           if (isDataValid) {
             db.close();
             console.log("Data exists and is valid");
             return true;
           } else {
-            console.log(`Data not exists/valid, now trying to store new data for ${storeName}`);
-            await store_file(storeName);
+            console.log(
+              `Data not exists/valid, now trying to store new data for ${storeName}`
+            );
+            await storeFile(storeName);
             let index = recursionIndex + 1;
-            check_data_exists(selectedTypes, index);
+            checkDataExists(selectedTypes, index);
           }
         } else {
           console.log("error while checking file length");
@@ -88,13 +230,13 @@ const check_data_exists = async (selectedTypes, index) => {
     }
   } else {
     console.log(
-      "Error while trying to fetch and store data in check_data_exists"
+      "Error while trying to fetch and store data in checkDataExists"
     );
     return false;
   }
 };
 
-const store_file = async (fileName) => {
+const storeFile = async (fileName) => {
   try {
     console.log("fileName received is : ", fileName);
     const response = await fetch(`/api/${fileName}`);
@@ -214,14 +356,13 @@ async function blobToText(blob) {
   });
 }
 
-
-
 export {
   initializeDexieDatabase,
   waitForDbInitialization,
   db,
-  store_file,
-  check_data_exists,
-  get_db_instance,
+  storeFile,
+  checkDataExists,
+  getDBInstance,
   setupDatabaseCloseListener,
+  fetchData,
 };

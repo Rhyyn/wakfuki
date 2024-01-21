@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
-import { check_data_exists } from "../../../services/data-service.jsx";
+import { checkDataExists } from "../../../services/data-service.jsx";
 import _, { forEach } from "lodash";
 
 // TODO
@@ -44,7 +44,7 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
         console.log("Error while trying to set type of item");
       }
     }
-    if (check_data_exists(newSelectedTypes, 0)) {
+    if (checkDataExists(newSelectedTypes, 0)) {
       // console.log("newSelectedTypes", newSelectedTypes);
       handlePassingTypeChange(newSelectedTypes);
     } else {

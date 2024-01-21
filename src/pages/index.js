@@ -4,7 +4,7 @@ import styles from "../../styles/Home.module.scss";
 import { useTranslation } from "next-i18next";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
 import ItemList from "../components/ItemList/ItemsList.jsx";
-import { store_file } from "../services/data-service.jsx";
+import { storeFile } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
 import "./i18n";
@@ -105,7 +105,7 @@ const Home = () => {
       </Head>
       <div>
         <Filter
-          store_file={store_file}
+          storeFile={storeFile}
           handleRarityChange={handleRarityChange}
           handleTypeChange={handleTypeChange}
           handleSearchChange={handleSearchChange}
@@ -116,7 +116,6 @@ const Home = () => {
         ></Filter>
 
         <div className={styles["global-container"]}>
-          {/* THIS GUY CAUSING BAD RE RENDERS */}
           <Header /> 
           <div className={styles["item-list"]}>
             {filterState.type && filterState.type.length !== 0 && (
