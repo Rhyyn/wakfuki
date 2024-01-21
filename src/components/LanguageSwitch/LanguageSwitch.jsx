@@ -1,40 +1,37 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Cookies from "js-cookie";
 import { useTranslation } from "next-i18next";
 import cssModule from "./LanguageSwitch.module.scss";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
-// TODO:
-// Something in this component is creating re-renders
-// for the whole app
-
-const LanguageSwitch = () => {
-  const router = useRouter();
-  const [flagToggle, setFlagToggle] = useState(1);
+const LanguageSwitch = React.memo(() => {
+  const [flagToggle, setFlagToggle] = useState();
   const { i18n } = useTranslation();
+
 
   const changeLanguageAndSave = (newLanguage, v) => {
     setFlagToggle(v);
+    localStorage.setItem("language", newLanguage);
     Cookies.remove("language");
     i18n.changeLanguage(newLanguage);
-    Cookies.set("language", newLanguage, { expires: 365 });
   };
 
   const retrieveLanguageFromCookie = () => {
-    const savedLanguage = Cookies.get("language");
+    const hasLanguageBeenSet = localStorage.getItem("languageSet");
+    let savedLanguage;
+    if (!hasLanguageBeenSet) {
+      localStorage.setItem("language", "en");
+      localStorage.setItem("languageSet", "true");
+      savedLanguage = localStorage.getItem("language");
+    }
 
-    if (savedLanguage) {
-      i18n.changeLanguage(savedLanguage).then(() => {
-        router.replace(router.pathname, router.asPath, {
-          locale: savedLanguage,
-        });
-      });
-      if (savedLanguage == 'en') {
-        setFlagToggle(2);
-      } else {
-        setFlagToggle(1);
-      }
+    savedLanguage = localStorage.getItem("language");
+    i18n.changeLanguage(savedLanguage);
+
+    if (savedLanguage === "en") {
+      setFlagToggle(2);
+    } else {
+      setFlagToggle(1);
     }
   };
 
@@ -48,9 +45,7 @@ const LanguageSwitch = () => {
     <div className={cssModule["language-container"]}>
       <Image
         className={`${cssModule["flag-icon"]} ${
-          flagToggle === 1
-            ? cssModule["opacity-100"]
-            : cssModule["opacity-30"]
+          flagToggle === 1 ? cssModule["opacity-100"] : cssModule["opacity-30"]
         }`}
         src="/france-flag.png"
         width={50}
@@ -61,9 +56,7 @@ const LanguageSwitch = () => {
       />
       <Image
         className={`${cssModule["flag-icon"]} ${
-          flagToggle === 2
-            ? cssModule["opacity-100"]
-            : cssModule["opacity-30"]
+          flagToggle === 2 ? cssModule["opacity-100"] : cssModule["opacity-30"]
         }`}
         src="/united-kingdom-flag.png"
         width={50}
@@ -74,8 +67,8 @@ const LanguageSwitch = () => {
       />
     </div>
   );
-};
+});
+
+LanguageSwitch.displayName = "LanguageSwitch";
 
 export default LanguageSwitch;
-
-

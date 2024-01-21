@@ -3,9 +3,6 @@ import { initReactI18next } from "react-i18next";
 import enTranslations from "../../public/locales/en/common.json";
 import frTranslations from "../../public/locales/fr/common.json";
 
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 
 const resources = {
   fr: {

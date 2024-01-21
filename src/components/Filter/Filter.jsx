@@ -26,6 +26,7 @@ const Filter = ({
   const dropdownContainerRef = useRef(null);
   const { t, i18n } = useTranslation();
 
+
   const handleSortingOptionsClick = (value) => {
     if (value) {
       if (value == "level.ascending") {
@@ -56,6 +57,12 @@ const Filter = ({
     setShowSortDropdown(false);
   };
 
+
+  const handleSortingOptionsDropdown = () => {
+    setShowSortDropdown(!showSortDropdown);
+  };
+
+
   useEffect(() => {
     const handleDocumentClick = (event) => {
       if (
@@ -78,9 +85,6 @@ const Filter = ({
     };
   }, []);
 
-  const handleSortingOptionsDropdown = () => {
-    setShowSortDropdown(!showSortDropdown);
-  };
 
   return (
     <div className={cssModule["filter-container"]}>

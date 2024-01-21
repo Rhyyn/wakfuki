@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(1);
+  const isInitialMount = useRef(true);
 
   const primary_stat = [
     "pa",
@@ -59,6 +60,10 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   };
 
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     console.log("useEffect in StatsFilter triggered");
     setSelectedCategory(1);
     if (selectedImages.length > 0) {

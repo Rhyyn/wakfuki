@@ -40,6 +40,7 @@ const Home = () => {
     setResetFiltersFlag(false);
   }, [resetFiltersFlag]);
 
+
   const handleLogClick = async () => {
     try {
       fetchItemsById();
@@ -104,7 +105,6 @@ const Home = () => {
       </Head>
       <div>
         <Filter
-          handleLogClick={() => handleLogClick}
           store_file={store_file}
           handleRarityChange={handleRarityChange}
           handleTypeChange={handleTypeChange}
@@ -116,7 +116,8 @@ const Home = () => {
         ></Filter>
 
         <div className={styles["global-container"]}>
-          {/* <Header /> THIS GUY CAUSING BAD RE RENDERS */}
+          {/* THIS GUY CAUSING BAD RE RENDERS */}
+          <Header /> 
           <div className={styles["item-list"]}>
             {filterState.type && filterState.type.length !== 0 && (
               <ItemList key={filterState.type} filterState={filterState} />
