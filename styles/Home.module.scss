@@ -24,5 +24,7 @@
     flex-grow: 0;
     position: relative;
     top: 80px;
+    width: 100%;
+    min-height: calc(100vh - 80px);
     // height: 2000px;
 }

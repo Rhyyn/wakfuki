@@ -8,10 +8,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
-.h1 {
-    font-size: 3.5rem;
-    margin-left: 10px;;
+.title-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -230px;
+    align-items: center;
+}
+
+.first-part-title {
+    height: 100%;
+    font-size: 2rem;
+    color: v.$background;
+    // margin-top: 16px;
+}
+
+.second-part-title {
+    height: 100%;
+    font-size: 3rem;
     color: v.$background-deep;
 }

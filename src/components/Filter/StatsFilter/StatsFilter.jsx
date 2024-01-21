@@ -58,7 +58,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
       } else {
         return [...prevSelectedImages, imageName];
       }
-    });
+    }, console.log(selectedImages));
   };
 
   useEffect(() => {
@@ -84,8 +84,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
         onClick={() => setSelectedCategory(1)}
       >
-        <span className={cssModule["stat-title"]}>{t("Primary Stats")}</span>
-        <div className={cssModule["global-icon-container"]}>
+        <span
+          className={`${cssModule["stat-title"]} ${
+            selectedCategory === 1
+              ? cssModule["selected-title"]
+              : cssModule["unselected-title"]
+          }`}
+        >
+          {t("Primary Stats")}
+        </span>
+        <div
+          className={`${cssModule["global-icon-container"]} ${
+            selectedCategory === 1
+              ? cssModule["selectedCategory"]
+              : cssModule["hidden"]
+          }`}
+        >
           {selectedCategory === 1 &&
             primary_stat.map((itemName) => (
               <div
@@ -94,6 +108,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   selectedItems.includes(itemName) ? cssModule["selected"] : ""
                 }`}
                 onClick={() => handleImageClick(itemName)}
+                title={itemName}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -102,7 +117,6 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   height={24}
                   unoptimized
                   alt={itemName}
-                  title={itemName}
                 />
               </div>
             ))}
@@ -112,8 +126,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={cssModule["type-row-icon-container"]}
         onClick={() => setSelectedCategory(2)}
       >
-        <span className={cssModule["stat-title"]}>{t("Secondary Stats")}</span>
-        <div className={cssModule["global-icon-container"]}>
+        <span
+          className={`${cssModule["stat-title"]} ${
+            selectedCategory === 2
+              ? cssModule["selected-title"]
+              : cssModule["unselected-title"]
+          }`}
+        >
+          {t("Secondary Stats")}
+        </span>
+        <div
+          className={`${cssModule["global-icon-container"]} ${
+            selectedCategory === 2
+              ? cssModule["selectedCategory"]
+              : cssModule["hidden"]
+          }`}
+        >
           {selectedCategory === 2 &&
             secondary_stat.map((itemName) => (
               <div
@@ -122,6 +150,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   selectedItems.includes(itemName) ? cssModule["selected"] : ""
                 }`}
                 onClick={() => handleImageClick(itemName)}
+                title={itemName}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -130,7 +159,6 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   height={24}
                   unoptimized
                   alt={itemName}
-                  title={itemName}
                 />
               </div>
             ))}
@@ -140,8 +168,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         className={cssModule["type-row-icon-container"]}
         onClick={() => setSelectedCategory(3)}
       >
-        <span className={cssModule["stat-title"]}>{t("Remaining Stats")}</span>
-        <div className={cssModule["global-icon-container"]}>
+        <span
+          className={`${cssModule["stat-title"]} ${
+            selectedCategory === 3
+              ? cssModule["selected-title"]
+              : cssModule["unselected-title"]
+          }`}
+        >
+          {t("Remaining Stats")}
+        </span>
+        <div
+          className={`${cssModule["global-icon-container"]} ${
+            selectedCategory === 3
+              ? cssModule["selectedCategory"]
+              : cssModule["hidden"]
+          }`}
+        >
           {selectedCategory === 3 &&
             remaining_stats.map((itemName) => (
               <div
@@ -150,6 +192,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   selectedItems.includes(itemName) ? cssModule["selected"] : ""
                 }`}
                 onClick={() => handleImageClick(itemName)}
+                title={itemName}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -158,7 +201,6 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   height={24}
                   unoptimized
                   alt={itemName}
-                  title={itemName}
                 />
               </div>
             ))}

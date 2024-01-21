@@ -18,7 +18,7 @@ const SearchBar = ({ handleSearchChange, resetFiltersFlag}) => {
   };
 
   const debouncedHandleSearchChange = React.useRef(
-    debounce(handleSearchChange, 300)
+    debounce(handleSearchChange, 500)
   ).current;
 
   useEffect(() => {
@@ -45,6 +45,7 @@ const SearchBar = ({ handleSearchChange, resetFiltersFlag}) => {
   return (
     <div className={cssModule["search-bar-container"]}>
       <input
+        type="text"
         className={cssModule["input"]}
         placeholder={t("Chercher")}
         value={userInput}

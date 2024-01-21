@@ -9,10 +9,12 @@
 }
 
 .type-title {
-    margin-bottom: 10px;
     color: v.$text-offwhite;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 3px rgba(41, 38, 33, 0.75);
 }
+
+
 
 .horizontal-separator {
     width: 180px;
@@ -26,7 +28,7 @@
 
 .type-row-icon-container {
     display: flex;
-    width: 90%;
+    width: 80%;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 3px 0 3px 0;
@@ -41,11 +43,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+}
+
+.selectedCategory {
+    transition: opacity 0.4s ease-in-out, height 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .stat-title {
-    color: v.$text-offwhite;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+.selected-title {
+    color: v.$text-offwhite;
+}
+
+.unselected-title {
+    color: v.$text-offwhite-nofocus;
 }
 
 .icon-container {
@@ -60,7 +81,7 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
     &:hover {
         cursor: pointer;
         background-color: v.$background;
