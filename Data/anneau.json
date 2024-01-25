@@ -25925,11 +25925,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-20% Coup critique",
+              "en": "-20% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 20
           }
         }
       },
@@ -53002,11 +53002,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -53179,11 +53179,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -53296,11 +53296,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -80606,11 +80606,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-5% Coup critique",
+              "en": "-5% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 5
           }
         }
       },
@@ -89110,11 +89110,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -89247,11 +89247,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -90409,11 +90409,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -91076,11 +91076,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -91228,11 +91228,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
@@ -91380,11 +91380,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },

@@ -6529,11 +6529,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-5% Coup critique",
+              "en": "-5% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 5
           }
         }
       },
@@ -7194,11 +7194,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-5% Coup critique",
+              "en": "-5% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 5
           }
         }
       },
@@ -8458,11 +8458,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-5% Coup critique",
+              "en": "-5% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 5
           }
         }
       },
@@ -11997,11 +11997,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-10% Coup critique",
+              "en": "-10% Critical Hit"
             },
-            "property": 0,
-            "values": []
+            "property": 168,
+            "values": 10
           }
         }
       },
