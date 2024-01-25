@@ -31,6 +31,13 @@ const Card = ({ item, lang }) => {
   // item.equipEffects.map((effect, index) =>
   //     console.log(effect.effect.stats.display.fr)
   // );
+  const handleClick = (e) => {
+    const propertyValue = e.currentTarget.dataset.id;
+    console.log(propertyValue);
+  }
+
+  console.log(item);
+
 
   return (
     <div className={cardCSS["card-container"]}>
@@ -156,7 +163,7 @@ const Card = ({ item, lang }) => {
           }`}
         >
           {item.equipEffects.map((effect, index) => (
-            <div key={index} className={cardCSS["item-stat-container"]}>
+            <div key={index} className={cardCSS["item-stat-container"]} data-id={effect.effect.stats.display.property} onClick={(e) => handleClick(e)}>
               <span className={cardCSS["item-stat"]}>
                 {effect.effect.stats.display[lang]}
               </span>

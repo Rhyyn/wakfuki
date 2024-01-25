@@ -51,6 +51,17 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     "up",
   ];
 
+  // "AP" : {
+  //          "Boost" : 31
+  //          "Deboost" : 56
+  // }
+
+  // if user selects PA -> create a new span with a default value - id = 1 - 31
+  // update filterState
+  // if user manually change value in span -> update filterState
+  // if value = negative -> change id to Deboost if !== 0   
+  // sets back to default and modal error
+
   const handleImageClick = (imageName) => {
     setSelectedImages((prevSelectedImages) => {
       if (prevSelectedImages.includes(imageName)) {
