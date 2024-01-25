@@ -7,6 +7,7 @@ import {
 } from "../services/data-service.jsx";
 import { appWithTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
+import { ModalManager } from "../components/ModalComponents/ModalManager/ModalManager";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
@@ -54,6 +55,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main className={poppins.className}>
+      <ModalManager />
       <Component {...pageProps} />
     </main>
   );

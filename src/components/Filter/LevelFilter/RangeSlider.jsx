@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./RangeSlider.module.scss";
 
-const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
+const RangeSlider = ({
+  selectedRange,
+  setSelectedRange,
+  resetFiltersFlag,
+  handleShowModal,
+  displayedTextRef
+}) => {
   const fromSliderRef = useRef(null);
   const toSliderRef = useRef(null);
   const fromInputRef = useRef(null);
@@ -64,16 +70,13 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
             ${sliderColor} 100%)`;
   };
 
-
   const handleMouseUpEvent = () => {
     setSelectedRange({ from: fromSliderValue, to: toSliderValue });
   };
 
-
   const isNumberInRange = (minValue, maxValue, currValue) => {
     return currValue >= minValue && currValue <= maxValue;
   };
-
 
   const checkIfHasInput = (e) => {
     // making sure we always have something in input field
@@ -90,7 +93,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     }
   };
 
-
   const isInputLengthValid = (input) => {
     if (input) {
       if (input.length > 3) {
@@ -101,7 +103,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     return false;
   };
 
-
   const isInputValid = (input, minValue, maxValue) => {
     if (input) {
       if (input >= minValue && input <= maxValue) {
@@ -111,7 +112,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     }
     return false;
   };
-
 
   const handleInputChange = (e) => {
     let inputValue = e.target.value;
@@ -153,6 +153,9 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
         fillSlider(updatedMinValue, updatedMaxValue);
         return;
       }
+      // handleShowModal();
+      console.log(displayedTextRef);
+      displayedTextRef.current = "STETTT"
       setInputFunction(defaultValue);
       setSliderFunction(defaultValue);
       const updatedMinValue =
@@ -164,11 +167,9 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     }, 600);
   };
 
-
   useEffect(() => {
     fillSlider(fromSliderValue, toSliderValue);
   }, []);
-
 
   // sets the last used thumb on top
   // prevents overlapping
@@ -184,7 +185,6 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     }
   }, [toSliderValue]);
 
-
   // Triggered when user sets a level range by using
   // the dropdown in LevelFilter
   useEffect(() => {
@@ -193,10 +193,9 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     setFromInputValue(fromValue);
     setToInputValue(toValue);
     setFromSliderValue(fromValue);
-    setToSliderValue(toValue)
+    setToSliderValue(toValue);
     fillSlider(fromValue, toValue);
   }, [selectedRange]);
-
 
   // Triggered when reset button is clicked
   useEffect(() => {
@@ -204,9 +203,8 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     setToInputValue(230);
     setFromSliderValue(0);
     setToSliderValue(230);
-    fillSlider(0, 230)
+    fillSlider(0, 230);
   }, [resetFiltersFlag]);
-
 
   return (
     <div className={cssModule["level-filter-container"]}>

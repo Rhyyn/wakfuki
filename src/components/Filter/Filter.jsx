@@ -20,6 +20,8 @@ const Filter = ({
   handleResetFilters,
   handleSortingOptionsChange,
   resetFiltersFlag,
+  handleShowModal,
+  displayedTextRef
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -172,6 +174,8 @@ const Filter = ({
         handleLevelChange={handleLevelChange}
         // handleResetFilters={handleResetFilters}
         resetFiltersFlag={resetFiltersFlag}
+        handleShowModal={handleShowModal}
+        displayedTextRef={displayedTextRef}
       />
       <TypeFilter
         handleTypeChange={handleTypeChange}

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import styles from "../../styles/Home.module.scss";
 import { useTranslation } from "next-i18next";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
@@ -7,6 +7,7 @@ import ItemList from "../components/ItemList/ItemsList.jsx";
 import { storeFile } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
+import Modal from "../components/ModalComponents/Modal/Modal";
 import "./i18n";
 
 const Home = () => {
@@ -21,8 +22,18 @@ const Home = () => {
     sortBy: { type: "level", order: "ascending" },
   });
 
-  const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
+  const showModal = useRef([]);
+  const displayedTextRef = useRef({ value: "test"});
+  const handleShowModal = () => {
+    let value = 0;
+    showModal.current.push(0)
 
+    setTimeout(() => {
+      showModal.current.slice(0, 1)
+    }, 2000);
+  }
+
+  const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
   const handleResetFilters = () => {
     console.log("handleResetFilters called");
     setFilterState({
@@ -110,9 +121,11 @@ const Home = () => {
           handleTypeChange={handleTypeChange}
           handleSearchChange={handleSearchChange}
           handleLevelChange={handleLevelChange}
+          handleShowModal={handleShowModal}
           handleResetFilters={handleResetFilters}
           handleSortingOptionsChange={handleSortingOptionsChange}
           resetFiltersFlag={resetFiltersFlag}
+          displayedTextRef={displayedTextRef}
         ></Filter>
 
         <div className={styles["global-container"]}>
@@ -122,6 +135,8 @@ const Home = () => {
               <ItemList key={filterState.type} filterState={filterState} />
             )}
           </div>
+          {/* {showModal.current.length > 0  ? <Modal></Modal> : null} */}
+          <Modal displayedTextRef={displayedTextRef}></Modal>
         </div>
       </div>
     </>
