@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useModal } from "./ModalContext";
 import cssModule from "./Modal.module.scss";
+import { useSpring, animated, config } from "react-spring";
 
 const Modal = () => {
   const { modals, closeModal } = useModal();
@@ -8,19 +9,17 @@ const Modal = () => {
   const animationFrameRef = useRef();
   const intervalRef = useRef();
   const remainingTimeRef = useRef();
-  const progressBarRef = useRef();
+  const [testValue, setTestValue] = useState();
 
   const updateProgress = (startTime) => {
-    
     intervalRef.current = setInterval(() => {
       const currentTime = Date.now();
       const elapsedTime = currentTime - startTime;
       const remainingTime = initialDurationRef.current - elapsedTime;
-      remainingTimeRef.current = remainingTime
+      remainingTimeRef.current = remainingTime;
       if (remainingTimeRef.current > 0) {
-        const percent = Math.round((remainingTime / initialDurationRef.current) * 100);
-        console.log(percent);
-        progressBarRef.current.style.width = `${percent}%`
+        const percent = (remainingTime / initialDurationRef.current) * 100;
+        setTestValue(percent);
       } else {
         clearInterval(intervalRef.current);
         cancelAnimationFrame(animationFrameRef.current);
@@ -36,20 +35,30 @@ const Modal = () => {
 
   useEffect(() => {
     if (modals.length > 0) {
+      setTestValue(100);
       const { id, duration } = modals[0];
-      initialDurationRef.current = duration;
+      let fixPercent = (duration * 0.06) // Used to get a better visual on the end of the slider
+      initialDurationRef.current = (duration - fixPercent);
       const startTime = Date.now();
       updateProgress(startTime);
-
-      setTimeout(() => {
+      let timeoutId;
+      timeoutId = setTimeout(() => {
         closeModal(id);
       }, duration);
 
       return () => {
+        clearInterval(intervalRef.current);
         cancelAnimationFrame(animationFrameRef.current);
+        clearTimeout(timeoutId);
       };
     }
-  }, [modals]);
+  }, [modals, closeModal]);
+
+  const progress = useSpring({
+    width: testValue,
+    from: { width: 100 },
+    config: config.slow,
+  });
 
   return (
     <React.Fragment>
@@ -57,10 +66,14 @@ const Modal = () => {
         <div className={cssModule["modal-container"]} key={modal.id}>
           <div className={cssModule["modal-text"]}>{modal.content}</div>
           <div className={cssModule["duration-slider"]}>
-            <div
-              ref={progressBarRef}
+            {/* <div ref={progressBarRef} className={cssModule["slider-fill"]}> */}
+            <animated.div
               className={cssModule["slider-fill"]}
-            ></div>
+              style={{
+                width: progress.width.to((width) => `${width}%`),
+              }}
+            ></animated.div>
+            {/* </div> */}
           </div>
           {/* <button onClick={() => closeModal(modal.id)}>Close Modal</button> */}
         </div>
