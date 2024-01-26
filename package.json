@@ -20,6 +20,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^14.0.0",
+    "react-spring": "^9.7.3",
     "sass": "^1.69.5"
   },
   "devDependencies": {
