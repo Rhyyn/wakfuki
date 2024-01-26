@@ -1,13 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useModal } from "../../ModalComponents/Modal/ModalContext";
 import cssModule from "./RangeSlider.module.scss";
 
-const RangeSlider = ({
-  selectedRange,
-  setSelectedRange,
-  resetFiltersFlag,
-  handleShowModal,
-  displayedTextRef
-}) => {
+const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
   const fromSliderRef = useRef(null);
   const toSliderRef = useRef(null);
   const fromInputRef = useRef(null);
@@ -17,6 +12,8 @@ const RangeSlider = ({
   const [toInputValue, setToInputValue] = useState(230);
   const [fromSliderValue, setFromSliderValue] = useState(0);
   const [toSliderValue, setToSliderValue] = useState(230);
+  const { openModal } = useModal();
+  const { closeModal } = useModal();
 
   // TODO
   // Create error modal
@@ -113,6 +110,10 @@ const RangeSlider = ({
     return false;
   };
 
+  const handleModal = () => {
+    let modalId = openModal(`Error, cannot use a value inferior to the minimum level of ${fromInputValue}`, 3000);
+  };
+
   const handleInputChange = (e) => {
     let inputValue = e.target.value;
     if (inputValue.startsWith("-")) {
@@ -153,9 +154,7 @@ const RangeSlider = ({
         fillSlider(updatedMinValue, updatedMaxValue);
         return;
       }
-      // handleShowModal();
-      console.log(displayedTextRef);
-      displayedTextRef.current = "STETTT"
+      handleModal();
       setInputFunction(defaultValue);
       setSliderFunction(defaultValue);
       const updatedMinValue =

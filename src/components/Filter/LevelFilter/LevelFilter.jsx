@@ -4,10 +4,7 @@ import RangeSlider from "./RangeSlider";
 
 const LevelFilter = ({
   handleLevelChange,
-  handleResetFilters,
   resetFiltersFlag,
-  handleShowModal,
-  displayedTextRef
 }) => {
   const [selectedRange, setSelectedRange] = useState({ from: 0, to: 230 });
   const ranges_dict = {
@@ -65,10 +62,8 @@ const LevelFilter = ({
       </div>
       <RangeSlider
         selectedRange={selectedRange}
-        handleShowModal={handleShowModal}
         setSelectedRange={setSelectedRange}
         resetFiltersFlag={resetFiltersFlag}
-        displayedTextRef={displayedTextRef}
       />
     </div>
   );
