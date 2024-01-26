@@ -3,11 +3,12 @@ import "../../styles/globals.scss";
 import {
   initializeDexieDatabase,
   setupDatabaseCloseListener,
-  waitForDbInitialization
+  waitForDbInitialization,
 } from "../services/data-service.jsx";
 import { appWithTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
-import { ModalManager } from "../components/ModalComponents/ModalManager/ModalManager";
+import { ModalProvider } from "../components/ModalComponents/Modal/ModalContext";
+import Modal from "../components/ModalComponents/Modal/Modal";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
@@ -55,8 +56,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main className={poppins.className}>
-      <ModalManager />
-      <Component {...pageProps} />
+      <ModalProvider>
+        <Component {...pageProps} />
+        <Modal />
+      </ModalProvider>
     </main>
   );
 }
