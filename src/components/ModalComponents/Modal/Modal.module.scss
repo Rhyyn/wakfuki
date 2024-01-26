@@ -1,19 +1,36 @@
-@use "../../../styles/variables.scss" as v;
+@use "../../../../styles/variables.scss" as v;
 
 
 .modal-container {
-    position: absolute;
+    position: fixed;
     bottom: 2%;
-    left: 350px;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 30px;
-    background-color: #a00808;
-    border-radius: 10px;
+    left: 240px;
+    min-width: 200px;
+    height: 35px;
+    background-color: v.$background;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .modal-text {
-    display: block;
-    width: 200px;
-    text-align: center;
+    font-size: 0.9rem;
+    color: v.$text-offwhite;
+    font-weight: bold;
+}
+
+.duration-slider {
+  opacity: 1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.slider-fill {
+  opacity: 1;
+  height: 2px;
+  background-color: v.$primary-yellow;
 }
