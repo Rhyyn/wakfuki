@@ -13,54 +13,138 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   const [selectedCategory, setSelectedCategory] = useState(1);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
+  const [lang, setLang] = useState();
 
-  const primary_stat = [
-    "pa",
-    "pm",
-    "wakfu",
-    "portee", // end of row1
-    "maitriseBerserk",
-    "maitriseMelee",
-    "maitriseDistance",
-    "maitriseElementRandom", // end of row2
-    "controle",
-    "maitriseDos",
-    "critique",
-    "maitriseCritique", // end of row3
-  ];
-  const secondary_stat = [
-    "maitriseSoin",
-    "volonte",
-    "tacle",
-    "esquive", // end of row1
-    "initiative",
-    "resCritique",
-    "hp",
-    "armure", // end of row2
-    "resAir",
-    "resEau",
-    "resFeu",
-    "resTerre", // end of row3
+  useEffect(() => {
+    setLang(localStorage.getItem("language"));
+  }, [t]);
+
+  const primary_stat = {
+    31: {
+      fr: "PA",
+      en: "AP",
+    },
+    41: {
+      fr: "PM",
+      en: "MP",
+    },
+    191: {
+      fr: "PW",
+      en: "WP",
+    },
+    160: {
+      fr: "Portée",
+      en: "Range",
+    },
+    1055: {
+      fr: "Maîtrise Berserk",
+      en: "Berserk Mastery",
+    },
+    1052: {
+      fr: "Maîtrise Mêlée",
+      en: "Melee Mastery",
+    },
+    1053: {
+      fr: "Maîtrise Distance",
+      en: "Distance Mastery",
+    },
+    1068: {
+      fr: "Maîtrise dans 2 éléments aléatoires",
+      en: "Mastery in 2 randoms elements",
+    },
+    184: {
+      fr: "Contrôle",
+      en: "Control",
+    },
+    180: {
+      fr: "Maîtrise Dos",
+      en: "Rear Mastery",
+    },
+    150: {
+      fr: "Coup critique",
+      en: "Critical Hit",
+    },
+    149: {
+      fr: "Maîtrise Critique",
+      en: "Critical Mastery",
+    },
+  };
+  const primary_stat_order = [
+    31, 41, 191, 160, 1055, 1052, 1053, 1068, 184, 180, 150, 149,
   ];
 
-  const remaining_stats = [
-    "malusResdos",
-    "prospection",
-    "ressourceRecolte",
-    "sagesse",
-    "up",
-  ];
+  const secondary_stat = {
+    26: {
+      fr: "Maîtrise Soin",
+      en: "Healing Mastery",
+    },
+    173: {
+      fr: "Tacle",
+      en: "Lock",
+    },
+    175: {
+      fr: "Esquive",
+      en: "Dodge",
+    },
+    988: {
+      fr: "Résistance Critique",
+      en: "Critical Resistance",
+    },
+    20: {
+      fr: "PV",
+      en: "HP",
+    },
+    39: {
+      fr: "Armure donnée",
+      en: "Armor given",
+    },
+    85: {
+      fr: "Résistance Air",
+      en: "Air Resistance",
+    },
+    83: {
+      fr: "Résistance Eau",
+      en: "Water Resistance",
+    },
+    82: {
+      fr: "Résistance Feu",
+      en: "Fire Resistance",
+    },
+    84: {
+      fr: "Résistance Terre",
+      en: "Earth Resistance",
+    },
+  };
+  const secondary_stat_order = [26, 173, 175, 988, 20, 39, 85, 83, 82, 84];
 
-  // "AP" : {
-  //          "Boost" : 31
-  //          "Deboost" : 56
-  // }
+  const remaining_stats = {
+    171: {
+      fr: "Initiative",
+      en: "Initiative",
+    },
+    177: {
+      fr: "Volonté",
+      en: "Force of Will",
+    },
+    2001: {
+      fr: "Quantité Récolte",
+      en: "Harvesting Quantity",
+    },
+  };
+  const remaining_stats_order = [171, 177, 2001];
 
   // if user selects PA -> create a new span with a default value - id = 1 - 31
   // update filterState
   // if user manually change value in span -> update filterState
-  // if value = negative -> change id to Deboost if !== 0   
+  // if value = negative -> change id to Deboost if !== 0
   // sets back to default and modal error
+
+  const getAlt = (statId) => {
+    const stat = primary_stat[statId];
+    if (stat) {
+      return lang === "fr" ? stat.fr : stat.en;
+    }
+  };
 
   const handleImageClick = (imageName) => {
     setSelectedImages((prevSelectedImages) => {
@@ -112,22 +196,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           }`}
         >
           {selectedCategory === 1 &&
-            primary_stat.map((itemName) => (
+            primary_stat_order.map((id) => (
               <div
-                key={itemName}
+                key={id + 1} // Adding 1 because index 0 is not used
                 className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(itemName) ? cssModule["selected"] : ""
+                  selectedItems.includes(id) ? cssModule["selected"] : ""
                 }`}
-                onClick={() => handleImageClick(itemName)}
-                title={itemName}
+                onClick={() => handleImageClick(id)}
+                title={getAlt(id)}
               >
                 <Image
                   className={cssModule["icon"]}
-                  src={`/stats/${itemName}.png`}
+                  src={`/stats/primaryStats/${id}.png`}
                   width={24}
                   height={24}
                   unoptimized
-                  alt={itemName}
+                  alt={getAlt(id)}
                 />
               </div>
             ))}
@@ -154,22 +238,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           }`}
         >
           {selectedCategory === 2 &&
-            secondary_stat.map((itemName) => (
+            secondary_stat_order.map((id) => (
               <div
-                key={itemName}
+                key={id + 1} // Adding 1 because index 0 is not used
                 className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(itemName) ? cssModule["selected"] : ""
+                  selectedItems.includes(id) ? cssModule["selected"] : ""
                 }`}
-                onClick={() => handleImageClick(itemName)}
-                title={itemName}
+                onClick={() => handleImageClick(id)}
+                title={getAlt(id)}
               >
                 <Image
                   className={cssModule["icon"]}
-                  src={`/stats/${itemName}.png`}
+                  src={`/stats/secondaryStats/${id}.png`}
                   width={24}
                   height={24}
                   unoptimized
-                  alt={itemName}
+                  alt={getAlt(id)}
                 />
               </div>
             ))}
@@ -196,27 +280,27 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           }`}
         >
           {selectedCategory === 3 &&
-            remaining_stats.map((itemName) => (
+            remaining_stats_order.map((id) => (
               <div
-                key={itemName}
+                key={id + 1} // Adding 1 because index 0 is not used
                 className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(itemName) ? cssModule["selected"] : ""
+                  selectedItems.includes(id) ? cssModule["selected"] : ""
                 }`}
-                onClick={() => handleImageClick(itemName)}
-                title={itemName}
+                onClick={() => handleImageClick(id)}
+                title={getAlt(id)}
               >
                 <Image
                   className={cssModule["icon"]}
-                  src={`/stats/${itemName}.png`}
+                  src={`/stats/remainingStats/${id}.png`}
                   width={24}
                   height={24}
                   unoptimized
-                  alt={itemName}
+                  alt={getAlt(id)}
                 />
               </div>
             ))}
         </div>
-      </div>
+      </div> 
     </div>
   );
 };
