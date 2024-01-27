@@ -3,6 +3,13 @@ import { useModal } from "./ModalContext";
 import cssModule from "./Modal.module.scss";
 import { useSpring, animated, config } from "react-spring";
 
+// TODO : Fix Modal slider starting from 0
+//        and bouncing to 80% before starting
+//        its normal behavior 
+//        when called for a 2nd time
+//        Maybe manually unmount?
+
+
 const Modal = () => {
   const { modals, closeModal } = useModal();
   const initialDurationRef = useRef();
