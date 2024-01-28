@@ -766,7 +766,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Eau",
-              "en": "26 Eau Mastery"
+              "en": "26 Water Mastery"
             },
             "property": 124,
             "values": 26
@@ -823,7 +823,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Terre",
-              "en": "26 Terre Mastery"
+              "en": "26 Earth Mastery"
             },
             "property": 123,
             "values": 26
@@ -937,7 +937,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Feu",
-              "en": "26 Feu Mastery"
+              "en": "26 Fire Mastery"
             },
             "property": 122,
             "values": 26
@@ -1045,8 +1045,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Mineur",
+              "en": "10% Harvesting Quantity in Miner"
             },
             "property": 2001,
             "values": 10
@@ -1589,7 +1589,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Terre",
-              "en": "26 Terre Mastery"
+              "en": "26 Earth Mastery"
             },
             "property": 123,
             "values": 26
@@ -1725,7 +1725,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Feu",
-              "en": "26 Feu Mastery"
+              "en": "26 Fire Mastery"
             },
             "property": 122,
             "values": 26
@@ -1806,7 +1806,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Eau",
-              "en": "26 Eau Mastery"
+              "en": "26 Water Mastery"
             },
             "property": 124,
             "values": 26
@@ -1915,7 +1915,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Terre",
-              "en": "12 Terre Mastery"
+              "en": "12 Earth Mastery"
             },
             "property": 123,
             "values": 12
@@ -2022,7 +2022,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Feu",
-              "en": "12 Feu Mastery"
+              "en": "12 Fire Mastery"
             },
             "property": 122,
             "values": 12
@@ -2129,7 +2129,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Eau",
-              "en": "12 Eau Mastery"
+              "en": "12 Water Mastery"
             },
             "property": 124,
             "values": 12
@@ -2191,7 +2191,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Feu",
-              "en": "12 Feu Mastery"
+              "en": "12 Fire Mastery"
             },
             "property": 122,
             "values": 12
@@ -2221,7 +2221,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Terre",
-              "en": "12 Terre Mastery"
+              "en": "12 Earth Mastery"
             },
             "property": 123,
             "values": 12
@@ -2780,7 +2780,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Eau",
-              "en": "12 Eau Mastery"
+              "en": "12 Water Mastery"
             },
             "property": 124,
             "values": 12
@@ -2825,7 +2825,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Terre",
-              "en": "12 Terre Mastery"
+              "en": "12 Earth Mastery"
             },
             "property": 123,
             "values": 12
@@ -2872,7 +2872,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Feu",
-              "en": "12 Feu Mastery"
+              "en": "12 Fire Mastery"
             },
             "property": 122,
             "values": 12
@@ -2917,7 +2917,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise Eau",
-              "en": "12 Eau Mastery"
+              "en": "12 Water Mastery"
             },
             "property": 124,
             "values": 12
@@ -3521,8 +3521,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Trappeur",
+              "en": "10% Harvesting Quantity in Trapper"
             },
             "property": 2001,
             "values": 10
@@ -3568,8 +3568,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Mineur",
+              "en": "5% Harvesting Quantity in Miner"
             },
             "property": 2001,
             "values": 5
@@ -3583,8 +3583,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Herboriste",
+              "en": "5% Harvesting Quantity in Herbalist"
             },
             "property": 2001,
             "values": 5
@@ -3598,8 +3598,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Forestier",
+              "en": "5% Harvesting Quantity in Lumberjack"
             },
             "property": 2001,
             "values": 5
@@ -3613,8 +3613,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Paysan",
+              "en": "5% Harvesting Quantity in Farmer"
             },
             "property": 2001,
             "values": 5
@@ -3628,8 +3628,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Pêcheur",
+              "en": "5% Harvesting Quantity in Fisherman"
             },
             "property": 2001,
             "values": 5
@@ -3643,8 +3643,8 @@
           },
           "stats": {
             "display": {
-              "fr": "5% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "5% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "5% Quantité Récolte en Trappeur",
+              "en": "5% Harvesting Quantity in Trapper"
             },
             "property": 2001,
             "values": 5
@@ -4559,7 +4559,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Terre",
-              "en": "0 Terre Resistance"
+              "en": "0 Earth Resistance"
             },
             "property": 84,
             "values": 0
@@ -4621,7 +4621,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Eau",
-              "en": "0 Eau Resistance"
+              "en": "0 Water Resistance"
             },
             "property": 83,
             "values": 0
@@ -4745,7 +4745,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Feu",
-              "en": "0 Feu Resistance"
+              "en": "0 Fire Resistance"
             },
             "property": 82,
             "values": 0
@@ -6475,7 +6475,7 @@
           "stats": {
             "display": {
               "fr": "5 Résistance Feu",
-              "en": "5 Feu Resistance"
+              "en": "5 Fire Resistance"
             },
             "property": 82,
             "values": 5
@@ -6505,7 +6505,7 @@
           "stats": {
             "display": {
               "fr": "5 Résistance Terre",
-              "en": "5 Terre Resistance"
+              "en": "5 Earth Resistance"
             },
             "property": 84,
             "values": 5
@@ -6613,8 +6613,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Forestier",
+              "en": "10% Harvesting Quantity in Lumberjack"
             },
             "property": 2001,
             "values": 10
@@ -6660,8 +6660,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Paysan",
+              "en": "10% Harvesting Quantity in Farmer"
             },
             "property": 2001,
             "values": 10
@@ -6707,8 +6707,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Pêcheur",
+              "en": "10% Harvesting Quantity in Fisherman"
             },
             "property": 2001,
             "values": 10
@@ -6754,8 +6754,8 @@
           },
           "stats": {
             "display": {
-              "fr": "10% Quantité Récolte{[~2]? en [#2]:}",
-              "en": "10% Harvesting Quantity{[~2]? in [#2]:}"
+              "fr": "10% Quantité Récolte en Herboriste",
+              "en": "10% Harvesting Quantity in Herbalist"
             },
             "property": 2001,
             "values": 10
@@ -7189,7 +7189,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Feu",
-              "en": "0 Feu Resistance"
+              "en": "0 Fire Resistance"
             },
             "property": 82,
             "values": 0
@@ -7313,7 +7313,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Eau",
-              "en": "0 Eau Resistance"
+              "en": "0 Water Resistance"
             },
             "property": 83,
             "values": 0
@@ -7375,7 +7375,7 @@
           "stats": {
             "display": {
               "fr": "0 Résistance Terre",
-              "en": "0 Terre Resistance"
+              "en": "0 Earth Resistance"
             },
             "property": 84,
             "values": 0
@@ -7593,7 +7593,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Terre",
-              "en": "26 Terre Mastery"
+              "en": "26 Earth Mastery"
             },
             "property": 123,
             "values": 26
@@ -7640,7 +7640,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Eau",
-              "en": "26 Eau Mastery"
+              "en": "26 Water Mastery"
             },
             "property": 124,
             "values": 26
@@ -7687,7 +7687,7 @@
           "stats": {
             "display": {
               "fr": "26 Maîtrise Feu",
-              "en": "26 Feu Mastery"
+              "en": "26 Fire Mastery"
             },
             "property": 122,
             "values": 26

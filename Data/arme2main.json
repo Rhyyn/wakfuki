@@ -128,7 +128,7 @@
           "stats": {
             "display": {
               "fr": "11 Maîtrise dans 2 éléments aléatoires",
-              "en": "11 Mastery in 2 randoms elements"
+              "en": "11 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 11
@@ -414,7 +414,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -657,7 +657,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance dans 2 éléments aléatoires",
-              "en": "42 Resistance in 2 randoms elements"
+              "en": "42 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 42
@@ -759,7 +759,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -1003,7 +1003,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -1110,7 +1110,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -1227,7 +1227,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 3 éléments aléatoires",
-              "en": "35 Mastery in 3 randoms elements"
+              "en": "35 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 35
@@ -1424,7 +1424,7 @@
           "stats": {
             "display": {
               "fr": "53 Maîtrise dans 3 éléments aléatoires",
-              "en": "53 Mastery in 3 randoms elements"
+              "en": "53 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 53
@@ -1595,7 +1595,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -1625,7 +1625,7 @@
           "stats": {
             "display": {
               "fr": "35 Résistance Eau",
-              "en": "35 Eau Resistance"
+              "en": "35 Water Resistance"
             },
             "property": 83,
             "values": 35
@@ -1640,7 +1640,7 @@
           "stats": {
             "display": {
               "fr": "35 Résistance Feu",
-              "en": "35 Feu Resistance"
+              "en": "35 Fire Resistance"
             },
             "property": 82,
             "values": 35
@@ -1796,7 +1796,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance dans 2 éléments aléatoires",
-              "en": "42 Resistance in 2 randoms elements"
+              "en": "42 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 42
@@ -1903,7 +1903,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 2 éléments aléatoires",
-              "en": "24 Mastery in 2 randoms elements"
+              "en": "24 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 24
@@ -2125,7 +2125,7 @@
           "stats": {
             "display": {
               "fr": "141 Maîtrise dans 3 éléments aléatoires",
-              "en": "141 Mastery in 3 randoms elements"
+              "en": "141 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 141
@@ -2395,7 +2395,7 @@
           "stats": {
             "display": {
               "fr": "212 Maîtrise dans 2 éléments aléatoires",
-              "en": "212 Mastery in 2 randoms elements"
+              "en": "212 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 212
@@ -2455,7 +2455,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -2485,7 +2485,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -2542,7 +2542,7 @@
           "stats": {
             "display": {
               "fr": "110 Maîtrise dans 2 éléments aléatoires",
-              "en": "110 Mastery in 2 randoms elements"
+              "en": "110 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 110
@@ -2754,7 +2754,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -2901,7 +2901,7 @@
           "stats": {
             "display": {
               "fr": "159 Maîtrise dans 3 éléments aléatoires",
-              "en": "159 Mastery in 3 randoms elements"
+              "en": "159 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 159
@@ -3184,7 +3184,7 @@
           },
           "stats": {
             "display": {
-              "fr": "25 Résistance dans 1 élément aléatoire",
+              "fr": "25 Résistances dans 1 élément aléatoire",
               "en": "25 Resistance in 1 random element"
             },
             "property": 1069,
@@ -3337,7 +3337,7 @@
           "stats": {
             "display": {
               "fr": "55 Maîtrise dans 2 éléments aléatoires",
-              "en": "55 Mastery in 2 randoms elements"
+              "en": "55 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 55
@@ -3459,7 +3459,7 @@
           "stats": {
             "display": {
               "fr": "224 Maîtrise dans 3 éléments aléatoires",
-              "en": "224 Mastery in 3 randoms elements"
+              "en": "224 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 224
@@ -3637,7 +3637,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -3652,7 +3652,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -3667,7 +3667,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -3697,7 +3697,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -3815,7 +3815,7 @@
           "stats": {
             "display": {
               "fr": "129 Maîtrise dans 3 éléments aléatoires",
-              "en": "129 Mastery in 3 randoms elements"
+              "en": "129 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 129
@@ -3875,7 +3875,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -3890,7 +3890,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -3905,7 +3905,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -4053,7 +4053,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -4068,7 +4068,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -4083,7 +4083,7 @@
           "stats": {
             "display": {
               "fr": "147 Maîtrise dans 3 éléments aléatoires",
-              "en": "147 Mastery in 3 randoms elements"
+              "en": "147 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 147
@@ -4113,7 +4113,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -4250,7 +4250,7 @@
           "stats": {
             "display": {
               "fr": "271 Maîtrise dans 3 éléments aléatoires",
-              "en": "271 Mastery in 3 randoms elements"
+              "en": "271 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 271
@@ -4382,7 +4382,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -4397,7 +4397,7 @@
           "stats": {
             "display": {
               "fr": "135 Maîtrise dans 2 éléments aléatoires",
-              "en": "135 Mastery in 2 randoms elements"
+              "en": "135 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 135
@@ -4427,7 +4427,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -4499,7 +4499,7 @@
           "stats": {
             "display": {
               "fr": "110 Maîtrise dans 2 éléments aléatoires",
-              "en": "110 Mastery in 2 randoms elements"
+              "en": "110 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 110
@@ -4736,7 +4736,7 @@
           "stats": {
             "display": {
               "fr": "112 Maîtrise dans 3 éléments aléatoires",
-              "en": "112 Mastery in 3 randoms elements"
+              "en": "112 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 112
@@ -5214,7 +5214,7 @@
           "stats": {
             "display": {
               "fr": "73 Maîtrise dans 2 éléments aléatoires",
-              "en": "73 Mastery in 2 randoms elements"
+              "en": "73 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 73
@@ -5370,7 +5370,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -5400,7 +5400,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -5415,7 +5415,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -5556,7 +5556,7 @@
           "stats": {
             "display": {
               "fr": "85 Maîtrise dans 2 éléments aléatoires",
-              "en": "85 Mastery in 2 randoms elements"
+              "en": "85 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 85
@@ -5601,7 +5601,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Eau",
-              "en": "49 Eau Resistance"
+              "en": "49 Water Resistance"
             },
             "property": 83,
             "values": 49
@@ -5616,7 +5616,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Feu",
-              "en": "49 Feu Resistance"
+              "en": "49 Fire Resistance"
             },
             "property": 82,
             "values": 49
@@ -5778,7 +5778,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -5970,7 +5970,7 @@
           "stats": {
             "display": {
               "fr": "41 Maîtrise dans 3 éléments aléatoires",
-              "en": "41 Mastery in 3 randoms elements"
+              "en": "41 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 41
@@ -6240,7 +6240,7 @@
           "stats": {
             "display": {
               "fr": "15 Maîtrise dans 2 éléments aléatoires",
-              "en": "15 Mastery in 2 randoms elements"
+              "en": "15 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 15
@@ -6343,7 +6343,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 2 éléments aléatoires",
-              "en": "18 Mastery in 2 randoms elements"
+              "en": "18 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 18
@@ -6505,7 +6505,7 @@
           "stats": {
             "display": {
               "fr": "324 Maîtrise dans 3 éléments aléatoires",
-              "en": "324 Mastery in 3 randoms elements"
+              "en": "324 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 324
@@ -6667,7 +6667,7 @@
           "stats": {
             "display": {
               "fr": "388 Maîtrise dans 3 éléments aléatoires",
-              "en": "388 Mastery in 3 randoms elements"
+              "en": "388 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 388
@@ -6774,7 +6774,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance dans 2 éléments aléatoires",
-              "en": "42 Resistance in 2 randoms elements"
+              "en": "42 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 42
@@ -6861,7 +6861,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 2 éléments aléatoires",
-              "en": "24 Mastery in 2 randoms elements"
+              "en": "24 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 24
@@ -7207,7 +7207,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -7344,7 +7344,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -7511,7 +7511,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -7526,7 +7526,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -7541,7 +7541,7 @@
           "stats": {
             "display": {
               "fr": "447 Maîtrise dans 3 éléments aléatoires",
-              "en": "447 Mastery in 3 randoms elements"
+              "en": "447 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 447
@@ -7703,7 +7703,7 @@
           "stats": {
             "display": {
               "fr": "235 Maîtrise dans 3 éléments aléatoires",
-              "en": "235 Mastery in 3 randoms elements"
+              "en": "235 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 235
@@ -7775,7 +7775,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -7835,7 +7835,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -7942,7 +7942,7 @@
           "stats": {
             "display": {
               "fr": "146 Maîtrise dans 2 éléments aléatoires",
-              "en": "146 Mastery in 2 randoms elements"
+              "en": "146 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 146
@@ -7972,7 +7972,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -8017,7 +8017,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -8032,7 +8032,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -8104,7 +8104,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -8164,7 +8164,7 @@
           "stats": {
             "display": {
               "fr": "83 Résistance Terre",
-              "en": "83 Terre Resistance"
+              "en": "83 Earth Resistance"
             },
             "property": 84,
             "values": 83
@@ -8296,7 +8296,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Feu",
-              "en": "17 Feu Resistance"
+              "en": "17 Fire Resistance"
             },
             "property": 82,
             "values": 17
@@ -8311,7 +8311,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Eau",
-              "en": "17 Eau Resistance"
+              "en": "17 Water Resistance"
             },
             "property": 83,
             "values": 17
@@ -8429,7 +8429,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Feu",
-              "en": "17 Feu Resistance"
+              "en": "17 Fire Resistance"
             },
             "property": 82,
             "values": 17
@@ -8489,7 +8489,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Terre",
-              "en": "17 Terre Resistance"
+              "en": "17 Earth Resistance"
             },
             "property": 84,
             "values": 17
@@ -8577,7 +8577,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Feu",
-              "en": "17 Feu Resistance"
+              "en": "17 Fire Resistance"
             },
             "property": 82,
             "values": 17
@@ -8607,7 +8607,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Terre",
-              "en": "17 Terre Resistance"
+              "en": "17 Earth Resistance"
             },
             "property": 84,
             "values": 17
@@ -8981,7 +8981,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -9041,7 +9041,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -9133,7 +9133,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -9193,7 +9193,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -9770,7 +9770,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -9800,7 +9800,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -9875,7 +9875,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -9978,7 +9978,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -10053,7 +10053,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -10068,7 +10068,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -10216,7 +10216,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -10231,7 +10231,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -10261,7 +10261,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -10318,7 +10318,7 @@
           "stats": {
             "display": {
               "fr": "85 Maîtrise dans 2 éléments aléatoires",
-              "en": "85 Mastery in 2 randoms elements"
+              "en": "85 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 85
@@ -10480,7 +10480,7 @@
           "stats": {
             "display": {
               "fr": "73 Maîtrise dans 2 éléments aléatoires",
-              "en": "73 Mastery in 2 randoms elements"
+              "en": "73 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 73
@@ -10642,7 +10642,7 @@
           "stats": {
             "display": {
               "fr": "98 Maîtrise dans 2 éléments aléatoires",
-              "en": "98 Mastery in 2 randoms elements"
+              "en": "98 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 98
@@ -10824,7 +10824,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -10961,7 +10961,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -11098,7 +11098,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -11215,7 +11215,7 @@
           "stats": {
             "display": {
               "fr": "122 Maîtrise dans 2 éléments aléatoires",
-              "en": "122 Mastery in 2 randoms elements"
+              "en": "122 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 122
@@ -11260,7 +11260,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -11355,7 +11355,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -11370,7 +11370,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -11445,7 +11445,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -11816,7 +11816,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Feu",
-              "en": "52 Feu Resistance"
+              "en": "52 Fire Resistance"
             },
             "property": 82,
             "values": 52
@@ -11831,7 +11831,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Eau",
-              "en": "52 Eau Resistance"
+              "en": "52 Water Resistance"
             },
             "property": 83,
             "values": 52
@@ -11846,7 +11846,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Terre",
-              "en": "52 Terre Resistance"
+              "en": "52 Earth Resistance"
             },
             "property": 84,
             "values": 52
@@ -11891,7 +11891,7 @@
           "stats": {
             "display": {
               "fr": "412 Maîtrise dans 2 éléments aléatoires",
-              "en": "412 Mastery in 2 randoms elements"
+              "en": "412 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 412
@@ -11993,7 +11993,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Eau",
-              "en": "52 Eau Resistance"
+              "en": "52 Water Resistance"
             },
             "property": 83,
             "values": 52
@@ -12008,7 +12008,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Terre",
-              "en": "52 Terre Resistance"
+              "en": "52 Earth Resistance"
             },
             "property": 84,
             "values": 52
@@ -12038,7 +12038,7 @@
           "stats": {
             "display": {
               "fr": "634 Maîtrise dans 2 éléments aléatoires",
-              "en": "634 Mastery in 2 randoms elements"
+              "en": "634 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 634
@@ -12053,7 +12053,7 @@
           "stats": {
             "display": {
               "fr": "52 Résistance Feu",
-              "en": "52 Feu Resistance"
+              "en": "52 Fire Resistance"
             },
             "property": 82,
             "values": 52
@@ -12185,7 +12185,7 @@
           "stats": {
             "display": {
               "fr": "53 Résistance Eau",
-              "en": "53 Eau Resistance"
+              "en": "53 Water Resistance"
             },
             "property": 83,
             "values": 53
@@ -12215,7 +12215,7 @@
           "stats": {
             "display": {
               "fr": "134 Maîtrise dans 3 éléments aléatoires",
-              "en": "134 Mastery in 3 randoms elements"
+              "en": "134 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 134
@@ -12362,7 +12362,7 @@
           "stats": {
             "display": {
               "fr": "53 Résistance Eau",
-              "en": "53 Eau Resistance"
+              "en": "53 Water Resistance"
             },
             "property": 83,
             "values": 53
@@ -12407,7 +12407,7 @@
           "stats": {
             "display": {
               "fr": "167 Maîtrise dans 3 éléments aléatoires",
-              "en": "167 Mastery in 3 randoms elements"
+              "en": "167 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 167
@@ -12539,7 +12539,7 @@
           "stats": {
             "display": {
               "fr": "53 Résistance Eau",
-              "en": "53 Eau Resistance"
+              "en": "53 Water Resistance"
             },
             "property": 83,
             "values": 53
@@ -12584,7 +12584,7 @@
           "stats": {
             "display": {
               "fr": "201 Maîtrise dans 3 éléments aléatoires",
-              "en": "201 Mastery in 3 randoms elements"
+              "en": "201 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 201
@@ -12691,7 +12691,7 @@
           "stats": {
             "display": {
               "fr": "90 Résistance dans 2 éléments aléatoires",
-              "en": "90 Resistance in 2 randoms elements"
+              "en": "90 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 90
@@ -12798,7 +12798,7 @@
           "stats": {
             "display": {
               "fr": "97 Résistance dans 2 éléments aléatoires",
-              "en": "97 Resistance in 2 randoms elements"
+              "en": "97 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 97
@@ -12945,7 +12945,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -12960,7 +12960,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -12990,7 +12990,7 @@
           "stats": {
             "display": {
               "fr": "98 Maîtrise dans 2 éléments aléatoires",
-              "en": "98 Mastery in 2 randoms elements"
+              "en": "98 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 98
@@ -13092,7 +13092,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -13107,7 +13107,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -13137,7 +13137,7 @@
           "stats": {
             "display": {
               "fr": "146 Maîtrise dans 2 éléments aléatoires",
-              "en": "146 Mastery in 2 randoms elements"
+              "en": "146 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 146
@@ -13209,7 +13209,7 @@
           "stats": {
             "display": {
               "fr": "447 Maîtrise dans 3 éléments aléatoires",
-              "en": "447 Mastery in 3 randoms elements"
+              "en": "447 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 447
@@ -13371,7 +13371,7 @@
           "stats": {
             "display": {
               "fr": "494 Maîtrise dans 3 éléments aléatoires",
-              "en": "494 Mastery in 3 randoms elements"
+              "en": "494 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 494
@@ -13523,7 +13523,7 @@
           "stats": {
             "display": {
               "fr": "427 Maîtrise dans 2 éléments aléatoires",
-              "en": "427 Mastery in 2 randoms elements"
+              "en": "427 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 427
@@ -13615,7 +13615,7 @@
           "stats": {
             "display": {
               "fr": "597 Maîtrise dans 2 éléments aléatoires",
-              "en": "597 Mastery in 2 randoms elements"
+              "en": "597 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 597
@@ -13737,7 +13737,7 @@
           "stats": {
             "display": {
               "fr": "756 Maîtrise dans 2 éléments aléatoires",
-              "en": "756 Mastery in 2 randoms elements"
+              "en": "756 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 756
@@ -13899,7 +13899,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -14187,7 +14187,7 @@
           "stats": {
             "display": {
               "fr": "38 Maîtrise dans 3 éléments aléatoires",
-              "en": "38 Mastery in 3 randoms elements"
+              "en": "38 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 38
@@ -14381,7 +14381,7 @@
           "stats": {
             "display": {
               "fr": "21 Maîtrise Terre",
-              "en": "21 Terre Mastery"
+              "en": "21 Earth Mastery"
             },
             "property": 123,
             "values": 21
@@ -14625,7 +14625,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise dans 2 éléments aléatoires",
-              "en": "22 Mastery in 2 randoms elements"
+              "en": "22 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 22
@@ -14712,7 +14712,7 @@
           "stats": {
             "display": {
               "fr": "42 Maîtrise dans 3 éléments aléatoires",
-              "en": "42 Mastery in 3 randoms elements"
+              "en": "42 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 42
@@ -14726,11 +14726,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-1 Portée",
+              "en": "-1 Range"
             },
-            "property": 0,
-            "values": []
+            "property": 161,
+            "values": 1
           }
         }
       },
@@ -15011,7 +15011,7 @@
           "stats": {
             "display": {
               "fr": "55 Maîtrise dans 2 éléments aléatoires",
-              "en": "55 Mastery in 2 randoms elements"
+              "en": "55 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 55
@@ -15189,7 +15189,7 @@
           "stats": {
             "display": {
               "fr": "13 Maîtrise dans 2 éléments aléatoires",
-              "en": "13 Mastery in 2 randoms elements"
+              "en": "13 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 13
@@ -15550,7 +15550,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 3 éléments aléatoires",
-              "en": "35 Mastery in 3 randoms elements"
+              "en": "35 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 35
@@ -15732,7 +15732,7 @@
           "stats": {
             "display": {
               "fr": "51 Maîtrise dans 2 éléments aléatoires",
-              "en": "51 Mastery in 2 randoms elements"
+              "en": "51 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 51
@@ -16016,7 +16016,7 @@
           "stats": {
             "display": {
               "fr": "75 Maîtrise dans 3 éléments aléatoires",
-              "en": "75 Mastery in 3 randoms elements"
+              "en": "75 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 75
@@ -16168,7 +16168,7 @@
           "stats": {
             "display": {
               "fr": "64 Maîtrise dans 3 éléments aléatoires",
-              "en": "64 Mastery in 3 randoms elements"
+              "en": "64 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 64
@@ -16305,7 +16305,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -16575,7 +16575,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 3 éléments aléatoires",
-              "en": "24 Mastery in 3 randoms elements"
+              "en": "24 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 24
@@ -16859,7 +16859,7 @@
           "stats": {
             "display": {
               "fr": "117 Maîtrise dans 2 éléments aléatoires",
-              "en": "117 Mastery in 2 randoms elements"
+              "en": "117 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 117
@@ -17314,7 +17314,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 2 éléments aléatoires",
-              "en": "24 Mastery in 2 randoms elements"
+              "en": "24 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 24
@@ -17446,7 +17446,7 @@
           "stats": {
             "display": {
               "fr": "96 Maîtrise dans 3 éléments aléatoires",
-              "en": "96 Mastery in 3 randoms elements"
+              "en": "96 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 96
@@ -17578,7 +17578,7 @@
           "stats": {
             "display": {
               "fr": "100 Maîtrise dans 3 éléments aléatoires",
-              "en": "100 Mastery in 3 randoms elements"
+              "en": "100 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 100
@@ -17771,7 +17771,7 @@
           "stats": {
             "display": {
               "fr": "47 Résistance Eau",
-              "en": "47 Eau Resistance"
+              "en": "47 Water Resistance"
             },
             "property": 83,
             "values": 47
@@ -17786,7 +17786,7 @@
           "stats": {
             "display": {
               "fr": "47 Résistance Feu",
-              "en": "47 Feu Resistance"
+              "en": "47 Fire Resistance"
             },
             "property": 82,
             "values": 47
@@ -17801,7 +17801,7 @@
           "stats": {
             "display": {
               "fr": "144 Maîtrise dans 2 éléments aléatoires",
-              "en": "144 Mastery in 2 randoms elements"
+              "en": "144 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 144
@@ -17923,7 +17923,7 @@
           "stats": {
             "display": {
               "fr": "138 Maîtrise dans 3 éléments aléatoires",
-              "en": "138 Mastery in 3 randoms elements"
+              "en": "138 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 138
@@ -17983,7 +17983,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Terre",
-              "en": "22 Terre Resistance"
+              "en": "22 Earth Resistance"
             },
             "property": 84,
             "values": 22
@@ -17998,7 +17998,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Eau",
-              "en": "22 Eau Resistance"
+              "en": "22 Water Resistance"
             },
             "property": 83,
             "values": 22
@@ -18013,7 +18013,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Feu",
-              "en": "22 Feu Resistance"
+              "en": "22 Fire Resistance"
             },
             "property": 82,
             "values": 22
@@ -18120,7 +18120,7 @@
           "stats": {
             "display": {
               "fr": "37 Maîtrise dans 2 éléments aléatoires",
-              "en": "37 Mastery in 2 randoms elements"
+              "en": "37 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 37
@@ -18242,7 +18242,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance dans 3 éléments aléatoires",
-              "en": "28 Resistance in 3 randoms elements"
+              "en": "28 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 28
@@ -18349,7 +18349,7 @@
           "stats": {
             "display": {
               "fr": "176 Maîtrise dans 3 éléments aléatoires",
-              "en": "176 Mastery in 3 randoms elements"
+              "en": "176 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 176
@@ -18571,7 +18571,7 @@
           "stats": {
             "display": {
               "fr": "141 Maîtrise dans 3 éléments aléatoires",
-              "en": "141 Mastery in 3 randoms elements"
+              "en": "141 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 141
@@ -18659,7 +18659,7 @@
           "stats": {
             "display": {
               "fr": "130 Maîtrise dans 2 éléments aléatoires",
-              "en": "130 Mastery in 2 randoms elements"
+              "en": "130 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 130
@@ -18903,7 +18903,7 @@
           "stats": {
             "display": {
               "fr": "53 Maîtrise dans 3 éléments aléatoires",
-              "en": "53 Mastery in 3 randoms elements"
+              "en": "53 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 53
@@ -18918,7 +18918,7 @@
           "stats": {
             "display": {
               "fr": "35 Résistance Terre",
-              "en": "35 Terre Resistance"
+              "en": "35 Earth Resistance"
             },
             "property": 84,
             "values": 35
@@ -19447,7 +19447,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -19462,7 +19462,7 @@
           "stats": {
             "display": {
               "fr": "192 Maîtrise dans 3 éléments aléatoires",
-              "en": "192 Mastery in 3 randoms elements"
+              "en": "192 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 192
@@ -19507,7 +19507,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -19640,7 +19640,7 @@
           "stats": {
             "display": {
               "fr": "245 Maîtrise dans 3 éléments aléatoires",
-              "en": "245 Mastery in 3 randoms elements"
+              "en": "245 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 245
@@ -19700,7 +19700,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -19715,7 +19715,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -19863,7 +19863,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -19878,7 +19878,7 @@
           "stats": {
             "display": {
               "fr": "308 Maîtrise dans 3 éléments aléatoires",
-              "en": "308 Mastery in 3 randoms elements"
+              "en": "308 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 308
@@ -19923,7 +19923,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -20115,7 +20115,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance dans 3 éléments aléatoires",
-              "en": "22 Resistance in 3 randoms elements"
+              "en": "22 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 22
@@ -20247,7 +20247,7 @@
           "stats": {
             "display": {
               "fr": "155 Maîtrise dans 3 éléments aléatoires",
-              "en": "155 Mastery in 3 randoms elements"
+              "en": "155 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 155
@@ -20395,7 +20395,7 @@
           "stats": {
             "display": {
               "fr": "47 Résistance Eau",
-              "en": "47 Eau Resistance"
+              "en": "47 Water Resistance"
             },
             "property": 83,
             "values": 47
@@ -20410,7 +20410,7 @@
           "stats": {
             "display": {
               "fr": "47 Résistance Feu",
-              "en": "47 Feu Resistance"
+              "en": "47 Fire Resistance"
             },
             "property": 82,
             "values": 47
@@ -20425,7 +20425,7 @@
           "stats": {
             "display": {
               "fr": "183 Maîtrise dans 2 éléments aléatoires",
-              "en": "183 Mastery in 2 randoms elements"
+              "en": "183 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 183
@@ -20573,7 +20573,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -20588,7 +20588,7 @@
           "stats": {
             "display": {
               "fr": "98 Maîtrise dans 2 éléments aléatoires",
-              "en": "98 Mastery in 2 randoms elements"
+              "en": "98 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 98
@@ -20633,7 +20633,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -20825,7 +20825,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -20958,7 +20958,7 @@
           "stats": {
             "display": {
               "fr": "166 Maîtrise dans 2 éléments aléatoires",
-              "en": "166 Mastery in 2 randoms elements"
+              "en": "166 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 166
@@ -21061,7 +21061,7 @@
           "stats": {
             "display": {
               "fr": "100 Maîtrise dans 2 éléments aléatoires",
-              "en": "100 Mastery in 2 randoms elements"
+              "en": "100 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 100
@@ -21183,7 +21183,7 @@
           "stats": {
             "display": {
               "fr": "150 Maîtrise dans 2 éléments aléatoires",
-              "en": "150 Mastery in 2 randoms elements"
+              "en": "150 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 150
@@ -21375,7 +21375,7 @@
           "stats": {
             "display": {
               "fr": "69 Maîtrise dans 3 éléments aléatoires",
-              "en": "69 Mastery in 3 randoms elements"
+              "en": "69 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 69
@@ -21828,7 +21828,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -22036,7 +22036,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 3 éléments aléatoires",
-              "en": "35 Mastery in 3 randoms elements"
+              "en": "35 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 35
@@ -22524,7 +22524,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 2 éléments aléatoires",
-              "en": "18 Mastery in 2 randoms elements"
+              "en": "18 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 18
@@ -22731,7 +22731,7 @@
           "stats": {
             "display": {
               "fr": "79 Maîtrise dans 2 éléments aléatoires",
-              "en": "79 Mastery in 2 randoms elements"
+              "en": "79 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 79
@@ -22908,7 +22908,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -22938,7 +22938,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -23040,7 +23040,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -23085,7 +23085,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -23147,7 +23147,7 @@
           "stats": {
             "display": {
               "fr": "183 Maîtrise dans 3 éléments aléatoires",
-              "en": "183 Mastery in 3 randoms elements"
+              "en": "183 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 183
@@ -23207,7 +23207,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -23222,7 +23222,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -23237,7 +23237,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -23359,7 +23359,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -23404,7 +23404,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -23419,7 +23419,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -23556,7 +23556,7 @@
           "stats": {
             "display": {
               "fr": "41 Résistance Eau",
-              "en": "41 Eau Resistance"
+              "en": "41 Water Resistance"
             },
             "property": 83,
             "values": 41
@@ -23571,7 +23571,7 @@
           "stats": {
             "display": {
               "fr": "41 Résistance Feu",
-              "en": "41 Feu Resistance"
+              "en": "41 Fire Resistance"
             },
             "property": 82,
             "values": 41
@@ -23601,7 +23601,7 @@
           "stats": {
             "display": {
               "fr": "41 Résistance Terre",
-              "en": "41 Terre Resistance"
+              "en": "41 Earth Resistance"
             },
             "property": 84,
             "values": 41
@@ -23687,7 +23687,7 @@
           },
           "stats": {
             "display": {
-              "fr": "33 Résistance dans 1 élément aléatoire",
+              "fr": "33 Résistances dans 1 élément aléatoire",
               "en": "33 Resistance in 1 random element"
             },
             "property": 1069,
@@ -23820,7 +23820,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance dans 2 éléments aléatoires",
-              "en": "28 Resistance in 2 randoms elements"
+              "en": "28 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 28
@@ -23892,7 +23892,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Terre",
-              "en": "17 Terre Resistance"
+              "en": "17 Earth Resistance"
             },
             "property": 84,
             "values": 17
@@ -23952,7 +23952,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Eau",
-              "en": "17 Eau Resistance"
+              "en": "17 Water Resistance"
             },
             "property": 83,
             "values": 17
@@ -24032,7 +24032,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -24447,7 +24447,7 @@
           "stats": {
             "display": {
               "fr": "53 Maîtrise dans 3 éléments aléatoires",
-              "en": "53 Mastery in 3 randoms elements"
+              "en": "53 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 53
@@ -24588,7 +24588,7 @@
           "stats": {
             "display": {
               "fr": "80 Maîtrise dans 3 éléments aléatoires",
-              "en": "80 Mastery in 3 randoms elements"
+              "en": "80 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 80
@@ -24675,7 +24675,7 @@
           "stats": {
             "display": {
               "fr": "408 Maîtrise dans 3 éléments aléatoires",
-              "en": "408 Mastery in 3 randoms elements"
+              "en": "408 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 408
@@ -25395,7 +25395,7 @@
           "stats": {
             "display": {
               "fr": "76 Maîtrise dans 3 éléments aléatoires",
-              "en": "76 Mastery in 3 randoms elements"
+              "en": "76 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 76
@@ -25497,7 +25497,7 @@
           "stats": {
             "display": {
               "fr": "102 Maîtrise dans 2 éléments aléatoires",
-              "en": "102 Mastery in 2 randoms elements"
+              "en": "102 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 102
@@ -25527,7 +25527,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Feu",
-              "en": "28 Feu Resistance"
+              "en": "28 Fire Resistance"
             },
             "property": 82,
             "values": 28
@@ -25557,7 +25557,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Terre",
-              "en": "28 Terre Resistance"
+              "en": "28 Earth Resistance"
             },
             "property": 84,
             "values": 28
@@ -25660,7 +25660,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise dans 2 éléments aléatoires",
-              "en": "12 Mastery in 2 randoms elements"
+              "en": "12 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 12
@@ -25763,7 +25763,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 2 éléments aléatoires",
-              "en": "18 Mastery in 2 randoms elements"
+              "en": "18 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 18
@@ -26111,7 +26111,7 @@
           "stats": {
             "display": {
               "fr": "23 Maîtrise Eau",
-              "en": "23 Eau Mastery"
+              "en": "23 Water Mastery"
             },
             "property": 124,
             "values": 23
@@ -26385,7 +26385,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 3 éléments aléatoires",
-              "en": "18 Mastery in 3 randoms elements"
+              "en": "18 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 18
@@ -26462,7 +26462,7 @@
           "stats": {
             "display": {
               "fr": "19 Maîtrise dans 3 éléments aléatoires",
-              "en": "19 Mastery in 3 randoms elements"
+              "en": "19 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 19
@@ -26908,7 +26908,7 @@
           "stats": {
             "display": {
               "fr": "33 Maîtrise dans 3 éléments aléatoires",
-              "en": "33 Mastery in 3 randoms elements"
+              "en": "33 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 33
@@ -27237,7 +27237,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -27359,7 +27359,7 @@
           "stats": {
             "display": {
               "fr": "76 Maîtrise dans 3 éléments aléatoires",
-              "en": "76 Mastery in 3 randoms elements"
+              "en": "76 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 76
@@ -27597,11 +27597,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-1 Portée",
+              "en": "-1 Range"
             },
-            "property": 0,
-            "values": []
+            "property": 161,
+            "values": 1
           }
         }
       },
@@ -27917,7 +27917,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -27947,7 +27947,7 @@
           "stats": {
             "display": {
               "fr": "37 Maîtrise dans 2 éléments aléatoires",
-              "en": "37 Mastery in 2 randoms elements"
+              "en": "37 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 37
@@ -27962,7 +27962,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -28225,7 +28225,7 @@
           "stats": {
             "display": {
               "fr": "85 Maîtrise dans 2 éléments aléatoires",
-              "en": "85 Mastery in 2 randoms elements"
+              "en": "85 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 85
@@ -28419,7 +28419,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -28536,7 +28536,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -28748,7 +28748,7 @@
           "stats": {
             "display": {
               "fr": "79 Maîtrise dans 2 éléments aléatoires",
-              "en": "79 Mastery in 2 randoms elements"
+              "en": "79 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 79
@@ -28870,7 +28870,7 @@
           "stats": {
             "display": {
               "fr": "305 Maîtrise dans 2 éléments aléatoires",
-              "en": "305 Mastery in 2 randoms elements"
+              "en": "305 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 305
@@ -29018,7 +29018,7 @@
           "stats": {
             "display": {
               "fr": "12 Maîtrise dans 2 éléments aléatoires",
-              "en": "12 Mastery in 2 randoms elements"
+              "en": "12 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 12
@@ -29120,7 +29120,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -29180,7 +29180,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -29210,7 +29210,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -29317,7 +29317,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -29347,7 +29347,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -29377,7 +29377,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -29495,7 +29495,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Eau",
-              "en": "17 Eau Resistance"
+              "en": "17 Water Resistance"
             },
             "property": 83,
             "values": 17
@@ -29525,7 +29525,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 2 éléments aléatoires",
-              "en": "24 Mastery in 2 randoms elements"
+              "en": "24 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 24
@@ -29540,7 +29540,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Terre",
-              "en": "17 Terre Resistance"
+              "en": "17 Earth Resistance"
             },
             "property": 84,
             "values": 17
@@ -29602,7 +29602,7 @@
           "stats": {
             "display": {
               "fr": "141 Maîtrise dans 3 éléments aléatoires",
-              "en": "141 Mastery in 3 randoms elements"
+              "en": "141 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 141
@@ -29677,7 +29677,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -29722,7 +29722,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -29799,7 +29799,7 @@
           "stats": {
             "display": {
               "fr": "153 Maîtrise dans 3 éléments aléatoires",
-              "en": "153 Mastery in 3 randoms elements"
+              "en": "153 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 153
@@ -29844,7 +29844,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -29874,7 +29874,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -30011,7 +30011,7 @@
           "stats": {
             "display": {
               "fr": "348 Maîtrise dans 2 éléments aléatoires",
-              "en": "348 Mastery in 2 randoms elements"
+              "en": "348 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 348
@@ -30133,7 +30133,7 @@
           "stats": {
             "display": {
               "fr": "91 Maîtrise dans 2 éléments aléatoires",
-              "en": "91 Mastery in 2 randoms elements"
+              "en": "91 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 91
@@ -30270,7 +30270,7 @@
           "stats": {
             "display": {
               "fr": "110 Maîtrise dans 2 éléments aléatoires",
-              "en": "110 Mastery in 2 randoms elements"
+              "en": "110 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 110
@@ -30422,7 +30422,7 @@
           "stats": {
             "display": {
               "fr": "76 Résistance Feu",
-              "en": "76 Feu Resistance"
+              "en": "76 Fire Resistance"
             },
             "property": 82,
             "values": 76
@@ -30452,7 +30452,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -30467,7 +30467,7 @@
           "stats": {
             "display": {
               "fr": "76 Résistance Terre",
-              "en": "76 Terre Resistance"
+              "en": "76 Earth Resistance"
             },
             "property": 84,
             "values": 76
@@ -30574,7 +30574,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -30619,7 +30619,7 @@
           "stats": {
             "display": {
               "fr": "63 Résistance Terre",
-              "en": "63 Terre Resistance"
+              "en": "63 Earth Resistance"
             },
             "property": 84,
             "values": 63
@@ -30634,7 +30634,7 @@
           "stats": {
             "display": {
               "fr": "63 Résistance Feu",
-              "en": "63 Feu Resistance"
+              "en": "63 Fire Resistance"
             },
             "property": 82,
             "values": 63
@@ -31039,7 +31039,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -31114,7 +31114,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -31201,7 +31201,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -31276,7 +31276,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -31537,7 +31537,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance dans 2 éléments aléatoires",
-              "en": "49 Resistance in 2 randoms elements"
+              "en": "49 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 49
@@ -31629,7 +31629,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance dans 2 éléments aléatoires",
-              "en": "56 Resistance in 2 randoms elements"
+              "en": "56 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 56
@@ -31766,7 +31766,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -31826,7 +31826,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -31947,7 +31947,7 @@
           },
           "stats": {
             "display": {
-              "fr": "100 Résistance dans 1 élément aléatoire",
+              "fr": "100 Résistances dans 1 élément aléatoire",
               "en": "100 Resistance in 1 random element"
             },
             "property": 1069,
@@ -32099,7 +32099,7 @@
           },
           "stats": {
             "display": {
-              "fr": "108 Résistance dans 1 élément aléatoire",
+              "fr": "108 Résistances dans 1 élément aléatoire",
               "en": "108 Resistance in 1 random element"
             },
             "property": 1069,
@@ -32191,7 +32191,7 @@
           },
           "stats": {
             "display": {
-              "fr": "108 Résistance dans 1 élément aléatoire",
+              "fr": "108 Résistances dans 1 élément aléatoire",
               "en": "108 Resistance in 1 random element"
             },
             "property": 1069,
@@ -32299,7 +32299,7 @@
           "stats": {
             "display": {
               "fr": "577 Maîtrise dans 3 éléments aléatoires",
-              "en": "577 Mastery in 3 randoms elements"
+              "en": "577 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 577
@@ -32344,7 +32344,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -32374,7 +32374,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -32717,7 +32717,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -32839,7 +32839,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -32971,7 +32971,7 @@
           "stats": {
             "display": {
               "fr": "21 Résistance Eau",
-              "en": "21 Eau Resistance"
+              "en": "21 Water Resistance"
             },
             "property": 83,
             "values": 21
@@ -32986,7 +32986,7 @@
           "stats": {
             "display": {
               "fr": "21 Résistance Terre",
-              "en": "21 Terre Resistance"
+              "en": "21 Earth Resistance"
             },
             "property": 84,
             "values": 21
@@ -33149,7 +33149,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -33164,7 +33164,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -33209,7 +33209,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -33327,7 +33327,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -33342,7 +33342,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -33357,7 +33357,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -33505,7 +33505,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -33580,7 +33580,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -33595,7 +33595,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -33682,7 +33682,7 @@
           "stats": {
             "display": {
               "fr": "219 Maîtrise dans 2 éléments aléatoires",
-              "en": "219 Mastery in 2 randoms elements"
+              "en": "219 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 219
@@ -33819,7 +33819,7 @@
           "stats": {
             "display": {
               "fr": "244 Maîtrise dans 2 éléments aléatoires",
-              "en": "244 Mastery in 2 randoms elements"
+              "en": "244 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 244
@@ -34041,7 +34041,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -34193,7 +34193,7 @@
           "stats": {
             "display": {
               "fr": "83 Résistance Terre",
-              "en": "83 Terre Resistance"
+              "en": "83 Earth Resistance"
             },
             "property": 84,
             "values": 83
@@ -34311,7 +34311,7 @@
           "stats": {
             "display": {
               "fr": "79 Résistance dans 2 éléments aléatoires",
-              "en": "79 Resistance in 2 randoms elements"
+              "en": "79 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 79
@@ -34519,7 +34519,7 @@
           "stats": {
             "display": {
               "fr": "79 Résistance dans 2 éléments aléatoires",
-              "en": "79 Resistance in 2 randoms elements"
+              "en": "79 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 79
@@ -34576,7 +34576,7 @@
           "stats": {
             "display": {
               "fr": "293 Maîtrise dans 2 éléments aléatoires",
-              "en": "293 Mastery in 2 randoms elements"
+              "en": "293 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 293
@@ -34621,7 +34621,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Feu",
-              "en": "69 Feu Resistance"
+              "en": "69 Fire Resistance"
             },
             "property": 82,
             "values": 69
@@ -34696,7 +34696,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -34798,7 +34798,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Feu",
-              "en": "69 Feu Resistance"
+              "en": "69 Fire Resistance"
             },
             "property": 82,
             "values": 69
@@ -34813,7 +34813,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -34873,7 +34873,7 @@
           "stats": {
             "display": {
               "fr": "354 Maîtrise dans 2 éléments aléatoires",
-              "en": "354 Mastery in 2 randoms elements"
+              "en": "354 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 354
@@ -34960,7 +34960,7 @@
           "stats": {
             "display": {
               "fr": "658 Maîtrise dans 3 éléments aléatoires",
-              "en": "658 Mastery in 3 randoms elements"
+              "en": "658 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 658
@@ -35047,7 +35047,7 @@
           "stats": {
             "display": {
               "fr": "785 Maîtrise dans 3 éléments aléatoires",
-              "en": "785 Mastery in 3 randoms elements"
+              "en": "785 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 785
@@ -35428,7 +35428,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -35595,7 +35595,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise Eau",
-              "en": "22 Eau Mastery"
+              "en": "22 Water Mastery"
             },
             "property": 124,
             "values": 22
@@ -35625,7 +35625,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise Terre",
-              "en": "22 Terre Mastery"
+              "en": "22 Earth Mastery"
             },
             "property": 123,
             "values": 22
@@ -35900,11 +35900,11 @@
           },
           "stats": {
             "display": {
-              "fr": "",
-              "en": ""
+              "fr": "-1 Portée",
+              "en": "-1 Range"
             },
-            "property": 0,
-            "values": []
+            "property": 161,
+            "values": 1
           }
         }
       },
@@ -36205,7 +36205,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise Eau",
-              "en": "22 Eau Mastery"
+              "en": "22 Water Mastery"
             },
             "property": 124,
             "values": 22
@@ -36297,7 +36297,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 3 éléments aléatoires",
-              "en": "18 Mastery in 3 randoms elements"
+              "en": "18 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 18
@@ -36419,7 +36419,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise Terre",
-              "en": "24 Terre Mastery"
+              "en": "24 Earth Mastery"
             },
             "property": 123,
             "values": 24
@@ -36708,7 +36708,7 @@
           "stats": {
             "display": {
               "fr": "19 Résistance dans 2 éléments aléatoires",
-              "en": "19 Resistance in 2 randoms elements"
+              "en": "19 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 19
@@ -37048,7 +37048,7 @@
           "stats": {
             "display": {
               "fr": "29 Maîtrise dans 2 éléments aléatoires",
-              "en": "29 Mastery in 2 randoms elements"
+              "en": "29 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 29
@@ -37110,7 +37110,7 @@
           "stats": {
             "display": {
               "fr": "37 Maîtrise dans 2 éléments aléatoires",
-              "en": "37 Mastery in 2 randoms elements"
+              "en": "37 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 37
@@ -37247,7 +37247,7 @@
           "stats": {
             "display": {
               "fr": "23 Maîtrise Feu",
-              "en": "23 Feu Mastery"
+              "en": "23 Fire Mastery"
             },
             "property": 122,
             "values": 23
@@ -37324,7 +37324,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 2 éléments aléatoires",
-              "en": "24 Mastery in 2 randoms elements"
+              "en": "24 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 24
@@ -37521,7 +37521,7 @@
           "stats": {
             "display": {
               "fr": "53 Maîtrise dans 3 éléments aléatoires",
-              "en": "53 Mastery in 3 randoms elements"
+              "en": "53 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 53
@@ -37583,7 +37583,7 @@
           "stats": {
             "display": {
               "fr": "28 Maîtrise dans 2 éléments aléatoires",
-              "en": "28 Mastery in 2 randoms elements"
+              "en": "28 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 28
@@ -37979,7 +37979,7 @@
           "stats": {
             "display": {
               "fr": "67 Maîtrise dans 2 éléments aléatoires",
-              "en": "67 Mastery in 2 randoms elements"
+              "en": "67 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 67
@@ -38156,7 +38156,7 @@
           "stats": {
             "display": {
               "fr": "55 Maîtrise dans 2 éléments aléatoires",
-              "en": "55 Mastery in 2 randoms elements"
+              "en": "55 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 55
@@ -38273,7 +38273,7 @@
           "stats": {
             "display": {
               "fr": "160 Maîtrise dans 2 éléments aléatoires",
-              "en": "160 Mastery in 2 randoms elements"
+              "en": "160 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 160
@@ -38465,7 +38465,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -38583,7 +38583,7 @@
           "stats": {
             "display": {
               "fr": "91 Maîtrise dans 2 éléments aléatoires",
-              "en": "91 Mastery in 2 randoms elements"
+              "en": "91 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 91
@@ -38750,7 +38750,7 @@
           "stats": {
             "display": {
               "fr": "141 Maîtrise dans 3 éléments aléatoires",
-              "en": "141 Mastery in 3 randoms elements"
+              "en": "141 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 141
@@ -38795,7 +38795,7 @@
           "stats": {
             "display": {
               "fr": "118 Résistance Terre",
-              "en": "118 Terre Resistance"
+              "en": "118 Earth Resistance"
             },
             "property": 84,
             "values": 118
@@ -38810,7 +38810,7 @@
           "stats": {
             "display": {
               "fr": "118 Résistance Feu",
-              "en": "118 Feu Resistance"
+              "en": "118 Fire Resistance"
             },
             "property": 82,
             "values": 118
@@ -38947,7 +38947,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Eau",
-              "en": "49 Eau Resistance"
+              "en": "49 Water Resistance"
             },
             "property": 83,
             "values": 49
@@ -38977,7 +38977,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -39007,7 +39007,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Terre",
-              "en": "49 Terre Resistance"
+              "en": "49 Earth Resistance"
             },
             "property": 84,
             "values": 49
@@ -39114,7 +39114,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -39186,7 +39186,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -39288,7 +39288,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance dans 3 éléments aléatoires",
-              "en": "17 Resistance in 3 randoms elements"
+              "en": "17 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 17
@@ -39406,7 +39406,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise dans 2 éléments aléatoires",
-              "en": "22 Mastery in 2 randoms elements"
+              "en": "22 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 22
@@ -39466,7 +39466,7 @@
           "stats": {
             "display": {
               "fr": "11 Résistance Eau",
-              "en": "11 Eau Resistance"
+              "en": "11 Water Resistance"
             },
             "property": 83,
             "values": 11
@@ -39481,7 +39481,7 @@
           "stats": {
             "display": {
               "fr": "11 Résistance Feu",
-              "en": "11 Feu Resistance"
+              "en": "11 Fire Resistance"
             },
             "property": 82,
             "values": 11
@@ -39496,7 +39496,7 @@
           "stats": {
             "display": {
               "fr": "11 Résistance Terre",
-              "en": "11 Terre Resistance"
+              "en": "11 Earth Resistance"
             },
             "property": 84,
             "values": 11
@@ -39614,7 +39614,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Feu",
-              "en": "17 Feu Resistance"
+              "en": "17 Fire Resistance"
             },
             "property": 82,
             "values": 17
@@ -39644,7 +39644,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -39659,7 +39659,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Eau",
-              "en": "17 Eau Resistance"
+              "en": "17 Water Resistance"
             },
             "property": 83,
             "values": 17
@@ -39674,7 +39674,7 @@
           "stats": {
             "display": {
               "fr": "17 Résistance Terre",
-              "en": "17 Terre Resistance"
+              "en": "17 Earth Resistance"
             },
             "property": 84,
             "values": 17
@@ -39796,7 +39796,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -39811,7 +39811,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -39826,7 +39826,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -39948,7 +39948,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -40023,7 +40023,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -40038,7 +40038,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -40160,7 +40160,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -40175,7 +40175,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -40190,7 +40190,7 @@
           "stats": {
             "display": {
               "fr": "141 Maîtrise dans 3 éléments aléatoires",
-              "en": "141 Mastery in 3 randoms elements"
+              "en": "141 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 141
@@ -40352,7 +40352,7 @@
           "stats": {
             "display": {
               "fr": "111 Résistance Feu",
-              "en": "111 Feu Resistance"
+              "en": "111 Fire Resistance"
             },
             "property": 82,
             "values": 111
@@ -40397,7 +40397,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -40412,7 +40412,7 @@
           "stats": {
             "display": {
               "fr": "111 Résistance Terre",
-              "en": "111 Terre Resistance"
+              "en": "111 Earth Resistance"
             },
             "property": 84,
             "values": 111
@@ -40515,7 +40515,7 @@
           "stats": {
             "display": {
               "fr": "122 Maîtrise dans 2 éléments aléatoires",
-              "en": "122 Mastery in 2 randoms elements"
+              "en": "122 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 122
@@ -40693,7 +40693,7 @@
           "stats": {
             "display": {
               "fr": "73 Maîtrise dans 2 éléments aléatoires",
-              "en": "73 Mastery in 2 randoms elements"
+              "en": "73 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 73
@@ -40845,7 +40845,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -41042,7 +41042,7 @@
           "stats": {
             "display": {
               "fr": "104 Maîtrise dans 2 éléments aléatoires",
-              "en": "104 Mastery in 2 randoms elements"
+              "en": "104 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 104
@@ -41164,7 +41164,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 2 éléments aléatoires",
-              "en": "94 Mastery in 2 randoms elements"
+              "en": "94 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 94
@@ -41357,7 +41357,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -41631,7 +41631,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 2 éléments aléatoires",
-              "en": "47 Mastery in 2 randoms elements"
+              "en": "47 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 47
@@ -41738,7 +41738,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance dans 2 éléments aléatoires",
-              "en": "22 Resistance in 2 randoms elements"
+              "en": "22 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 22
@@ -42022,7 +42022,7 @@
           "stats": {
             "display": {
               "fr": "210 Maîtrise dans 2 éléments aléatoires",
-              "en": "210 Mastery in 2 randoms elements"
+              "en": "210 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 210
@@ -42124,7 +42124,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -42139,7 +42139,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -42241,7 +42241,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -42271,7 +42271,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -42408,7 +42408,7 @@
           "stats": {
             "display": {
               "fr": "37 Maîtrise dans 2 éléments aléatoires",
-              "en": "37 Mastery in 2 randoms elements"
+              "en": "37 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 37
@@ -42605,7 +42605,7 @@
           "stats": {
             "display": {
               "fr": "43 Maîtrise dans 2 éléments aléatoires",
-              "en": "43 Mastery in 2 randoms elements"
+              "en": "43 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 43
@@ -42712,7 +42712,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -42757,7 +42757,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Terre",
-              "en": "49 Terre Resistance"
+              "en": "49 Earth Resistance"
             },
             "property": 84,
             "values": 49
@@ -42772,7 +42772,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Eau",
-              "en": "49 Eau Resistance"
+              "en": "49 Water Resistance"
             },
             "property": 83,
             "values": 49
@@ -42980,7 +42980,7 @@
           },
           "stats": {
             "display": {
-              "fr": "33 Résistance dans 1 élément aléatoire",
+              "fr": "33 Résistances dans 1 élément aléatoire",
               "en": "33 Resistance in 1 random element"
             },
             "property": 1069,
@@ -43087,7 +43087,7 @@
           },
           "stats": {
             "display": {
-              "fr": "33 Résistance dans 1 élément aléatoire",
+              "fr": "33 Résistances dans 1 élément aléatoire",
               "en": "33 Resistance in 1 random element"
             },
             "property": 1069,
@@ -43175,7 +43175,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -43205,7 +43205,7 @@
           "stats": {
             "display": {
               "fr": "65 Maîtrise dans 3 éléments aléatoires",
-              "en": "65 Mastery in 3 randoms elements"
+              "en": "65 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 65
@@ -43826,7 +43826,7 @@
           },
           "stats": {
             "display": {
-              "fr": "100 Résistance dans 1 élément aléatoire",
+              "fr": "100 Résistances dans 1 élément aléatoire",
               "en": "100 Resistance in 1 random element"
             },
             "property": 1069,
@@ -43967,7 +43967,7 @@
           },
           "stats": {
             "display": {
-              "fr": "117 Résistance dans 1 élément aléatoire",
+              "fr": "117 Résistances dans 1 élément aléatoire",
               "en": "117 Resistance in 1 random element"
             },
             "property": 1069,
@@ -44138,7 +44138,7 @@
           },
           "stats": {
             "display": {
-              "fr": "117 Résistance dans 1 élément aléatoire",
+              "fr": "117 Résistances dans 1 élément aléatoire",
               "en": "117 Resistance in 1 random element"
             },
             "property": 1069,
@@ -44246,7 +44246,7 @@
           "stats": {
             "display": {
               "fr": "306 Maîtrise dans 3 éléments aléatoires",
-              "en": "306 Mastery in 3 randoms elements"
+              "en": "306 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 306
@@ -44383,7 +44383,7 @@
           "stats": {
             "display": {
               "fr": "341 Maîtrise dans 3 éléments aléatoires",
-              "en": "341 Mastery in 3 randoms elements"
+              "en": "341 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 341
@@ -44545,7 +44545,7 @@
           "stats": {
             "display": {
               "fr": "98 Maîtrise dans 2 éléments aléatoires",
-              "en": "98 Mastery in 2 randoms elements"
+              "en": "98 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 98
@@ -44707,7 +44707,7 @@
           "stats": {
             "display": {
               "fr": "140 Maîtrise dans 2 éléments aléatoires",
-              "en": "140 Mastery in 2 randoms elements"
+              "en": "140 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 140
@@ -44839,7 +44839,7 @@
           "stats": {
             "display": {
               "fr": "177 Maîtrise dans 2 éléments aléatoires",
-              "en": "177 Mastery in 2 randoms elements"
+              "en": "177 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 177
@@ -44976,7 +44976,7 @@
           "stats": {
             "display": {
               "fr": "76 Maîtrise dans 3 éléments aléatoires",
-              "en": "76 Mastery in 3 randoms elements"
+              "en": "76 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 76
@@ -45113,7 +45113,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -45250,7 +45250,7 @@
           "stats": {
             "display": {
               "fr": "149 Maîtrise dans 3 éléments aléatoires",
-              "en": "149 Mastery in 3 randoms elements"
+              "en": "149 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 149
@@ -45383,7 +45383,7 @@
           "stats": {
             "display": {
               "fr": "234 Maîtrise dans 3 éléments aléatoires",
-              "en": "234 Mastery in 3 randoms elements"
+              "en": "234 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 234
@@ -45428,7 +45428,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -45443,7 +45443,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -45561,7 +45561,7 @@
           "stats": {
             "display": {
               "fr": "279 Maîtrise dans 3 éléments aléatoires",
-              "en": "279 Mastery in 3 randoms elements"
+              "en": "279 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 279
@@ -45621,7 +45621,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -45636,7 +45636,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -45739,7 +45739,7 @@
           "stats": {
             "display": {
               "fr": "335 Maîtrise dans 3 éléments aléatoires",
-              "en": "335 Mastery in 3 randoms elements"
+              "en": "335 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 335
@@ -45769,7 +45769,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -45829,7 +45829,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -45916,7 +45916,7 @@
           "stats": {
             "display": {
               "fr": "83 Résistance dans 2 éléments aléatoires",
-              "en": "83 Resistance in 2 randoms elements"
+              "en": "83 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 83
@@ -46048,7 +46048,7 @@
           "stats": {
             "display": {
               "fr": "83 Résistance dans 2 éléments aléatoires",
-              "en": "83 Resistance in 2 randoms elements"
+              "en": "83 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 83
@@ -46180,7 +46180,7 @@
           "stats": {
             "display": {
               "fr": "566 Maîtrise dans 3 éléments aléatoires",
-              "en": "566 Mastery in 3 randoms elements"
+              "en": "566 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 566
@@ -46297,7 +46297,7 @@
           "stats": {
             "display": {
               "fr": "647 Maîtrise dans 3 éléments aléatoires",
-              "en": "647 Mastery in 3 randoms elements"
+              "en": "647 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 647
@@ -46474,7 +46474,7 @@
           "stats": {
             "display": {
               "fr": "400 Maîtrise dans 3 éléments aléatoires",
-              "en": "400 Mastery in 3 randoms elements"
+              "en": "400 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 400
@@ -46636,7 +46636,7 @@
           "stats": {
             "display": {
               "fr": "435 Maîtrise dans 3 éléments aléatoires",
-              "en": "435 Mastery in 3 randoms elements"
+              "en": "435 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 435
@@ -46708,7 +46708,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -46982,7 +46982,7 @@
           "stats": {
             "display": {
               "fr": "22 Maîtrise Terre",
-              "en": "22 Terre Mastery"
+              "en": "22 Earth Mastery"
             },
             "property": 123,
             "values": 22
@@ -47119,7 +47119,7 @@
           "stats": {
             "display": {
               "fr": "23 Maîtrise Feu",
-              "en": "23 Feu Mastery"
+              "en": "23 Fire Mastery"
             },
             "property": 122,
             "values": 23
@@ -47211,7 +47211,7 @@
           "stats": {
             "display": {
               "fr": "21 Maîtrise Terre",
-              "en": "21 Terre Mastery"
+              "en": "21 Earth Mastery"
             },
             "property": 123,
             "values": 21
@@ -47256,7 +47256,7 @@
           "stats": {
             "display": {
               "fr": "21 Maîtrise Eau",
-              "en": "21 Eau Mastery"
+              "en": "21 Water Mastery"
             },
             "property": 124,
             "values": 21
@@ -47840,7 +47840,7 @@
           "stats": {
             "display": {
               "fr": "42 Maîtrise dans 3 éléments aléatoires",
-              "en": "42 Mastery in 3 randoms elements"
+              "en": "42 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 42
@@ -48217,7 +48217,7 @@
           "stats": {
             "display": {
               "fr": "79 Maîtrise dans 2 éléments aléatoires",
-              "en": "79 Mastery in 2 randoms elements"
+              "en": "79 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 79
@@ -48354,7 +48354,7 @@
           "stats": {
             "display": {
               "fr": "58 Maîtrise dans 3 éléments aléatoires",
-              "en": "58 Mastery in 3 randoms elements"
+              "en": "58 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 58
@@ -48703,7 +48703,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -48718,7 +48718,7 @@
           "stats": {
             "display": {
               "fr": "100 Maîtrise dans 2 éléments aléatoires",
-              "en": "100 Mastery in 2 randoms elements"
+              "en": "100 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 100
@@ -48844,7 +48844,7 @@
           "stats": {
             "display": {
               "fr": "74 Maîtrise dans 2 éléments aléatoires",
-              "en": "74 Mastery in 2 randoms elements"
+              "en": "74 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 74
@@ -49132,7 +49132,7 @@
           "stats": {
             "display": {
               "fr": "55 Maîtrise dans 3 éléments aléatoires",
-              "en": "55 Mastery in 3 randoms elements"
+              "en": "55 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 55
@@ -49207,7 +49207,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Eau",
-              "en": "49 Eau Resistance"
+              "en": "49 Water Resistance"
             },
             "property": 83,
             "values": 49
@@ -49324,7 +49324,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -49339,7 +49339,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -49354,7 +49354,7 @@
           "stats": {
             "display": {
               "fr": "76 Maîtrise dans 3 éléments aléatoires",
-              "en": "76 Mastery in 3 randoms elements"
+              "en": "76 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 76
@@ -49384,7 +49384,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -49501,7 +49501,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -49546,7 +49546,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -49561,7 +49561,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -49809,7 +49809,7 @@
           "stats": {
             "display": {
               "fr": "18 Maîtrise dans 3 éléments aléatoires",
-              "en": "18 Mastery in 3 randoms elements"
+              "en": "18 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 18
@@ -49950,7 +49950,7 @@
           "stats": {
             "display": {
               "fr": "91 Maîtrise dans 3 éléments aléatoires",
-              "en": "91 Mastery in 3 randoms elements"
+              "en": "91 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 91
@@ -49995,7 +49995,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -50010,7 +50010,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -50217,7 +50217,7 @@
           "stats": {
             "display": {
               "fr": "88 Maîtrise dans 3 éléments aléatoires",
-              "en": "88 Mastery in 3 randoms elements"
+              "en": "88 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 88
@@ -50294,7 +50294,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -50324,7 +50324,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -50354,7 +50354,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -50532,7 +50532,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Eau",
-              "en": "28 Eau Resistance"
+              "en": "28 Water Resistance"
             },
             "property": 83,
             "values": 28
@@ -50547,7 +50547,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Feu",
-              "en": "28 Feu Resistance"
+              "en": "28 Fire Resistance"
             },
             "property": 82,
             "values": 28
@@ -50562,7 +50562,7 @@
           "stats": {
             "display": {
               "fr": "150 Maîtrise dans 2 éléments aléatoires",
-              "en": "150 Mastery in 2 randoms elements"
+              "en": "150 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 150
@@ -50577,7 +50577,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Terre",
-              "en": "28 Terre Resistance"
+              "en": "28 Earth Resistance"
             },
             "property": 84,
             "values": 28
@@ -50872,7 +50872,7 @@
           "stats": {
             "display": {
               "fr": "74 Maîtrise dans 3 éléments aléatoires",
-              "en": "74 Mastery in 3 randoms elements"
+              "en": "74 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 74
@@ -51024,7 +51024,7 @@
           "stats": {
             "display": {
               "fr": "50 Résistance dans 3 éléments aléatoires",
-              "en": "50 Resistance in 3 randoms elements"
+              "en": "50 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 50
@@ -51161,7 +51161,7 @@
           "stats": {
             "display": {
               "fr": "36 Résistance dans 3 éléments aléatoires",
-              "en": "36 Resistance in 3 randoms elements"
+              "en": "36 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 36
@@ -51294,7 +51294,7 @@
           "stats": {
             "display": {
               "fr": "20 Maîtrise dans 3 éléments aléatoires",
-              "en": "20 Mastery in 3 randoms elements"
+              "en": "20 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 20
@@ -51309,7 +51309,7 @@
           "stats": {
             "display": {
               "fr": "16 Résistance Feu",
-              "en": "16 Feu Resistance"
+              "en": "16 Fire Resistance"
             },
             "property": 82,
             "values": 16
@@ -51324,7 +51324,7 @@
           "stats": {
             "display": {
               "fr": "16 Résistance Eau",
-              "en": "16 Eau Resistance"
+              "en": "16 Water Resistance"
             },
             "property": 83,
             "values": 16
@@ -51339,7 +51339,7 @@
           "stats": {
             "display": {
               "fr": "16 Résistance Terre",
-              "en": "16 Terre Resistance"
+              "en": "16 Earth Resistance"
             },
             "property": 84,
             "values": 16
@@ -51419,7 +51419,7 @@
           "stats": {
             "display": {
               "fr": "194 Maîtrise dans 3 éléments aléatoires",
-              "en": "194 Mastery in 3 randoms elements"
+              "en": "194 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 194
@@ -51434,7 +51434,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -51494,7 +51494,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -51556,7 +51556,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance dans 2 éléments aléatoires",
-              "en": "28 Resistance in 2 randoms elements"
+              "en": "28 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 28
@@ -51734,7 +51734,7 @@
           "stats": {
             "display": {
               "fr": "29 Maîtrise dans 3 éléments aléatoires",
-              "en": "29 Mastery in 3 randoms elements"
+              "en": "29 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 29
@@ -51749,7 +51749,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -51764,7 +51764,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -51779,7 +51779,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -51856,7 +51856,7 @@
           "stats": {
             "display": {
               "fr": "188 Maîtrise dans 3 éléments aléatoires",
-              "en": "188 Mastery in 3 randoms elements"
+              "en": "188 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 188
@@ -51901,7 +51901,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -51931,7 +51931,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -52038,7 +52038,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -52053,7 +52053,7 @@
           "stats": {
             "display": {
               "fr": "235 Maîtrise dans 3 éléments aléatoires",
-              "en": "235 Mastery in 3 randoms elements"
+              "en": "235 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 235
@@ -52083,7 +52083,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -52190,7 +52190,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -52205,7 +52205,7 @@
           "stats": {
             "display": {
               "fr": "312 Maîtrise dans 3 éléments aléatoires",
-              "en": "312 Mastery in 3 randoms elements"
+              "en": "312 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 312
@@ -52235,7 +52235,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -52353,7 +52353,7 @@
           "stats": {
             "display": {
               "fr": "162 Maîtrise dans 2 éléments aléatoires",
-              "en": "162 Mastery in 2 randoms elements"
+              "en": "162 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 162
@@ -52383,7 +52383,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Terre",
-              "en": "39 Terre Resistance"
+              "en": "39 Earth Resistance"
             },
             "property": 84,
             "values": 39
@@ -52398,7 +52398,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -52413,7 +52413,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -52561,7 +52561,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Feu",
-              "en": "22 Feu Resistance"
+              "en": "22 Fire Resistance"
             },
             "property": 82,
             "values": 22
@@ -52576,7 +52576,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 2 éléments aléatoires",
-              "en": "94 Mastery in 2 randoms elements"
+              "en": "94 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 94
@@ -52606,7 +52606,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Terre",
-              "en": "22 Terre Resistance"
+              "en": "22 Earth Resistance"
             },
             "property": 84,
             "values": 22
@@ -52621,7 +52621,7 @@
           "stats": {
             "display": {
               "fr": "22 Résistance Eau",
-              "en": "22 Eau Resistance"
+              "en": "22 Water Resistance"
             },
             "property": 83,
             "values": 22
@@ -52758,7 +52758,7 @@
           "stats": {
             "display": {
               "fr": "30 Résistance dans 3 éléments aléatoires",
-              "en": "30 Resistance in 3 randoms elements"
+              "en": "30 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 30
@@ -52910,7 +52910,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance dans 3 éléments aléatoires",
-              "en": "44 Resistance in 3 randoms elements"
+              "en": "44 Resistance in 3 random elements"
             },
             "property": 1069,
             "values": 44
@@ -53012,7 +53012,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -53042,7 +53042,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Terre",
-              "en": "28 Terre Resistance"
+              "en": "28 Earth Resistance"
             },
             "property": 84,
             "values": 28
@@ -53072,7 +53072,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Eau",
-              "en": "28 Eau Resistance"
+              "en": "28 Water Resistance"
             },
             "property": 83,
             "values": 28
@@ -53219,7 +53219,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Feu",
-              "en": "39 Feu Resistance"
+              "en": "39 Fire Resistance"
             },
             "property": 82,
             "values": 39
@@ -53249,7 +53249,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -53279,7 +53279,7 @@
           "stats": {
             "display": {
               "fr": "39 Résistance Eau",
-              "en": "39 Eau Resistance"
+              "en": "39 Water Resistance"
             },
             "property": 83,
             "values": 39
@@ -53420,7 +53420,7 @@
           "stats": {
             "display": {
               "fr": "63 Résistance Eau",
-              "en": "63 Eau Resistance"
+              "en": "63 Water Resistance"
             },
             "property": 83,
             "values": 63
@@ -53450,7 +53450,7 @@
           "stats": {
             "display": {
               "fr": "135 Maîtrise dans 3 éléments aléatoires",
-              "en": "135 Mastery in 3 randoms elements"
+              "en": "135 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 135
@@ -53465,7 +53465,7 @@
           "stats": {
             "display": {
               "fr": "63 Résistance Terre",
-              "en": "63 Terre Resistance"
+              "en": "63 Earth Resistance"
             },
             "property": 84,
             "values": 63
@@ -53636,7 +53636,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -53666,7 +53666,7 @@
           "stats": {
             "display": {
               "fr": "68 Maîtrise dans 3 éléments aléatoires",
-              "en": "68 Mastery in 3 randoms elements"
+              "en": "68 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 68
@@ -53681,7 +53681,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Terre",
-              "en": "42 Terre Resistance"
+              "en": "42 Earth Resistance"
             },
             "property": 84,
             "values": 42
@@ -53813,7 +53813,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -53828,7 +53828,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -53843,7 +53843,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -53873,7 +53873,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -53945,7 +53945,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -54020,7 +54020,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -54161,7 +54161,7 @@
           "stats": {
             "display": {
               "fr": "60 Résistance Eau",
-              "en": "60 Eau Resistance"
+              "en": "60 Water Resistance"
             },
             "property": 83,
             "values": 60
@@ -54176,7 +54176,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 2 éléments aléatoires",
-              "en": "106 Mastery in 2 randoms elements"
+              "en": "106 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 106
@@ -54347,7 +54347,7 @@
           "stats": {
             "display": {
               "fr": "63 Maîtrise dans 2 éléments aléatoires",
-              "en": "63 Mastery in 2 randoms elements"
+              "en": "63 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 63
@@ -54407,7 +54407,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -55019,7 +55019,7 @@
           "stats": {
             "display": {
               "fr": "54 Maîtrise dans 2 éléments aléatoires",
-              "en": "54 Mastery in 2 randoms elements"
+              "en": "54 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 54
@@ -55096,7 +55096,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 2 éléments aléatoires",
-              "en": "35 Mastery in 2 randoms elements"
+              "en": "35 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 35
@@ -55771,7 +55771,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 3 éléments aléatoires",
-              "en": "35 Mastery in 3 randoms elements"
+              "en": "35 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 35
@@ -55933,7 +55933,7 @@
           "stats": {
             "display": {
               "fr": "294 Maîtrise dans 3 éléments aléatoires",
-              "en": "294 Mastery in 3 randoms elements"
+              "en": "294 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 294
@@ -56095,7 +56095,7 @@
           "stats": {
             "display": {
               "fr": "353 Maîtrise dans 3 éléments aléatoires",
-              "en": "353 Mastery in 3 randoms elements"
+              "en": "353 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 353
@@ -56152,7 +56152,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -56212,7 +56212,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Terre",
-              "en": "42 Terre Resistance"
+              "en": "42 Earth Resistance"
             },
             "property": 84,
             "values": 42
@@ -56227,7 +56227,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -56304,7 +56304,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -56364,7 +56364,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Terre",
-              "en": "42 Terre Resistance"
+              "en": "42 Earth Resistance"
             },
             "property": 84,
             "values": 42
@@ -56379,7 +56379,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Feu",
-              "en": "42 Feu Resistance"
+              "en": "42 Fire Resistance"
             },
             "property": 82,
             "values": 42
@@ -56501,7 +56501,7 @@
           "stats": {
             "display": {
               "fr": "40 Maîtrise dans 3 éléments aléatoires",
-              "en": "40 Mastery in 3 randoms elements"
+              "en": "40 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 40
@@ -56546,7 +56546,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Terre",
-              "en": "28 Terre Resistance"
+              "en": "28 Earth Resistance"
             },
             "property": 84,
             "values": 28
@@ -56576,7 +56576,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Eau",
-              "en": "28 Eau Resistance"
+              "en": "28 Water Resistance"
             },
             "property": 83,
             "values": 28
@@ -56683,7 +56683,7 @@
           "stats": {
             "display": {
               "fr": "56 Maîtrise dans 3 éléments aléatoires",
-              "en": "56 Mastery in 3 randoms elements"
+              "en": "56 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 56
@@ -56713,7 +56713,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Terre",
-              "en": "28 Terre Resistance"
+              "en": "28 Earth Resistance"
             },
             "property": 84,
             "values": 28
@@ -56743,7 +56743,7 @@
           "stats": {
             "display": {
               "fr": "28 Résistance Eau",
-              "en": "28 Eau Resistance"
+              "en": "28 Water Resistance"
             },
             "property": 83,
             "values": 28
@@ -56805,7 +56805,7 @@
           "stats": {
             "display": {
               "fr": "139 Résistance dans 2 éléments aléatoires",
-              "en": "139 Resistance in 2 randoms elements"
+              "en": "139 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 139
@@ -56927,7 +56927,7 @@
           "stats": {
             "display": {
               "fr": "139 Résistance dans 2 éléments aléatoires",
-              "en": "139 Resistance in 2 randoms elements"
+              "en": "139 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 139
@@ -57049,7 +57049,7 @@
           "stats": {
             "display": {
               "fr": "139 Résistance dans 2 éléments aléatoires",
-              "en": "139 Resistance in 2 randoms elements"
+              "en": "139 Resistance in 2 random elements"
             },
             "property": 1069,
             "values": 139
@@ -57121,7 +57121,7 @@
           "stats": {
             "display": {
               "fr": "588 Maîtrise dans 3 éléments aléatoires",
-              "en": "588 Mastery in 3 randoms elements"
+              "en": "588 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 588
@@ -57166,7 +57166,7 @@
           "stats": {
             "display": {
               "fr": "78 Résistance Terre",
-              "en": "78 Terre Resistance"
+              "en": "78 Earth Resistance"
             },
             "property": 84,
             "values": 78
@@ -57181,7 +57181,7 @@
           "stats": {
             "display": {
               "fr": "78 Résistance Eau",
-              "en": "78 Eau Resistance"
+              "en": "78 Water Resistance"
             },
             "property": 83,
             "values": 78
@@ -57196,7 +57196,7 @@
           "stats": {
             "display": {
               "fr": "78 Résistance Feu",
-              "en": "78 Feu Resistance"
+              "en": "78 Fire Resistance"
             },
             "property": 82,
             "values": 78
@@ -57277,7 +57277,7 @@
           "stats": {
             "display": {
               "fr": "35 Maîtrise dans 3 éléments aléatoires",
-              "en": "35 Mastery in 3 randoms elements"
+              "en": "35 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 35
@@ -57292,7 +57292,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -57307,7 +57307,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -57448,7 +57448,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Terre",
-              "en": "56 Terre Resistance"
+              "en": "56 Earth Resistance"
             },
             "property": 84,
             "values": 56
@@ -57493,7 +57493,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -57508,7 +57508,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Feu",
-              "en": "56 Feu Resistance"
+              "en": "56 Fire Resistance"
             },
             "property": 82,
             "values": 56
@@ -57630,7 +57630,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -57645,7 +57645,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -58718,7 +58718,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -58733,7 +58733,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -58763,7 +58763,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -58885,7 +58885,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -58900,7 +58900,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -58930,7 +58930,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -59052,7 +59052,7 @@
           "stats": {
             "display": {
               "fr": "153 Maîtrise dans 3 éléments aléatoires",
-              "en": "153 Mastery in 3 randoms elements"
+              "en": "153 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 153
@@ -59067,7 +59067,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -59097,7 +59097,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -59252,7 +59252,7 @@
           "stats": {
             "display": {
               "fr": "59 Maîtrise dans 3 éléments aléatoires",
-              "en": "59 Mastery in 3 randoms elements"
+              "en": "59 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 59
@@ -59282,7 +59282,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -59342,7 +59342,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -59422,7 +59422,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -59452,7 +59452,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -59512,7 +59512,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -59592,7 +59592,7 @@
           "stats": {
             "display": {
               "fr": "118 Maîtrise dans 3 éléments aléatoires",
-              "en": "118 Mastery in 3 randoms elements"
+              "en": "118 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 118
@@ -59622,7 +59622,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -59682,7 +59682,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Terre",
-              "en": "69 Terre Resistance"
+              "en": "69 Earth Resistance"
             },
             "property": 84,
             "values": 69
@@ -59729,7 +59729,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -59759,7 +59759,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -59849,7 +59849,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -59926,7 +59926,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -59986,7 +59986,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Feu",
-              "en": "33 Feu Resistance"
+              "en": "33 Fire Resistance"
             },
             "property": 82,
             "values": 33
@@ -60016,7 +60016,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -60108,7 +60108,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -60245,7 +60245,7 @@
           "stats": {
             "display": {
               "fr": "30 Maîtrise dans 2 éléments aléatoires",
-              "en": "30 Mastery in 2 randoms elements"
+              "en": "30 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 30
@@ -60412,7 +60412,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -60427,7 +60427,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -60457,7 +60457,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -60560,7 +60560,7 @@
           "stats": {
             "display": {
               "fr": "159 Maîtrise dans 3 éléments aléatoires",
-              "en": "159 Mastery in 3 randoms elements"
+              "en": "159 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 159
@@ -60575,7 +60575,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -60620,7 +60620,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -60723,7 +60723,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -60753,7 +60753,7 @@
           "stats": {
             "display": {
               "fr": "144 Maîtrise dans 3 éléments aléatoires",
-              "en": "144 Mastery in 3 randoms elements"
+              "en": "144 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 144
@@ -60783,7 +60783,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -60886,7 +60886,7 @@
           "stats": {
             "display": {
               "fr": "180 Maîtrise dans 3 éléments aléatoires",
-              "en": "180 Mastery in 3 randoms elements"
+              "en": "180 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 180
@@ -60916,7 +60916,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -60946,7 +60946,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Terre",
-              "en": "44 Terre Resistance"
+              "en": "44 Earth Resistance"
             },
             "property": 84,
             "values": 44
@@ -61033,7 +61033,7 @@
           "stats": {
             "display": {
               "fr": "92 Résistance Feu",
-              "en": "92 Feu Resistance"
+              "en": "92 Fire Resistance"
             },
             "property": 82,
             "values": 92
@@ -61108,7 +61108,7 @@
           "stats": {
             "display": {
               "fr": "388 Maîtrise dans 3 éléments aléatoires",
-              "en": "388 Mastery in 3 randoms elements"
+              "en": "388 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 388
@@ -61180,7 +61180,7 @@
           "stats": {
             "display": {
               "fr": "492 Maîtrise dans 3 éléments aléatoires",
-              "en": "492 Mastery in 3 randoms elements"
+              "en": "492 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 492
@@ -61195,7 +61195,7 @@
           "stats": {
             "display": {
               "fr": "92 Résistance Feu",
-              "en": "92 Feu Resistance"
+              "en": "92 Fire Resistance"
             },
             "property": 82,
             "values": 92
@@ -61312,7 +61312,7 @@
           "stats": {
             "display": {
               "fr": "177 Maîtrise dans 3 éléments aléatoires",
-              "en": "177 Mastery in 3 randoms elements"
+              "en": "177 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 177
@@ -61342,7 +61342,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -61402,7 +61402,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -61474,7 +61474,7 @@
           "stats": {
             "display": {
               "fr": "235 Maîtrise dans 3 éléments aléatoires",
-              "en": "235 Mastery in 3 randoms elements"
+              "en": "235 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 235
@@ -61504,7 +61504,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Feu",
-              "en": "44 Feu Resistance"
+              "en": "44 Fire Resistance"
             },
             "property": 82,
             "values": 44
@@ -61519,7 +61519,7 @@
           "stats": {
             "display": {
               "fr": "44 Résistance Eau",
-              "en": "44 Eau Resistance"
+              "en": "44 Water Resistance"
             },
             "property": 83,
             "values": 44
@@ -61915,7 +61915,7 @@
           "stats": {
             "display": {
               "fr": "421 Maîtrise dans 2 éléments aléatoires",
-              "en": "421 Mastery in 2 randoms elements"
+              "en": "421 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 421
@@ -62062,7 +62062,7 @@
           "stats": {
             "display": {
               "fr": "463 Maîtrise dans 2 éléments aléatoires",
-              "en": "463 Mastery in 2 randoms elements"
+              "en": "463 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 463
@@ -62224,7 +62224,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -62650,7 +62650,7 @@
           "stats": {
             "display": {
               "fr": "37 Maîtrise dans 2 éléments aléatoires",
-              "en": "37 Mastery in 2 randoms elements"
+              "en": "37 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 37
@@ -62802,7 +62802,7 @@
           "stats": {
             "display": {
               "fr": "34 Maîtrise dans 2 éléments aléatoires",
-              "en": "34 Mastery in 2 randoms elements"
+              "en": "34 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 34
@@ -62879,7 +62879,7 @@
           "stats": {
             "display": {
               "fr": "21 Maîtrise Terre",
-              "en": "21 Terre Mastery"
+              "en": "21 Earth Mastery"
             },
             "property": 123,
             "values": 21
@@ -62894,7 +62894,7 @@
           "stats": {
             "display": {
               "fr": "21 Maîtrise Feu",
-              "en": "21 Feu Mastery"
+              "en": "21 Fire Mastery"
             },
             "property": 122,
             "values": 21
@@ -63442,7 +63442,7 @@
           "stats": {
             "display": {
               "fr": "73 Maîtrise dans 2 éléments aléatoires",
-              "en": "73 Mastery in 2 randoms elements"
+              "en": "73 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 73
@@ -63696,7 +63696,7 @@
           "stats": {
             "display": {
               "fr": "49 Maîtrise dans 2 éléments aléatoires",
-              "en": "49 Mastery in 2 randoms elements"
+              "en": "49 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 49
@@ -63863,7 +63863,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -63989,7 +63989,7 @@
           "stats": {
             "display": {
               "fr": "47 Maîtrise dans 3 éléments aléatoires",
-              "en": "47 Mastery in 3 randoms elements"
+              "en": "47 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 47
@@ -64141,7 +64141,7 @@
           "stats": {
             "display": {
               "fr": "49 Résistance Eau",
-              "en": "49 Eau Resistance"
+              "en": "49 Water Resistance"
             },
             "property": 83,
             "values": 49
@@ -64156,7 +64156,7 @@
           "stats": {
             "display": {
               "fr": "53 Maîtrise dans 3 éléments aléatoires",
-              "en": "53 Mastery in 3 randoms elements"
+              "en": "53 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 53
@@ -64288,7 +64288,7 @@
           "stats": {
             "display": {
               "fr": "65 Maîtrise dans 3 éléments aléatoires",
-              "en": "65 Mastery in 3 randoms elements"
+              "en": "65 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 65
@@ -64465,7 +64465,7 @@
           "stats": {
             "display": {
               "fr": "15 Maîtrise dans 2 éléments aléatoires",
-              "en": "15 Mastery in 2 randoms elements"
+              "en": "15 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 15
@@ -64627,7 +64627,7 @@
           "stats": {
             "display": {
               "fr": "94 Maîtrise dans 3 éléments aléatoires",
-              "en": "94 Mastery in 3 randoms elements"
+              "en": "94 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 94
@@ -64794,7 +64794,7 @@
           "stats": {
             "display": {
               "fr": "98 Maîtrise dans 2 éléments aléatoires",
-              "en": "98 Mastery in 2 randoms elements"
+              "en": "98 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 98
@@ -64839,7 +64839,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -64869,7 +64869,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -64926,7 +64926,7 @@
           "stats": {
             "display": {
               "fr": "247 Maîtrise dans 3 éléments aléatoires",
-              "en": "247 Mastery in 3 randoms elements"
+              "en": "247 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 247
@@ -65063,7 +65063,7 @@
           "stats": {
             "display": {
               "fr": "38 Maîtrise dans 3 éléments aléatoires",
-              "en": "38 Mastery in 3 randoms elements"
+              "en": "38 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 38
@@ -65215,7 +65215,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -65230,7 +65230,7 @@
           "stats": {
             "display": {
               "fr": "266 Maîtrise dans 3 éléments aléatoires",
-              "en": "266 Mastery in 3 randoms elements"
+              "en": "266 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 266
@@ -65245,7 +65245,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -65337,7 +65337,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -65352,7 +65352,7 @@
           "stats": {
             "display": {
               "fr": "332 Maîtrise dans 3 éléments aléatoires",
-              "en": "332 Mastery in 3 randoms elements"
+              "en": "332 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 332
@@ -65382,7 +65382,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -65489,7 +65489,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Eau",
-              "en": "33 Eau Resistance"
+              "en": "33 Water Resistance"
             },
             "property": 83,
             "values": 33
@@ -65519,7 +65519,7 @@
           "stats": {
             "display": {
               "fr": "134 Maîtrise dans 2 éléments aléatoires",
-              "en": "134 Mastery in 2 randoms elements"
+              "en": "134 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 134
@@ -65549,7 +65549,7 @@
           "stats": {
             "display": {
               "fr": "33 Résistance Terre",
-              "en": "33 Terre Resistance"
+              "en": "33 Earth Resistance"
             },
             "property": 84,
             "values": 33
@@ -65651,7 +65651,7 @@
           "stats": {
             "display": {
               "fr": "311 Maîtrise dans 3 éléments aléatoires",
-              "en": "311 Mastery in 3 randoms elements"
+              "en": "311 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 311
@@ -65783,7 +65783,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -65980,7 +65980,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -65995,7 +65995,7 @@
           "stats": {
             "display": {
               "fr": "82 Maîtrise dans 3 éléments aléatoires",
-              "en": "82 Mastery in 3 randoms elements"
+              "en": "82 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 82
@@ -66132,7 +66132,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -66147,7 +66147,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 3 éléments aléatoires",
-              "en": "106 Mastery in 3 randoms elements"
+              "en": "106 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 106
@@ -66273,7 +66273,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
@@ -66519,7 +66519,7 @@
           "stats": {
             "display": {
               "fr": "29 Maîtrise dans 3 éléments aléatoires",
-              "en": "29 Mastery in 3 randoms elements"
+              "en": "29 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 29
@@ -66788,7 +66788,7 @@
           "stats": {
             "display": {
               "fr": "45 Maîtrise dans 2 éléments aléatoires",
-              "en": "45 Mastery in 2 randoms elements"
+              "en": "45 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 45
@@ -66890,7 +66890,7 @@
           "stats": {
             "display": {
               "fr": "20 Maîtrise dans 2 éléments aléatoires",
-              "en": "20 Mastery in 2 randoms elements"
+              "en": "20 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 20
@@ -67552,7 +67552,7 @@
           "stats": {
             "display": {
               "fr": "88 Maîtrise dans 2 éléments aléatoires",
-              "en": "88 Mastery in 2 randoms elements"
+              "en": "88 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 88
@@ -67689,7 +67689,7 @@
           "stats": {
             "display": {
               "fr": "106 Maîtrise dans 2 éléments aléatoires",
-              "en": "106 Mastery in 2 randoms elements"
+              "en": "106 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 106
@@ -67958,7 +67958,7 @@
           "stats": {
             "display": {
               "fr": "24 Maîtrise dans 3 éléments aléatoires",
-              "en": "24 Mastery in 3 randoms elements"
+              "en": "24 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 24
@@ -68055,7 +68055,7 @@
           "stats": {
             "display": {
               "fr": "38 Maîtrise dans 3 éléments aléatoires",
-              "en": "38 Mastery in 3 randoms elements"
+              "en": "38 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 38
@@ -68212,7 +68212,7 @@
           "stats": {
             "display": {
               "fr": "55 Maîtrise dans 3 éléments aléatoires",
-              "en": "55 Mastery in 3 randoms elements"
+              "en": "55 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 55
@@ -68338,7 +68338,7 @@
           "stats": {
             "display": {
               "fr": "43 Maîtrise dans 2 éléments aléatoires",
-              "en": "43 Mastery in 2 randoms elements"
+              "en": "43 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 43
@@ -68509,7 +68509,7 @@
           "stats": {
             "display": {
               "fr": "61 Maîtrise dans 2 éléments aléatoires",
-              "en": "61 Mastery in 2 randoms elements"
+              "en": "61 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 61
@@ -68830,7 +68830,7 @@
           "stats": {
             "display": {
               "fr": "93 Maîtrise dans 3 éléments aléatoires",
-              "en": "93 Mastery in 3 randoms elements"
+              "en": "93 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 93
@@ -68967,7 +68967,7 @@
           "stats": {
             "display": {
               "fr": "129 Maîtrise dans 3 éléments aléatoires",
-              "en": "129 Mastery in 3 randoms elements"
+              "en": "129 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 129
@@ -69074,7 +69074,7 @@
           "stats": {
             "display": {
               "fr": "171 Maîtrise dans 3 éléments aléatoires",
-              "en": "171 Mastery in 3 randoms elements"
+              "en": "171 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 171
@@ -69230,7 +69230,7 @@
           "stats": {
             "display": {
               "fr": "265 Maîtrise dans 3 éléments aléatoires",
-              "en": "265 Mastery in 3 randoms elements"
+              "en": "265 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 265
@@ -69245,7 +69245,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -69326,7 +69326,7 @@
           "stats": {
             "display": {
               "fr": "360 Maîtrise dans 3 éléments aléatoires",
-              "en": "360 Mastery in 3 randoms elements"
+              "en": "360 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 360
@@ -69341,7 +69341,7 @@
           "stats": {
             "display": {
               "fr": "63 Résistance Eau",
-              "en": "63 Eau Resistance"
+              "en": "63 Water Resistance"
             },
             "property": 83,
             "values": 63
@@ -69512,7 +69512,7 @@
           "stats": {
             "display": {
               "fr": "424 Maîtrise dans 3 éléments aléatoires",
-              "en": "424 Mastery in 3 randoms elements"
+              "en": "424 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 424
@@ -69527,7 +69527,7 @@
           "stats": {
             "display": {
               "fr": "69 Résistance Eau",
-              "en": "69 Eau Resistance"
+              "en": "69 Water Resistance"
             },
             "property": 83,
             "values": 69
@@ -69619,7 +69619,7 @@
           "stats": {
             "display": {
               "fr": "183 Maîtrise dans 2 éléments aléatoires",
-              "en": "183 Mastery in 2 randoms elements"
+              "en": "183 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 183
@@ -69771,7 +69771,7 @@
           "stats": {
             "display": {
               "fr": "244 Maîtrise dans 2 éléments aléatoires",
-              "en": "244 Mastery in 2 randoms elements"
+              "en": "244 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 244
@@ -69923,7 +69923,7 @@
           "stats": {
             "display": {
               "fr": "366 Maîtrise dans 2 éléments aléatoires",
-              "en": "366 Mastery in 2 randoms elements"
+              "en": "366 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 366
@@ -70100,7 +70100,7 @@
           "stats": {
             "display": {
               "fr": "65 Résistance Feu",
-              "en": "65 Feu Resistance"
+              "en": "65 Fire Resistance"
             },
             "property": 82,
             "values": 65
@@ -70115,7 +70115,7 @@
           "stats": {
             "display": {
               "fr": "65 Résistance Eau",
-              "en": "65 Eau Resistance"
+              "en": "65 Water Resistance"
             },
             "property": 83,
             "values": 65
@@ -70175,7 +70175,7 @@
           "stats": {
             "display": {
               "fr": "224 Maîtrise dans 3 éléments aléatoires",
-              "en": "224 Mastery in 3 randoms elements"
+              "en": "224 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 224
@@ -70511,7 +70511,7 @@
           "stats": {
             "display": {
               "fr": "56 Résistance Eau",
-              "en": "56 Eau Resistance"
+              "en": "56 Water Resistance"
             },
             "property": 83,
             "values": 56
@@ -70601,7 +70601,7 @@
           "stats": {
             "display": {
               "fr": "200 Maîtrise dans 2 éléments aléatoires",
-              "en": "200 Mastery in 2 randoms elements"
+              "en": "200 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 200
@@ -70673,7 +70673,7 @@
           "stats": {
             "display": {
               "fr": "42 Résistance Eau",
-              "en": "42 Eau Resistance"
+              "en": "42 Water Resistance"
             },
             "property": 83,
             "values": 42
@@ -70763,7 +70763,7 @@
           "stats": {
             "display": {
               "fr": "200 Maîtrise dans 2 éléments aléatoires",
-              "en": "200 Mastery in 2 randoms elements"
+              "en": "200 Mastery in 2 random elements"
             },
             "property": 1068,
             "values": 200
@@ -70850,7 +70850,7 @@
           "stats": {
             "display": {
               "fr": "461 Maîtrise dans 3 éléments aléatoires",
-              "en": "461 Mastery in 3 randoms elements"
+              "en": "461 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 461
@@ -70982,7 +70982,7 @@
           "stats": {
             "display": {
               "fr": "530 Maîtrise dans 3 éléments aléatoires",
-              "en": "530 Mastery in 3 randoms elements"
+              "en": "530 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 530
@@ -71174,7 +71174,7 @@
           "stats": {
             "display": {
               "fr": "71 Maîtrise dans 3 éléments aléatoires",
-              "en": "71 Mastery in 3 randoms elements"
+              "en": "71 Mastery in 3 random elements"
             },
             "property": 1068,
             "values": 71
