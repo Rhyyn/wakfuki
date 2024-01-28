@@ -5,15 +5,22 @@ import { useTranslation } from "react-i18next";
 
 // TODO
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
-// fix title attribute with locales
+// need a max number of selected stats
 
-const TypeFilter = ({ resetFiltersFlag }) => {
-  const [selectedImages, setSelectedImages] = useState([]);
-  const [selectedItems, setSelectedItems] = useState([]);
+const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
   const [selectedCategory, setSelectedCategory] = useState(1);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
   const [lang, setLang] = useState();
+  const selectedStatsRefs = useRef([]);
+  const iconsRefs = useRef({});
+  const setIconsRefs = (statID, element) => {
+    iconsRefs.current[statID] = element;
+  };
+  const inputRefs = useRef({});
+  const setInputRefs = (statID, element) => {
+    inputRefs.current[statID] = element;
+  };
 
   useEffect(() => {
     setLang(localStorage.getItem("language"));
@@ -133,43 +140,39 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   };
   const remaining_stats_order = [171, 177, 2001];
 
-  // if user selects PA -> create a new span with a default value - id = 1 - 31
-  // update filterState
-  // if user manually change value in span -> update filterState
-  // if value = negative -> change id to Deboost if !== 0
-  // sets back to default and modal error
-
-  const getAlt = (statId) => {
-    const stat = primary_stat[statId];
-    if (stat) {
-      return lang === "fr" ? stat.fr : stat.en;
+  const handleClick = (statID) => {
+    // console.log(iconsRefs.current);
+    if (selectedStatsRefs.current.includes(statID)) {
+      selectedStatsRefs.current = selectedStatsRefs.current.filter(
+        (value) => value !== statID
+      );
+    } else {
+      selectedStatsRefs.current.push(statID);
+      // console.log(selectedStatsRefs.current);
     }
+
+    const iconRef = iconsRefs.current[statID];
+    if (iconRef) {
+      iconRef.classList.toggle(cssModule["selected"]);
+    }
+
+    handlePassingStatsChange(selectedStatsRefs.current);
   };
 
-  const handleImageClick = (imageName) => {
-    setSelectedImages((prevSelectedImages) => {
-      if (prevSelectedImages.includes(imageName)) {
-        return prevSelectedImages.filter((name) => name !== imageName);
-      } else {
-        return [...prevSelectedImages, imageName];
-      }
-    }, console.log(selectedImages));
+  let timer;
+  const handlePassingStatsChange = (newSelectedStats) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      handleStatsChange(newSelectedStats);
+    }, 500);
   };
+
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
-    console.log("useEffect in StatsFilter triggered");
-    setSelectedCategory(1);
-    if (selectedImages.length > 0) {
-      setSelectedImages([]);
-    }
-
-    if (selectedItems.length > 0) {
-      setSelectedItems([]);
-    }
+    selectedStatsRefs.current.forEach((element) =>
+      iconsRefs.current[element].classList.toggle(cssModule["selected"])
+    );
+    selectedStatsRefs.current = [];
   }, [resetFiltersFlag]); // maybe wrong?
 
   return (
@@ -198,12 +201,12 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           {selectedCategory === 1 &&
             primary_stat_order.map((id) => (
               <div
-                key={id + 1} // Adding 1 because index 0 is not used
-                className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(id) ? cssModule["selected"] : ""
-                }`}
-                onClick={() => handleImageClick(id)}
-                title={getAlt(id)}
+                key={id}
+                ref={(element) => setIconsRefs(id, element)}
+                className={cssModule["icon-container"]}
+                data-id={id}
+                onClick={() => handleClick(id)}
+                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -211,7 +214,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={getAlt(id)}
+                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
                 />
               </div>
             ))}
@@ -240,12 +243,12 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           {selectedCategory === 2 &&
             secondary_stat_order.map((id) => (
               <div
-                key={id + 1} // Adding 1 because index 0 is not used
-                className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(id) ? cssModule["selected"] : ""
-                }`}
-                onClick={() => handleImageClick(id)}
-                title={getAlt(id)}
+                key={id}
+                ref={(element) => setIconsRefs(id, element)}
+                className={cssModule["icon-container"]}
+                data-id={id}
+                onClick={() => handleClick(id)}
+                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -253,7 +256,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={getAlt(id)}
+                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
                 />
               </div>
             ))}
@@ -282,12 +285,12 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           {selectedCategory === 3 &&
             remaining_stats_order.map((id) => (
               <div
-                key={id + 1} // Adding 1 because index 0 is not used
-                className={`${cssModule["icon-container"]} ${
-                  selectedItems.includes(id) ? cssModule["selected"] : ""
-                }`}
-                onClick={() => handleImageClick(id)}
-                title={getAlt(id)}
+                key={id}
+                ref={(element) => setIconsRefs(id, element)}
+                className={cssModule["icon-container"]}
+                data-id={id}
+                onClick={() => handleClick(id)}
+                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
               >
                 <Image
                   className={cssModule["icon"]}
@@ -295,12 +298,42 @@ const TypeFilter = ({ resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={getAlt(id)}
+                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
                 />
               </div>
             ))}
         </div>
-      </div> 
+      </div>
+      {selectedStatsRefs.current.length > 0 ? (
+        <div className={cssModule["value-editor-container"]}>
+          {Object.entries(selectedStatsRefs.current).map(
+            ([selectedStatID, statElement]) =>
+              Object.values(iconsRefs.current).map((iconId, iconElement) => {
+                if (parseInt(iconId.attributes.getNamedItem("data-id").value) === parseInt(statElement)) {
+                  return (
+                    <div
+                      key={iconId.attributes[2]}
+                      className={cssModule["value-editor"]}
+                      ref={(element) => setInputRefs(iconId, element)}
+                    >
+                      {/* {iconId.attributes.getNamedItem("title").value} */}
+                      {/* {`/stats/remainingSTats/${iconId.attributes.getNamedItem("data-id").value}.png`} */}
+                      <Image 
+                        alt={iconId.attributes.getNamedItem("title").value}
+                        width={24}
+                        height={24}
+                        src={`/stats/primaryStats/${iconId.attributes.getNamedItem("data-id").value}.png`}
+                      />
+                      <input className={cssModule["value-input"]} />
+                    </div>
+                  );
+                }
+                // return <div key={iconId.attributes.getNamedItem("data-id").value}>{statElement}</div>;
+                return null;
+              })
+          )}
+        </div>
+      ) : null}
     </div>
   );
 };
