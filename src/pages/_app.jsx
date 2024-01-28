@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log("MyApp component is mounting or updating...");
     const initializeApp = async () => {
-      initializeDexieDatabase();
+      initializeDexieDatabase(fileNames);
       await waitForDbInitialization();
       setupDatabaseCloseListener();
     };
