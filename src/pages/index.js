@@ -112,6 +112,7 @@ const Home = () => {
           handleLevelChange={handleLevelChange}
           handleResetFilters={handleResetFilters}
           handleSortingOptionsChange={handleSortingOptionsChange}
+          handleStatsChange={handleStatsChange}
           resetFiltersFlag={resetFiltersFlag}
         ></Filter>
 
