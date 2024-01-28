@@ -49,8 +49,8 @@ const TypeFilter = ({ resetFiltersFlag }) => {
       en: "Distance Mastery",
     },
     1068: {
-      fr: "Maîtrise dans 2 éléments aléatoires",
-      en: "Mastery in 2 randoms elements",
+      fr: "Maîtrise dans X éléments aléatoires",
+      en: "Mastery in X randoms elements",
     },
     184: {
       fr: "Contrôle",
@@ -61,8 +61,8 @@ const TypeFilter = ({ resetFiltersFlag }) => {
       en: "Rear Mastery",
     },
     150: {
-      fr: "Coup critique",
-      en: "Critical Hit",
+      fr: "% Coup critique",
+      en: "% Critical Hit",
     },
     149: {
       fr: "Maîtrise Critique",
