@@ -9,6 +9,7 @@ import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
 import Image from "next/image";
 import "./i18n";
+import { filter } from "lodash";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -58,7 +59,6 @@ const Home = () => {
   };
 
   const handleSearchChange = (newSearchQuery) => {
-    // console.log("handleSearchChange called");
     setFilterState((prevState) => ({
       ...prevState,
       searchQuery: newSearchQuery,
@@ -66,12 +66,10 @@ const Home = () => {
   };
 
   const handleRarityChange = (newRarity) => {
-    // console.log("handleRarityChange called", newRarity);
     setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
   };
 
   const handleLevelChange = (newLevelRange) => {
-    // console.log("handleLevelChange called");
     setFilterState((prevState) => ({
       ...prevState,
       levelRange: newLevelRange,
@@ -79,21 +77,25 @@ const Home = () => {
   };
 
   const handleTypeChange = (newType) => {
-    // console.log("handleTypeChange called");
     setFilterState((prevState) => ({ ...prevState, type: newType }));
-    // console.log("newType", newType);
   };
 
   const handleStatsChange = (newStats) => {
     setFilterState((prevState) => {
-      // Filter out existing stats
-      const newStatsToAdd = newStats.filter(
+
+      const filteredNewStats = newStats.filter(
         (newStat) => !prevState.stats.some((existingStat) => existingStat.property === newStat.property)
       );
   
+      const updatedStats = prevState.stats.filter(
+        (existingStat) => newStats.some((newStat) => newStat.property === existingStat.property)
+      );
+  
+      const finalStats = [...updatedStats, ...filteredNewStats];
+  
       return {
         ...prevState,
-        stats: [...prevState.stats, ...newStatsToAdd],
+        stats: finalStats,
       };
     });
   };
@@ -125,6 +127,7 @@ const Home = () => {
   
     setFilterState({ ...filterState, stats: updatedStats });
   };
+  
 
   return (
     <>
@@ -163,7 +166,7 @@ const Home = () => {
                       alt={element.property}
                       width={24}
                       height={24}
-                      src={`/stats/primaryStats/${element.property}.png`}
+                      src={`/stats/${element.property}.png`}
                     />
                     <input
                       value={element.value}
