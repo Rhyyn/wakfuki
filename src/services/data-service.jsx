@@ -81,7 +81,7 @@ const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
 };
 
 const filterByStatsQuery = (itemsQuery, stats) => {
-  console.log(stats);
+  // console.log(stats);
   if (stats && stats.length > 0) {
     return itemsQuery.filter(item =>
       stats.every(stat =>
