@@ -21,6 +21,8 @@ const Filter = ({
   handleSortingOptionsChange,
   handleStatsChange,
   resetFiltersFlag,
+  filterStateStats,
+  updateStatsFlag
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -177,7 +179,11 @@ const Filter = ({
         handleTypeChange={handleTypeChange}
         resetFiltersFlag={resetFiltersFlag}
       />
-      <StatsFilter handleStatsChange={handleStatsChange} resetFiltersFlag={resetFiltersFlag}/>
+      <StatsFilter 
+        handleStatsChange={handleStatsChange} 
+        resetFiltersFlag={resetFiltersFlag}
+        filterStateStats={filterStateStats}
+        updateStatsFlag={updateStatsFlag} />
     </div>
   );
 };
