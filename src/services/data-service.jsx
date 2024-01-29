@@ -82,9 +82,12 @@ const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
 const filterByStatsQuery = (itemsQuery, stats) => {
   console.log(stats);
   if (stats && stats.length > 0) {
-    return itemsQuery.filter((item) =>
-      item.equipEffects.some((effect) =>
-        stats.includes(effect.effect.stats.property)
+    return itemsQuery.filter(item =>
+      item.equipEffects.some(effect =>
+        stats.some(stat =>
+          effect.effect.stats.property === stat.property &&
+          effect.effect.stats.values >= stat.value
+        )
       )
     );
   }
@@ -134,7 +137,7 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
           itemsQuery = filterByStatsQuery(
             itemsQuery, 
             filterState.stats);
-            
+
           itemsQuery = filterBySearchQuery(
             itemsQuery,
             lang,
