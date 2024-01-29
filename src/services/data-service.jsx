@@ -63,28 +63,42 @@ const sortData = (data, sortOption) => {
   }
 };
 
-const filterByRarityQuery = (itemsQuery, lang, rarity) => {
+const filterByRarityQuery = (itemsQuery, rarity) => {
   if (rarity.length > 0) {
-    return itemsQuery.filter((o) => o.baseParams.rarity == rarity[0]);
+    return itemsQuery.where("baseParams.rarity").equals(rarity[0]);
   }
   return itemsQuery;
 };
 
-const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
-  if (searchQuery.length > 0) {
-    return itemsQuery.filter((o) =>
-      o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
+const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
+  if (levelRange.from > 0 || levelRange.to < 230) {
+    itemsQuery = itemsQuery
+      .where("level")
+      .between(levelRange.from, levelRange.to);
+  }
+  return itemsQuery;
+};
+
+const filterByStatsQuery = (itemsQuery, stats) => {
+  console.log(stats);
+  if (stats && stats.length > 0) {
+    return itemsQuery.filter((item) =>
+      item.equipEffects.some((effect) =>
+        stats.includes(effect.effect.stats.property)
+      )
     );
   }
   return itemsQuery;
 };
 
-const filterByLevelRangeQuery = (itemsQuery, lang, levelRange) => {
-  if (levelRange.from > 0 || levelRange.to < 230) {
-    return itemsQuery.filter(
-      (o) =>
-        o.level >= levelRange.from &&
-        o.level <= levelRange.to
+const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
+  if (searchQuery && searchQuery.length > 0) {
+    // .where() does not work because
+    // anyOfIgnoreCase does not seem to want to index properly
+    // const langIndex = `title.${lang}`;
+    // return itemsQuery.where(langIndex).anyOfIgnoreCase(searchQuery);
+    return itemsQuery.filter((o) =>
+      o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
   return itemsQuery;
@@ -109,19 +123,22 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
           }
 
           itemsQuery = filterByRarityQuery(
+            itemsQuery, 
+            filterState.rarity);
+
+          itemsQuery = filterByLevelRangeQuery(
             itemsQuery,
-            lang,
-            filterState.rarity
+            filterState.levelRange
           );
+
+          itemsQuery = filterByStatsQuery(
+            itemsQuery, 
+            filterState.stats);
+            
           itemsQuery = filterBySearchQuery(
             itemsQuery,
             lang,
             filterState.searchQuery
-          );
-          itemsQuery = filterByLevelRangeQuery(
-            itemsQuery,
-            lang,
-            filterState.levelRange
           );
 
           itemsQuery = itemsQuery.limit(itemsPerPage);
