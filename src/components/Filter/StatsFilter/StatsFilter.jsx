@@ -7,7 +7,12 @@ import { useTranslation } from "react-i18next";
 // maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
 // need a max number of selected stats
 
-const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
+const TypeFilter = ({
+  handleStatsChange,
+  resetFiltersFlag,
+  filterStateStats,
+  updateStatsFlag,
+}) => {
   const [selectedCategory, setSelectedCategory] = useState(1);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
@@ -27,6 +32,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
     setLang(localStorage.getItem("language"));
   }, [t]);
 
+  // this is a hack
+  // this is bad
+  // but it works :)
   const primary_stat = {
     31: {
       fr: "PA",
@@ -152,13 +160,13 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
       } else {
         selectedStatsConstructedRefs.current.push({
           property: statID,
-          value: 0,
+          value: 1,
         });
       }
     } else {
       selectedStatsConstructedRefs.current.push({
         property: statID,
-        value: 0,
+        value: 1,
       });
     }
 
@@ -166,7 +174,7 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
     handlePassingStatsChange(selectedStatsConstructedRefs.current);
   };
 
-  const handleSelectedStatsRefs = statID => {
+  const handleSelectedStatsRefs = (statID) => {
     if (selectedStatsRefs.current.includes(statID)) {
       selectedStatsRefs.current = selectedStatsRefs.current.filter(
         (value) => value !== statID
@@ -200,6 +208,23 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
     );
     selectedStatsRefs.current = [];
   }, [resetFiltersFlag]); // maybe wrong?
+
+  useEffect(() => {
+    const missingElements = selectedStatsRefs.current.filter(
+      (element) => !filterStateStats.some((stat) => stat.property === element)
+    );
+    
+    missingElements.forEach((missingElement) => {
+      iconsRefs.current[missingElement].classList.toggle(cssModule["selected"]);
+    });
+
+    const updatedSelectedStatsRefs = selectedStatsRefs.current.filter(
+      (element) => filterStateStats.some((stat) => stat.property === element)
+    );
+    
+    selectedStatsRefs.current = updatedSelectedStatsRefs;
+    selectedStatsConstructedRefs.current = filterStateStats
+  }, [updateStatsFlag]);
 
   return (
     <div className={cssModule["type-container"]}>
@@ -342,7 +367,7 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
             ))}
         </div>
       </div>
-      {selectedStatsRefs.current.length > 0 ? (
+      {/* {selectedStatsRefs.current.length > 0 ? (
         <div className={cssModule["value-editor-container"]}>
           {Object.entries(selectedStatsRefs.current).map(
             ([selectedStatID, statElement]) =>
@@ -357,8 +382,6 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                       className={cssModule["value-editor"]}
                       ref={(element) => setInputRefs(iconId, element)}
                     >
-                      {/* {iconId.attributes.getNamedItem("title").value} */}
-                      {/* {`/stats/remainingSTats/${iconId.attributes.getNamedItem("data-id").value}.png`} */}
                       <Image
                         alt={iconId.attributes.getNamedItem("title").value}
                         width={24}
@@ -374,9 +397,10 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                 // return <div key={iconId.attributes.getNamedItem("data-id").value}>{statElement}</div>;
                 return null;
               })
-          )}
+          )} 
+          
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

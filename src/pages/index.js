@@ -1,12 +1,13 @@
 import Head from "next/head";
 import { useState, useEffect, useCallback, useRef } from "react";
-import styles from "../../styles/Home.module.scss";
+import cssModule from "../../styles/Home.module.scss";
 import { useTranslation } from "next-i18next";
 import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
 import ItemList from "../components/ItemList/ItemsList.jsx";
 import { storeFile } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
+import Image from "next/image";
 import "./i18n";
 
 const Home = () => {
@@ -20,7 +21,6 @@ const Home = () => {
     stats: [],
     sortBy: { type: "level", order: "ascending" },
   });
-
 
   const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
   const handleResetFilters = () => {
@@ -40,7 +40,6 @@ const Home = () => {
     setResetFiltersFlag(false);
   }, [resetFiltersFlag]);
 
-
   const handleLogClick = async () => {
     try {
       fetchItemsById();
@@ -53,10 +52,10 @@ const Home = () => {
     console.log(newSortingOption);
     setFilterState((prevState) => ({
       ...prevState,
-      sortBy: newSortingOption
+      sortBy: newSortingOption,
     }));
     console.log(filterState.sortBy);
-  }
+  };
 
   const handleSearchChange = (newSearchQuery) => {
     // console.log("handleSearchChange called");
@@ -86,14 +85,46 @@ const Home = () => {
   };
 
   const handleStatsChange = (newStats) => {
-    // console.log("handleTypeChange called");
-    setFilterState((prevState) => ({ ...prevState, stats: newStats }));
+    setFilterState((prevState) => {
+      // Filter out existing stats
+      const newStatsToAdd = newStats.filter(
+        (newStat) => !prevState.stats.some((existingStat) => existingStat.property === newStat.property)
+      );
+  
+      return {
+        ...prevState,
+        stats: [...prevState.stats, ...newStatsToAdd],
+      };
+    });
   };
 
-  // useEffect(() => {
-  //   console.log("INDEX.JS -- filterState", filterState);
-  //   console.log("INDEX.JS -- filterState.type.length", filterState.type.length);
-  // }, [filterState]);
+  const [updateStatsFlag, setUpdateStatsFlag] = useState(false);
+  const updateStats = (elementProperty) => {
+    const updatedStats = filterState.stats.filter(
+      (stat) => stat.property !== elementProperty
+    );
+
+    setFilterState((prevFilterState) => ({
+      ...prevFilterState,
+      stats: updatedStats,
+    }));
+    setUpdateStatsFlag(true);
+  };
+
+  useEffect(() => {
+    setUpdateStatsFlag(false);
+  }, [updateStatsFlag]);
+
+  const handleInput = (input, inputElement) => {
+    const updatedStats = filterState.stats.map((element) => {
+      if (element.property === inputElement.property) {
+        return { ...element, value: input };
+      }
+      return element;
+    });
+  
+    setFilterState({ ...filterState, stats: updatedStats });
+  };
 
   return (
     <>
@@ -114,11 +145,68 @@ const Home = () => {
           handleSortingOptionsChange={handleSortingOptionsChange}
           handleStatsChange={handleStatsChange}
           resetFiltersFlag={resetFiltersFlag}
+          filterStateStats={filterState.stats}
+          updateStatsFlag={updateStatsFlag}
         ></Filter>
 
-        <div className={styles["global-container"]}>
-          <Header /> 
-          <div className={styles["item-list"]}>
+        <div className={cssModule["global-container"]}>
+          <Header />
+          <div className={cssModule["items-values-filtering-container"]}>
+            <div className={cssModule["items-values-editor-container"]}>
+              {filterState.stats &&
+                filterState.stats.map((element) => (
+                  <div
+                    key={element.property}
+                    className={cssModule["value-editor"]}
+                  >
+                    <Image
+                      alt={element.property}
+                      width={24}
+                      height={24}
+                      src={`/stats/primaryStats/${element.property}.png`}
+                    />
+                    <input
+                      value={element.value}
+                      onChange={(e) => handleInput(e.target.value, element)}
+                      className={cssModule["value-input"]}
+                    />
+                    <Image
+                      className={cssModule["cross-icon"]}
+                      alt="Delete Icon"
+                      width={16}
+                      height={16}
+                      src="/cross_icon_yellow.png"
+                      onClick={() => updateStats(element.property)}
+                    />
+                  </div>
+                ))}
+            </div>
+            <div className={cssModule["items-sorting-container"]}>
+              <Image
+                className={cssModule["header-icon"]}
+                src="/reset_icon_yellow.png"
+                width={32}
+                height={32}
+                unoptimized
+                alt="reset-icon"
+                title={t("Mise à zéro des Filtres")}
+                onClick={() => handleResetFilters()}
+              />
+              <div className={cssModule["vertical-separator"]}></div>
+              <Image
+                className={cssModule["header-icon"]}
+                src="/sort_icon_yellow.png"
+                width={32}
+                height={32}
+                unoptimized
+                alt="sort-icon"
+                title={t("Trier par")}
+                // onClick={handleSortingOptionsDropdown}
+                // ref={dropdownRef}
+              />
+            </div>
+          </div>
+          <div className={cssModule["item-list"]}>
             {filterState.type && filterState.type.length !== 0 && (
               <ItemList key={filterState.type} filterState={filterState} />
             )}
