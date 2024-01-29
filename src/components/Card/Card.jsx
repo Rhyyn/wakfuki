@@ -36,7 +36,7 @@ const Card = ({ item, lang }) => {
     console.log(propertyValue);
   }
 
-  console.log(item);
+  // console.log(item);
 
 
   return (
@@ -163,7 +163,10 @@ const Card = ({ item, lang }) => {
           }`}
         >
           {item.equipEffects.map((effect, index) => (
-            <div key={index} className={cardCSS["item-stat-container"]} data-id={effect.effect.stats.display.property} onClick={(e) => handleClick(e)}>
+            <div key={index} 
+              className={cardCSS["item-stat-container"]} 
+              data-id={effect.effect.stats.display.property} 
+              onClick={(e) => handleClick(e)}>
               <span className={cardCSS["item-stat"]}>
                 {effect.effect.stats.display[lang]}
               </span>
