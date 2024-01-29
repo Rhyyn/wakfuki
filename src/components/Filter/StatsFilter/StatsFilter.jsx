@@ -13,6 +13,7 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
   const isInitialMount = useRef(true);
   const [lang, setLang] = useState();
   const selectedStatsRefs = useRef([]);
+  const selectedStatsConstructedRefs = useRef([]);
   const iconsRefs = useRef({});
   const setIconsRefs = (statID, element) => {
     iconsRefs.current[statID] = element;
@@ -140,23 +141,49 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
   };
   const remaining_stats_order = [171, 177, 2001];
 
-  const handleClick = (statID) => {
-    // console.log(iconsRefs.current);
+  const handleConstructedRefObject = (statID) => {
+    if (selectedStatsConstructedRefs.current.length > 0) {
+      const index = selectedStatsConstructedRefs.current.findIndex(
+        (element) => element.property === statID
+      );
+
+      if (index !== -1) {
+        selectedStatsConstructedRefs.current.splice(index, 1);
+      } else {
+        selectedStatsConstructedRefs.current.push({
+          property: statID,
+          value: 0,
+        });
+      }
+    } else {
+      selectedStatsConstructedRefs.current.push({
+        property: statID,
+        value: 0,
+      });
+    }
+
+    // console.log(selectedStatsConstructedRefs.current);
+    handlePassingStatsChange(selectedStatsConstructedRefs.current);
+  };
+
+  const handleSelectedStatsRefs = statID => {
     if (selectedStatsRefs.current.includes(statID)) {
       selectedStatsRefs.current = selectedStatsRefs.current.filter(
         (value) => value !== statID
       );
     } else {
       selectedStatsRefs.current.push(statID);
-      // console.log(selectedStatsRefs.current);
     }
 
     const iconRef = iconsRefs.current[statID];
     if (iconRef) {
       iconRef.classList.toggle(cssModule["selected"]);
     }
+  };
 
-    handlePassingStatsChange(selectedStatsRefs.current);
+  const handleClick = (statID) => {
+    handleSelectedStatsRefs(statID);
+    handleConstructedRefObject(statID);
   };
 
   let timer;
@@ -166,7 +193,6 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
       handleStatsChange(newSelectedStats);
     }, 500);
   };
-
 
   useEffect(() => {
     selectedStatsRefs.current.forEach((element) =>
@@ -206,7 +232,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                 className={cssModule["icon-container"]}
                 data-id={id}
                 onClick={() => handleClick(id)}
-                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                title={
+                  lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                }
               >
                 <Image
                   className={cssModule["icon"]}
@@ -214,7 +242,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                  alt={
+                    lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                  }
                 />
               </div>
             ))}
@@ -248,7 +278,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                 className={cssModule["icon-container"]}
                 data-id={id}
                 onClick={() => handleClick(id)}
-                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                title={
+                  lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                }
               >
                 <Image
                   className={cssModule["icon"]}
@@ -256,7 +288,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                  alt={
+                    lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                  }
                 />
               </div>
             ))}
@@ -290,7 +324,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                 className={cssModule["icon-container"]}
                 data-id={id}
                 onClick={() => handleClick(id)}
-                title={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                title={
+                  lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                }
               >
                 <Image
                   className={cssModule["icon"]}
@@ -298,7 +334,9 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                   width={24}
                   height={24}
                   unoptimized
-                  alt={lang === "fr" ? primary_stat[id].fr : primary_stat[id].en}
+                  alt={
+                    lang === "fr" ? primary_stat[id].fr : primary_stat[id].en
+                  }
                 />
               </div>
             ))}
@@ -309,7 +347,10 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
           {Object.entries(selectedStatsRefs.current).map(
             ([selectedStatID, statElement]) =>
               Object.values(iconsRefs.current).map((iconId, iconElement) => {
-                if (parseInt(iconId.attributes.getNamedItem("data-id").value) === parseInt(statElement)) {
+                if (
+                  parseInt(iconId.attributes.getNamedItem("data-id").value) ===
+                  parseInt(statElement)
+                ) {
                   return (
                     <div
                       key={iconId.attributes[2]}
@@ -318,11 +359,13 @@ const TypeFilter = ({ handleStatsChange, resetFiltersFlag }) => {
                     >
                       {/* {iconId.attributes.getNamedItem("title").value} */}
                       {/* {`/stats/remainingSTats/${iconId.attributes.getNamedItem("data-id").value}.png`} */}
-                      <Image 
+                      <Image
                         alt={iconId.attributes.getNamedItem("title").value}
                         width={24}
                         height={24}
-                        src={`/stats/primaryStats/${iconId.attributes.getNamedItem("data-id").value}.png`}
+                        src={`/stats/primaryStats/${
+                          iconId.attributes.getNamedItem("data-id").value
+                        }.png`}
                       />
                       <input className={cssModule["value-input"]} />
                     </div>
