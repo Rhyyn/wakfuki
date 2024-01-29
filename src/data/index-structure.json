@@ -1,926 +1,1016 @@
 {
-    "states.json": {
-        "indexes": [
-            {
-                "name": "states_indexByTitleFr",
-                "keyPath": [
-                    "title.fr"
-                ]
-            },
-            {
-                "name": "states_indexById",
-                "keyPath": [
-                    "definition.id"
-                ]
-            }
+  "states.json": {
+    "indexes": [
+      {
+        "name": "states_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
         ]
-    },
-    "actions.json": {
-        "indexes": [
-            {
-                "name": "actions_indexByDefId",
-                "keyPath": [
-                    "definition.id"
-                ]
-            },
-            {
-                "name": "actions_indexByDescFr",
-                "keyPath": [
-                    "description.fr"
-                ]
-            },
-            {
-                "name": "actions_indexByDescEn",
-                "keyPath": [
-                    "description.en"
-                ]
-            },
-            {
-                "name": "actions_indexByDefEffect",
-                "keyPath": [
-                    "definition.effect"
-                ]
-            }
+      },
+      {
+        "name": "states_indexById",
+        "keyPath": [
+          "definition.id"
         ]
-    },
-    "blueprints.json": {
-        "indexes": [
-            {
-                "name": "blueprints_indexByBlueprintId",
-                "keyPath": [
-                    "blueprintId"
-                ]
-            },
-            {
-                "name": "blueprints_indexByRecipeId",
-                "keyPath": [
-                    "recipeId"
-                ]
-            }
+      }
+    ]
+  },
+  "actions.json": {
+    "indexes": [
+      {
+        "name": "actions_indexByDefId",
+        "keyPath": [
+          "definition.id"
         ]
-    },
-    "equipmentItemTypes.json": {
-        "indexes": [
-            {
-                "name": "equipmentItemTypes_indexByDefId",
-                "keyPath": [
-                    "definition.id"
-                ]
-            }
+      },
+      {
+        "name": "actions_indexByDescFr",
+        "keyPath": [
+          "description.fr"
         ]
-    },
-    "harvestLoots.json": {
-        "indexes": [
-            {
-                "name": "harvestLoots_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            }
+      },
+      {
+        "name": "actions_indexByDescEn",
+        "keyPath": [
+          "description.en"
         ]
-    },
-    "recipes.json": {
-        "indexes": [
-            {
-                "name": "recipes_indexBycategoryId",
-                "keyPath": [
-                    "categoryId"
-                ]
-            },
-            {
-                "name": "recipes_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "recipes_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            }
+      },
+      {
+        "name": "actions_indexByDefEffect",
+        "keyPath": [
+          "definition.effect"
         ]
-    },
-    "recipeIngredients.json": {
-        "indexes": [
-            {
-                "name": "recipeIngredients_indexByRecipeId",
-                "keyPath": [
-                    "recipeId"
-                ]
-            }
+      }
+    ]
+  },
+  "blueprints.json": {
+    "indexes": [
+      {
+        "name": "blueprints_indexByBlueprintId",
+        "keyPath": [
+          "blueprintId"
         ]
-    },
-    "recipeResults.json": {
-        "indexes": [
-            {
-                "name": "recipeResults_indexByRecipeId",
-                "keyPath": [
-                    "recipeId"
-                ]
-            }
+      },
+      {
+        "name": "blueprints_indexByRecipeId",
+        "keyPath": [
+          "recipeId"
         ]
-    },
-    "recipeCategories.json": {
-        "indexes": [
-            {
-                "name": "recipeCategories_indexByDefId",
-                "keyPath": [
-                    "definition.id"
-                ]
-            },
-            {
-                "name": "recipeCategories_indexByTitleFr",
-                "keyPath": [
-                    "title.fr"
-                ]
-            }, 
-            {
-                "name": "recipeCategories_indexByTitleEn",
-                "keyPath": [
-                    "title.en"
-                ]
-            }
+      }
+    ]
+  },
+  "equipmentItemTypes.json": {
+    "indexes": [
+      {
+        "name": "equipmentItemTypes_indexByDefId",
+        "keyPath": [
+          "definition.id"
         ]
-    },
-    "amulette.json": {
-        "indexes": [
-            {
-                "name": "amulette_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "amulette_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "amulette_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "amulette_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "amulette_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "amulette_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "amulette_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "amulette_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "harvestLoots.json": {
+    "indexes": [
+      {
+        "name": "harvestLoots_indexById",
+        "keyPath": [
+          "id"
         ]
-    },
-    "anneau.json": {
-        "indexes": [
-            {
-                "name": "anneau_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "anneau_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "anneau_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "anneau_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "anneau_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "anneau_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "anneau_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "anneau_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "recipes.json": {
+    "indexes": [
+      {
+        "name": "recipes_indexBycategoryId",
+        "keyPath": [
+          "categoryId"
         ]
-    },
-    "cape.json": {
-        "indexes": [
-            {
-                "name": "cape_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "cape_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "cape_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "cape_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "cape_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "cape_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "cape_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "cape_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "recipes_indexById",
+        "keyPath": [
+          "id"
         ]
-    },
-    "bottes.json": {
-        "indexes": [
-            {
-                "name": "botte_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "botte_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "botte_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "botte_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "botte_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "botte_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "botte_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "botte_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "recipes_indexBylevel",
+        "keyPath": [
+          "level"
         ]
-    },
-    "casque.json": {
-        "indexes": [
-            {
-                "name": "casque_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "casque_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "casque_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "casque_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "casque_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "casque_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "casque_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "casque_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "recipeIngredients.json": {
+    "indexes": [
+      {
+        "name": "recipeIngredients_indexByRecipeId",
+        "keyPath": [
+          "recipeId"
         ]
-    },
-    "ceinture.json": {
-        "indexes": [
-            {
-                "name": "ceinture_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "ceinture_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "ceinture_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "ceinture_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "ceinture_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "ceinture_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "ceinture_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "ceinture_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "recipeResults.json": {
+    "indexes": [
+      {
+        "name": "recipeResults_indexByRecipeId",
+        "keyPath": [
+          "recipeId"
         ]
-    },
-    "epaulettes.json": {
-        "indexes": [
-            {
-                "name": "epaulettes_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "epaulettes_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "epaulettes_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "epaulettes_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "epaulettes_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "epaulettes_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "epaulettes_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "epaulettes_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "recipeCategories.json": {
+    "indexes": [
+      {
+        "name": "recipeCategories_indexByDefId",
+        "keyPath": [
+          "definition.id"
         ]
-    },
-    "plastron.json": {
-        "indexes": [
-            {
-                "name": "plastron_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "plastron_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "plastron_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "plastron_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "plastron_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "plastron_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "plastron_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "plastron_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "recipeCategories_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
         ]
-    },
-    "familiers.json": {
-        "indexes": [
-            {
-                "name": "familiers_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "familiers_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "familiers_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "familiers_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "familiers_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "familiers_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "familiers_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "familiers_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "recipeCategories_indexByTitleEn",
+        "keyPath": [
+          "title.en"
         ]
-    },
-    "arme1main.json": {
-        "indexes": [
-            {
-                "name": "arme1main_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "arme1main_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "arme1main_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "arme1main_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "arme1main_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "arme1main_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "arme1main_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "arme1main_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      }
+    ]
+  },
+  "amulette.json": {
+    "indexes": [
+      {
+        "name": "amulette_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
         ]
-    },
-    "arme2main.json": {
-        "indexes": [
-            {
-                "name": "arme2main_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "arme2main_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "arme2main_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "arme2main_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "arme2main_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "arme2main_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "arme2main_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "arme2main_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "amulette_indexByTitleEn",
+        "keyPath": [
+          "title.en"
         ]
-    },
-    "secondemain.json": {
-        "indexes": [
-            {
-                "name": "secondemain_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "secondemain_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "secondemain_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "secondemain_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "secondemain_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "secondemain_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "secondemain_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "secondemain_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "amulette_indexByDroprates",
+        "keyPath": [
+          "droprates"
         ]
-    },
-    "emblemes.json": {
-        "indexes": [
-            {
-                "name": "emblemes_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "emblemes_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "emblemes_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "emblemes_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "emblemes_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "emblemes_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "emblemes_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "emblemes_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "amulette_indexBylevel",
+        "keyPath": [
+          "level"
         ]
-    },
-    "montures.json": {
-        "indexes": [
-            {
-                "name": "montures_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "montures_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "montures_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "montures_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "montures_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "montures_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "montures_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "montures_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "amulette_indexById",
+        "keyPath": [
+          "id"
         ]
-    },
-    "outils.json": {
-        "indexes": [
-            {
-                "name": "outils_indexByTitle",
-                "keyPath": [
-                    "title"
-                ]
-            },
-            {
-                "name": "outils_indexByDroprates",
-                "keyPath": [
-                    "droprates"
-                ]
-            },
-            {
-                "name": "outils_indexBylevel",
-                "keyPath": [
-                    "level"
-                ]
-            },
-            {
-                "name": "outils_indexById",
-                "keyPath": [
-                    "id"
-                ]
-            },
-            {
-                "name": "outils_indexByBaseParams",
-                "keyPath": [
-                    "baseParams"
-                ]
-            },
-            {
-                "name": "outils_indexByTypeId",
-                "keyPath": [
-                    "baseParams.itemTypeId"
-                ]
-            },
-            {
-                "name": "outils_indexByGfxId",
-                "keyPath": [
-                    "gfxId"
-                ]
-            },
-            {
-                "name": "outils_indexByEquipEffects",
-                "keyPath": [
-                    "equipEffects"
-                ]
-            }
+      },
+      {
+        "name": "amulette_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
         ]
-    }
+      },
+      {
+        "name": "amulette_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "amulette_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "amulette_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "anneau.json": {
+    "indexes": [
+      {
+        "name": "anneau_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "anneau_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "anneau_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "anneau_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "anneau_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "anneau_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "anneau_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "anneau_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "anneau_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "cape.json": {
+    "indexes": [
+      {
+        "name": "cape_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "cape_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "cape_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "cape_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "cape_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "cape_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "cape_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "cape_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "cape_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "bottes.json": {
+    "indexes": [
+      {
+        "name": "botte_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "botte_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "botte_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "botte_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "botte_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "botte_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "botte_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "botte_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "botte_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "casque.json": {
+    "indexes": [
+      {
+        "name": "casque_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "casque_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "casque_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "casque_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "casque_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "casque_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "casque_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "casque_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "casque_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "ceinture.json": {
+    "indexes": [
+      {
+        "name": "ceinture_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "ceinture_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "ceinture_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "ceinture_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "ceinture_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "ceinture_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "ceinture_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "ceinture_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "ceinture_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "epaulettes.json": {
+    "indexes": [
+      {
+        "name": "epaulettes_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "epaulettes_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "epaulettes_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "epaulettes_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "plastron.json": {
+    "indexes": [
+      {
+        "name": "plastron_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "plastron_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "plastron_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "plastron_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "plastron_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "plastron_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "plastron_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "plastron_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "plastron_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "familiers.json": {
+    "indexes": [
+      {
+        "name": "familiers_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "familiers_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "familiers_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "familiers_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "familiers_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "familiers_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "familiers_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "familiers_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "familiers_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "arme1main.json": {
+    "indexes": [
+      {
+        "name": "arme1main_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "arme1main_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "arme1main_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "arme1main_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "arme1main_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "arme1main_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "arme1main_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "arme1main_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "arme1main_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "arme2main.json": {
+    "indexes": [
+      {
+        "name": "arme2main_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "arme2main_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "arme2main_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "arme2main_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "arme2main_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "arme2main_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "arme2main_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "arme2main_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "arme2main_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "secondemain.json": {
+    "indexes": [
+      {
+        "name": "secondemain_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "secondemain_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "secondemain_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "secondemain_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "secondemain_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "secondemain_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "secondemain_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "secondemain_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "secondemain_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "emblemes.json": {
+    "indexes": [
+      {
+        "name": "emblemes_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "emblemes_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "emblemes_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "emblemes_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "emblemes_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "emblemes_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "emblemes_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "emblemes_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "emblemes_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "montures.json": {
+    "indexes": [
+      {
+        "name": "montures_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "montures_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "montures_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "montures_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "montures_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "montures_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "montures_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "montures_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "montures_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  },
+  "outils.json": {
+    "indexes": [
+      {
+        "name": "outils_indexByTitleFr",
+        "keyPath": [
+          "title.fr"
+        ]
+      },
+      {
+        "name": "outils_indexByTitleEn",
+        "keyPath": [
+          "title.en"
+        ]
+      },
+      {
+        "name": "outils_indexByDroprates",
+        "keyPath": [
+          "droprates"
+        ]
+      },
+      {
+        "name": "outils_indexBylevel",
+        "keyPath": [
+          "level"
+        ]
+      },
+      {
+        "name": "outils_indexById",
+        "keyPath": [
+          "id"
+        ]
+      },
+      {
+        "name": "outils_indexByBaseParams",
+        "keyPath": [
+          "baseParams"
+        ]
+      },
+      {
+        "name": "outils_indexByRarity",
+        "keyPath": [
+          "baseParams.rarity"
+        ]
+      },
+      {
+        "name": "outils_indexByGfxId",
+        "keyPath": [
+          "gfxId"
+        ]
+      },
+      {
+        "name": "outils_indexByEquipEffects",
+        "keyPath": [
+          "equipEffects"
+        ]
+      }
+    ]
+  }
 }
