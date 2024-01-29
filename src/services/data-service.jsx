@@ -42,7 +42,6 @@ const sortItemsByRarity = (data, order) => {
 const sortData = (data, sortOption) => {
   if (data && sortOption) {
     const { type, order } = sortOption;
-
     switch (type) {
       case "level":
         return sortItemsByLevel(data, order);
@@ -65,16 +64,18 @@ const sortData = (data, sortOption) => {
 
 const filterByRarityQuery = (itemsQuery, rarity) => {
   if (rarity.length > 0) {
-    return itemsQuery.where("baseParams.rarity").equals(rarity[0]);
+    return itemsQuery.filter((o) => o.baseParams.rarity == rarity[0]);
   }
   return itemsQuery;
 };
 
 const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
   if (levelRange.from > 0 || levelRange.to < 230) {
-    itemsQuery = itemsQuery
-      .where("level")
-      .between(levelRange.from, levelRange.to);
+    return itemsQuery.filter(
+      (o) =>
+        o.level >= levelRange.from &&
+        o.level <= levelRange.to
+    );
   }
   return itemsQuery;
 };
@@ -83,8 +84,8 @@ const filterByStatsQuery = (itemsQuery, stats) => {
   console.log(stats);
   if (stats && stats.length > 0) {
     return itemsQuery.filter(item =>
-      item.equipEffects.some(effect =>
-        stats.some(stat =>
+      stats.every(stat =>
+        item.equipEffects.some(effect =>
           effect.effect.stats.property === stat.property &&
           effect.effect.stats.values >= stat.value
         )
