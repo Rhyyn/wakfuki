@@ -1,0 +1,102 @@
+{
+  "20": {
+    "fr": "PV",
+    "en": "HP"
+  },
+  "26": {
+    "fr": "Maîtrise Soin",
+    "en": "Healing Mastery"
+  },
+  "31": {
+    "fr": "PA",
+    "en": "AP"
+  },
+  "39": {
+    "fr": "Armure donnée",
+    "en": "Armor given"
+  },
+  "41": {
+    "fr": "PM",
+    "en": "MP"
+  },
+  "82": {
+    "fr": "Résistance Feu",
+    "en": "Fire Resistance"
+  },
+  "83": {
+    "fr": "Résistance Eau",
+    "en": "Water Resistance"
+  },
+  "84": {
+    "fr": "Résistance Terre",
+    "en": "Earth Resistance"
+  },
+  "85": {
+    "fr": "Résistance Air",
+    "en": "Air Resistance"
+  },
+  "149": {
+    "fr": "Maîtrise Critique",
+    "en": "Critical Mastery"
+  },
+  "150": {
+    "fr": "% Coup critique",
+    "en": "% Critical Hit"
+  },
+  "160": {
+    "fr": "Portée",
+    "en": "Range"
+  },
+  "171": {
+    "fr": "Initiative",
+    "en": "Initiative"
+  },
+  "173": {
+    "fr": "Tacle",
+    "en": "Lock"
+  },
+  "175": {
+    "fr": "Esquive",
+    "en": "Dodge"
+  },
+  "177": {
+    "fr": "Volonté",
+    "en": "Force of Will"
+  },
+  "180": {
+    "fr": "Maîtrise Dos",
+    "en": "Rear Mastery"
+  },
+  "184": {
+    "fr": "Contrôle",
+    "en": "Control"
+  },
+  "191": {
+    "fr": "PW",
+    "en": "WP"
+  },
+  "988": {
+    "fr": "Résistance Critique",
+    "en": "Critical Resistance"
+  },
+  "1052": {
+    "fr": "Maîtrise Mêlée",
+    "en": "Melee Mastery"
+  },
+  "1053": {
+    "fr": "Maîtrise Distance",
+    "en": "Distance Mastery"
+  },
+  "1055": {
+    "fr": "Maîtrise Berserk",
+    "en": "Berserk Mastery"
+  },
+  "1068": {
+    "fr": "Maîtrise dans X éléments aléatoires",
+    "en": "Mastery in X randoms elements"
+  },
+  "2001": {
+    "fr": "Quantité Récolte",
+    "en": "Harvesting Quantity"
+  }
+}
