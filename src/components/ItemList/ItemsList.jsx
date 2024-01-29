@@ -36,8 +36,8 @@ const ItemList = ({ filterState }) => {
       setIsLoading(true);
       fetchItems();
 
-      console.log(isLoading);
-      console.log(items);
+      // console.log(isLoading);
+      // console.log(items);
     }
   }, [currentPage, filterState]);
 
