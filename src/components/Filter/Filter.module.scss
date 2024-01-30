@@ -2,7 +2,8 @@
 
 .filter-container {
   width: 230px;
-  background-color: v.$background-light;
+  // background-color: v.$background-light;
+  background-color: v.$background-deep-new;
   position: fixed;
   // top: 80px;
   top: 0px;
@@ -66,7 +67,8 @@
   height: 170px;
   left: 230px;
   top: 20px;
-  background-color: v.$background-light;
+  background-color: v.$background;
+  border: 3px solid v.$background-light;
   display: flex;
   flex-direction: column;
   border-radius: 0 12px 12px 0;
@@ -78,13 +80,14 @@
 .sorting-option {
   width: 100%;
   cursor: pointer;
-  color: v.$text-offwhite;
+  color: v.$text-offwhite-nofocus;
   padding-left: 7px;
   font-size: 0.9rem;
 }
 
 .sorting-option:hover {
-  background-color: v.$background;
+  background-color: v.$background-light;
+  color: v.$text-offwhite;
   border-radius: 0 12px 12px 0;
 }
 

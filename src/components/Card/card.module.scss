@@ -3,218 +3,221 @@
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
-    width: 340px;
-    height: 460px;
-    border-radius: 12px;
-    background-color: v.$background;
-    color: v.$text-offwhite;
-    box-shadow: 5px 5px 5px v.$primary-yellow;
-    // margin-bottom: 20px;
+  width: 320px;
+  max-height: 500px;
+  background-color: v.$background;
+  color: v.$text-offwhite;
+  box-shadow: 2px 2px v.$primary-yellow;
+  border-radius: 10px 10px 0 0;
 }
 .top-card-container {
-    width: 100%;
+  width: 100%;
 }
 
 .header-top-row {
-    width: 100%;
-    height: 58px;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    background-color: v.$background-light;
-    border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 58px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: v.$background-light;
+  border-radius: 10px 10px 0 0;
 }
 
 .header-left-top-container {
-    // padding: 0 0 0 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 60px;
-    // padding-top: 10px;
+  // padding: 0 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+  // padding-top: 10px;
 }
 
 .item-name-container {
-    height: 48px;
-    display: flex;
-    align-items: center;
+  height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 /* --- header-right-top-container STARTS---*/
 .header-right-top-container {
-    // padding: 0 0 0 12px;
-    position: relative;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+  // padding: 0 0 0 12px;
+  position: relative;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 }
 
 .image-square {
-    width: 56px;
-    height: 56px;
-    background-color: v.$background-deep;
-    border: 3px solid v.$background;
+  width: 56px;
+  height: 56px;
+  background-color: v.$background-deep;
+  border: 3px solid v.$background;
 }
 /* --- header-right-top-container ENDS---*/
 
 /* --- header-bottom-row STARTS--- */
 .header-bottom-row {
-    width: 100%;
-    height: 62px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 200px 140px;
-    background-color: v.$background-light;
+  width: 100%;
+  height: 62px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 140px;
+  background-color: v.$background-light;
 }
 
 .header-bottom-row:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    max-width: 250px;
-    height: 1px;
-    width: 202px;
-    border-bottom: 3px solid v.$background;
-    margin: 0 auto;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  // max-width: 250px;
+  height: 1px;
+  width: 182px;
+  border-bottom: 3px solid v.$background;
+  margin: 0 auto;
 }
 /* --- header-bottom-row ENDS--- */
 
 /* --- header-left-bottom-container STARTS---*/
 .header-left-bottom-container {
-    max-width: 220px;
+  max-width: 180px;
 }
 
 .item-name {
-    font-size: 17px;
-    font-weight: 600;
-    padding-left: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 8px;
 }
 
 .item-type-level-container {
-    display: flex;
-    flex-direction: row;
-    height: 30px;
-    align-items: center;
-    padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+  padding-left: 8px;
 }
 
 .item-type-icon-container {
-    width: 25px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 25px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-type-level-text {
-    font-size: 16px;
-    color: v.$text-offwhite;
-    padding-left: 4px;
+  font-size: 16px;
+  color: v.$text-offwhite-nofocus;
+  padding-left: 8px;
+}
+
+.item-type-level-text-number {
+  font-size: 16px;
+  color: v.$text-offwhite;
+  padding-left: 8px;
 }
 
 .item-rarity-container {
-    display: flex;
-    flex-direction: row;
-    height: 30px;
-    align-items: center;
-    padding-left: 5px;
-    margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 2px;
 }
 
 .item-rarity-icon-container {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-rarity-text {
-    font-size: 16px;
-    // color: v.$legendaire;
-    padding-left: 9px;
+  font-size: 16px;
+  // color: v.$legendaire;
+  padding-left: 9px;
 }
 
 .Commun {
-    color: #989898;
+  color: #989898;
 }
 
 .Rare {
-    color: #70dd77;
+  color: #70dd77;
 }
 
 .Mythique {
-    color: #e97e19;
+  color: #e97e19;
 }
 
 .Légendaire {
-    color: #f5d44a;
+  color: #f5d44a;
 }
 
 .Épique {
-    color: #e862e9;
+  color: #e862e9;
 }
 
 .Souvenir {
-    color: #83bfd9;
+  color: #83bfd9;
 }
 
 .Relique {
-    color: #db77a2;
+  color: #db77a2;
 }
 /* --- header-left-bottom-container ENDS---*/
 
 /* --- header-right-bottom-container STARTS---*/
 .header-right-bottom-container {
-    position: relative;
-    height: 45px;
-    align-self: end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 45px;
 }
 
 .toggle-tabs-container {
-    background-color: v.$background-light;
-    border: 3px solid v.$background;
-    border-bottom: none;
-    border-radius: 10px 0 0 0;
-    height: 45px;
-    width: 140px;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    // display: grid;
-    // grid-template-columns: 36px 36px 28px;
-    padding: 0 5px 0 5px;
+  background-color: v.$background-light;
+  border: 3px solid v.$background;
+  border-bottom: none;
+  height: 45px;
+  width: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // display: grid;
+  // grid-template-columns: 36px 36px 28px;
+  padding: 0 5px 0 5px;
 }
 
 .drop-icon {
-    width: 37px;
-    height: 37px;
-    background-image: url(../../../public/toggleDropOn.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 37px;
+  height: 37px;
+  background-image: url(../../../public/toggleDropOn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .item-icon {
-    width: 37px;
-    height: 37px;
-    background-image: url(../../../public/toggleShowStatsOn.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 37px;
+  height: 37px;
+  background-image: url(../../../public/toggleShowStatsOn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .recipe-icon {
-    width: 32px;
-    height: 37px;
-    background-image: url(../../../public/toggleCraftOnFixed.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 32px;
+  height: 37px;
+  background-image: url(../../../public/toggleCraftOnFixed.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* --- header-right-bottom-container ENDS---*/
 /* ---TOP CONTAINER ENDS--- */
@@ -222,39 +225,41 @@
 /* ---MIDDLE CONTAINER STARTS--- */
 // calc(100% - 205px);
 .middle-card-container {
-    background-color: v.$background-light;
-    height: 340px;
-    padding: 15px 12px 15px 12px;
-    border-left: 3px solid v.$background;
-    border-right: 3px solid v.$background;
-    border-bottom: 3px solid v.$background;
+  background-color: v.$background-light;
+  // background-color: red;
+  // height: 340px;
+  max-height: 380px;
+  padding: 15px 12px 15px 12px;
+  border-left: 3px solid v.$background;
+  border-right: 3px solid v.$background;
+  border-bottom: 3px solid v.$background;
 }
 .visible {
-    display: block; /* or any other style to make it visible */
+  display: block; /* or any other style to make it visible */
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .item-stat-container {
-    display: flex;
-    align-items: center;
-    padding: 3px 0 3px 0;
+  display: flex;
+  align-items: center;
+  padding: 3px 0 3px 0;
 }
 
 .temp-stat-image {
-    width: 20px;
-    height: 20px;
-    // background-color: v.$background-3;
-    background-image: url(../../../public/stats/150.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  // background-color: v.$background-3;
+  background-image: url(../../../public/stats/150.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .item-stat {
-    padding-left: 8px;
-    font-size: 16px;
+  padding-left: 8px;
+  font-size: 16px;
 }
 
 /* ---MIDDLE CONTAINER ENDS--- */
@@ -262,14 +267,13 @@
 /* ---BOTTOM CONTAINER STARTS--- */
 
 .bottom-card-container {
-    max-width: 340px;
-    height: 80px;
-    background-color: v.$background-deep;
-    border-radius: 0 0 12px 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  max-width: 340px;
+  height: 80px;
+  background-color: v.$background-deep;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 // .temp-toggle-container {
@@ -277,36 +281,35 @@
 // }
 
 .bottom-toggle-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
 }
 
 .opacity-100 {
-    opacity: 1;
+  opacity: 1;
 }
 
 .opacity-30 {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .toggle-drop-img {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .cardFilterIcon {
-    opacity: 1;
-    width: 56px;
-    height: 56px;
-    background-image: url(../../../public/toggleShowStatsOn.png);
-    background-repeat: no-repeat;
+  opacity: 1;
+  width: 56px;
+  height: 56px;
+  background-image: url(../../../public/toggleShowStatsOn.png);
+  background-repeat: no-repeat;
 }
 
 .toggle-craft-img {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 /* ---BOTTOM CONTAINER ENDS--- */

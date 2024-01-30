@@ -9,7 +9,6 @@ import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
 import Image from "next/image";
 import "./i18n";
-import { filter } from "lodash";
 
 const Home = () => {
   const { t } = useTranslation();

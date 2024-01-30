@@ -29,7 +29,7 @@
   width: 80%;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 3px 0 3px 0;
+  margin: 10px 0 3px 0;
   flex-wrap: wrap;
 }
 
@@ -58,6 +58,7 @@
 .stat-title {
   margin: 0 auto;
   cursor: pointer;
+  color: v.$text-offwhite;
 }
 
 .selected-title {

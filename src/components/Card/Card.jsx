@@ -1,5 +1,4 @@
-"use client";
-import cardCSS from "./card.module.scss";
+import cardCSS from "./Card.module.scss";
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
@@ -34,10 +33,9 @@ const Card = ({ item, lang }) => {
   const handleClick = (e) => {
     const propertyValue = e.currentTarget.dataset.id;
     console.log(propertyValue);
-  }
+  };
 
   // console.log(item);
-
 
   return (
     <div className={cardCSS["card-container"]}>
@@ -72,12 +70,12 @@ const Card = ({ item, lang }) => {
                     height={32}
                   ></Image>
                 </div>
-                <a
-                  href="/fr/encyclopedie/objet/120/8222"
-                  className={cardCSS["item-type-level-text"]}
-                >
-                  {item.baseParams.itemTypeId} - {item.level}
-                </a>
+                <span className={cardCSS["item-type-level-text"]}>
+                  {t("Level")} -
+                </span>
+                <span className={cardCSS["item-type-level-text-number"]}>
+                  {item.level}
+                </span>
               </div>
               <div className={cardCSS["item-rarity-container"]}>
                 <div className={cardCSS["item-rarity-icon-container"]}>
@@ -163,10 +161,12 @@ const Card = ({ item, lang }) => {
           }`}
         >
           {item.equipEffects.map((effect, index) => (
-            <div key={index} 
-              className={cardCSS["item-stat-container"]} 
-              data-id={effect.effect.stats.display.property} 
-              onClick={(e) => handleClick(e)}>
+            <div
+              key={index}
+              className={cardCSS["item-stat-container"]}
+              data-id={effect.effect.stats.display.property}
+              onClick={(e) => handleClick(e)}
+            >
               <span className={cardCSS["item-stat"]}>
                 {effect.effect.stats.display[lang]}
               </span>
