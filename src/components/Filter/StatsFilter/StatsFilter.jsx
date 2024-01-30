@@ -14,7 +14,6 @@ const TypeFilter = ({
   filterStateStats,
   updateStatsFlag,
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState(1);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
   const [lang, setLang] = useState();
@@ -33,6 +32,7 @@ const TypeFilter = ({
     31, 41, 191, 160, 1055, 1052, 1053, 1068, 184, 180, 150, 149, 26, 173, 175,
     988, 20, 39, 85, 83, 82, 84, 171, 177, 2001,
   ];
+
 
   const handleConstructedRefObject = (statID) => {
     if (selectedStatsConstructedRefs.current.length > 0) {
@@ -72,9 +72,47 @@ const TypeFilter = ({
     }
   };
 
-  const handleClick = (statID) => {
-    handleSelectedStatsRefs(statID);
-    handleConstructedRefObject(statID);
+  // using states because !.includes of refs array doesn't work
+  // this is hack, probably needs refactoring later
+  const [isDistanceChecked, setIsDistanceChecked] = useState(false);
+  const [isMeleeChecked, setIsMeleeChecked] = useState(false);
+  const toggle_stat = (statID) => {
+    const handleAndSet = (statID) => {
+      handleSelectedStatsRefs(statID);
+      handleConstructedRefObject(statID);
+    };
+    
+    if (statID === 1053) {
+      if (isDistanceChecked) {
+        handleAndSet(statID);
+        setIsDistanceChecked(false);
+      } else {
+        if (selectedStatsRefs.current.includes(1068)) {
+          handleAndSet(statID);
+        } else {
+          [1068, statID].forEach(handleAndSet);
+        }
+        setIsDistanceChecked(true);
+      }
+    } else if (statID === 1052) {
+      if (isMeleeChecked) {
+        handleAndSet(statID);
+        setIsMeleeChecked(false);
+      } else {
+        if (selectedStatsRefs.current.includes(1068)) {
+          handleAndSet(statID);
+        } else {
+          [1068, statID].forEach(handleAndSet);
+        }
+        setIsMeleeChecked(true);
+      }
+    } else {
+      handleAndSet(statID);
+    }
+  };
+
+  const handleClick = (statID, e) => {
+    toggle_stat(statID);
   };
 
   let timer;
@@ -121,7 +159,7 @@ const TypeFilter = ({
               ref={(element) => setIconsRefs(id, element)}
               className={cssModule["icon-container"]}
               data-id={id}
-              onClick={() => handleClick(id)}
+              onClick={(e) => handleClick(id, e)}
               title={lang === "fr" ? stats[id].fr : stats[id].en}
             >
               <Image
