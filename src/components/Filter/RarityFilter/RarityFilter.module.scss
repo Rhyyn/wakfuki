@@ -38,6 +38,10 @@
     align-items: center;
     margin: 2px;
     @include v.no-select();
+    &:hover {
+        background-color: v.$background-light;
+        border-radius: 8px;
+    }
 }
 
 .selected {
