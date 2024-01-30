@@ -86,7 +86,7 @@ const Filter = ({
     return () => {
       document.removeEventListener("mousedown", handleDocumentClick);
     };
-  }, []);
+  }, [showSortDropdown]);
 
 
   return (
