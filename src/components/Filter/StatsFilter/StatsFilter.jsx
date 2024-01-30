@@ -128,6 +128,9 @@ const TypeFilter = ({
       iconsRefs.current[element].classList.toggle(cssModule["selected"])
     );
     selectedStatsRefs.current = [];
+    selectedStatsConstructedRefs.current = [];
+    setIsDistanceChecked(false);
+    setIsMeleeChecked(false);
   }, [resetFiltersFlag]);
 
   useEffect(() => {
