@@ -1,10 +1,19 @@
 $primary-yellow: #f9be25;
-$text-offwhite: #ebdcb8;
-$text-offwhite-nofocus: #c8bb9d;
-$background-light: #615a49;
-$background: #514a39;
-$background-deep: #292621;
-$background-deep-new: #333333;
+$primary-accent: #FFD700;
+
+$text: #ffffff;
+$text-offwhite: #999999;
+$text-offwhite-nofocus: #C2C2C2;
+
+$background: #333333;
+$background-light: #777777;
+$background-mid: #666666;
+$background-off: #484848;
+$background-deep: #1E1E1E;
+
+
+$error: #FF6347;
+$link: #1E90FF;
 
 @mixin no-select() {
     -webkit-user-select: none;
