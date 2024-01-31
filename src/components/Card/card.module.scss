@@ -5,7 +5,7 @@
 .card {
   width: 320px;
   max-height: 500px;
-  background-color: v.$background;
+  background-color: v.$background-deep-new;
   color: v.$text-offwhite;
   box-shadow: 2px 2px v.$primary-yellow;
   border-radius: 10px 10px 0 0;
@@ -19,7 +19,7 @@
   height: 58px;
   display: grid;
   grid-template-columns: 70% 30%;
-  background-color: v.$background-light;
+  background-color: v.$background-deep-new;
   border-radius: 10px 10px 0 0;
 }
 
