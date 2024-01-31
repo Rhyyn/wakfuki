@@ -22,7 +22,7 @@ const Card = ({ item, lang }) => {
   };
 
 
-  const logNonSortedStats = () => {
+  const logNonSortedStats = (priority_order) => {
     item.equipEffects.forEach((element) => {
       if (!priority_order.includes(element.effect.stats.property)) {
         console.log(
@@ -96,7 +96,7 @@ const Card = ({ item, lang }) => {
       98, // - Water Resistance
       96, // - Earth Resistance
     ];
-    logNonSortedStats();
+    logNonSortedStats(priority_order);
     item.equipEffects.sort((a, b) => {
       const firstIndex = priority_order.indexOf(a.effect.stats.property);
       const secondIndex = priority_order.indexOf(b.effect.stats.property);
