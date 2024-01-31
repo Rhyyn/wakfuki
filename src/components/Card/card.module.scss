@@ -3,24 +3,25 @@
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
-  width: 320px;
-  max-height: 500px;
-  background-color: v.$background-deep-new;
+  width: 300px;
   color: v.$text-offwhite;
-  box-shadow: 2px 2px v.$primary-yellow;
-  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
 }
+
 .top-card-container {
   width: 100%;
 }
 
 .header-top-row {
   width: 100%;
-  height: 58px;
+  height: 69px;
   display: grid;
   grid-template-columns: 70% 30%;
-  background-color: v.$background-deep-new;
-  border-radius: 10px 10px 0 0;
+  background-color: v.$background;
+  border-radius: 4px 4px 0 0;
 }
 
 .header-left-top-container {
@@ -40,16 +41,9 @@
 
 /* --- header-right-top-container STARTS---*/
 .header-right-top-container {
-  // padding: 0 0 0 12px;
-  position: relative;
-  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 }
 
 .image-square {
@@ -63,30 +57,28 @@
 /* --- header-bottom-row STARTS--- */
 .header-bottom-row {
   width: 100%;
-  height: 62px;
-  position: relative;
-  display: grid;
-  grid-template-columns: 200px 140px;
-  background-color: v.$background-light;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  background-color: v.$background-off;
 }
 
-.header-bottom-row:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  // max-width: 250px;
-  height: 1px;
-  width: 182px;
-  border-bottom: 3px solid v.$background;
-  margin: 0 auto;
-}
+// This was used to make custom border
+// .header-bottom-row:after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   // max-width: 250px;
+//   height: 1px;
+//   width: 182px;
+//   border-bottom: 3px solid v.$background;
+//   margin: 0 auto;
+// }
+
 /* --- header-bottom-row ENDS--- */
 
 /* --- header-left-bottom-container STARTS---*/
-.header-left-bottom-container {
-  max-width: 180px;
-}
 
 .item-name {
   font-size: 17px;
@@ -113,13 +105,13 @@
 .item-type-level-text {
   font-size: 16px;
   color: v.$text-offwhite-nofocus;
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 .item-type-level-text-number {
   font-size: 16px;
-  color: v.$text-offwhite;
-  padding-left: 8px;
+  color: v.$text;
+  padding-left: 4px;
 }
 
 .item-rarity-container {
@@ -127,7 +119,7 @@
   flex-direction: row;
   height: 30px;
   align-items: center;
-  padding-left: 5px;
+  padding-right: 8px;
   margin-bottom: 2px;
 }
 
@@ -137,12 +129,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 4px;
 }
 
 .item-rarity-text {
   font-size: 16px;
   // color: v.$legendaire;
-  padding-left: 9px;
+  padding-left: 4px;
 }
 
 .Commun {
@@ -174,68 +167,21 @@
 }
 /* --- header-left-bottom-container ENDS---*/
 
-/* --- header-right-bottom-container STARTS---*/
-.header-right-bottom-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 45px;
-}
-
-.toggle-tabs-container {
-  background-color: v.$background-light;
-  border: 3px solid v.$background;
-  border-bottom: none;
-  height: 45px;
-  width: 140px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  // display: grid;
-  // grid-template-columns: 36px 36px 28px;
-  padding: 0 5px 0 5px;
-}
-
-.drop-icon {
-  width: 37px;
-  height: 37px;
-  background-image: url(../../../public/toggleDropOn.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item-icon {
-  width: 37px;
-  height: 37px;
-  background-image: url(../../../public/toggleShowStatsOn.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.recipe-icon {
-  width: 32px;
-  height: 37px;
-  background-image: url(../../../public/toggleCraftOnFixed.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* --- header-right-bottom-container ENDS---*/
 /* ---TOP CONTAINER ENDS--- */
 
 /* ---MIDDLE CONTAINER STARTS--- */
-// calc(100% - 205px);
 .middle-card-container {
-  background-color: v.$background-light;
-  // background-color: red;
-  // height: 340px;
-  max-height: 380px;
+  background-color: v.$background;
+  height: 100%;
   padding: 15px 12px 15px 12px;
   border-left: 3px solid v.$background;
   border-right: 3px solid v.$background;
   border-bottom: 3px solid v.$background;
 }
+
 .visible {
-  display: block; /* or any other style to make it visible */
+  // box-sizing: content-box;
+  display: inline-block;
 }
 
 .hidden {
@@ -260,56 +206,42 @@
 .item-stat {
   padding-left: 8px;
   font-size: 16px;
+  color: #c2c2c2;
 }
 
 /* ---MIDDLE CONTAINER ENDS--- */
 
-/* ---BOTTOM CONTAINER STARTS--- */
-
-.bottom-card-container {
-  max-width: 340px;
-  height: 80px;
-  background-color: v.$background-deep;
+.footer-container {
+  min-height: 45px;
+  min-width: 60px;
+  background-color: v.$background-off;
+  border-top: 4px solid v.$background-mid;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
-// .temp-toggle-container {
-//     background-color: v.$background-on;
-// }
-
-.bottom-toggle-icon-container {
+.footer-icon-container {
+  opacity: 1; // TEMP
+  flex-grow: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  align-items: center;
+  background-color: v.$background-off;
 }
 
-.opacity-100 {
-  opacity: 1;
+.footer-icon-container-selected {
+  background-color: v.$background-mid;
+}
+.footer-icon-container:hover {
+  background-color: v.$background-deep;
 }
 
-.opacity-30 {
-  opacity: 0.3;
+.add-icon {
+  background-color: v.$background-off !important;
 }
 
-.toggle-drop-img {
-  opacity: 0.3;
-}
-
-.cardFilterIcon {
-  opacity: 1;
-  width: 56px;
-  height: 56px;
-  background-image: url(../../../public/toggleShowStatsOn.png);
-  background-repeat: no-repeat;
-}
-
-.toggle-craft-img {
-  opacity: 0.3;
-}
+// .clipboard-icon-container:hover {
+//   background-color: v.$background-deep;
+// }
 
 /* ---BOTTOM CONTAINER ENDS--- */

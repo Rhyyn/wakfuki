@@ -1,14 +1,18 @@
-import cardCSS from "./Card.module.scss";
+import cssModule from "./Card.module.scss";
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
-  const [triToggle, setTriToggle] = useState(2);
-  const handleTriToggleClick = (e) => {
-    setTriToggle(e);
-    console.log(triToggle);
+  const [triToggle, setTriToggle] = useState(1);
+
+  const handleTriToggleClick = (value) => {
+    setTriToggle(value);
+  };
+
+  const handleCopyToClipBoard = () => {
+    navigator.clipboard.writeText(item.title[lang]);
   };
 
   const rarities = {
@@ -20,7 +24,6 @@ const Card = ({ item, lang }) => {
     6: "Souvenir",
     7: "Relique",
   };
-
 
   const logNonSortedStats = (priority_order) => {
     item.equipEffects.forEach((element) => {
@@ -116,152 +119,214 @@ const Card = ({ item, lang }) => {
     console.log(propertyValue);
   };
 
-
   return (
-    <div className={cardCSS["card-container"]}>
-      <div className={cardCSS["card"]}>
-        <div className={cardCSS["top-card-container"]}>
-          <div className={cardCSS["header-top-row"]}>
-            <div className={cardCSS["header-left-top-container"]}>
-              <div
-                className={`${cardCSS["item-name-container"]} ${cardCSS["test"]}`}
+    <div className={cssModule["card"]}>
+      <div className={cssModule["top-card-container"]}>
+        <div className={cssModule["header-top-row"]}>
+          <div className={cssModule["header-left-top-container"]}>
+            <div
+              className={`${cssModule["item-name-container"]} ${cssModule["test"]}`}
+            >
+              <span
+                className={cssModule["item-name"]}
               >
-                <a
-                  href="/fr/encyclopedie/objet/120/8222"
-                  className={cardCSS["item-name"]}
-                >
-                  {item.title[lang]}
-                </a>
-              </div>
-            </div>
-            <div className={cardCSS["header-right-top-container"]}>
-              <div className={cardCSS["image-square"]}></div>
+                {item.title[lang]}
+              </span>
             </div>
           </div>
-          <div className={cardCSS["header-bottom-row"]}>
-            <div className={cardCSS["header-left-bottom-container"]}>
-              <div className={cardCSS["item-type-level-container"]}>
-                <div className={cardCSS["item-type-icon-container"]}>
-                  <Image
-                    src="/itemTypes/120-amulette.png"
-                    className={cardCSS["item-type-icon"]}
-                    alt="amulette"
-                    width={32}
-                    height={32}
-                  ></Image>
-                </div>
-                <span className={cardCSS["item-type-level-text"]}>
-                  {t("Level")} -
-                </span>
-                <span className={cardCSS["item-type-level-text-number"]}>
-                  {item.level}
-                </span>
-              </div>
-              <div className={cardCSS["item-rarity-container"]}>
-                <div className={cardCSS["item-rarity-icon-container"]}>
-                  <Image
-                    src={rarityIcon}
-                    className={cardCSS["rarity-icon"]}
-                    alt="rarity icon"
-                    width={32}
-                    height={32}
-                    style={{ height: "auto" }}
-                  ></Image>
-                </div>
-                <span
-                  className={`${cardCSS["item-rarity-text"]} ${cardCSS[rarity]}`}
-                >
-                  {rarity}
-                </span>
-              </div>
-            </div>
-            <div className={cardCSS["header-right-bottom-container"]}>
-              <div className={cardCSS["toggle-tabs-container"]}>
-                <div
-                  onClick={() => handleTriToggleClick(0)}
-                  className={`${cardCSS["toggle-icon"]} ${
-                    cardCSS["drop-icon"]
-                  } ${
-                    triToggle === 0
-                      ? cardCSS["opacity-100"]
-                      : cardCSS["opacity-30"]
-                  }`}
-                ></div>
-                <div
-                  onClick={() => handleTriToggleClick(1)}
-                  className={`${cardCSS["toggle-icon"]} ${
-                    cardCSS["recipe-icon"]
-                  } ${
-                    triToggle === 1
-                      ? cardCSS["opacity-100"]
-                      : cardCSS["opacity-30"]
-                  }`}
-                ></div>
-                <div
-                  onClick={() => handleTriToggleClick(2)}
-                  className={`${cardCSS["toggle-icon"]} ${
-                    cardCSS["item-icon"]
-                  }  ${
-                    triToggle === 2
-                      ? cardCSS["opacity-100"]
-                      : cardCSS["opacity-30"]
-                  }`}
-                ></div>
-              </div>
-            </div>
+          <div className={cssModule["header-right-top-container"]}>
+            <div className={cssModule["image-square"]}></div>
           </div>
         </div>
+        <div className={cssModule["header-bottom-row"]}>
+          <div className={cssModule["item-type-level-container"]}>
+            <div className={cssModule["item-type-icon-container"]}>
+              <Image
+                src="/itemTypes/120-amulette.png"
+                className={cssModule["item-type-icon"]}
+                alt="amulette"
+                width={24}
+                height={24}
+              ></Image>
+            </div>
+            <span className={cssModule["item-type-level-text"]}>
+              {t("Level")} -
+            </span>
+            <span className={cssModule["item-type-level-text-number"]}>
+              {item.level}
+            </span>
+          </div>
+          <div className={cssModule["item-rarity-container"]}>
+            <div className={cssModule["item-rarity-icon-container"]}>
+              <Image
+                src={rarityIcon}
+                className={cssModule["rarity-icon"]}
+                alt="rarity icon"
+                width={24}
+                height={24}
+                style={{ width: "auto" }}
+              ></Image>
+            </div>
+            <span style={{ color: "#C2C2C2"}}> - </span>
+            <span
+              className={`${cssModule["item-rarity-text"]} ${cssModule[rarity]}`}
+            >
+              {rarity}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div // DROPRATES
+        className={`${cssModule["middle-card-container"]} ${
+          triToggle === 2 ? cssModule["visible"] : cssModule["hidden"]
+        }`}
+      >
+        {item.droprates ? (
+          Object.entries(item.droprates).map(([key, value], index) => (
+            <div key={index} className={cssModule["item-drop-container"]}>
+              <span
+                className={cssModule["item-drop"]}
+              >{`${key}: ${value}`}</span>
+            </div>
+          ))
+        ) : (
+          <span>Pas obtenable sur des monstres!</span>
+        )}
+      </div>
+      <div // RECIPE
+        className={`${cssModule["middle-card-container"]} ${
+          triToggle === 0 ? cssModule["visible"] : cssModule["hidden"]
+        }`}
+      >
+        <span>Pas de recette!</span>
+      </div>
+      <div // STATS
+        className={`${cssModule["middle-card-container"]} ${
+          triToggle === 1 ? cssModule["visible"] : cssModule["hidden"]
+        }`}
+      >
+        {item.equipEffects.map((effect, index) => (
+          <div
+            key={index}
+            className={cssModule["item-stat-container"]}
+            data-id={effect.effect.stats.display.property}
+            onClick={(e) => handleClick(e)}
+          >
+            {/* <span className={cssModule["item-stat"]}>
+                {effect.effect.stats.display[lang]}
+              </span> */}
+            <span
+              className={cssModule["item-stat"]}
+              style={{
+                color: effect.effect.stats.display[lang].startsWith("-")
+                  ? "#FF6347"
+                  : "#C2C2C2",
+              }}
+            >
+              {effect.effect.stats.display[lang]}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className={cssModule["footer-container"]}>
         <div
-          className={`${cardCSS["middle-card-container"]} ${
-            triToggle === 0 ? cardCSS["visible"] : cardCSS["hidden"]
+          className={`${cssModule["footer-icon-container"]} ${
+            triToggle === 0 ? cssModule["footer-icon-container-selected"] : null
           }`}
+          onClick={() => handleTriToggleClick(0)}
         >
-          {item.droprates ? (
-            Object.entries(item.droprates).map(([key, value], index) => (
-              <div key={index} className={cardCSS["item-drop-container"]}>
-                <span
-                  className={cardCSS["item-drop"]}
-                >{`${key}: ${value}`}</span>
-              </div>
-            ))
+          {triToggle === 0 ? (
+            <Image
+              alt="Recipe"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/recipe-book-yellow.png"
+            />
           ) : (
-            <span>Pas obtenable sur des monstres!</span>
+            <Image
+              alt="Recipe"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/recipe-book-white.png"
+            />
           )}
         </div>
         <div
-          className={`${cardCSS["middle-card-container"]} ${
-            triToggle === 1 ? cardCSS["visible"] : cardCSS["hidden"]
+          className={`${cssModule["footer-icon-container"]} ${
+            triToggle === 1 ? cssModule["footer-icon-container-selected"] : null
           }`}
+          onClick={() => handleTriToggleClick(1)}
         >
-          <span>Pas de recette!</span>
+          {triToggle === 1 ? (
+            <Image
+              alt="Stats"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/stats-yellow.png"
+            />
+          ) : (
+            <Image
+              alt="Stats"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/stats-white.png"
+            />
+          )}
         </div>
         <div
-          className={`${cardCSS["middle-card-container"]} ${
-            triToggle === 2 ? cardCSS["visible"] : cardCSS["hidden"]
-          }`}
+          className={`${cssModule["footer-icon-container"]} ${cssModule["clipboard-copy"]}`}
+          onClick={() => handleCopyToClipBoard()}
+          title={t("copyToClipBoard")}
         >
-          {item.equipEffects.map((effect, index) => (
-            <div
-              key={index}
-              className={cardCSS["item-stat-container"]}
-              data-id={effect.effect.stats.display.property}
-              onClick={(e) => handleClick(e)}
-            >
-              {/* <span className={cardCSS["item-stat"]}>
-                {effect.effect.stats.display[lang]}
-              </span> */}
-              <span
-                className={cardCSS["item-stat"]}
-                style={{
-                  color: effect.effect.stats.display[lang].startsWith("-")
-                    ? "#FF6347"
-                    : "inherit",
-                }}
-              >
-                {effect.effect.stats.display[lang]}
-              </span>
-            </div>
-          ))}
+          {triToggle === 2 ? (
+            <Image
+              alt="Copy"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/paste-yellow.png"
+            />
+          ) : (
+            <Image
+              alt="Copy"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/paste-white.png"
+            />
+          )}
+        </div>
+        <div
+          className={`${cssModule["footer-icon-container"]} ${
+            triToggle === 3 ? cssModule["footer-icon-container-selected"] : null
+          }`}
+          onClick={() => handleTriToggleClick(3)}
+        >
+          {triToggle === 3 ? (
+            <Image
+              alt="Droprates"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/dice-yellow.png"
+            />
+          ) : (
+            <Image
+              alt="Droprates"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/dice-white.png"
+            />
+          )}
+        </div>
+        <div
+          className={`${cssModule["footer-icon-container"]} ${cssModule["add-icon"]}`}
+          title="Disabled, coming soon!"
+          style={{ opacity: 0.2 }}
+        >
+          <Image
+            alt="Add"
+            width={30}
+            height={30}
+            src="/UI-icons/Card/Footer/plus-white.png"
+          />
         </div>
       </div>
     </div>
