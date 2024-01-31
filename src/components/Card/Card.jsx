@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
   const [triToggle, setTriToggle] = useState(2);
-
   const handleTriToggleClick = (e) => {
     setTriToggle(e);
     console.log(triToggle);
@@ -22,20 +21,101 @@ const Card = ({ item, lang }) => {
     7: "Relique",
   };
 
-  // console.log(item.droprates);
+
+  const logNonSortedStats = () => {
+    item.equipEffects.forEach((element) => {
+      if (!priority_order.includes(element.effect.stats.property)) {
+        console.log(
+          element.effect.stats.property,
+          element.effect.stats.display.en,
+          "Is not sorted"
+        );
+      }
+    });
+  };
+
+  const sortEffectsWithPriority = (item) => {
+    const priority_order = [
+      20, // HP
+      1068, // Random Mastery
+      120, // Elemental Mastery
+      122, // Feu Mastery
+      123, // Earth Mastery
+      124, // Water Mastery
+      125, // Air Mastery
+      1053, // Distance Mastery
+      1052, // Melee Mastery
+      1055, // Berserk Mastery
+      180, // Rear Mastery
+      26, // Healing Mastery
+      149, // Critical Mastery
+      150, // Critical Chance
+      160, // Range
+      31, // AP
+      41, // MP
+      191, // WP
+      173, // Lock
+      175, // Dodge
+      171, // Initiative
+      177, // Force of Will
+      184, // Control
+      875, // Block
+      39, // Armor given
+      988, // Critical Resistance
+      80, // Elemental Resistance
+      71, // Rear Resistance
+      1069, // Random Resistance
+      82, // Fire Resistance
+      83, // Water Resistance
+      84, // Earth Resistance
+      85, // Air Resistance
+      979, // Lvl to elemental spells
+      2001, // Harvesting Quantity
+      21, // - HP
+      130, // - Elemental Mastery
+      132, // - Feu Mastery
+      1060, // - Distance Mastery
+      1059, // - Melee Mastery
+      1061, // - Berserk Mastery
+      181, // - Rear Mastery
+      1056, // - Critical Mastery
+      168, // - Critical Chance
+      56, // - AP
+      161, // - Range
+      57, // - MP
+      192, // - WP
+      174, // - Lock
+      176, // - Dodge
+      172, // - Initiative
+      876, // - Block
+      1063, // - Rear Resistance
+      1062, // - Critical Resistance
+      90, // - Elemental Resistance ?
+      100, // - Elemental Resistance ?
+      97, // - Fire Resistance
+      98, // - Water Resistance
+      96, // - Earth Resistance
+    ];
+    logNonSortedStats();
+    item.equipEffects.sort((a, b) => {
+      const firstIndex = priority_order.indexOf(a.effect.stats.property);
+      const secondIndex = priority_order.indexOf(b.effect.stats.property);
+
+      return (
+        (firstIndex === -1 ? 25 : firstIndex) -
+        (secondIndex === -1 ? 25 : secondIndex)
+      );
+    });
+  };
+  sortEffectsWithPriority(item);
+
   const rarity = rarities[item.baseParams.rarity];
   const rarityIcon = `/rarities/${item.baseParams.rarity}.png`;
-  // console.log(rarity);
-
-  // item.equipEffects.map((effect, index) =>
-  //     console.log(effect.effect.stats.display.fr)
-  // );
   const handleClick = (e) => {
     const propertyValue = e.currentTarget.dataset.id;
     console.log(propertyValue);
   };
 
-  // console.log(item);
 
   return (
     <div className={cardCSS["card-container"]}>
@@ -167,7 +247,17 @@ const Card = ({ item, lang }) => {
               data-id={effect.effect.stats.display.property}
               onClick={(e) => handleClick(e)}
             >
-              <span className={cardCSS["item-stat"]}>
+              {/* <span className={cardCSS["item-stat"]}>
+                {effect.effect.stats.display[lang]}
+              </span> */}
+              <span
+                className={cardCSS["item-stat"]}
+                style={{
+                  color: effect.effect.stats.display[lang].startsWith("-")
+                    ? "#FF6347"
+                    : "inherit",
+                }}
+              >
                 {effect.effect.stats.display[lang]}
               </span>
             </div>
