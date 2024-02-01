@@ -1,15 +1,15 @@
 @use "../../../styles/variables.scss" as v;
 
 .cards-container {
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 20px 20px;
-    // align-items: stretch;
-    // justify-content: stretch;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 20px 20px;
+  // align-items: stretch;
+  // justify-content: stretch;
 }
 
 .test-button {
-    padding: 2rem;
+  padding: 2rem;
 }

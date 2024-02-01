@@ -3,12 +3,18 @@
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
-  width: 300px;
+  width: 310px;
   color: v.$text-offwhite;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
+}
+
+@media screen and (min-width: 1400px) {
+  .card {
+    width: 330px;
+  }
 }
 
 .top-card-container {
@@ -84,6 +90,7 @@
   font-size: 17px;
   font-weight: 600;
   padding-left: 8px;
+  color: v.$text;
 }
 
 .item-type-level-container {
@@ -203,11 +210,21 @@
   background-repeat: no-repeat;
 }
 
-.item-stat {
+.stat-string-desc {
   padding-left: 8px;
-  font-size: 16px;
-  color: #c2c2c2;
+  font-size: 17px;
+  color: v.$text-offwhite-nofocus;
+  font-weight: 400;
 }
+
+.stat-string-value {
+  width: 38px;
+  font-size: 17px;
+  color: v.$text;
+  text-align: center;
+  font-weight: 500;
+}
+
 
 /* ---MIDDLE CONTAINER ENDS--- */
 

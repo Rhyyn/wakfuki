@@ -3,6 +3,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
+// TODO: Add stats img to localstorage
+// Fix missing stats img
+// Figure out CDN for item img
+// Figure out global container div for middle container
+// so it doesnt change height if no recipe
+
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
   const [triToggle, setTriToggle] = useState(1);
@@ -127,11 +133,7 @@ const Card = ({ item, lang }) => {
             <div
               className={`${cssModule["item-name-container"]} ${cssModule["test"]}`}
             >
-              <span
-                className={cssModule["item-name"]}
-              >
-                {item.title[lang]}
-              </span>
+              <span className={cssModule["item-name"]}>{item.title[lang]}</span>
             </div>
           </div>
           <div className={cssModule["header-right-top-container"]}>
@@ -164,10 +166,10 @@ const Card = ({ item, lang }) => {
                 alt="rarity icon"
                 width={24}
                 height={24}
-                style={{ width: "auto" }}
+                style={{ height: "auto" }}
               ></Image>
             </div>
-            <span style={{ color: "#C2C2C2"}}> - </span>
+            <span style={{ color: "#C2C2C2" }}> - </span>
             <span
               className={`${cssModule["item-rarity-text"]} ${cssModule[rarity]}`}
             >
@@ -212,18 +214,31 @@ const Card = ({ item, lang }) => {
             data-id={effect.effect.stats.display.property}
             onClick={(e) => handleClick(e)}
           >
-            {/* <span className={cssModule["item-stat"]}>
-                {effect.effect.stats.display[lang]}
-              </span> */}
+            <Image 
+              alt={effect.effect.stats.stat_string_desc[lang]} 
+              width={20} 
+              height={18}
+              style={{ height: "auto" }}
+              src={`/stats/${effect.effect.stats.property}.png`} />
             <span
-              className={cssModule["item-stat"]}
+              className={cssModule["stat-string-value"]}
               style={{
-                color: effect.effect.stats.display[lang].startsWith("-")
+                color: effect.effect.stats.stat_string_value.startsWith("-")
+                  ? "#FF6347"
+                  : "#ffffff",
+              }}
+            >
+              {effect.effect.stats.stat_string_value}
+            </span>
+            <span
+              className={cssModule["stat-string-desc"]}
+              style={{
+                color: effect.effect.stats.stat_string_value.startsWith("-")
                   ? "#FF6347"
                   : "#C2C2C2",
               }}
             >
-              {effect.effect.stats.display[lang]}
+              {effect.effect.stats.stat_string_desc[lang]}
             </span>
           </div>
         ))}
