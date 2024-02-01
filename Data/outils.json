@@ -38,8 +38,13 @@
               "fr": "10% Quantité Récolte en Paysan",
               "en": "10% Harvesting Quantity in Farmer"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Paysan",
+              "en": "Harvesting Quantity in Farmer"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -85,8 +90,13 @@
               "fr": "10% Quantité Récolte en Mineur",
               "en": "10% Harvesting Quantity in Miner"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Mineur",
+              "en": "Harvesting Quantity in Miner"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -132,8 +142,13 @@
               "fr": "10% Quantité Récolte en Forestier",
               "en": "10% Harvesting Quantity in Lumberjack"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Forestier",
+              "en": "Harvesting Quantity in Lumberjack"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -179,8 +194,13 @@
               "fr": "10% Quantité Récolte en Trappeur",
               "en": "10% Harvesting Quantity in Trapper"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Trappeur",
+              "en": "Harvesting Quantity in Trapper"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -226,8 +246,13 @@
               "fr": "10% Quantité Récolte en Herboriste",
               "en": "10% Harvesting Quantity in Herbalist"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Herboriste",
+              "en": "Harvesting Quantity in Herbalist"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -273,8 +298,13 @@
               "fr": "10% Quantité Récolte en Pêcheur",
               "en": "10% Harvesting Quantity in Fisherman"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Pêcheur",
+              "en": "Harvesting Quantity in Fisherman"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -320,8 +350,13 @@
               "fr": "20% Quantité Récolte en Pêcheur",
               "en": "20% Harvesting Quantity in Fisherman"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Pêcheur",
+              "en": "Harvesting Quantity in Fisherman"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -367,8 +402,13 @@
               "fr": "20% Quantité Récolte en Trappeur",
               "en": "20% Harvesting Quantity in Trapper"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Trappeur",
+              "en": "Harvesting Quantity in Trapper"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -414,8 +454,13 @@
               "fr": "20% Quantité Récolte en Paysan",
               "en": "20% Harvesting Quantity in Farmer"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Paysan",
+              "en": "Harvesting Quantity in Farmer"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -461,8 +506,13 @@
               "fr": "20% Quantité Récolte en Forestier",
               "en": "20% Harvesting Quantity in Lumberjack"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Forestier",
+              "en": "Harvesting Quantity in Lumberjack"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -508,8 +558,13 @@
               "fr": "20% Quantité Récolte en Mineur",
               "en": "20% Harvesting Quantity in Miner"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Mineur",
+              "en": "Harvesting Quantity in Miner"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -555,8 +610,13 @@
               "fr": "20% Quantité Récolte en Herboriste",
               "en": "20% Harvesting Quantity in Herbalist"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Herboriste",
+              "en": "Harvesting Quantity in Herbalist"
+            },
+            "stat_string_value": "20%",
             "property": 2001,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -602,8 +662,13 @@
               "fr": "30% Quantité Récolte en Herboriste",
               "en": "30% Harvesting Quantity in Herbalist"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Herboriste",
+              "en": "Harvesting Quantity in Herbalist"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -649,8 +714,13 @@
               "fr": "30% Quantité Récolte en Trappeur",
               "en": "30% Harvesting Quantity in Trapper"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Trappeur",
+              "en": "Harvesting Quantity in Trapper"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -696,8 +766,13 @@
               "fr": "30% Quantité Récolte en Paysan",
               "en": "30% Harvesting Quantity in Farmer"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Paysan",
+              "en": "Harvesting Quantity in Farmer"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -743,8 +818,13 @@
               "fr": "30% Quantité Récolte en Pêcheur",
               "en": "30% Harvesting Quantity in Fisherman"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Pêcheur",
+              "en": "Harvesting Quantity in Fisherman"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -790,8 +870,13 @@
               "fr": "30% Quantité Récolte en Forestier",
               "en": "30% Harvesting Quantity in Lumberjack"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Forestier",
+              "en": "Harvesting Quantity in Lumberjack"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -837,8 +922,13 @@
               "fr": "30% Quantité Récolte en Mineur",
               "en": "30% Harvesting Quantity in Miner"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Mineur",
+              "en": "Harvesting Quantity in Miner"
+            },
+            "stat_string_value": "30%",
             "property": 2001,
-            "values": 30
+            "value": 30
           }
         }
       }

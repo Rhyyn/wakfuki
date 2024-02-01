@@ -38,8 +38,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       },
@@ -53,8 +58,13 @@
               "fr": "10 Initiative",
               "en": "10 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "10",
             "property": 171,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -110,8 +120,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       },
@@ -125,8 +140,13 @@
               "fr": "10 Tacle",
               "en": "10 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "10",
             "property": 173,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -172,8 +192,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -187,8 +212,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -234,8 +264,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       },
@@ -249,8 +284,13 @@
               "fr": "10 Esquive",
               "en": "10 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "10",
             "property": 175,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -296,8 +336,13 @@
               "fr": "180 PV",
               "en": "180 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "180",
             "property": 20,
-            "values": 180
+            "value": 180
           }
         }
       }
@@ -343,8 +388,13 @@
               "fr": "110 PV",
               "en": "110 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "110",
             "property": 20,
-            "values": 110
+            "value": 110
           }
         }
       }
@@ -400,8 +450,13 @@
               "fr": "10 Esquive",
               "en": "10 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "10",
             "property": 175,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -415,8 +470,13 @@
               "fr": "10 Tacle",
               "en": "10 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "10",
             "property": 173,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -462,8 +522,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -477,8 +542,13 @@
               "fr": "20 Maîtrise Dos",
               "en": "20 Rear Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Dos",
+              "en": "Rear Mastery"
+            },
+            "stat_string_value": "20",
             "property": 180,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -542,8 +612,13 @@
               "fr": "0% Parade",
               "en": "0% Block"
             },
+            "stat_string_desc": {
+              "fr": "Parade",
+              "en": "Block"
+            },
+            "stat_string_value": "0%",
             "property": 875,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -557,8 +632,13 @@
               "fr": "0 Résistance Élémentaire",
               "en": "0 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "0",
             "property": 80,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -572,8 +652,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -619,8 +704,13 @@
               "fr": "2{[~2]?%:} [#3]",
               "en": "2{[~2]?%:} [#3]"
             },
+            "stat_string_desc": {
+              "fr": "[~2]?%:} [#3]",
+              "en": "[~2]?%:} [#3]"
+            },
+            "stat_string_value": "2{",
             "property": 39,
-            "values": 2
+            "value": 2
           }
         }
       },
@@ -634,8 +724,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -681,8 +776,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -696,8 +796,13 @@
               "fr": "0 Résistance Élémentaire",
               "en": "0 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "0",
             "property": 80,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -711,8 +816,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -768,8 +878,13 @@
               "fr": "26 Maîtrise Eau",
               "en": "26 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "26",
             "property": 124,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -825,8 +940,13 @@
               "fr": "26 Maîtrise Terre",
               "en": "26 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "26",
             "property": 123,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -882,8 +1002,13 @@
               "fr": "26 Maîtrise Air",
               "en": "26 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "26",
             "property": 125,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -939,8 +1064,13 @@
               "fr": "26 Maîtrise Feu",
               "en": "26 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "26",
             "property": 122,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -986,8 +1116,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -1001,8 +1136,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -1048,8 +1188,13 @@
               "fr": "10% Quantité Récolte en Mineur",
               "en": "10% Harvesting Quantity in Miner"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Mineur",
+              "en": "Harvesting Quantity in Miner"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -1095,8 +1240,13 @@
               "fr": "125 PV",
               "en": "125 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "125",
             "property": 20,
-            "values": 125
+            "value": 125
           }
         }
       },
@@ -1110,8 +1260,13 @@
               "fr": "0 Contrôle",
               "en": "0 Control"
             },
+            "stat_string_desc": {
+              "fr": "Contrôle",
+              "en": "Control"
+            },
+            "stat_string_value": "0",
             "property": 184,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -1157,8 +1312,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -1172,8 +1332,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -1237,8 +1402,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -1252,8 +1422,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1267,8 +1442,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -1314,8 +1494,13 @@
               "fr": "20 Maîtrise Soin",
               "en": "20 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "20",
             "property": 26,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -1329,8 +1514,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -1376,8 +1566,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -1391,8 +1586,13 @@
               "fr": "0% Parade",
               "en": "0% Block"
             },
+            "stat_string_desc": {
+              "fr": "Parade",
+              "en": "Block"
+            },
+            "stat_string_value": "0%",
             "property": 875,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1406,8 +1606,13 @@
               "fr": "10 Tacle",
               "en": "10 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "10",
             "property": 173,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -1471,8 +1676,13 @@
               "fr": "15 Maîtrise Critique",
               "en": "15 Critical Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Critique",
+              "en": "Critical Mastery"
+            },
+            "stat_string_value": "15",
             "property": 149,
-            "values": 15
+            "value": 15
           }
         }
       },
@@ -1486,8 +1696,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -1591,8 +1806,13 @@
               "fr": "26 Maîtrise Terre",
               "en": "26 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "26",
             "property": 123,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -1638,8 +1858,13 @@
               "fr": "26 Maîtrise Air",
               "en": "26 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "26",
             "property": 125,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -1727,8 +1952,13 @@
               "fr": "26 Maîtrise Feu",
               "en": "26 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "26",
             "property": 122,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -1808,8 +2038,13 @@
               "fr": "26 Maîtrise Eau",
               "en": "26 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "26",
             "property": 124,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -1855,8 +2090,13 @@
               "fr": "20 Esquive",
               "en": "20 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "20",
             "property": 175,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -1902,8 +2142,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -1917,8 +2162,13 @@
               "fr": "12 Maîtrise Terre",
               "en": "12 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "12",
             "property": 123,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -1932,8 +2182,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1947,8 +2202,13 @@
               "fr": "12 Maîtrise Air",
               "en": "12 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "12",
             "property": 125,
-            "values": 12
+            "value": 12
           }
         }
       }
@@ -1994,8 +2254,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2009,8 +2274,13 @@
               "fr": "12 Maîtrise Air",
               "en": "12 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "12",
             "property": 125,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2024,8 +2294,13 @@
               "fr": "12 Maîtrise Feu",
               "en": "12 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "12",
             "property": 122,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2039,8 +2314,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2086,8 +2366,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2101,8 +2386,13 @@
               "fr": "12 Maîtrise Air",
               "en": "12 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "12",
             "property": 125,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2116,8 +2406,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2131,8 +2426,13 @@
               "fr": "12 Maîtrise Eau",
               "en": "12 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "12",
             "property": 124,
-            "values": 12
+            "value": 12
           }
         }
       }
@@ -2178,8 +2478,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2193,8 +2498,13 @@
               "fr": "12 Maîtrise Feu",
               "en": "12 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "12",
             "property": 122,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2208,8 +2518,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2223,8 +2538,13 @@
               "fr": "12 Maîtrise Terre",
               "en": "12 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "12",
             "property": 123,
-            "values": 12
+            "value": 12
           }
         }
       }
@@ -2270,8 +2590,13 @@
               "fr": "0 Résistance Élémentaire",
               "en": "0 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "0",
             "property": 80,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2285,8 +2610,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2300,8 +2630,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -2365,8 +2700,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2380,8 +2720,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -2427,8 +2772,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2442,8 +2792,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2457,8 +2812,13 @@
               "fr": "0 Résistance Élémentaire",
               "en": "0 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "0",
             "property": 80,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2504,8 +2864,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2519,8 +2884,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -2566,8 +2936,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -2581,8 +2956,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -2628,8 +3008,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2643,8 +3028,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -2658,8 +3048,13 @@
               "fr": "0 Contrôle",
               "en": "0 Control"
             },
+            "stat_string_desc": {
+              "fr": "Contrôle",
+              "en": "Control"
+            },
+            "stat_string_value": "0",
             "property": 184,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2705,8 +3100,13 @@
               "fr": "0 Tacle",
               "en": "0 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "0",
             "property": 173,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2720,8 +3120,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2735,8 +3140,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -2782,8 +3192,13 @@
               "fr": "12 Maîtrise Eau",
               "en": "12 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "12",
             "property": 124,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2797,8 +3212,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2812,8 +3232,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2827,8 +3252,13 @@
               "fr": "12 Maîtrise Terre",
               "en": "12 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "12",
             "property": 123,
-            "values": 12
+            "value": 12
           }
         }
       }
@@ -2874,8 +3304,13 @@
               "fr": "12 Maîtrise Feu",
               "en": "12 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "12",
             "property": 122,
-            "values": 12
+            "value": 12
           }
         }
       },
@@ -2889,8 +3324,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -2904,8 +3344,13 @@
               "fr": "0 Initiative",
               "en": "0 Initiative"
             },
+            "stat_string_desc": {
+              "fr": "Initiative",
+              "en": "Initiative"
+            },
+            "stat_string_value": "0",
             "property": 171,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2919,8 +3364,13 @@
               "fr": "12 Maîtrise Eau",
               "en": "12 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "12",
             "property": 124,
-            "values": 12
+            "value": 12
           }
         }
       }
@@ -2966,8 +3416,13 @@
               "fr": "2% Parade",
               "en": "2% Block"
             },
+            "stat_string_desc": {
+              "fr": "Parade",
+              "en": "Block"
+            },
+            "stat_string_value": "2%",
             "property": 875,
-            "values": 2
+            "value": 2
           }
         }
       },
@@ -2981,8 +3436,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -3028,8 +3488,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -3043,8 +3508,13 @@
               "fr": "10 Maîtrise Dos",
               "en": "10 Rear Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Dos",
+              "en": "Rear Mastery"
+            },
+            "stat_string_value": "10",
             "property": 180,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -3090,8 +3560,13 @@
               "fr": "10 Maîtrise Distance",
               "en": "10 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1053,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -3105,8 +3580,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -3152,8 +3632,13 @@
               "fr": "10 Tacle",
               "en": "10 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "10",
             "property": 173,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -3167,8 +3652,13 @@
               "fr": "5 Résistance Élémentaire",
               "en": "5 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "5",
             "property": 80,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -3214,8 +3704,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -3229,8 +3724,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -3276,8 +3776,13 @@
               "fr": "30 PV",
               "en": "30 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "30",
             "property": 20,
-            "values": 30
+            "value": 30
           }
         }
       },
@@ -3291,8 +3796,13 @@
               "fr": "30 Maîtrise Élémentaire",
               "en": "30 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "30",
             "property": 120,
-            "values": 30
+            "value": 30
           }
         }
       }
@@ -3338,8 +3848,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -3353,8 +3868,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -3400,8 +3920,13 @@
               "fr": "20 Maîtrise Soin",
               "en": "20 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "20",
             "property": 26,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -3415,8 +3940,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -3462,8 +3992,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -3477,8 +4012,13 @@
               "fr": "20 Maîtrise Berserk",
               "en": "20 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "20",
             "property": 1055,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -3524,8 +4064,13 @@
               "fr": "10% Quantité Récolte en Trappeur",
               "en": "10% Harvesting Quantity in Trapper"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Trappeur",
+              "en": "Harvesting Quantity in Trapper"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -3571,8 +4116,13 @@
               "fr": "5% Quantité Récolte en Mineur",
               "en": "5% Harvesting Quantity in Miner"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Mineur",
+              "en": "Harvesting Quantity in Miner"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -3586,8 +4136,13 @@
               "fr": "5% Quantité Récolte en Herboriste",
               "en": "5% Harvesting Quantity in Herbalist"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Herboriste",
+              "en": "Harvesting Quantity in Herbalist"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -3601,8 +4156,13 @@
               "fr": "5% Quantité Récolte en Forestier",
               "en": "5% Harvesting Quantity in Lumberjack"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Forestier",
+              "en": "Harvesting Quantity in Lumberjack"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -3616,8 +4176,13 @@
               "fr": "5% Quantité Récolte en Paysan",
               "en": "5% Harvesting Quantity in Farmer"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Paysan",
+              "en": "Harvesting Quantity in Farmer"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -3631,8 +4196,13 @@
               "fr": "5% Quantité Récolte en Pêcheur",
               "en": "5% Harvesting Quantity in Fisherman"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Pêcheur",
+              "en": "Harvesting Quantity in Fisherman"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -3646,8 +4216,13 @@
               "fr": "5% Quantité Récolte en Trappeur",
               "en": "5% Harvesting Quantity in Trapper"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Trappeur",
+              "en": "Harvesting Quantity in Trapper"
+            },
+            "stat_string_value": "5%",
             "property": 2001,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -3693,8 +4268,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -3708,8 +4288,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -3755,8 +4340,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -3770,8 +4360,13 @@
               "fr": "20 Maîtrise Berserk",
               "en": "20 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "20",
             "property": 1055,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -3817,8 +4412,13 @@
               "fr": "20 Esquive",
               "en": "20 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "20",
             "property": 175,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -3832,8 +4432,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       }
@@ -3879,8 +4484,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -3894,8 +4504,13 @@
               "fr": "20 Maîtrise Soin",
               "en": "20 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "20",
             "property": 26,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -3941,8 +4556,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -3956,8 +4576,13 @@
               "fr": "10 Maîtrise Distance",
               "en": "10 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1053,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -4003,8 +4628,13 @@
               "fr": "20 Tacle",
               "en": "20 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "20",
             "property": 173,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -4018,8 +4648,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       }
@@ -4065,8 +4700,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -4080,8 +4720,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -4127,8 +4772,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -4142,8 +4792,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -4189,8 +4844,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -4204,8 +4864,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4251,8 +4916,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -4266,8 +4936,13 @@
               "fr": "0 Contrôle",
               "en": "0 Control"
             },
+            "stat_string_desc": {
+              "fr": "Contrôle",
+              "en": "Control"
+            },
+            "stat_string_value": "0",
             "property": 184,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -4313,8 +4988,13 @@
               "fr": "0 PW",
               "en": "0 WP"
             },
+            "stat_string_desc": {
+              "fr": "PW",
+              "en": "WP"
+            },
+            "stat_string_value": "0",
             "property": 191,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4328,8 +5008,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4375,8 +5060,13 @@
               "fr": "20 Maîtrise Dos",
               "en": "20 Rear Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Dos",
+              "en": "Rear Mastery"
+            },
+            "stat_string_value": "20",
             "property": 180,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -4390,8 +5080,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4437,8 +5132,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -4452,8 +5152,13 @@
               "fr": "0 Résistance Critique",
               "en": "0 Critical Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Critique",
+              "en": "Critical Resistance"
+            },
+            "stat_string_value": "0",
             "property": 988,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -4499,8 +5204,13 @@
               "fr": "0 Résistance Air",
               "en": "0 Air Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Air",
+              "en": "Air Resistance"
+            },
+            "stat_string_value": "0",
             "property": 85,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4514,8 +5224,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4561,8 +5276,13 @@
               "fr": "0 Résistance Terre",
               "en": "0 Earth Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Terre",
+              "en": "Earth Resistance"
+            },
+            "stat_string_value": "0",
             "property": 84,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4576,8 +5296,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4623,8 +5348,13 @@
               "fr": "0 Résistance Eau",
               "en": "0 Water Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Eau",
+              "en": "Water Resistance"
+            },
+            "stat_string_value": "0",
             "property": 83,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4638,8 +5368,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4685,8 +5420,13 @@
               "fr": "0 Résistance Dos",
               "en": "0 Rear Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Dos",
+              "en": "Rear Resistance"
+            },
+            "stat_string_value": "0",
             "property": 71,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4700,8 +5440,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4747,8 +5492,13 @@
               "fr": "0 Résistance Feu",
               "en": "0 Fire Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Feu",
+              "en": "Fire Resistance"
+            },
+            "stat_string_value": "0",
             "property": 82,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -4762,8 +5512,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4809,8 +5564,13 @@
               "fr": "20 Tacle",
               "en": "20 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "20",
             "property": 173,
-            "values": 20
+            "value": 20
           }
         }
       }
@@ -4856,8 +5616,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -4871,8 +5636,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -4918,8 +5688,13 @@
               "fr": "10 Esquive",
               "en": "10 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "10",
             "property": 175,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -4933,8 +5708,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -4948,8 +5728,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -4995,8 +5780,13 @@
               "fr": "10 Maîtrise Soin",
               "en": "10 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "10",
             "property": 26,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5010,8 +5800,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5025,8 +5820,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5072,8 +5872,13 @@
               "fr": "0 Contrôle",
               "en": "0 Control"
             },
+            "stat_string_desc": {
+              "fr": "Contrôle",
+              "en": "Control"
+            },
+            "stat_string_value": "0",
             "property": 184,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -5087,8 +5892,13 @@
               "fr": "10 Maîtrise Distance",
               "en": "10 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1053,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5102,8 +5912,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5149,8 +5964,13 @@
               "fr": "10 Maîtrise Berserk",
               "en": "10 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1055,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5164,8 +5984,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5179,8 +6004,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5226,8 +6056,13 @@
               "fr": "0 Résistance Élémentaire",
               "en": "0 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "0",
             "property": 80,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -5241,8 +6076,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5256,8 +6096,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5303,8 +6148,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5318,8 +6168,13 @@
               "fr": "5 Esquive",
               "en": "5 Dodge"
             },
+            "stat_string_desc": {
+              "fr": "Esquive",
+              "en": "Dodge"
+            },
+            "stat_string_value": "5",
             "property": 175,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5333,8 +6188,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -5380,8 +6240,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5395,8 +6260,13 @@
               "fr": "5 Tacle",
               "en": "5 Lock"
             },
+            "stat_string_desc": {
+              "fr": "Tacle",
+              "en": "Lock"
+            },
+            "stat_string_value": "5",
             "property": 173,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5410,8 +6280,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -5457,8 +6332,13 @@
               "fr": "20 Maîtrise Berserk",
               "en": "20 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "20",
             "property": 1055,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -5472,8 +6352,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5519,8 +6404,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -5534,8 +6424,13 @@
               "fr": "15 Maîtrise Critique",
               "en": "15 Critical Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Critique",
+              "en": "Critical Mastery"
+            },
+            "stat_string_value": "15",
             "property": 149,
-            "values": 15
+            "value": 15
           }
         }
       }
@@ -5581,8 +6476,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5596,8 +6496,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       }
@@ -5643,8 +6548,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -5658,8 +6568,13 @@
               "fr": "10 Maîtrise Dos",
               "en": "10 Rear Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Dos",
+              "en": "Rear Mastery"
+            },
+            "stat_string_value": "10",
             "property": 180,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -5705,8 +6620,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5720,8 +6640,13 @@
               "fr": "15 Maîtrise Mêlée",
               "en": "15 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "15",
             "property": 1052,
-            "values": 15
+            "value": 15
           }
         }
       }
@@ -5767,8 +6692,13 @@
               "fr": "15 Maîtrise Mêlée",
               "en": "15 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "15",
             "property": 1052,
-            "values": 15
+            "value": 15
           }
         }
       },
@@ -5782,8 +6712,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5829,8 +6764,13 @@
               "fr": "1 Résistance Élémentaire",
               "en": "1 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "1",
             "property": 80,
-            "values": 1
+            "value": 1
           }
         }
       },
@@ -5844,8 +6784,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -5859,8 +6804,13 @@
               "fr": "5 Maîtrise Mêlée",
               "en": "5 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "5",
             "property": 1052,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -5906,8 +6856,13 @@
               "fr": "65 PV",
               "en": "65 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "65",
             "property": 20,
-            "values": 65
+            "value": 65
           }
         }
       },
@@ -5921,8 +6876,13 @@
               "fr": "10 Maîtrise Soin",
               "en": "10 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "10",
             "property": 26,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -5968,8 +6928,13 @@
               "fr": "10 Maîtrise Distance",
               "en": "10 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1053,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -5983,8 +6948,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -5998,8 +6968,13 @@
               "fr": "5 Maîtrise Critique",
               "en": "5 Critical Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Critique",
+              "en": "Critical Mastery"
+            },
+            "stat_string_value": "5",
             "property": 149,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6045,8 +7020,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6060,8 +7040,13 @@
               "fr": "10 Maîtrise Berserk",
               "en": "10 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1055,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6107,8 +7092,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6122,8 +7112,13 @@
               "fr": "5 Maîtrise Élémentaire",
               "en": "5 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "5",
             "property": 120,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6137,8 +7132,13 @@
               "fr": "1 Résistance Élémentaire",
               "en": "1 Elemental Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Élémentaire",
+              "en": "Elemental Resistance"
+            },
+            "stat_string_value": "1",
             "property": 80,
-            "values": 1
+            "value": 1
           }
         }
       }
@@ -6184,8 +7184,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6199,8 +7204,13 @@
               "fr": "15 Maîtrise Distance",
               "en": "15 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "15",
             "property": 1053,
-            "values": 15
+            "value": 15
           }
         }
       }
@@ -6246,8 +7256,13 @@
               "fr": "0% Parade",
               "en": "0% Block"
             },
+            "stat_string_desc": {
+              "fr": "Parade",
+              "en": "Block"
+            },
+            "stat_string_value": "0%",
             "property": 875,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -6261,8 +7276,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6308,8 +7328,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -6323,8 +7348,13 @@
               "fr": "10 Maîtrise Critique",
               "en": "10 Critical Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Critique",
+              "en": "Critical Mastery"
+            },
+            "stat_string_value": "10",
             "property": 149,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -6338,8 +7368,13 @@
               "fr": "5 Maîtrise Distance",
               "en": "5 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "5",
             "property": 1053,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6385,8 +7420,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -6400,8 +7440,13 @@
               "fr": "10 Maîtrise Critique",
               "en": "10 Critical Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Critique",
+              "en": "Critical Mastery"
+            },
+            "stat_string_value": "10",
             "property": 149,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -6415,8 +7460,13 @@
               "fr": "5 Maîtrise Mêlée",
               "en": "5 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "5",
             "property": 1052,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6462,8 +7512,13 @@
               "fr": "5 PV",
               "en": "5 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "5",
             "property": 20,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6477,8 +7532,13 @@
               "fr": "5 Résistance Feu",
               "en": "5 Fire Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Feu",
+              "en": "Fire Resistance"
+            },
+            "stat_string_value": "5",
             "property": 82,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6492,8 +7552,13 @@
               "fr": "5 Résistance Air",
               "en": "5 Air Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Air",
+              "en": "Air Resistance"
+            },
+            "stat_string_value": "5",
             "property": 85,
-            "values": 5
+            "value": 5
           }
         }
       },
@@ -6507,8 +7572,13 @@
               "fr": "5 Résistance Terre",
               "en": "5 Earth Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Terre",
+              "en": "Earth Resistance"
+            },
+            "stat_string_value": "5",
             "property": 84,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6554,8 +7624,13 @@
               "fr": "10 Maîtrise Soin",
               "en": "10 Healing Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Soin",
+              "en": "Healing Mastery"
+            },
+            "stat_string_value": "10",
             "property": 26,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -6569,8 +7644,13 @@
               "fr": "5 Volonté",
               "en": "5 Force of Will"
             },
+            "stat_string_desc": {
+              "fr": "Volonté",
+              "en": "Force of Will"
+            },
+            "stat_string_value": "5",
             "property": 177,
-            "values": 5
+            "value": 5
           }
         }
       }
@@ -6616,8 +7696,13 @@
               "fr": "10% Quantité Récolte en Forestier",
               "en": "10% Harvesting Quantity in Lumberjack"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Forestier",
+              "en": "Harvesting Quantity in Lumberjack"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6663,8 +7748,13 @@
               "fr": "10% Quantité Récolte en Paysan",
               "en": "10% Harvesting Quantity in Farmer"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Paysan",
+              "en": "Harvesting Quantity in Farmer"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6710,8 +7800,13 @@
               "fr": "10% Quantité Récolte en Pêcheur",
               "en": "10% Harvesting Quantity in Fisherman"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Pêcheur",
+              "en": "Harvesting Quantity in Fisherman"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6757,8 +7852,13 @@
               "fr": "10% Quantité Récolte en Herboriste",
               "en": "10% Harvesting Quantity in Herbalist"
             },
+            "stat_string_desc": {
+              "fr": "Quantité Récolte en Herboriste",
+              "en": "Harvesting Quantity in Herbalist"
+            },
+            "stat_string_value": "10%",
             "property": 2001,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6804,8 +7904,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -6819,8 +7924,13 @@
               "fr": "10 Maîtrise Mêlée",
               "en": "10 Melee Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Mêlée",
+              "en": "Melee Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1052,
-            "values": 10
+            "value": 10
           }
         }
       }
@@ -6866,8 +7976,13 @@
               "fr": "10 Maîtrise Distance",
               "en": "10 Distance Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Distance",
+              "en": "Distance Mastery"
+            },
+            "stat_string_value": "10",
             "property": 1053,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -6881,8 +7996,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -6928,8 +8048,13 @@
               "fr": "10 Maîtrise Dos",
               "en": "10 Rear Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Dos",
+              "en": "Rear Mastery"
+            },
+            "stat_string_value": "10",
             "property": 180,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -6943,8 +8068,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -6990,8 +8120,13 @@
               "fr": "10 Maîtrise Élémentaire",
               "en": "10 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "10",
             "property": 120,
-            "values": 10
+            "value": 10
           }
         }
       },
@@ -7005,8 +8140,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7052,8 +8192,13 @@
               "fr": "20 Maîtrise Berserk",
               "en": "20 Berserk Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Berserk",
+              "en": "Berserk Mastery"
+            },
+            "stat_string_value": "20",
             "property": 1055,
-            "values": 20
+            "value": 20
           }
         }
       },
@@ -7067,8 +8212,13 @@
               "fr": "0% Coup critique",
               "en": "0% Critical Hit"
             },
+            "stat_string_desc": {
+              "fr": "Coup critique",
+              "en": "Critical Hit"
+            },
+            "stat_string_value": "0%",
             "property": 150,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7114,8 +8264,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7129,8 +8284,13 @@
               "fr": "0 PW",
               "en": "0 WP"
             },
+            "stat_string_desc": {
+              "fr": "PW",
+              "en": "WP"
+            },
+            "stat_string_value": "0",
             "property": 191,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7176,8 +8336,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7191,8 +8356,13 @@
               "fr": "0 Résistance Feu",
               "en": "0 Fire Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Feu",
+              "en": "Fire Resistance"
+            },
+            "stat_string_value": "0",
             "property": 82,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7238,8 +8408,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7253,8 +8428,13 @@
               "fr": "0 Résistance Air",
               "en": "0 Air Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Air",
+              "en": "Air Resistance"
+            },
+            "stat_string_value": "0",
             "property": 85,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7300,8 +8480,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7315,8 +8500,13 @@
               "fr": "0 Résistance Eau",
               "en": "0 Water Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Eau",
+              "en": "Water Resistance"
+            },
+            "stat_string_value": "0",
             "property": 83,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7362,8 +8552,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7377,8 +8572,13 @@
               "fr": "0 Résistance Terre",
               "en": "0 Earth Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Terre",
+              "en": "Earth Resistance"
+            },
+            "stat_string_value": "0",
             "property": 84,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7424,8 +8624,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7439,8 +8644,13 @@
               "fr": "0 Résistance Dos",
               "en": "0 Rear Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Dos",
+              "en": "Rear Resistance"
+            },
+            "stat_string_value": "0",
             "property": 71,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7486,8 +8696,13 @@
               "fr": "60 PV",
               "en": "60 HP"
             },
+            "stat_string_desc": {
+              "fr": "PV",
+              "en": "HP"
+            },
+            "stat_string_value": "60",
             "property": 20,
-            "values": 60
+            "value": 60
           }
         }
       },
@@ -7501,8 +8716,13 @@
               "fr": "0 Résistance Critique",
               "en": "0 Critical Resistance"
             },
+            "stat_string_desc": {
+              "fr": "Résistance Critique",
+              "en": "Critical Resistance"
+            },
+            "stat_string_value": "0",
             "property": 988,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -7548,8 +8768,13 @@
               "fr": "26 Maîtrise Air",
               "en": "26 Air Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Air",
+              "en": "Air Mastery"
+            },
+            "stat_string_value": "26",
             "property": 125,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -7595,8 +8820,13 @@
               "fr": "26 Maîtrise Terre",
               "en": "26 Earth Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Terre",
+              "en": "Earth Mastery"
+            },
+            "stat_string_value": "26",
             "property": 123,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -7642,8 +8872,13 @@
               "fr": "26 Maîtrise Eau",
               "en": "26 Water Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Eau",
+              "en": "Water Mastery"
+            },
+            "stat_string_value": "26",
             "property": 124,
-            "values": 26
+            "value": 26
           }
         }
       }
@@ -7689,8 +8924,13 @@
               "fr": "26 Maîtrise Feu",
               "en": "26 Fire Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Feu",
+              "en": "Fire Mastery"
+            },
+            "stat_string_value": "26",
             "property": 122,
-            "values": 26
+            "value": 26
           }
         }
       }

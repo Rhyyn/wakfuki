@@ -38,8 +38,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -53,8 +58,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -100,8 +110,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -115,8 +130,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -162,8 +182,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -177,8 +202,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -224,8 +254,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -239,8 +274,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -286,8 +326,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -301,8 +346,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -348,8 +398,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -363,8 +418,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -410,8 +470,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -425,8 +490,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -472,8 +542,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -487,8 +562,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -534,8 +614,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -549,8 +634,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -596,8 +686,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -611,8 +706,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -658,8 +758,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -673,8 +778,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -720,8 +830,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -735,8 +850,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -782,8 +902,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -797,8 +922,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -844,8 +974,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -859,8 +994,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -906,8 +1046,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -921,8 +1066,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -968,8 +1118,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -983,8 +1138,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1030,8 +1190,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1045,8 +1210,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1092,8 +1262,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1107,8 +1282,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1154,8 +1334,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1169,8 +1354,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1216,8 +1406,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1231,8 +1426,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1278,8 +1478,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1293,8 +1498,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1340,8 +1550,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1355,8 +1570,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1402,8 +1622,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1417,8 +1642,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1464,8 +1694,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1479,8 +1714,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1526,8 +1766,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -1541,8 +1786,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -1588,8 +1838,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1603,8 +1858,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1650,8 +1910,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -1665,8 +1930,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -1712,8 +1982,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1727,8 +2002,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1774,8 +2054,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1789,8 +2074,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1836,8 +2126,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1851,8 +2146,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1898,8 +2198,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1913,8 +2218,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -1960,8 +2270,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -1975,8 +2290,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
@@ -2022,8 +2342,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -2037,8 +2362,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2084,8 +2414,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -2099,8 +2434,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2146,8 +2486,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -2161,8 +2506,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2208,8 +2558,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       },
@@ -2223,8 +2578,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       }
@@ -2270,8 +2630,13 @@
               "fr": "0 Maîtrise Élémentaire",
               "en": "0 Elemental Mastery"
             },
+            "stat_string_desc": {
+              "fr": "Maîtrise Élémentaire",
+              "en": "Elemental Mastery"
+            },
+            "stat_string_value": "0",
             "property": 120,
-            "values": 0
+            "value": 0
           }
         }
       },
@@ -2285,8 +2650,13 @@
               "fr": "",
               "en": ""
             },
+            "stat_string_desc": {
+              "fr": "",
+              "en": ""
+            },
+            "stat_string_value": "",
             "property": 0,
-            "values": []
+            "value": 0
           }
         }
       }
