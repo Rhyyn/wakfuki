@@ -23,11 +23,25 @@ const ItemList = ({ filterState }) => {
   const scrollThreshold = 100;
   let lang = localStorage.getItem("language")
 
+
+  const transformDataForDisplay = (rawData) => {
+    return rawData.map(item => ({
+      title: item.title,
+      level: item.level,
+      id: item.id,
+      droprates: item.droprates,
+      baseParams: item.baseParams,
+      equipEffects: item.equipEffects,
+      gfxId: item.gfxId
+    }));
+  };
+
   useEffect(() => {
     const fetchItems = async () => {
       lang = localStorage.getItem("language")
       let DATA = await fetchData(filterState, currentPage, itemsPerPage, lang);
-      setItems(DATA);
+      let slimmedDownData = transformDataForDisplay(DATA);
+      setItems(slimmedDownData);
       setIsLoading(false);
     };
 
