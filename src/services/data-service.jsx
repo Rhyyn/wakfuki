@@ -217,16 +217,21 @@ const setupDatabaseCloseListener = () => {
   });
 };
 
+const random = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+
 const checkFileLength = async (fileName, db) => {
   for (const file in filesLength) {
     if (fileName === file) {
       let expectedItemCount = filesLength[file];
       let count = await db.table(fileName).count();
+      console.log("expectedItemCount : ", expectedItemCount);
+      console.log(`count of ${fileName} : `, count);
       if (count == expectedItemCount) {
-        // maybe check for random object?
-        // console.log(
-        //   `Number of records in ${fileName} table: ${count}, expected: ${expectedItemCount}`
-        // );
+        // TODO : maybe check for random object?
+        let randomNumber = random(1, expectedItemCount);
         return true;
       } else {
         console.log(
