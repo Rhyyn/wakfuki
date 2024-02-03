@@ -54,8 +54,8 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
     let maxRange = 230;
     let fromPosition = from;
     let toPosition = to;
-    let sliderColor = "#615a49";
-    let rangeColor = "#292621";
+    let sliderColor = "#292621";
+    let rangeColor = "#999999";
 
     toSliderRef.current.style.background = `linear-gradient(
             to right,
@@ -258,6 +258,7 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
             step={5}
             onChange={(e) => controlFromSlider(e)}
             onMouseUp={(e) => handleMouseUpEvent(e)}
+            onTouchEnd={(e) => handleMouseUpEvent(e)}
             ref={fromSliderRef}
           />
           <input
@@ -270,6 +271,7 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
             step={5}
             onChange={(e) => controlToSlider(e)}
             onMouseUp={(e) => handleMouseUpEvent(e)}
+            onTouchEnd={(e) => handleMouseUpEvent(e)}
             ref={toSliderRef}
           />
         </div>
