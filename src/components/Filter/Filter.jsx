@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import cssModule from "./Filter.module.scss";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,8 @@ import SearchBar from "./SearchBar/SearchBar";
 import LevelFilter from "./LevelFilter/LevelFilter";
 import TypeFilter from "./TypeFilter/TypeFilter";
 import StatsFilter from "./StatsFilter/StatsFilter";
+import { motion, AnimatePresence } from "framer-motion";
+import { useDevice } from "../DeviceContext/DeviceContext";
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -22,13 +24,18 @@ const Filter = ({
   handleStatsChange,
   resetFiltersFlag,
   filterStateStats,
-  updateStatsFlag
+  updateStatsFlag,
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
   const dropdownContainerRef = useRef(null);
   const { t, i18n } = useTranslation();
+  const [isComponentReady, setIsComponentReady] = useState(false);
+  const { deviceType } = useDevice();
 
+  useEffect(() => {
+    setIsComponentReady(true);
+  }, []);
 
   const handleSortingOptionsClick = (value) => {
     if (value) {
@@ -60,11 +67,9 @@ const Filter = ({
     setShowSortDropdown(false);
   };
 
-
   const handleSortingOptionsDropdown = () => {
     setShowSortDropdown(!showSortDropdown);
   };
-
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
@@ -88,103 +93,124 @@ const Filter = ({
     };
   }, [showSortDropdown]);
 
-
   return (
-    <div className={cssModule["filter-container"]}>
-      <div className={cssModule["header-container"]}>
-        <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
-        <div className={cssModule["header-icons-container"]}>
-          <Image
-            className={cssModule["header-icon"]}
-            src="/reset_icon_yellow.png"
-            width={32}
-            height={32}
-            unoptimized
-            alt="reset-icon"
-            title={t("Mise à zéro des Filtres")}
-            onClick={() => handleResetFilters()}
-          />
-          <div className={cssModule["vertical-separator"]}></div>
-          <Image
-            className={cssModule["header-icon"]}
-            src="/sort_icon_yellow.png"
-            width={32}
-            height={32}
-            unoptimized
-            alt="sort-icon"
-            title={t("Trier par")}
-            onClick={handleSortingOptionsDropdown}
-            ref={dropdownRef}
-          />
-          <div
-            className={`${cssModule["sorting-options-container"]} ${
-              showSortDropdown ? cssModule["selected"] : cssModule["hide"]
-            }`}
-            ref={dropdownContainerRef}
-          >
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("level.ascending")}
-            >
-              Level ascending
-            </span>
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("level.descending")}
-            >
-              Level descending
-            </span>
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("alphabetical.ascending")}
-            >
-              Name ascending
-            </span>
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("alphabetical.descending")}
-            >
-              Name descending
-            </span>
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("rarity.ascending")}
-            >
-              Rarity ascending
-            </span>
-            <span
-              className={cssModule["sorting-option"]}
-              onClick={() => handleSortingOptionsClick("rarity.descending")}
-            >
-              Rarity descending
-            </span>
+    <motion.div
+      key="unique-key"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      {isComponentReady && (
+        <div className={cssModule["filter-container"]}>
+          <div className={cssModule["header-container"]}>
+            <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
+            {deviceType === "desktop" && (
+              <div className={cssModule["header-icons-container"]}>
+                <Image
+                  className={cssModule["header-icon"]}
+                  src="/reset_icon_yellow.png"
+                  width={32}
+                  height={32}
+                  unoptimized
+                  alt="reset-icon"
+                  title={t("Mise à zéro des Filtres")}
+                  onClick={() => handleResetFilters()}
+                />
+                <div className={cssModule["vertical-separator"]}></div>
+                <Image
+                  className={cssModule["header-icon"]}
+                  src="/sort_icon_yellow.png"
+                  width={32}
+                  height={32}
+                  unoptimized
+                  alt="sort-icon"
+                  title={t("Trier par")}
+                  onClick={handleSortingOptionsDropdown}
+                  ref={dropdownRef}
+                />
+                <div
+                  className={`${cssModule["sorting-options-container"]} ${
+                    showSortDropdown ? cssModule["selected"] : cssModule["hide"]
+                  }`}
+                  ref={dropdownContainerRef}
+                >
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() => handleSortingOptionsClick("level.ascending")}
+                  >
+                    Level ascending
+                  </span>
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() =>
+                      handleSortingOptionsClick("level.descending")
+                    }
+                  >
+                    Level descending
+                  </span>
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() =>
+                      handleSortingOptionsClick("alphabetical.ascending")
+                    }
+                  >
+                    Name ascending
+                  </span>
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() =>
+                      handleSortingOptionsClick("alphabetical.descending")
+                    }
+                  >
+                    Name descending
+                  </span>
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() =>
+                      handleSortingOptionsClick("rarity.ascending")
+                    }
+                  >
+                    Rarity ascending
+                  </span>
+                  <span
+                    className={cssModule["sorting-option"]}
+                    onClick={() =>
+                      handleSortingOptionsClick("rarity.descending")
+                    }
+                  >
+                    Rarity descending
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
+          <div className={cssModule["horizontal-separator"]}></div>
+          <RarityFilter
+            handleRarityChange={handleRarityChange}
+            resetFiltersFlag={resetFiltersFlag}
+          />
+          <SearchBar
+            handleSearchChange={handleSearchChange}
+            resetFiltersFlag={resetFiltersFlag}
+          />
+          <div className={cssModule["horizontal-separator"]}></div>
+          <LevelFilter
+            handleLevelChange={handleLevelChange}
+            resetFiltersFlag={resetFiltersFlag}
+          />
+          <TypeFilter
+            handleTypeChange={handleTypeChange}
+            resetFiltersFlag={resetFiltersFlag}
+          />
+          <StatsFilter
+            handleStatsChange={handleStatsChange}
+            resetFiltersFlag={resetFiltersFlag}
+            filterStateStats={filterStateStats}
+            updateStatsFlag={updateStatsFlag}
+          />
         </div>
-      </div>
-      <div className={cssModule["horizontal-separator"]}></div>
-      <RarityFilter
-        handleRarityChange={handleRarityChange}
-        resetFiltersFlag={resetFiltersFlag}
-      />
-      <SearchBar
-        handleSearchChange={handleSearchChange}
-        resetFiltersFlag={resetFiltersFlag}
-      />
-      <div className={cssModule["horizontal-separator"]}></div>
-      <LevelFilter
-        handleLevelChange={handleLevelChange}
-        resetFiltersFlag={resetFiltersFlag}
-      />
-      <TypeFilter
-        handleTypeChange={handleTypeChange}
-        resetFiltersFlag={resetFiltersFlag}
-      />
-      <StatsFilter 
-        handleStatsChange={handleStatsChange} 
-        resetFiltersFlag={resetFiltersFlag}
-        filterStateStats={filterStateStats}
-        updateStatsFlag={updateStatsFlag} />
-    </div>
+      )}
+    </motion.div>
   );
 };
 

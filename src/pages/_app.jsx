@@ -8,6 +8,7 @@ import {
 import { appWithTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
 import { ModalProvider } from "../components/ModalComponents/Modal/ModalContext";
+import { DeviceProvider } from "../components/DeviceContext/DeviceContext";
 import Modal from "../components/ModalComponents/Modal/Modal";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
@@ -56,10 +57,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main className={poppins.className}>
-      <ModalProvider>
-        <Component {...pageProps} />
-        <Modal />
-      </ModalProvider>
+      <DeviceProvider>
+        <ModalProvider>
+          <Component {...pageProps} />
+          <Modal />
+        </ModalProvider>
+      </DeviceProvider>
     </main>
   );
 }

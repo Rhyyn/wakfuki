@@ -37,6 +37,8 @@ const ItemList = ({ filterState }) => {
   };
 
   useEffect(() => {
+    console.log("filterState changed");
+    console.log(filterState);
     const fetchItems = async () => {
       lang = localStorage.getItem("language")
       let DATA = await fetchData(filterState, currentPage, itemsPerPage, lang);

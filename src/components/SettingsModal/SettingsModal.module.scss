@@ -1,0 +1,50 @@
+@use "../../../styles/variables.scss" as v;
+
+
+.settings-modal {
+  width: 400px;
+  height: 300px;
+  background: v.$background;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.close-button {
+  width: 60px;
+  background-color: v.$primary-yellow;
+  border: none;
+}
+
+.delete-button {
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  background-color: v.$error;
+  color: v.$text;
+  text-decoration: none;
+  border: none;
+}
+
+.shadow-box {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}

@@ -2,20 +2,22 @@
 
 .filter-container {
   width: 230px;
-  // background-color: v.$background-light;
   background-color: v.$background;
   position: fixed;
-  // top: 80px;
   top: 0px;
   left: 0px;
   height: 100vh;
-  // height: 1500px;
   overflow-y: auto;
   z-index: 2;
   padding: 0;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .filter-container {
+    width: 100%;
+    position: fixed;
+    top: 110px;
+  }
 }
 
 .header-container {

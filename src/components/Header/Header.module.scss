@@ -1,33 +1,51 @@
 @use "../../../styles/variables.scss" as v;
 
 .header-container {
-    height: 80px;
+  height: 60px;
+  width: calc(100% - 230px);
+  background-color: v.$primary-yellow;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .header-container {
     width: 100%;
-    background-color: v.$primary-yellow;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  }
 }
 
 .title-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: -230px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .title-container {
+    margin-left: 0px;
+  }
 }
 
 .first-part-title {
-    height: 100%;
-    font-size: 2rem;
-    color: v.$background;
-    // margin-top: 16px;
+  height: 100%;
+  font-size: 2rem;
+  color: v.$background;
+  // margin-top: 16px;
 }
 
 .second-part-title {
-    height: 100%;
-    font-size: 3rem;
-    color: v.$background-deep;
+  height: 100%;
+  font-size: 3rem;
+  color: v.$background-deep;
+}
+
+.menu-icon-container {
+  min-width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }

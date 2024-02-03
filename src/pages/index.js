@@ -7,7 +7,11 @@ import ItemList from "../components/ItemList/ItemsList.jsx";
 import { storeFile } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
 import Header from "../components/Header/Header.jsx";
+import StatsValuesFilterer from "../components/StatsValuesFilterer/StatsValuesFilterer";
+import SettingsModal from "../components/SettingsModal/SettingsModal";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useDevice } from "../components/DeviceContext/DeviceContext";
 import "./i18n";
 
 const Home = () => {
@@ -21,6 +25,8 @@ const Home = () => {
     stats: [],
     sortBy: { type: "level", order: "ascending" },
   });
+  const { deviceType } = useDevice();
+  const [isMobileFilterShowing, setIsMobileFilterShowing] = useState(false);
 
   const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
   const handleResetFilters = () => {
@@ -69,6 +75,7 @@ const Home = () => {
   };
 
   const handleLevelChange = (newLevelRange) => {
+    console.log(newLevelRange);
     setFilterState((prevState) => ({
       ...prevState,
       levelRange: newLevelRange,
@@ -81,17 +88,19 @@ const Home = () => {
 
   const handleStatsChange = (newStats) => {
     setFilterState((prevState) => {
-
       const filteredNewStats = newStats.filter(
-        (newStat) => !prevState.stats.some((existingStat) => existingStat.property === newStat.property)
+        (newStat) =>
+          !prevState.stats.some(
+            (existingStat) => existingStat.property === newStat.property
+          )
       );
-  
-      const updatedStats = prevState.stats.filter(
-        (existingStat) => newStats.some((newStat) => newStat.property === existingStat.property)
+
+      const updatedStats = prevState.stats.filter((existingStat) =>
+        newStats.some((newStat) => newStat.property === existingStat.property)
       );
-  
+
       const finalStats = [...updatedStats, ...filteredNewStats];
-  
+
       return {
         ...prevState,
         stats: finalStats,
@@ -123,10 +132,14 @@ const Home = () => {
       }
       return element;
     });
-  
+
     setFilterState({ ...filterState, stats: updatedStats });
   };
-  
+
+  const [isModalShowing, setIsModalShowing] = useState(false);
+  const handleCogClick = () => {
+    setIsModalShowing(true);
+  };
 
   return (
     <>
@@ -136,78 +149,38 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {isModalShowing && (
+        <SettingsModal setIsModalShowing={setIsModalShowing} />
+      )}
       <div>
-        <Filter
-          storeFile={storeFile}
-          handleRarityChange={handleRarityChange}
-          handleTypeChange={handleTypeChange}
-          handleSearchChange={handleSearchChange}
-          handleLevelChange={handleLevelChange}
-          handleResetFilters={handleResetFilters}
-          handleSortingOptionsChange={handleSortingOptionsChange}
-          handleStatsChange={handleStatsChange}
-          resetFiltersFlag={resetFiltersFlag}
-          filterStateStats={filterState.stats}
-          updateStatsFlag={updateStatsFlag}
-        ></Filter>
+        <AnimatePresence>
+          {(deviceType !== "mobile" || isMobileFilterShowing) && (
+            <Filter
+              storeFile={storeFile}
+              handleRarityChange={handleRarityChange}
+              handleTypeChange={handleTypeChange}
+              handleSearchChange={handleSearchChange}
+              handleLevelChange={handleLevelChange}
+              handleResetFilters={handleResetFilters}
+              handleSortingOptionsChange={handleSortingOptionsChange}
+              handleStatsChange={handleStatsChange}
+              resetFiltersFlag={resetFiltersFlag}
+              filterStateStats={filterState.stats}
+              updateStatsFlag={updateStatsFlag}
+            ></Filter>
+          )}
+        </AnimatePresence>
 
         <div className={cssModule["global-container"]}>
-          <Header />
-          <div className={cssModule["items-values-filtering-container"]}>
-            <div className={cssModule["items-values-editor-container"]}>
-              {filterState.stats &&
-                filterState.stats.map((element) => (
-                  <div
-                    key={element.property}
-                    className={cssModule["value-editor"]}
-                  >
-                    <Image
-                      alt={element.property}
-                      width={24}
-                      height={24}
-                      src={`/stats/${element.property}.png`}
-                    />
-                    <input
-                      value={element.value}
-                      onChange={(e) => handleInput(e.target.value, element)}
-                      className={cssModule["value-input"]}
-                    />
-                    <Image
-                      className={cssModule["cross-icon"]}
-                      alt="Delete Icon"
-                      width={16}
-                      height={16}
-                      src="/cross_icon_yellow.png"
-                      onClick={() => updateStats(element.property)}
-                    />
-                  </div>
-                ))}
-            </div>
-            <div className={cssModule["items-sorting-container"]}>
-              <Image
-                className={cssModule["header-icon"]}
-                src="/reset_icon_yellow.png"
-                width={32}
-                height={32}
-                unoptimized
-                alt="reset-icon"
-                title={t("Mise à zéro des Filtres")}
-                onClick={() => handleResetFilters()}
-              />
-              <div className={cssModule["vertical-separator"]}></div>
-              <Image
-                className={cssModule["header-icon"]}
-                src="/sort_icon_yellow.png"
-                width={32}
-                height={32}
-                unoptimized
-                alt="sort-icon"
-                title={t("Trier par")}
-                // onClick={handleSortingOptionsDropdown}
-                // ref={dropdownRef}
-              />
-            </div>
-          </div>
+          <Header setIsModalShowing={setIsModalShowing} />
+          <StatsValuesFilterer
+            stats={filterState.stats}
+            updateStats={updateStats}
+            handleInput={handleInput}
+            setIsMobileFilterShowing={setIsMobileFilterShowing}
+            isMobileFilterShowing={isMobileFilterShowing}
+          />
+
           <div className={cssModule["item-list"]}>
             {filterState.type && filterState.type.length !== 0 && (
               <ItemList key={filterState.type} filterState={filterState} />

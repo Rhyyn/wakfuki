@@ -53,6 +53,7 @@ const LanguageSwitch = React.memo(() => {
         unoptimized
         onClick={() => changeLanguageAndSave("fr", 1)}
         alt="france-flag"
+        style={{ padding: "10px"}}
       />
       <Image
         className={`${cssModule["flag-icon"]} ${
@@ -64,6 +65,7 @@ const LanguageSwitch = React.memo(() => {
         unoptimized
         onClick={() => changeLanguageAndSave("en", 2)}
         alt="uk-flag"
+        style={{ padding: "10px"}}
       />
     </div>
   );
