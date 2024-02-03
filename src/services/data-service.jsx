@@ -81,16 +81,16 @@ const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
 };
 
 const filterByStatsQuery = (itemsQuery, stats) => {
-  // console.log(stats);
   if (stats && stats.length > 0) {
-    return itemsQuery.filter(item =>
-      stats.every(stat =>
+    return itemsQuery.filter(item => {
+      const result = stats.every(stat =>
         item.equipEffects.some(effect =>
           effect.effect.stats.property === stat.property &&
-          effect.effect.stats.values >= stat.value
+          effect.effect.stats.value >= stat.value
         )
-      )
-    );
+      );
+      return result;
+    });
   }
   return itemsQuery;
 };
@@ -109,7 +109,6 @@ const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
 };
 
 const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
-  let data;
   await waitForDbInitialization();
   try {
     const tableNames = filterState.type.map((type) => db.table(type + ".json"));
