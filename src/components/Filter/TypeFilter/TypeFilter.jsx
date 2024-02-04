@@ -2,27 +2,39 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { checkDataExists } from "../../../services/data-service.jsx";
-import _, { forEach } from "lodash";
+import { useTypeStateContext } from "../../Contexts/TypeStateContext";
 
 // TODO
 // Create modal for errors
 
-const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
+const TypeFilter = ({
+  handleTypeChange,
+  filterStateType,
+  resetFiltersFlag,
+}) => {
   const selectedTypesRefs = useRef([]);
   const iconsRefs = useRef({});
+  const { state, dispatch } = useTypeStateContext();
 
   const setIconsRefs = (imageName, element) => {
     iconsRefs.current[imageName] = element;
   };
-
 
   const handleImageClick = (imageName) => {
     if (selectedTypesRefs.current.includes(imageName)) {
       selectedTypesRefs.current = selectedTypesRefs.current.filter(
         (name) => name !== imageName
       );
+      dispatch({
+        type: "UPDATE_GLOBAL_VALUE",
+        payload: selectedTypesRefs.current,
+      });
     } else {
       selectedTypesRefs.current.push(imageName);
+      dispatch({
+        type: "UPDATE_GLOBAL_VALUE",
+        payload: selectedTypesRefs.current,
+      });
     }
 
     const iconRef = iconsRefs.current[imageName];
@@ -32,6 +44,21 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
 
     getNumberFromTypeString(selectedTypesRefs.current);
   };
+
+  useEffect(() => {
+    let size = Object.keys(state.stateValue).length;
+    if (size > 0) {
+      setTimeout(() => {
+        state.stateValue.forEach((imageName) => {
+          const iconRef = iconsRefs.current[imageName];
+          if (iconRef) {
+            iconRef.classList.toggle(cssModule["selected"]);
+          }
+        });
+        selectedTypesRefs.current = state.stateValue;
+      }, 0);
+    }
+  }, []);
 
   // TODO needs refactoring
   const getNumberFromTypeString = (selectedTypes) => {
@@ -69,14 +96,6 @@ const TypeFilter = ({ handleTypeChange, resetFiltersFlag }) => {
     );
     selectedTypesRefs.current = [];
   }, [resetFiltersFlag]);
-
-  // const debouncedHandleTypeChange = useCallback(
-  //   _.debounce((types) => {
-  //     handleTypeChange(types);
-  //   }, 100),
-  //   [handleTypeChange]
-  // );
-  // DEBOUNCE TEST USING LODASH
 
   return (
     <div className={cssModule["type-container"]}>

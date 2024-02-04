@@ -11,7 +11,7 @@ import StatsValuesFilterer from "../components/StatsValuesFilterer/StatsValuesFi
 import SettingsModal from "../components/SettingsModal/SettingsModal";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useDevice } from "../components/DeviceContext/DeviceContext";
+import { useDevice } from "../components/Contexts/DeviceContext";
 import "./i18n";
 
 const Home = () => {
@@ -44,6 +44,7 @@ const Home = () => {
 
   useEffect(() => {
     setResetFiltersFlag(false);
+    console.log("there");
   }, [resetFiltersFlag]);
 
   const handleLogClick = async () => {
@@ -64,6 +65,7 @@ const Home = () => {
   };
 
   const handleSearchChange = (newSearchQuery) => {
+    console.log("handleSearchChange called with newSearchQuery: ", newSearchQuery);
     setFilterState((prevState) => ({
       ...prevState,
       searchQuery: newSearchQuery,
@@ -71,11 +73,12 @@ const Home = () => {
   };
 
   const handleRarityChange = (newRarity) => {
+    console.log("handleRarityChange called with newRarity: ", newRarity);
     setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
   };
 
   const handleLevelChange = (newLevelRange) => {
-    console.log(newLevelRange);
+    console.log("handleLevelChange called with newLevelRange: ", newLevelRange);
     setFilterState((prevState) => ({
       ...prevState,
       levelRange: newLevelRange,
@@ -83,10 +86,12 @@ const Home = () => {
   };
 
   const handleTypeChange = (newType) => {
+    console.log("handleTypeChange called with newType: ", newType);
     setFilterState((prevState) => ({ ...prevState, type: newType }));
   };
 
   const handleStatsChange = (newStats) => {
+    console.log("handleStatsChange called with newStats: ", newStats);
     setFilterState((prevState) => {
       const filteredNewStats = newStats.filter(
         (newStat) =>
@@ -137,9 +142,11 @@ const Home = () => {
   };
 
   const [isModalShowing, setIsModalShowing] = useState(false);
-  const handleCogClick = () => {
-    setIsModalShowing(true);
-  };
+
+  // TODO: Fix the filter not loading last state
+  // useEffect(() => {
+  //   console.log(filterState);
+  // }, [filterState]);
 
   return (
     <>
@@ -153,14 +160,17 @@ const Home = () => {
         <SettingsModal setIsModalShowing={setIsModalShowing} />
       )}
       <div>
-        <AnimatePresence>
-          {(deviceType !== "mobile" || isMobileFilterShowing) && (
+        {(deviceType !== "mobile" || isMobileFilterShowing) && (
+          <AnimatePresence>
             <Filter
               storeFile={storeFile}
               handleRarityChange={handleRarityChange}
               handleTypeChange={handleTypeChange}
+              filterStateType={filterState.type}
               handleSearchChange={handleSearchChange}
+              filterStateSearchQuery={filterState.searchQuery}
               handleLevelChange={handleLevelChange}
+              filterStateLevelRange={filterState.levelRange}
               handleResetFilters={handleResetFilters}
               handleSortingOptionsChange={handleSortingOptionsChange}
               handleStatsChange={handleStatsChange}
@@ -168,8 +178,8 @@ const Home = () => {
               filterStateStats={filterState.stats}
               updateStatsFlag={updateStatsFlag}
             ></Filter>
-          )}
-        </AnimatePresence>
+          </AnimatePresence>
+        )}
 
         <div className={cssModule["global-container"]}>
           <Header setIsModalShowing={setIsModalShowing} />
