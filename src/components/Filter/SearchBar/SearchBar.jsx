@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import cssModule from "./SearchBar.module.scss";
 import { useTranslation } from "react-i18next";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
 const SearchBar = ({
   handleSearchChange,
   filterStateSearchQuery,
   resetFiltersFlag,
 }) => {
-  const [userInput, setUserInput] = useState(filterStateSearchQuery);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
+  const { filterState, dispatch } = useGlobalContext();
+  const [userInput, setUserInput] = useState(filterState.searchQuery);
 
   const debounce = (func, delay) => {
     let timeoutId;
@@ -21,9 +23,15 @@ const SearchBar = ({
     };
   };
 
-  const debouncedHandleSearchChange = useRef(
-    debounce(handleSearchChange, 500)
-  ).current;
+  const debouncedHandleSearchChange = useCallback(
+    debounce((value) => {
+      dispatch({
+        type: "UPDATE_SEARCH_QUERY",
+        payload: value,
+      });
+    }, 500),
+    [dispatch]
+  );
 
   useEffect(() => {
     if (!isInitialMount.current) {
@@ -32,7 +40,7 @@ const SearchBar = ({
         clearTimeout(timeoutId);
       };
     }
-  }, [userInput]);
+  }, [userInput, debouncedHandleSearchChange]);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
