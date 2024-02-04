@@ -1,7 +1,8 @@
 @use "../../../styles/variables.scss" as v;
 
 .cards-container {
-  padding-top: 20px;
+  // padding-top: 60px;
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

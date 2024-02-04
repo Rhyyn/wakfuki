@@ -51,6 +51,7 @@ const SearchBar = ({
   return (
     <div className={cssModule["search-bar-container"]}>
       <input
+        spellCheck="false"
         type="text"
         className={cssModule["input"]}
         placeholder={t("Chercher")}

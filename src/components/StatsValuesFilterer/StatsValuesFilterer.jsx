@@ -4,7 +4,9 @@ import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useDevice } from "../Contexts/DeviceContext";
 
-const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilterShowing, isMobileFilterShowing }) => {
+// TODO : add sorting dropdown
+
+const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilterShowing, isMobileFilterShowing, handleResetFilters }) => {
   const { t } = useTranslation();
   const { deviceType } = useDevice();
 

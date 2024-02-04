@@ -16,9 +16,9 @@
 }
 
 .horizontal-separator {
-    width: 180px;
+    width: 80%;
     height: 3px;
-    background-color: v.$primary-yellow;
+    background-color: v.$background-light;
     border-radius: 12px;
     margin: 0 auto;
     -moz-appearance: none;
@@ -48,16 +48,21 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    background-color: v.$background-light;
+    border-radius: 50%;
+    -webkit-tap-highlight-color: transparent;
+}
 
-    &:hover {
-        cursor: pointer;
-        background-color: v.$background;
-    }
+@media (hover: hover) {
+  .icon-container:hover {
+    cursor: pointer;
+    background-color: v.$background-off;
+  }
 }
 
 .selected {
-    border: 3px solid v.$primary-yellow;
-    background-color: v.$background;
+    // border: 3px solid v.$primary-yellow;
+    background-color: v.$primary-yellow;
 }
 
 // .icon {

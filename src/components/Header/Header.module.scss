@@ -5,10 +5,12 @@
   width: calc(100% - 230px);
   background-color: v.$primary-yellow;
   position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 3;
 }
 
 @media screen and (max-width: 600px) {

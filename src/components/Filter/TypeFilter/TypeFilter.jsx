@@ -171,6 +171,30 @@ const TypeFilter = ({
           </div>
         ))}
       </div>
+      <div
+        className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
+      >
+        {["812-sublimation", "582-familiers", "611-montures", "646-emblemes"].map(
+          (imageName) => (
+            <div
+              key={imageName}
+              onClick={() => handleImageClick(imageName)}
+              data-image-name={imageName}
+              ref={(element) => setIconsRefs(imageName, element)}
+              className={cssModule["icon-container"]}
+            >
+              <Image
+                className={cssModule["icon"]}
+                src={`/itemTypes/${imageName}.png`}
+                width={28}
+                height={28}
+                unoptimized
+                alt={imageName}
+              />
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 };

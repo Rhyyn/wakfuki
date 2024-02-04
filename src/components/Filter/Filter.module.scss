@@ -23,17 +23,15 @@
 .header-container {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
   height: 60px;
   align-items: center;
 }
 
-.horizontal-separator {
-  width: 180px;
-  height: 3px;
-  background-color: v.$primary-yellow;
-  border-radius: 12px;
-  margin: 0 auto;
+@media screen and (max-width: 600px) {
+  .header-container {
+    margin-top: 20px;
+  }
+  
 }
 
 .header-icon {
@@ -43,8 +41,29 @@
 .header-title {
   flex-grow: 1;
   padding-left: 25px;
-  color: v.$text-offwhite;
+  color: v.$text;
 }
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    margin-top: 10px;
+    height: 40px;
+  }
+  .header-title {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.horizontal-separator {
+  width: 80%;
+  height: 3px;
+  background-color: v.$background-light;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+
 
 .header-icons-container {
   display: flex;
@@ -54,13 +73,13 @@
   margin-right: 10px;
 }
 
-.vertical-separator {
-  width: 3px;
-  height: 24px;
-  border-radius: 12px;
-  background-color: v.$background-deep;
-  margin: 0 4px 0 4px;
-}
+// .vertical-separator {
+//   width: 3px;
+//   height: 24px;
+//   border-radius: 12px;
+//   background-color: v.$primary-yellow;
+//   margin: 0 4px 0 4px;
+// }
 
 .sorting-options-container {
   position: fixed;

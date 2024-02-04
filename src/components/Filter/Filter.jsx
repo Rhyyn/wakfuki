@@ -27,7 +27,7 @@ const Filter = ({
   resetFiltersFlag,
   filterStateStats,
   updateStatsFlag,
-  filterStateType
+  filterStateType,
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -40,7 +40,6 @@ const Filter = ({
   useEffect(() => {
     setIsComponentReady(true);
   }, []);
-  
 
   const handleSortingOptionsClick = (value) => {
     if (value) {
@@ -189,7 +188,9 @@ const Filter = ({
               </div>
             )}
           </div>
-          <div className={cssModule["horizontal-separator"]}></div>
+          {deviceType !== "mobile" && (
+            <div className={cssModule["horizontal-separator"]}></div>
+          )}
           <RarityFilter
             handleRarityChange={handleRarityChange}
             resetFiltersFlag={resetFiltersFlag}
