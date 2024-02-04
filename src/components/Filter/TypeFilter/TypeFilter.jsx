@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { checkDataExists } from "../../../services/data-service.jsx";
-import { useTypeStateContext } from "../../Contexts/TypeStateContext";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
 // TODO
 // Create modal for errors
@@ -12,9 +12,9 @@ const TypeFilter = ({
   filterStateType,
   resetFiltersFlag,
 }) => {
+  const { filterState, dispatch } = useGlobalContext();
   const selectedTypesRefs = useRef([]);
   const iconsRefs = useRef({});
-  const { state, dispatch } = useTypeStateContext();
 
   const setIconsRefs = (imageName, element) => {
     iconsRefs.current[imageName] = element;
@@ -25,16 +25,8 @@ const TypeFilter = ({
       selectedTypesRefs.current = selectedTypesRefs.current.filter(
         (name) => name !== imageName
       );
-      dispatch({
-        type: "UPDATE_GLOBAL_VALUE",
-        payload: selectedTypesRefs.current,
-      });
     } else {
       selectedTypesRefs.current.push(imageName);
-      dispatch({
-        type: "UPDATE_GLOBAL_VALUE",
-        payload: selectedTypesRefs.current,
-      });
     }
 
     const iconRef = iconsRefs.current[imageName];
@@ -46,17 +38,20 @@ const TypeFilter = ({
   };
 
   useEffect(() => {
-    let size = Object.keys(state.stateValue).length;
+    let size = Object.keys(filterState.type).length;
     if (size > 0) {
       setTimeout(() => {
-        state.stateValue.forEach((imageName) => {
+        filterState.type.forEach((imageName) => {
+          console.log(imageName);
+          console.log(iconsRefs.current);
           const iconRef = iconsRefs.current[imageName];
+          console.log(iconRef);
           if (iconRef) {
             iconRef.classList.toggle(cssModule["selected"]);
           }
         });
-        selectedTypesRefs.current = state.stateValue;
-      }, 0);
+        selectedTypesRefs.current = filterState.type;
+      }, 50);
     }
   }, []);
 
@@ -86,6 +81,10 @@ const TypeFilter = ({
   const handlePassingTypeChange = (newSelectedTypes) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
+      dispatch({
+        type: "UPDATE_TYPE",
+        payload: newSelectedTypes,
+      });
       handleTypeChange(newSelectedTypes);
     }, 700);
   };
@@ -174,26 +173,29 @@ const TypeFilter = ({
       <div
         className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
       >
-        {["812-sublimation", "582-familiers", "611-montures", "646-emblemes"].map(
-          (imageName) => (
-            <div
-              key={imageName}
-              onClick={() => handleImageClick(imageName)}
-              data-image-name={imageName}
-              ref={(element) => setIconsRefs(imageName, element)}
-              className={cssModule["icon-container"]}
-            >
-              <Image
-                className={cssModule["icon"]}
-                src={`/itemTypes/${imageName}.png`}
-                width={28}
-                height={28}
-                unoptimized
-                alt={imageName}
-              />
-            </div>
-          )
-        )}
+        {[
+          "812-sublimation",
+          "582-familiers",
+          "611-montures",
+          "646-emblemes",
+        ].map((imageName) => (
+          <div
+            key={imageName}
+            onClick={() => handleImageClick(imageName)}
+            data-image-name={imageName}
+            ref={(element) => setIconsRefs(imageName, element)}
+            className={cssModule["icon-container"]}
+          >
+            <Image
+              className={cssModule["icon"]}
+              src={`/itemTypes/${imageName}.png`}
+              width={28}
+              height={28}
+              unoptimized
+              alt={imageName}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

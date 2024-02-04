@@ -3,10 +3,12 @@ import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import stats from "../../../data/stats.json";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
 // TODO
-// maitrisElementRandom should show if maitriseMelee or maitriseDistance is selected
 // need a max number of selected stats
+// need to combine selectedStatsRefs with selectedStatsConstructedRefs
+// for better readability - need a way to combine the id with the name for fetch table
 
 const TypeFilter = ({
   handleStatsChange,
@@ -14,6 +16,7 @@ const TypeFilter = ({
   filterStateStats,
   updateStatsFlag,
 }) => {
+  const { filterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
   const [lang, setLang] = useState();
@@ -65,6 +68,11 @@ const TypeFilter = ({
     } else {
       selectedStatsRefs.current.push(statID);
     }
+
+    dispatch({
+      type: "UPDATE_STATS",
+      payload: selectedStatsRefs.current,
+    });
 
     const iconRef = iconsRefs.current[statID];
     if (iconRef) {
