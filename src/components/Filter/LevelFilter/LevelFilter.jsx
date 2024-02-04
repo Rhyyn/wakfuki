@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./LevelFilter.module.scss";
 import RangeSlider from "./RangeSlider";
 
 const LevelFilter = ({
   handleLevelChange,
   resetFiltersFlag,
+  filterStateLevelRange,
 }) => {
-  const [selectedRange, setSelectedRange] = useState({ from: 0, to: 230 });
+  const isInitialRender = useRef(true);
+  const [selectedRange, setSelectedRange] = useState({
+    from: filterStateLevelRange.from,
+    to: filterStateLevelRange.to,
+  });
   const ranges_dict = {
     20: { from: 0, to: 20 },
     35: { from: 21, to: 35 },
@@ -28,7 +33,7 @@ const LevelFilter = ({
   const handleRangeChange = (e) => {
     const selectedKey = e.target.value;
     const selectedRangeValue = ranges_dict[selectedKey];
-    setSelectedRange(selectedRangeValue);
+    handleLevelChange(selectedRangeValue);
   };
 
   const selectedKey = Object.keys(ranges_dict).find(
@@ -38,11 +43,26 @@ const LevelFilter = ({
   );
 
   useEffect(() => {
-    handleLevelChange(selectedRange);
+    if (!isInitialRender.current) {
+      console.log("useEffect in LevelFilter triggered", selectedRange);
+      handleLevelChange(selectedRange);
+    }
   }, [selectedRange]);
 
   useEffect(() => {
-    setSelectedRange({ from: 0, to: 230 });
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+
+    console.log(
+      "useEffectresetFiltersFlag inside LevelFilter triggered",
+      resetFiltersFlag
+    );
+
+    if (resetFiltersFlag) {
+      setSelectedRange({ from: 0, to: 230 });
+    }
   }, [resetFiltersFlag]);
 
   return (
@@ -62,8 +82,10 @@ const LevelFilter = ({
       </div>
       <RangeSlider
         selectedRange={selectedRange}
-        setSelectedRange={setSelectedRange}
+        // setSelectedRange={setSelectedRange}
         resetFiltersFlag={resetFiltersFlag}
+        handleLevelChange={handleLevelChange}
+        filterStateLevelRange={filterStateLevelRange}
       />
     </div>
   );

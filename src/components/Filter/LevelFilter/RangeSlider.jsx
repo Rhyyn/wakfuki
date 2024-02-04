@@ -2,18 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import { useModal } from "../../ModalComponents/Modal/ModalContext";
 import cssModule from "./RangeSlider.module.scss";
 
-const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
+const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handleLevelChange, filterStateLevelRange }) => {
   const fromSliderRef = useRef(null);
   const toSliderRef = useRef(null);
   const fromInputRef = useRef(null);
   const toInputRef = useRef(null);
   const timerRef = useRef(null);
-  const [fromInputValue, setFromInputValue] = useState(0);
-  const [toInputValue, setToInputValue] = useState(230);
-  const [fromSliderValue, setFromSliderValue] = useState(0);
-  const [toSliderValue, setToSliderValue] = useState(230);
+  const [fromInputValue, setFromInputValue] = useState(filterStateLevelRange.from);
+  const [toInputValue, setToInputValue] = useState(filterStateLevelRange.to);
+  const [fromSliderValue, setFromSliderValue] = useState(filterStateLevelRange.from);
+  const [toSliderValue, setToSliderValue] = useState(filterStateLevelRange.to);
   const { openModal } = useModal();
   const { closeModal } = useModal();
+  const isInitialRender = useRef(true);
 
   // TODO
   // Create error modal
@@ -68,7 +69,9 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
   };
 
   const handleMouseUpEvent = () => {
-    setSelectedRange({ from: fromSliderValue, to: toSliderValue });
+    console.log("tigger");
+    handleLevelChange({ from: fromSliderValue, to: toSliderValue });
+    // setSelectedRange({ from: fromSliderValue, to: toSliderValue });
   };
 
   const isNumberInRange = (minValue, maxValue, currValue) => {
@@ -187,17 +190,22 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag }) => {
   // Triggered when user sets a level range by using
   // the dropdown in LevelFilter
   useEffect(() => {
-    let fromValue = selectedRange.from;
-    let toValue = selectedRange.to;
+    let fromValue = filterStateLevelRange.from;
+    let toValue = filterStateLevelRange.to;
     setFromInputValue(fromValue);
     setToInputValue(toValue);
     setFromSliderValue(fromValue);
     setToSliderValue(toValue);
     fillSlider(fromValue, toValue);
-  }, [selectedRange]);
+  }, [filterStateLevelRange]);
 
   // Triggered when reset button is clicked
   useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    
     setFromInputValue(0);
     setToInputValue(230);
     setFromSliderValue(0);
