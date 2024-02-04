@@ -2,8 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./SearchBar.module.scss";
 import { useTranslation } from "react-i18next";
 
-const SearchBar = ({ handleSearchChange, resetFiltersFlag}) => {
-  const [userInput, setUserInput] = useState("");
+const SearchBar = ({
+  handleSearchChange,
+  filterStateSearchQuery,
+  resetFiltersFlag,
+}) => {
+  const [userInput, setUserInput] = useState(filterStateSearchQuery);
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
 
@@ -17,29 +21,31 @@ const SearchBar = ({ handleSearchChange, resetFiltersFlag}) => {
     };
   };
 
-  const debouncedHandleSearchChange = React.useRef(
+  const debouncedHandleSearchChange = useRef(
     debounce(handleSearchChange, 500)
   ).current;
 
   useEffect(() => {
-    debouncedHandleSearchChange(userInput);
-
-    return () => clearTimeout(debouncedHandleSearchChange);
-  }, [userInput, debouncedHandleSearchChange]);
+    if (!isInitialMount.current) {
+      const timeoutId = debouncedHandleSearchChange(userInput);
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [userInput]);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
+    if (!isInitialMount.current) {
+      console.log("useEffect in SearchBar triggered");
+      if (userInput.length > 0) {
+        setUserInput("");
+      }
     }
-    console.log('useEffect in SearchBar triggered');
-    if (userInput.length > 0) {
-      setUserInput([]);
-    }
+    isInitialMount.current = false;
   }, [resetFiltersFlag]);
 
   return (

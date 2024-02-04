@@ -8,7 +8,7 @@ import LevelFilter from "./LevelFilter/LevelFilter";
 import TypeFilter from "./TypeFilter/TypeFilter";
 import StatsFilter from "./StatsFilter/StatsFilter";
 import { motion, AnimatePresence } from "framer-motion";
-import { useDevice } from "../DeviceContext/DeviceContext";
+import { useDevice } from "../Contexts/DeviceContext";
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -18,13 +18,16 @@ const Filter = ({
   handleRarityChange,
   handleTypeChange,
   handleSearchChange,
+  filterStateSearchQuery,
   handleLevelChange,
+  filterStateLevelRange,
   handleResetFilters,
   handleSortingOptionsChange,
   handleStatsChange,
   resetFiltersFlag,
   filterStateStats,
   updateStatsFlag,
+  filterStateType
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -32,10 +35,12 @@ const Filter = ({
   const { t, i18n } = useTranslation();
   const [isComponentReady, setIsComponentReady] = useState(false);
   const { deviceType } = useDevice();
+  const isInitialRender = useRef(true);
 
   useEffect(() => {
     setIsComponentReady(true);
   }, []);
+  
 
   const handleSortingOptionsClick = (value) => {
     if (value) {
@@ -192,15 +197,18 @@ const Filter = ({
           <SearchBar
             handleSearchChange={handleSearchChange}
             resetFiltersFlag={resetFiltersFlag}
+            filterStateSearchQuery={filterStateSearchQuery}
           />
           <div className={cssModule["horizontal-separator"]}></div>
           <LevelFilter
             handleLevelChange={handleLevelChange}
             resetFiltersFlag={resetFiltersFlag}
+            filterStateLevelRange={filterStateLevelRange}
           />
           <TypeFilter
             handleTypeChange={handleTypeChange}
             resetFiltersFlag={resetFiltersFlag}
+            filterStateType={filterStateType}
           />
           <StatsFilter
             handleStatsChange={handleStatsChange}
