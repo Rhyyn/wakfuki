@@ -144,9 +144,7 @@ const Home = () => {
   const [isModalShowing, setIsModalShowing] = useState(false);
 
   // TODO: Fix the filter not loading last state
-  // useEffect(() => {
-  //   console.log(filterState);
-  // }, [filterState]);
+  // Fix AnimatePresence not working when unmounting
 
   return (
     <>
@@ -189,6 +187,7 @@ const Home = () => {
             handleInput={handleInput}
             setIsMobileFilterShowing={setIsMobileFilterShowing}
             isMobileFilterShowing={isMobileFilterShowing}
+            handleResetFilters={handleResetFilters}
           />
 
           <div className={cssModule["item-list"]}>
