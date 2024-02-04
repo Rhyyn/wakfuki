@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cssModule from "./Header.module.scss";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
-import { useDevice } from "../DeviceContext/DeviceContext";
+import { useDevice } from "../Contexts/DeviceContext";
 import Image from "next/image";
 
 const Header = ({ setIsModalShowing }) => {

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 // TODO: Add stats img to localstorage
 // Fix missing stats img
 // Figure out CDN for item img
+// Cache image to localStorage maybe?
 // Figure out global container div for middle container
 // so it doesnt change height if no recipe
 

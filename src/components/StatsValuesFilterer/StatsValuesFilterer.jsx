@@ -2,7 +2,7 @@ import React from "react";
 import cssModule from "./StatsValuesFilterer.module.scss";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { useDevice } from "../DeviceContext/DeviceContext";
+import { useDevice } from "../Contexts/DeviceContext";
 
 const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilterShowing, isMobileFilterShowing }) => {
   const { t } = useTranslation();
