@@ -1,4 +1,4 @@
-import cssModule from "./Card.module.scss";
+import cssModule from "./card.module.scss";
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
