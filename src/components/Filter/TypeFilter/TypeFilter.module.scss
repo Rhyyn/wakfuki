@@ -30,15 +30,14 @@
     display: flex;
     width: 90%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 3px 0 3px 0;
 }
 
-.top-row {
-    margin-top: 10px;
-}
 
 .icon-container {
+    margin: 2px;
     width: 45px;
     height: 45px;
     border-radius: 8px;
