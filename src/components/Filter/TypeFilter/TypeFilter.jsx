@@ -3,76 +3,58 @@ import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { checkDataExists } from "../../../services/data-service.jsx";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
+import string_to_item_types from "../../../data/string_to_item_types.json";
 
 // TODO
 // Create modal for errors
 
-const TypeFilter = ({
-  handleTypeChange,
-  filterStateType,
-  resetFiltersFlag,
-}) => {
-  const { filterState, dispatch } = useGlobalContext();
+const TypeFilter = ({ resetFiltersFlag }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const selectedTypesRefs = useRef([]);
   const iconsRefs = useRef({});
 
-  const setIconsRefs = (imageName, element) => {
-    iconsRefs.current[imageName] = element;
+  const setIconsRefs = (type, element) => {
+    iconsRefs.current[type] = element;
   };
 
-  const handleImageClick = (imageName) => {
-    if (selectedTypesRefs.current.includes(imageName)) {
+  const handleImageClick = (type) => {
+    if (selectedTypesRefs.current.includes(type)) {
       selectedTypesRefs.current = selectedTypesRefs.current.filter(
-        (name) => name !== imageName
+        (typeName) => typeName !== type
       );
     } else {
-      selectedTypesRefs.current.push(imageName);
+      selectedTypesRefs.current.push(type);
     }
 
-    const iconRef = iconsRefs.current[imageName];
+    const iconRef = iconsRefs.current[type];
     if (iconRef) {
       iconRef.classList.toggle(cssModule["selected"]);
     }
 
-    getNumberFromTypeString(selectedTypesRefs.current);
+    if (checkDataExists(selectedTypesRefs.current, 0)) {
+      handlePassingTypeChange(selectedTypesRefs.current);
+    } else {
+      console.log(`Error : at least one type in ${selectedTypesRefs.current} does not exist or is incomplete")}`);
+    }
   };
 
+  // Used to populate refs on mount if any exists
+  // for mobile filter
   useEffect(() => {
-    let size = Object.keys(filterState.type).length;
+    let size = Object.keys(globalFilterState.type).length;
     if (size > 0) {
       setTimeout(() => {
-        filterState.type.forEach((imageName) => {
-          console.log(imageName);
-          console.log(iconsRefs.current);
-          const iconRef = iconsRefs.current[imageName];
-          console.log(iconRef);
+        globalFilterState.type.forEach((type) => {
+          const iconRef = iconsRefs.current[type];
           if (iconRef) {
             iconRef.classList.toggle(cssModule["selected"]);
           }
         });
-        selectedTypesRefs.current = filterState.type;
-      }, 50);
+        selectedTypesRefs.current = globalFilterState.type;
+      }, 50); // small delay because for some reason 0 did not work
     }
   }, []);
 
-  // TODO needs refactoring
-  const getNumberFromTypeString = (selectedTypes) => {
-    let newSelectedTypes = [];
-    for (let i = 0; i < selectedTypes.length; i++) {
-      let temp_string = selectedTypes[i].toString().split(/\-(.*)/);
-      if (typeof temp_string[1] === "string") {
-        newSelectedTypes.push(temp_string[1]);
-      } else {
-        console.log("Error while trying to set type of item");
-      }
-    }
-    if (checkDataExists(newSelectedTypes, 0)) {
-      // console.log("newSelectedTypes", newSelectedTypes);
-      handlePassingTypeChange(newSelectedTypes);
-    } else {
-      console.log("error data does not exists");
-    }
-  };
 
   // this exists to delay fetching if the user
   // selects x types, so we get 1 request
@@ -85,8 +67,7 @@ const TypeFilter = ({
         type: "UPDATE_TYPE",
         payload: newSelectedTypes,
       });
-      handleTypeChange(newSelectedTypes);
-    }, 700);
+    }, 600);
   };
 
   useEffect(() => {
@@ -99,100 +80,22 @@ const TypeFilter = ({
   return (
     <div className={cssModule["type-container"]}>
       <div className={cssModule["horizontal-separator"]}></div>
-      <div
-        className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
-      >
-        {["134-casque", "138-epaulettes", "120-amulette", "136-plastron"].map(
-          (imageName) => (
-            <div
-              key={imageName}
-              onClick={() => handleImageClick(imageName)}
-              data-image-name={imageName}
-              ref={(element) => setIconsRefs(imageName, element)}
-              className={cssModule["icon-container"]}
-            >
-              <Image
-                className={cssModule["icon"]}
-                src={`/itemTypes/${imageName}.png`}
-                width={28}
-                height={28}
-                unoptimized
-                alt={imageName}
-              />
-            </div>
-          )
-        )}
-      </div>
       <div className={cssModule["type-row-icon-container"]}>
-        {["132-cape", "103-anneau", "133-ceinture", "119-bottes"].map(
-          (imageName) => (
-            <div
-              key={imageName}
-              className={cssModule["icon-container"]}
-              onClick={() => handleImageClick(imageName)}
-              data-image-name={imageName}
-              ref={(element) => setIconsRefs(imageName, element)}
-            >
-              <Image
-                className={cssModule["icon"]}
-                src={`/itemTypes/${imageName}.png`}
-                width={28}
-                height={28}
-                unoptimized
-                alt={imageName}
-              />
-            </div>
-          )
-        )}
-      </div>
-      <div className={cssModule["type-row-icon-container"]}>
-        {[
-          "518-arme1main",
-          "519-arme2main",
-          "571-secondemain",
-          "520-bouclier",
-        ].map((imageName) => (
+        {Object.keys(string_to_item_types).map((type) => (
           <div
-            key={imageName}
-            className={cssModule["icon-container"]}
-            onClick={() => handleImageClick(imageName)}
-            data-image-name={imageName}
-            ref={(element) => setIconsRefs(imageName, element)}
-          >
-            <Image
-              className={cssModule["icon"]}
-              src={`/itemTypes/${imageName}.png`}
-              width={28}
-              height={28}
-              unoptimized
-              alt={imageName}
-            />
-          </div>
-        ))}
-      </div>
-      <div
-        className={`${cssModule["type-row-icon-container"]} ${cssModule["top-row"]}`}
-      >
-        {[
-          "812-sublimation",
-          "582-familiers",
-          "611-montures",
-          "646-emblemes",
-        ].map((imageName) => (
-          <div
-            key={imageName}
-            onClick={() => handleImageClick(imageName)}
-            data-image-name={imageName}
-            ref={(element) => setIconsRefs(imageName, element)}
+            key={type}
+            onClick={() => handleImageClick(type)}
+            data-image-name={type}
+            ref={(element) => setIconsRefs(type, element)}
             className={cssModule["icon-container"]}
           >
             <Image
               className={cssModule["icon"]}
-              src={`/itemTypes/${imageName}.png`}
+              src={`/itemTypes/${type}.png`}
               width={28}
               height={28}
               unoptimized
-              alt={imageName}
+              alt={type}
             />
           </div>
         ))}
