@@ -7,13 +7,14 @@ import {
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
 import { useTranslation } from "react-i18next";
-
+import { useGlobalContext } from "../Contexts/GlobalContext.js";
 
 // TODO :
 // rarities does not get added on top of the list ?
 // Pages and infinite scrolling
 
 const ItemList = ({ filterState }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
@@ -21,41 +22,76 @@ const ItemList = ({ filterState }) => {
   const [isFetching, setIsFetching] = useState(false);
   const itemsPerPage = 40;
   const scrollThreshold = 100;
-  let lang = localStorage.getItem("language")
-
+  let lang = localStorage.getItem("language");
 
   const transformDataForDisplay = (rawData) => {
-    return rawData.map(item => ({
+    return rawData.map((item) => ({
       title: item.title,
       level: item.level,
       id: item.id,
       droprates: item.droprates,
       baseParams: item.baseParams,
       equipEffects: item.equipEffects,
-      gfxId: item.gfxId
+      gfxId: item.gfxId,
     }));
   };
 
   useEffect(() => {
     console.log("filterState changed");
-    console.log(filterState);
-    const fetchItems = async () => {
-      lang = localStorage.getItem("language")
-      let DATA = await fetchData(filterState, currentPage, itemsPerPage, lang);
-      let slimmedDownData = transformDataForDisplay(DATA);
-      setItems(slimmedDownData);
-      setIsLoading(false);
-    };
+    // console.log(filterState);
+    // const fetchItems = async () => {
+    // 	lang = localStorage.getItem("language");
+    // 	let DATA = await fetchData(
+    // 		filterState,
+    // 		currentPage,
+    // 		itemsPerPage,
+    // 		lang
+    // 	);
+    // 	let slimmedDownData = transformDataForDisplay(DATA);
+    // 	setItems(slimmedDownData);
+    // 	setIsLoading(false);
+    // };
 
-    if (filterState !== null) {
-      // setCurrentPage(1); // Reset page to 1 when a new type is selected\
-      setIsLoading(true);
-      fetchItems();
+    // if (filterState !== null) {
+    // 	// setCurrentPage(1); // Reset page to 1 when a new type is selected\
+    // 	setIsLoading(true);
+    // 	fetchItems();
 
-      // console.log(isLoading);
-      // console.log(items);
-    }
+    // 	// console.log(isLoading);
+    // 	// console.log(items);
+    // }
   }, [currentPage, filterState]);
+
+  let timer;
+  useEffect(() => {
+    console.log("globalFilterState changed", globalFilterState);
+
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      const fetchItems = async () => {
+        console.log("GlobalFilterState changed", globalFilterState);
+        lang = localStorage.getItem("language");
+        let DATA = await fetchData(
+          globalFilterState,
+          currentPage,
+          itemsPerPage,
+          lang
+        );
+        let slimmedDownData = transformDataForDisplay(DATA);
+        setItems(slimmedDownData);
+        setIsLoading(false);
+      };
+      if (filterState !== null) {
+        // setCurrentPage(1); // Reset page to 1 when a new type is selected\
+        setIsLoading(true);
+        fetchItems();
+
+        // console.log(isLoading);
+        // console.log(items);
+      }
+    }, 500);
+  }, [globalFilterState]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +126,8 @@ const ItemList = ({ filterState }) => {
   return (
     <div className={cssModule["cards-container"]}>
       {isLoading && <p>Loading...</p>}
-      {!isLoading && items.map((item) => <Card key={item.id} item={item} lang={lang}/>)}
+      {!isLoading &&
+        items.map((item) => <Card key={item.id} item={item} lang={lang} />)}
     </div>
   );
 };

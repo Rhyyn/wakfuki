@@ -10,8 +10,8 @@ const SearchBar = ({
 }) => {
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
-  const { filterState, dispatch } = useGlobalContext();
-  const [userInput, setUserInput] = useState(filterState.searchQuery);
+  const { globalFilterState, dispatch } = useGlobalContext();
+  const [userInput, setUserInput] = useState(globalFilterState.searchQuery);
 
   const debounce = (func, delay) => {
     let timeoutId;
