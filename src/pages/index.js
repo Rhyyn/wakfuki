@@ -12,9 +12,11 @@ import SettingsModal from "../components/SettingsModal/SettingsModal";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDevice } from "../components/Contexts/DeviceContext";
+import { useGlobalContext } from "../components/Contexts/GlobalContext";
 import "./i18n";
 
 const Home = () => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const { t } = useTranslation();
   const [selectedType, setSelectedType] = useState(null);
   const [filterState, setFilterState] = useState({
@@ -191,8 +193,8 @@ const Home = () => {
           />
 
           <div className={cssModule["item-list"]}>
-            {filterState.type && filterState.type.length !== 0 && (
-              <ItemList key={filterState.type} filterState={filterState} />
+            {globalFilterState.type && globalFilterState.type.length !== 0 && (
+              <ItemList key={globalFilterState.type} filterState={globalFilterState} />
             )}
           </div>
         </div>
