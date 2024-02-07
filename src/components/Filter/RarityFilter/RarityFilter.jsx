@@ -3,10 +3,11 @@ import cssModule from "./RarityFilter.module.scss";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
-export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
+export const RarityFilter = ({ resetFiltersFlag }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
-  const [selectedItems, setSelectedItems] = useState([]);
   const imageFileNames = [
     "0.png",
     "1.png",
@@ -24,7 +25,14 @@ export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
     iconsRefs.current[rarity] = element;
   };
 
-  const rows = [imageFileNames.slice(0, 4), imageFileNames.slice(4)];
+  // Populate selectedRaritiesRefs when mounting for mobile filter
+  useEffect(() => {
+    if (globalFilterState.rarity) {
+      for (let i = 0; i < globalFilterState.rarity.length; i++) {
+        selectedRaritiesRefs.current.push(globalFilterState.rarity[i]);
+      }
+    }
+  }, []);
 
   const handleClick = (rarity) => {
     if (selectedRaritiesRefs.current.includes(rarity)) {
@@ -43,13 +51,19 @@ export const RarityFilter = ({ handleRarityChange, resetFiltersFlag }) => {
     handlePassingRaritiesChange(selectedRaritiesRefs.current);
   };
 
+  // Used to wait for the user to stop selecting rarities
+  // and then update the global filter or after 500ms
   let timer;
   const handlePassingRaritiesChange = (newSelectedRarities) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      handleRarityChange(newSelectedRarities);
+      dispatch({
+        type: "UPDATE_RARITY",
+        payload: newSelectedRarities,
+      });
     }, 500);
   };
+
 
   useEffect(() => {
     selectedRaritiesRefs.current.forEach((element) =>
