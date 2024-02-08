@@ -8,16 +8,7 @@ import { useGlobalContext } from "../../Contexts/GlobalContext";
 export const RarityFilter = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
-  const imageFileNames = [
-    "0.png",
-    "1.png",
-    "2.png",
-    "3.png",
-    "4.png",
-    "5.png",
-    "6.png",
-    "7.png",
-  ];
+  const imageFileNames = ["0.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
 
   const selectedRaritiesRefs = useRef([]);
   const iconsRefs = useRef({});
@@ -64,12 +55,9 @@ export const RarityFilter = ({ resetFiltersFlag }) => {
     }, 500);
   };
 
-
   useEffect(() => {
     selectedRaritiesRefs.current.forEach((element) =>
-      iconsRefs.current[element + ".png"].classList.toggle(
-        cssModule["selected"]
-      )
+      iconsRefs.current[element + ".png"].classList.toggle(cssModule["selected"])
     );
     selectedRaritiesRefs.current = [];
   }, [resetFiltersFlag]);
