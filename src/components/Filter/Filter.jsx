@@ -15,19 +15,11 @@ import { useDevice } from "../Contexts/DeviceContext";
 // ELSE GO HAM
 
 const Filter = ({
-  handleRarityChange,
-  handleTypeChange,
-  handleSearchChange,
-  filterStateSearchQuery,
-  handleLevelChange,
-  filterStateLevelRange,
   handleResetFilters,
   handleSortingOptionsChange,
   handleStatsChange,
   resetFiltersFlag,
-  filterStateStats,
   updateStatsFlag,
-  filterStateType,
 }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -192,29 +184,21 @@ const Filter = ({
             <div className={cssModule["horizontal-separator"]}></div>
           )}
           <RarityFilter
-            handleRarityChange={handleRarityChange}
             resetFiltersFlag={resetFiltersFlag}
           />
           <SearchBar
-            handleSearchChange={handleSearchChange}
             resetFiltersFlag={resetFiltersFlag}
-            filterStateSearchQuery={filterStateSearchQuery}
           />
           <div className={cssModule["horizontal-separator"]}></div>
           <LevelFilter
-            handleLevelChange={handleLevelChange}
             resetFiltersFlag={resetFiltersFlag}
-            filterStateLevelRange={filterStateLevelRange}
           />
           <TypeFilter
-            handleTypeChange={handleTypeChange}
             resetFiltersFlag={resetFiltersFlag}
-            filterStateType={filterStateType}
           />
           <StatsFilter
             handleStatsChange={handleStatsChange}
             resetFiltersFlag={resetFiltersFlag}
-            filterStateStats={filterStateStats}
             updateStatsFlag={updateStatsFlag}
           />
         </div>

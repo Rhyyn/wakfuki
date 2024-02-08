@@ -1,14 +1,35 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import cssModule from "./StatsValuesFilterer.module.scss";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useDevice } from "../Contexts/DeviceContext";
+import { useGlobalContext } from "../Contexts/GlobalContext";
 
 // TODO : add sorting dropdown
 
-const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilterShowing, isMobileFilterShowing, handleResetFilters }) => {
+const StatsValuesFilterer = ({ updateStats, handleStatsValuesFiltererInputChange, setIsMobileFilterShowing, isMobileFilterShowing, handleResetFilters }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const { t } = useTranslation();
   const { deviceType } = useDevice();
+
+  const [selectedStats, setSelectedStats] = useState([]);
+  useEffect(() => {
+    let newStats = [];
+    console.log(globalFilterState.stats);
+    globalFilterState.stats.forEach(stat => {
+      newStats.push(stat)
+    });
+
+    setSelectedStats(newStats);
+  }, [globalFilterState.stats]); // this does not trigger for some reason?
+
+  let timer;
+  const handleValueInputChange = (value, element) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      handleStatsValuesFiltererInputChange(value, element);
+    }, 500);
+  };
 
   return (
     <div className={cssModule["items-values-filtering-container"]}>
@@ -24,9 +45,9 @@ const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilte
         )}
       </div>
       <div className={cssModule["items-values-editor-container"]}>
-        {stats &&
-          stats.length > 0 &&
-          stats.map((element) => (
+        {selectedStats &&
+          selectedStats.length > 0 &&
+          selectedStats.map((element) => (
             <div key={element.property} className={cssModule["value-editor"]}>
               <Image
                 alt={element.property}
@@ -35,8 +56,8 @@ const StatsValuesFilterer = ({ stats, updateStats, handleInput, setIsMobileFilte
                 src={`/stats/${element.property}.png`}
               />
               <input
-                value={element.value}
-                onChange={(e) => handleInput(e.target.value, element)}
+                defaultValue={element.value}
+                onChange={(e) => handleValueInputChange(e.target.value, element)}
                 className={cssModule["value-input"]}
               />
               <Image

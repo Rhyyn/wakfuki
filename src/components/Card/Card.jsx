@@ -203,7 +203,7 @@ const Card = ({ item, lang }) => {
       >
         <span>Pas de recette!</span>
       </div>
-      <div // STATS
+      <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
           triToggle === 1 ? cssModule["visible"] : cssModule["hidden"]
         }`}

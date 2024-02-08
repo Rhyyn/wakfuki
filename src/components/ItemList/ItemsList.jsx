@@ -64,10 +64,7 @@ const ItemList = ({ filterState }) => {
 
   let timer;
   useEffect(() => {
-    console.log("globalFilterState changed", globalFilterState);
-
     clearTimeout(timer);
-
     timer = setTimeout(() => {
       const fetchItems = async () => {
         console.log("GlobalFilterState changed", globalFilterState);
