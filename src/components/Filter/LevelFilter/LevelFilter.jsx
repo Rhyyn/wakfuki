@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./LevelFilter.module.scss";
 import RangeSlider from "./RangeSlider";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
-const LevelFilter = ({
-  handleLevelChange,
-  resetFiltersFlag,
-  filterStateLevelRange,
-}) => {
+// TODO : Maybe add an opacity to the selected range if not used
+
+const LevelFilter = ({ resetFiltersFlag }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const isInitialRender = useRef(true);
   const [selectedRange, setSelectedRange] = useState({
-    from: filterStateLevelRange.from,
-    to: filterStateLevelRange.to,
+    from: globalFilterState.levelRange.from,
+    to: globalFilterState.levelRange.to,
   });
   const ranges_dict = {
     20: { from: 0, to: 20 },
@@ -33,21 +33,17 @@ const LevelFilter = ({
   const handleRangeChange = (e) => {
     const selectedKey = e.target.value;
     const selectedRangeValue = ranges_dict[selectedKey];
-    handleLevelChange(selectedRangeValue);
+    dispatch({
+      type: "UPDATE_LEVEL_RANGE",
+      payload: selectedRangeValue,
+    });
   };
 
+  // finds ranges in dict that match selectedRange
   const selectedKey = Object.keys(ranges_dict).find(
     (key) =>
-      ranges_dict[key].from === selectedRange.from &&
-      ranges_dict[key].to === selectedRange.to
+      ranges_dict[key].from === selectedRange.from && ranges_dict[key].to === selectedRange.to
   );
-
-  useEffect(() => {
-    if (!isInitialRender.current) {
-      console.log("useEffect in LevelFilter triggered", selectedRange);
-      handleLevelChange(selectedRange);
-    }
-  }, [selectedRange]);
 
   useEffect(() => {
     if (isInitialRender.current) {
@@ -55,10 +51,7 @@ const LevelFilter = ({
       return;
     }
 
-    console.log(
-      "useEffectresetFiltersFlag inside LevelFilter triggered",
-      resetFiltersFlag
-    );
+    console.log("useEffectresetFiltersFlag inside LevelFilter triggered", resetFiltersFlag);
 
     if (resetFiltersFlag) {
       setSelectedRange({ from: 0, to: 230 });
@@ -80,13 +73,7 @@ const LevelFilter = ({
           ))}
         </select>
       </div>
-      <RangeSlider
-        selectedRange={selectedRange}
-        // setSelectedRange={setSelectedRange}
-        resetFiltersFlag={resetFiltersFlag}
-        handleLevelChange={handleLevelChange}
-        filterStateLevelRange={filterStateLevelRange}
-      />
+      <RangeSlider resetFiltersFlag={resetFiltersFlag} />
     </div>
   );
 };

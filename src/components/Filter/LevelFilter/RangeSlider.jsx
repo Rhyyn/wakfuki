@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useModal } from "../../ModalComponents/Modal/ModalContext";
 import cssModule from "./RangeSlider.module.scss";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 
-const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handleLevelChange, filterStateLevelRange }) => {
+const RangeSlider = ({ resetFiltersFlag }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const fromSliderRef = useRef(null);
   const toSliderRef = useRef(null);
   const fromInputRef = useRef(null);
   const toInputRef = useRef(null);
   const timerRef = useRef(null);
-  const [fromInputValue, setFromInputValue] = useState(filterStateLevelRange.from);
-  const [toInputValue, setToInputValue] = useState(filterStateLevelRange.to);
-  const [fromSliderValue, setFromSliderValue] = useState(filterStateLevelRange.from);
-  const [toSliderValue, setToSliderValue] = useState(filterStateLevelRange.to);
+  const [fromInputValue, setFromInputValue] = useState(globalFilterState.levelRange.from);
+  const [toInputValue, setToInputValue] = useState(globalFilterState.levelRange.to);
+  const [fromSliderValue, setFromSliderValue] = useState(globalFilterState.levelRange.from);
+  const [toSliderValue, setToSliderValue] = useState(globalFilterState.levelRange.to);
   const { openModal } = useModal();
   const { closeModal } = useModal();
   const isInitialRender = useRef(true);
@@ -69,9 +71,10 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handle
   };
 
   const handleMouseUpEvent = () => {
-    console.log("tigger");
-    handleLevelChange({ from: fromSliderValue, to: toSliderValue });
-    // setSelectedRange({ from: fromSliderValue, to: toSliderValue });
+    dispatch({
+      type: "UPDATE_LEVEL_RANGE",
+      payload: { from: fromSliderValue, to: toSliderValue },
+    });
   };
 
   const isNumberInRange = (minValue, maxValue, currValue) => {
@@ -114,9 +117,13 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handle
   };
 
   const handleModal = () => {
-    let modalId = openModal(`Error, cannot use a value inferior to the minimum level of ${fromInputValue}`, 3000);
+    let modalId = openModal(
+      `Error, cannot use a value inferior to the minimum level of ${fromInputValue}`,
+      3000
+    );
   };
 
+  // TODO : Too much responsibility, needs refactoring but hard and time consuming
   const handleInputChange = (e) => {
     let inputValue = e.target.value;
     if (inputValue.startsWith("-")) {
@@ -145,36 +152,35 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handle
     setInputFunction(newInput);
 
     timerRef.current = setTimeout(() => {
-      if (
-        isInputLengthValid(newInput) &&
-        isInputValid(newInput, minValue, maxValue)
-      ) {
+      if (isInputLengthValid(newInput) && isInputValid(newInput, minValue, maxValue)) {
         setInputFunction(newInput);
         setSliderFunction(newInput);
-        const updatedMinValue =
-          e.target.id === "fromInput" ? newInput : minValue;
+        const updatedMinValue = e.target.id === "fromInput" ? newInput : minValue;
         const updatedMaxValue = e.target.id === "toInput" ? newInput : maxValue;
+        dispatch({
+          type: "UPDATE_LEVEL_RANGE",
+          payload: { from: updatedMinValue, to: updatedMaxValue },
+        });
         fillSlider(updatedMinValue, updatedMaxValue);
         return;
       }
       handleModal();
       setInputFunction(defaultValue);
       setSliderFunction(defaultValue);
-      const updatedMinValue =
-        e.target.id === "fromInput" ? defaultValue : minValue;
-      const updatedMaxValue =
-        e.target.id === "toInput" ? defaultValue : maxValue;
+      const updatedMinValue = e.target.id === "fromInput" ? defaultValue : minValue;
+      const updatedMaxValue = e.target.id === "toInput" ? defaultValue : maxValue;
       fillSlider(updatedMinValue, updatedMaxValue);
       // Pop up modal error
     }, 600);
   };
 
+  // Fills slider with values on mount, used for the mobile filter
   useEffect(() => {
     fillSlider(fromSliderValue, toSliderValue);
   }, []);
 
   // sets the last used thumb on top
-  // prevents overlapping
+  // prevents overlapping confusion
   useEffect(() => {
     let minValue = fromSliderValue;
     let maxValue = fromSliderValue + 2;
@@ -190,14 +196,14 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handle
   // Triggered when user sets a level range by using
   // the dropdown in LevelFilter
   useEffect(() => {
-    let fromValue = filterStateLevelRange.from;
-    let toValue = filterStateLevelRange.to;
+    let fromValue = globalFilterState.levelRange.from;
+    let toValue = globalFilterState.levelRange.to;
     setFromInputValue(fromValue);
     setToInputValue(toValue);
     setFromSliderValue(fromValue);
     setToSliderValue(toValue);
     fillSlider(fromValue, toValue);
-  }, [filterStateLevelRange]);
+  }, [globalFilterState.levelRange]);
 
   // Triggered when reset button is clicked
   useEffect(() => {
@@ -205,7 +211,7 @@ const RangeSlider = ({ selectedRange, setSelectedRange, resetFiltersFlag, handle
       isInitialRender.current = false;
       return;
     }
-    
+
     setFromInputValue(0);
     setToInputValue(230);
     setFromSliderValue(0);
