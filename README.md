@@ -1,4 +1,4 @@
-# WakfuKi , une encyclopédie pour Wakfu 
+# WakfuKi ,an encyclopedia for the game Wakfu 
 
 Tech stack : React / NextJS, IndexedDB using DexieJS, SCSS
 
