@@ -49,13 +49,6 @@ const Home = () => {
     console.log("there");
   }, [resetFiltersFlag]);
 
-  const handleLogClick = async () => {
-    try {
-      fetchItemsById();
-    } catch (error) {
-      console.error("Error fetching and processing data:", error);
-    }
-  };
 
   const handleSortingOptionsChange = (newSortingOption) => {
     console.log(newSortingOption);
@@ -66,40 +59,14 @@ const Home = () => {
     console.log(filterState.sortBy);
   };
 
-  const handleSearchChange = (newSearchQuery) => {
-    console.log("handleSearchChange called with newSearchQuery: ", newSearchQuery);
-    setFilterState((prevState) => ({
-      ...prevState,
-      searchQuery: newSearchQuery,
-    }));
-  };
-
-  const handleRarityChange = (newRarity) => {
-    console.log("handleRarityChange called with newRarity: ", newRarity);
-    setFilterState((prevState) => ({ ...prevState, rarity: newRarity }));
-  };
-
-  const handleLevelChange = (newLevelRange) => {
-    console.log("handleLevelChange called with newLevelRange: ", newLevelRange);
-    setFilterState((prevState) => ({
-      ...prevState,
-      levelRange: newLevelRange,
-    }));
-  };
-
-  const handleTypeChange = (newType) => {
-    console.log("handleTypeChange called with newType: ", newType);
-    setFilterState((prevState) => ({ ...prevState, type: newType }));
-  };
+  
 
   const handleStatsChange = (newStats) => {
     console.log("handleStatsChange called with newStats: ", newStats);
     setFilterState((prevState) => {
       const filteredNewStats = newStats.filter(
         (newStat) =>
-          !prevState.stats.some(
-            (existingStat) => existingStat.property === newStat.property
-          )
+          !prevState.stats.some((existingStat) => existingStat.property === newStat.property)
       );
 
       const updatedStats = prevState.stats.filter((existingStat) =>
@@ -117,14 +84,14 @@ const Home = () => {
 
   const [updateStatsFlag, setUpdateStatsFlag] = useState(false);
   const updateStats = (elementProperty) => {
-    const updatedStats = filterState.stats.filter(
+    const updatedStats = globalFilterState.stats.filter(
       (stat) => stat.property !== elementProperty
     );
 
-    setFilterState((prevFilterState) => ({
-      ...prevFilterState,
-      stats: updatedStats,
-    }));
+    dispatch({
+      type: "UPDATE_STATS",
+      payload: updatedStats,
+    });
     setUpdateStatsFlag(true);
   };
 
@@ -132,15 +99,19 @@ const Home = () => {
     setUpdateStatsFlag(false);
   }, [updateStatsFlag]);
 
-  const handleInput = (input, inputElement) => {
-    const updatedStats = filterState.stats.map((element) => {
-      if (element.property === inputElement.property) {
-        return { ...element, value: input };
+  // this is triggered when values of stats are changed by the user
+  const handleStatsValuesFiltererInputChange = (input, inputElement) => {
+    const updatedStats = globalFilterState.stats.map((stat) => {
+      if (stat.property === inputElement.property) {
+        return { ...stat, value: input };
       }
-      return element;
+      return stat;
     });
 
-    setFilterState({ ...filterState, stats: updatedStats });
+    dispatch({
+      type: "UPDATE_STATS",
+      payload: updatedStats,
+    });
   };
 
   const [isModalShowing, setIsModalShowing] = useState(false);
@@ -156,26 +127,15 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isModalShowing && (
-        <SettingsModal setIsModalShowing={setIsModalShowing} />
-      )}
+      {isModalShowing && <SettingsModal setIsModalShowing={setIsModalShowing} />}
       <div>
         {(deviceType !== "mobile" || isMobileFilterShowing) && (
           <AnimatePresence>
             <Filter
-              storeFile={storeFile}
-              handleRarityChange={handleRarityChange}
-              handleTypeChange={handleTypeChange}
-              filterStateType={filterState.type}
-              handleSearchChange={handleSearchChange}
-              filterStateSearchQuery={filterState.searchQuery}
-              handleLevelChange={handleLevelChange}
-              filterStateLevelRange={filterState.levelRange}
+              handleStatsChange={handleStatsChange}
               handleResetFilters={handleResetFilters}
               handleSortingOptionsChange={handleSortingOptionsChange}
-              handleStatsChange={handleStatsChange}
               resetFiltersFlag={resetFiltersFlag}
-              filterStateStats={filterState.stats}
               updateStatsFlag={updateStatsFlag}
             ></Filter>
           </AnimatePresence>
@@ -184,9 +144,8 @@ const Home = () => {
         <div className={cssModule["global-container"]}>
           <Header setIsModalShowing={setIsModalShowing} />
           <StatsValuesFilterer
-            stats={filterState.stats}
             updateStats={updateStats}
-            handleInput={handleInput}
+            handleStatsValuesFiltererInputChange={handleStatsValuesFiltererInputChange}
             setIsMobileFilterShowing={setIsMobileFilterShowing}
             isMobileFilterShowing={isMobileFilterShowing}
             handleResetFilters={handleResetFilters}
