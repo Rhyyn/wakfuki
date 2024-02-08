@@ -67,8 +67,9 @@ const TypeFilter = ({
       );
     } else {
       selectedStatsRefs.current.push(statID);
-    }
+    } 
 
+    // {property: X, value: 1}
     dispatch({
       type: "UPDATE_STATS",
       payload: selectedStatsRefs.current,
@@ -80,8 +81,9 @@ const TypeFilter = ({
     }
   };
 
-  // using states because !.includes of refs array doesn't work
-  // this is hack, probably needs refactoring later
+  // using states because !.includes on refs array doesn't work for some reason
+  // this is a hack, probably needs refactoring later
+  // Used to check distance/melee if multi-elements is selected and vice versa
   const [isDistanceChecked, setIsDistanceChecked] = useState(false);
   const [isMeleeChecked, setIsMeleeChecked] = useState(false);
   const toggle_stat = (statID) => {
@@ -95,6 +97,7 @@ const TypeFilter = ({
         handleAndSet(statID);
         setIsDistanceChecked(false);
       } else {
+        // needs a separate func to check array since {property: X, value: 1}
         if (selectedStatsRefs.current.includes(1068)) {
           handleAndSet(statID);
         } else {
@@ -132,6 +135,7 @@ const TypeFilter = ({
   };
 
   useEffect(() => {
+    // needs to iterate differently since {property: X, value: 1}
     selectedStatsRefs.current.forEach((element) =>
       iconsRefs.current[element].classList.toggle(cssModule["selected"])
     );
@@ -142,6 +146,7 @@ const TypeFilter = ({
   }, [resetFiltersFlag]);
 
   useEffect(() => {
+    // needs to iterate differently since {property: X, value: 1}
     const missingElements = selectedStatsRefs.current.filter(
       (element) => !filterStateStats.some((stat) => stat.property === element)
     );
