@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import cssModule from "./StatsValuesFilterer.module.scss";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
@@ -7,7 +7,13 @@ import { useGlobalContext } from "../Contexts/GlobalContext";
 
 // TODO : add sorting dropdown
 
-const StatsValuesFilterer = ({ updateStats, handleStatsValuesFiltererInputChange, setIsMobileFilterShowing, isMobileFilterShowing, handleResetFilters }) => {
+const StatsValuesFilterer = ({
+  updateStats,
+  handleStatsValuesFiltererInputChange,
+  setIsMobileFilterShowing,
+  isMobileFilterShowing,
+  handleResetFilters,
+}) => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t } = useTranslation();
   const { deviceType } = useDevice();
@@ -16,8 +22,8 @@ const StatsValuesFilterer = ({ updateStats, handleStatsValuesFiltererInputChange
   useEffect(() => {
     let newStats = [];
     console.log(globalFilterState.stats);
-    globalFilterState.stats.forEach(stat => {
-      newStats.push(stat)
+    globalFilterState.stats.forEach((stat) => {
+      newStats.push(stat);
     });
 
     setSelectedStats(newStats);
@@ -29,6 +35,17 @@ const StatsValuesFilterer = ({ updateStats, handleStatsValuesFiltererInputChange
     timer = setTimeout(() => {
       handleStatsValuesFiltererInputChange(value, element);
     }, 500);
+  };
+
+  // Update state when user click the cross delete button
+  const updateState = (element) => {
+    const newElements = globalFilterState.stats.filter(
+      (stat) => stat.property !== element.property
+    );
+    dispatch({
+      type: "UPDATE_STATS",
+      payload: newElements,
+    });
   };
 
   return (
@@ -66,7 +83,7 @@ const StatsValuesFilterer = ({ updateStats, handleStatsValuesFiltererInputChange
                 width={16}
                 height={16}
                 src="/cross_icon_yellow.png"
-                onClick={() => updateStats(element.property)}
+                onClick={() => updateState(element)}
               />
             </div>
           ))}
