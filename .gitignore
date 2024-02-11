@@ -37,3 +37,4 @@ next-env.d.ts
 
 
 /reminders.txt
+.vscode/settings.json
