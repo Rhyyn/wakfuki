@@ -9,7 +9,6 @@ import { appWithTranslation } from "next-i18next";
 import { Poppins } from "next/font/google";
 import { ModalProvider } from "../components/ModalComponents/Modal/ModalContext";
 import { DeviceProvider } from "../components/Contexts/DeviceContext";
-import { TypeSateProvider } from "../components/Contexts/TypeStateContext";
 import { GlobalContextProvider } from "../components/Contexts/GlobalContext";
 import Modal from "../components/ModalComponents/Modal/Modal";
 
@@ -61,12 +60,10 @@ function MyApp({ Component, pageProps }) {
     <main className={poppins.className}>
       <DeviceProvider>
         <GlobalContextProvider>
-          <TypeSateProvider>
-            <ModalProvider>
-              <Component {...pageProps} />
-              <Modal />
-            </ModalProvider>
-          </TypeSateProvider>
+          <ModalProvider>
+            <Component {...pageProps} />
+            <Modal />
+          </ModalProvider>
         </GlobalContextProvider>
       </DeviceProvider>
     </main>
