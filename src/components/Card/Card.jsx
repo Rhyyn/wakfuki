@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 // Cache image to localStorage maybe?
 // Figure out global container div for middle container
 // so it doesnt change height if no recipe
+// when clicked on a start add to filter
 
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
@@ -111,10 +112,7 @@ const Card = ({ item, lang }) => {
       const firstIndex = priority_order.indexOf(a.effect.stats.property);
       const secondIndex = priority_order.indexOf(b.effect.stats.property);
 
-      return (
-        (firstIndex === -1 ? 25 : firstIndex) -
-        (secondIndex === -1 ? 25 : secondIndex)
-      );
+      return (firstIndex === -1 ? 25 : firstIndex) - (secondIndex === -1 ? 25 : secondIndex);
     });
   };
   sortEffectsWithPriority(item);
@@ -131,9 +129,7 @@ const Card = ({ item, lang }) => {
       <div className={cssModule["top-card-container"]}>
         <div className={cssModule["header-top-row"]}>
           <div className={cssModule["header-left-top-container"]}>
-            <div
-              className={`${cssModule["item-name-container"]} ${cssModule["test"]}`}
-            >
+            <div className={`${cssModule["item-name-container"]} ${cssModule["test"]}`}>
               <span className={cssModule["item-name"]}>{item.title[lang]}</span>
             </div>
           </div>
@@ -152,12 +148,8 @@ const Card = ({ item, lang }) => {
                 height={24}
               ></Image>
             </div>
-            <span className={cssModule["item-type-level-text"]}>
-              {t("Level")} -
-            </span>
-            <span className={cssModule["item-type-level-text-number"]}>
-              {item.level}
-            </span>
+            <span className={cssModule["item-type-level-text"]}>{t("Level")} -</span>
+            <span className={cssModule["item-type-level-text-number"]}>{item.level}</span>
           </div>
           <div className={cssModule["item-rarity-container"]}>
             <div className={cssModule["item-rarity-icon-container"]}>
@@ -171,9 +163,7 @@ const Card = ({ item, lang }) => {
               ></Image>
             </div>
             <span style={{ color: "#C2C2C2" }}> - </span>
-            <span
-              className={`${cssModule["item-rarity-text"]} ${cssModule[rarity]}`}
-            >
+            <span className={`${cssModule["item-rarity-text"]} ${cssModule[rarity]}`}>
               {rarity}
             </span>
           </div>
@@ -187,9 +177,7 @@ const Card = ({ item, lang }) => {
         {item.droprates ? (
           Object.entries(item.droprates).map(([key, value], index) => (
             <div key={index} className={cssModule["item-drop-container"]}>
-              <span
-                className={cssModule["item-drop"]}
-              >{`${key}: ${value}`}</span>
+              <span className={cssModule["item-drop"]}>{`${key}: ${value}`}</span>
             </div>
           ))
         ) : (
@@ -215,12 +203,13 @@ const Card = ({ item, lang }) => {
             data-id={effect.effect.stats.display.property}
             onClick={(e) => handleClick(e)}
           >
-            <Image 
-              alt={effect.effect.stats.stat_string_desc[lang]} 
-              width={20} 
+            <Image
+              alt={effect.effect.stats.stat_string_desc[lang]}
+              width={20}
               height={18}
               style={{ height: "auto" }}
-              src={`/stats/${effect.effect.stats.property}.png`} />
+              src={`/stats/${effect.effect.stats.property}.png`}
+            />
             <span
               className={cssModule["stat-string-value"]}
               style={{
@@ -281,12 +270,7 @@ const Card = ({ item, lang }) => {
               src="/UI-icons/Card/Footer/stats-yellow.png"
             />
           ) : (
-            <Image
-              alt="Stats"
-              width={30}
-              height={30}
-              src="/UI-icons/Card/Footer/stats-white.png"
-            />
+            <Image alt="Stats" width={30} height={30} src="/UI-icons/Card/Footer/stats-white.png" />
           )}
         </div>
         <div
@@ -295,19 +279,9 @@ const Card = ({ item, lang }) => {
           title={t("copyToClipBoard")}
         >
           {triToggle === 2 ? (
-            <Image
-              alt="Copy"
-              width={30}
-              height={30}
-              src="/UI-icons/Card/Footer/paste-yellow.png"
-            />
+            <Image alt="Copy" width={30} height={30} src="/UI-icons/Card/Footer/paste-yellow.png" />
           ) : (
-            <Image
-              alt="Copy"
-              width={30}
-              height={30}
-              src="/UI-icons/Card/Footer/paste-white.png"
-            />
+            <Image alt="Copy" width={30} height={30} src="/UI-icons/Card/Footer/paste-white.png" />
           )}
         </div>
         <div
@@ -337,12 +311,7 @@ const Card = ({ item, lang }) => {
           title="Disabled, coming soon!"
           style={{ opacity: 0.2 }}
         >
-          <Image
-            alt="Add"
-            width={30}
-            height={30}
-            src="/UI-icons/Card/Footer/plus-white.png"
-          />
+          <Image alt="Add" width={30} height={30} src="/UI-icons/Card/Footer/plus-white.png" />
         </div>
       </div>
     </div>

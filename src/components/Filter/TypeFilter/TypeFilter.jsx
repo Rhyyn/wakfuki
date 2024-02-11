@@ -4,9 +4,11 @@ import Image from "next/image";
 import { checkDataExists } from "../../../services/data-service.jsx";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
 import string_to_item_types from "../../../data/string_to_item_types.json";
+import tablenames from "../../../data/tablenames.json";
 
 // TODO
 // Create modal for errors
+// Add titles
 
 const TypeFilter = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -17,11 +19,10 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     iconsRefs.current[type] = element;
   };
 
-  const handleImageClick = (type) => {
+  const handleImageClick = (type, types) => {
+    console.log(types);
     if (selectedTypesRefs.current.includes(type)) {
-      selectedTypesRefs.current = selectedTypesRefs.current.filter(
-        (typeName) => typeName !== type
-      );
+      selectedTypesRefs.current = selectedTypesRefs.current.filter((typeName) => typeName !== type);
     } else {
       selectedTypesRefs.current.push(type);
     }
@@ -34,7 +35,9 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     if (checkDataExists(selectedTypesRefs.current, 0)) {
       handlePassingTypeChange(selectedTypesRefs.current);
     } else {
-      console.log(`Error : at least one type in ${selectedTypesRefs.current} does not exist or is incomplete")}`);
+      console.log(
+        `Error : at least one type in ${selectedTypesRefs.current} does not exist or is incomplete")}`
+      );
     }
   };
 
@@ -55,7 +58,6 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     }
   }, []);
 
-
   // this exists to delay fetching if the user
   // selects x types, so we get 1 request
   // instead of x
@@ -70,6 +72,14 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     }, 600);
   };
 
+  // Object.keys(tablenames).map((tableName) => {
+  //   console.log("---");
+  //   console.log(tableName);
+  //   console.log(tablenames[tableName].tablename);
+  //   console.log(tablenames[tableName].types);
+  //   console.log("---");
+  // });
+
   useEffect(() => {
     selectedTypesRefs.current.forEach((element) =>
       iconsRefs.current[element].classList.toggle(cssModule["selected"])
@@ -81,21 +91,21 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     <div className={cssModule["type-container"]}>
       <div className={cssModule["horizontal-separator"]}></div>
       <div className={cssModule["type-row-icon-container"]}>
-        {Object.keys(string_to_item_types).map((type) => (
+        {Object.keys(tablenames).map((tableName) => (
           <div
-            key={type}
-            onClick={() => handleImageClick(type)}
-            data-image-name={type}
-            ref={(element) => setIconsRefs(type, element)}
+            key={tableName}
+            onClick={() => handleImageClick(tableName, tablenames[tableName].types)}
+            data-image-name={tableName}
+            ref={(element) => setIconsRefs(tableName, element)}
             className={cssModule["icon-container"]}
           >
             <Image
               className={cssModule["icon"]}
-              src={`/itemTypes/${type}.png`}
+              src={`/itemTypes/${tableName}.png`}
               width={28}
               height={28}
               unoptimized
-              alt={type}
+              alt={tableName}
             />
           </div>
         ))}

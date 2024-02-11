@@ -1,6 +1,7 @@
 import Dexie from "dexie";
 import indexStructure from "../data/index-structure.json";
 import filesLength from "../data/files_length.json";
+import tablenames from "../data/tablenames.json";
 
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
@@ -24,9 +25,7 @@ const sortItemsAlphabetically = (data, order) => {
     const aValue = a.title.fr.toLowerCase();
     const bValue = b.title.fr.toLowerCase();
 
-    return order === "ascending"
-      ? aValue.localeCompare(bValue)
-      : bValue.localeCompare(aValue);
+    return order === "ascending" ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
   });
 };
 
@@ -71,22 +70,20 @@ const filterByRarityQuery = (itemsQuery, rarity) => {
 
 const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
   if (levelRange.from > 0 || levelRange.to < 230) {
-    return itemsQuery.filter(
-      (o) =>
-        o.level >= levelRange.from &&
-        o.level <= levelRange.to
-    );
+    return itemsQuery.filter((o) => o.level >= levelRange.from && o.level <= levelRange.to);
   }
   return itemsQuery;
 };
 
+// TODO : add invidivual elemental if global elemental selected
 const filterByStatsQuery = (itemsQuery, stats) => {
   if (stats && stats.length > 0) {
-    return itemsQuery.filter(item => {
-      const result = stats.every(stat =>
-        item.equipEffects.some(effect =>
-          effect.effect.stats.property === stat.property &&
-          effect.effect.stats.value >= stat.value
+    return itemsQuery.filter((item) => {
+      const result = stats.every((stat) =>
+        item.equipEffects.some(
+          (effect) =>
+            effect.effect.stats.property === stat.property &&
+            effect.effect.stats.value >= stat.value
         )
       );
       return result;
@@ -125,24 +122,13 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
             itemsQuery = itemsQuery.offset(offset);
           }
 
-          itemsQuery = filterByRarityQuery(
-            itemsQuery, 
-            filterState.rarity);
+          itemsQuery = filterByRarityQuery(itemsQuery, filterState.rarity);
 
-          itemsQuery = filterByLevelRangeQuery(
-            itemsQuery,
-            filterState.levelRange
-          );
+          itemsQuery = filterByLevelRangeQuery(itemsQuery, filterState.levelRange);
 
-          itemsQuery = filterByStatsQuery(
-            itemsQuery, 
-            filterState.stats);
+          itemsQuery = filterByStatsQuery(itemsQuery, filterState.stats);
 
-          itemsQuery = filterBySearchQuery(
-            itemsQuery,
-            lang,
-            filterState.searchQuery
-          );
+          itemsQuery = filterBySearchQuery(itemsQuery, lang, filterState.searchQuery);
 
           itemsQuery = itemsQuery.limit(itemsPerPage);
 
@@ -218,8 +204,7 @@ const setupDatabaseCloseListener = () => {
 
 const random = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
-}
-
+};
 
 const checkFileLength = async (fileName, db) => {
   for (const file in filesLength) {
@@ -257,9 +242,7 @@ const checkDataExists = async (selectedTypes, index) => {
             console.log("Data exists and is valid");
             return true;
           } else {
-            console.log(
-              `Data not exists/valid, now trying to store new data for ${storeName}`
-            );
+            console.log(`Data not exists/valid, now trying to store new data for ${storeName}`);
             await storeFile(storeName);
             let index = recursionIndex + 1;
             checkDataExists(selectedTypes, index);
@@ -272,9 +255,7 @@ const checkDataExists = async (selectedTypes, index) => {
       }
     }
   } else {
-    console.log(
-      "Error while trying to fetch and store data in checkDataExists"
-    );
+    console.log("Error while trying to fetch and store data in checkDataExists");
     return false;
   }
 };
