@@ -14,5 +14,21 @@
     "7": "Épique",
     "Stats": "Stats",
     "Level": "Niveau",
-    "copyToClipBoard": "Copier dans le presse-papier"
+    "copyToClipBoard": "Copier dans le presse-papier",
+    "casque": "Casque",
+    "epaulettes": "Epaulettes",
+    "amulette": "Amulette",
+    "plastron": "Plastron",
+    "cape": "Cape",
+    "anneau": "Anneau",
+    "ceinture": "Ceinture",
+    "bottes": "Botte",
+    "arme1main": "Armes à 1 main",
+    "arme2main": "Armes à 2 mains",
+    "secondemain": "Seconde main",
+    "bouclier": "Boucliers",
+    "sublimation": "Sublimations",
+    "familiers": "Familiers",
+    "montures": "Montures",
+    "emblemes": "Emblemes"
 }
