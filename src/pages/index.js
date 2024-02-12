@@ -46,9 +46,7 @@ const Home = () => {
 
   useEffect(() => {
     setResetFiltersFlag(false);
-    console.log("there");
   }, [resetFiltersFlag]);
-
 
   const handleSortingOptionsChange = (newSortingOption) => {
     console.log(newSortingOption);
@@ -58,8 +56,6 @@ const Home = () => {
     }));
     console.log(filterState.sortBy);
   };
-
-  
 
   const handleStatsChange = (newStats) => {
     console.log("handleStatsChange called with newStats: ", newStats);
@@ -123,9 +119,18 @@ const Home = () => {
     <>
       <Head>
         <title>WakfuKi</title>
-        <meta name="description" content={t("Titre_desc")} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content={t("Titre_desc")}
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+        />
       </Head>
       {isModalShowing && <SettingsModal setIsModalShowing={setIsModalShowing} />}
       <div>
@@ -153,7 +158,10 @@ const Home = () => {
 
           <div className={cssModule["item-list"]}>
             {globalFilterState.type && globalFilterState.type.length !== 0 && (
-              <ItemList key={globalFilterState.type} filterState={globalFilterState} />
+              <ItemList
+                key={globalFilterState.type}
+                filterState={globalFilterState}
+              />
             )}
           </div>
         </div>
