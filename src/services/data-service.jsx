@@ -6,10 +6,10 @@ import tablenames from "../data/tablenames.json";
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
 
-// TODO
-// FIX BOUCLIER
-// FIX OTHER CATEGORIES
-// FEAT CHECK DB DATA VALID ?
+// TODO :
+// Add version.json do the DB to check when user loads
+// Fix bouclier.json
+// Fix sublimations
 
 const sortItemsByLevel = (data, order) => {
   return data.sort((a, b) => {
@@ -81,9 +81,7 @@ const filterByStatsQuery = (itemsQuery, stats) => {
     return itemsQuery.filter((item) => {
       const result = stats.every((stat) =>
         item.equipEffects.some(
-          (effect) =>
-            effect.effect.stats.property === stat.property &&
-            effect.effect.stats.value >= stat.value
+          (effect) => effect.effect.stats.property === stat.property && effect.effect.stats.value >= stat.value
         )
       );
       return result;
@@ -98,9 +96,7 @@ const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
     // anyOfIgnoreCase does not seem to want to index properly
     // const langIndex = `title.${lang}`;
     // return itemsQuery.where(langIndex).anyOfIgnoreCase(searchQuery);
-    return itemsQuery.filter((o) =>
-      o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    return itemsQuery.filter((o) => o.title[lang].toLowerCase().includes(searchQuery.toLowerCase()));
   }
   return itemsQuery;
 };
@@ -108,7 +104,7 @@ const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
 const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
   await waitForDbInitialization();
   try {
-    const tableNames = filterState.type.map((type) => db.table(type + ".json"));
+    const tableNames = filterState.type.map((obj) => db.table(obj.typeName + ".json"));
     await openDB();
     return Promise.resolve(
       await db.transaction("r", tableNames, async () => {
@@ -116,7 +112,7 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
         const combinedItems = [];
 
         for (const type of filterState.type) {
-          let itemsQuery = db.table(type + ".json");
+          let itemsQuery = db.table(type.typeName + ".json");
 
           if (offset > 0) {
             itemsQuery = itemsQuery.offset(offset);
@@ -218,9 +214,7 @@ const checkFileLength = async (fileName, db) => {
         let randomNumber = random(1, expectedItemCount);
         return true;
       } else {
-        console.log(
-          `${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`
-        );
+        console.log(`${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`);
         return false;
       }
     }
@@ -232,8 +226,10 @@ const checkDataExists = async (selectedTypes, index) => {
   let recursionIndex = 0 + index;
   if (recursionIndex < 3) {
     if (selectedTypes) {
-      for (let i = 0; i < selectedTypes.length; i++) {
-        let storeName = selectedTypes[i] + ".json";
+      // for (let i = 0; i < selectedTypes.length; i++) {
+      selectedTypes.forEach(async (obj) => {
+        console.log("data ext:", obj.typeName);
+        let storeName = obj.typeName + ".json";
         await db.open();
         if (db.table(storeName)) {
           let isDataValid = await checkFileLength(storeName, db);
@@ -252,7 +248,7 @@ const checkDataExists = async (selectedTypes, index) => {
           db.close();
           return false;
         }
-      }
+      });
     }
   } else {
     console.log("Error while trying to fetch and store data in checkDataExists");
@@ -345,6 +341,7 @@ const initializeDexieDatabase = async function (fileNames) {
       }
       console.log("All files processed");
     }
+    await storeFile("recipes.json");
     db.close();
     isDbInitialized = true;
     console.log("Database closed.");
