@@ -30,5 +30,7 @@
     "sublimation": "Sublimations",
     "familiers": "Pets",
     "montures": "Mounts",
-    "emblemes": "Emblems"
+    "emblemes": "Emblems",
+    "maxStatsErrorPrefix": "Max number of filtered stats: 5",
+    "maxStatsErrorSuffix": "reached"
 }
