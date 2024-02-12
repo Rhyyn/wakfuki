@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  waitForDbInitialization,
-  getDBInstance,
-  fetchData,
-} from "../../services/data-service.jsx";
+import { waitForDbInitialization, getDBInstance, fetchData } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
 import { useTranslation } from "react-i18next";
@@ -69,12 +65,7 @@ const ItemList = ({ filterState }) => {
       const fetchItems = async () => {
         console.log("GlobalFilterState changed", globalFilterState);
         lang = localStorage.getItem("language");
-        let DATA = await fetchData(
-          globalFilterState,
-          currentPage,
-          itemsPerPage,
-          lang
-        );
+        let DATA = await fetchData(globalFilterState, currentPage, itemsPerPage, lang);
         let slimmedDownData = transformDataForDisplay(DATA);
         setItems(slimmedDownData);
         setIsLoading(false);
@@ -92,17 +83,13 @@ const ItemList = ({ filterState }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const { scrollTop, clientHeight, scrollHeight } =
-        document.documentElement;
+      const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
       // console.log("scrollTop", Math.abs(scrollTop));
       // console.log("clientHeight", clientHeight);
       // console.log("scrollHeight", scrollHeight);
       // console.log(Math.abs(scrollHeight - clientHeight - scrollTop) < 1);
-      if (
-        scrollTop + clientHeight >= scrollHeight - scrollThreshold &&
-        !isFetching
-      ) {
+      if (scrollTop + clientHeight >= scrollHeight - scrollThreshold && !isFetching) {
         console.log("scrolled", isFetching);
         setCurrentPage((prevPage) => prevPage + 1);
         setIsFetching(true);
@@ -123,8 +110,7 @@ const ItemList = ({ filterState }) => {
   return (
     <div className={cssModule["cards-container"]}>
       {isLoading && <p>Loading...</p>}
-      {!isLoading &&
-        items.map((item) => <Card key={item.id} item={item} lang={lang} />)}
+      {!isLoading && items.map((item) => <Card key={item.id} item={item} lang={lang} />)}
     </div>
   );
 };
