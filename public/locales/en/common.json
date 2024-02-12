@@ -14,5 +14,21 @@
     "7": "Epic",
     "Stats": "Stats",
     "Level": "Level",
-    "copyToClipBoard": "Copy to clipboard"
+    "copyToClipBoard": "Copy to clipboard",
+    "casque": "Helmet",
+    "epaulettes": "Epaulettes",
+    "amulette": "Amulet",
+    "plastron": "Breastplate",
+    "cape": "Cloak",
+    "anneau": "Ring",
+    "ceinture": "Belt",
+    "bottes": "Boots",
+    "arme1main": "One-Handed Weapons",
+    "arme2main": "Two-Handed Weapons",
+    "secondemain": "Second Hand",
+    "bouclier": "Shields",
+    "sublimation": "Sublimations",
+    "familiers": "Pets",
+    "montures": "Mounts",
+    "emblemes": "Emblems"
 }

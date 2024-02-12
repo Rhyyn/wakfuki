@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 
-const globalglobalFilterState = {
+const globalFilterState = {
   searchQuery: "",
   rarity: [],
   levelRange: { from: 0, to: 230 },
@@ -12,13 +12,9 @@ const globalglobalFilterState = {
 const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
-  const [globalFilterState, dispatch] = useReducer(
-    globalReducer,
-    globalglobalFilterState
-  );
-  // console.log("GlobalContext", globalFilterState);
+  const [state, dispatch] = useReducer(globalReducer, globalFilterState);
   return (
-    <GlobalContext.Provider value={{ globalFilterState, dispatch }}>
+    <GlobalContext.Provider value={{ globalFilterState: state, dispatch }}>
       {children}
     </GlobalContext.Provider>
   );
@@ -35,7 +31,7 @@ export const useGlobalContext = () => {
 const globalReducer = (globalFilterState, action) => {
   switch (action.type) {
     case "UPDATE_GLOBAL_globalFilterState":
-      return { ...globalFilterState, globalglobalFilterState: action.payload };
+      return { ...globalFilterState, globalFilterState: action.payload };
     case "UPDATE_SEARCH_QUERY":
       if (typeof action.payload === "string") {
         console.log("setting search query: ", action.payload);

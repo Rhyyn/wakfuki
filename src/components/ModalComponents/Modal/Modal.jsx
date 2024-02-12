@@ -5,10 +5,10 @@ import { useSpring, animated, config } from "react-spring";
 
 // TODO : Fix Modal slider starting from 0
 //        and bouncing to 80% before starting
-//        its normal behavior 
+//        its normal behavior
 //        when called for a 2nd time
 //        Maybe manually unmount?
-
+//        add delete DB button
 
 const Modal = () => {
   const { modals, closeModal } = useModal();
@@ -44,8 +44,8 @@ const Modal = () => {
     if (modals.length > 0) {
       setTestValue(100);
       const { id, duration } = modals[0];
-      let fixPercent = (duration * 0.06) // Used to get a better visual on the end of the slider
-      initialDurationRef.current = (duration - fixPercent);
+      let fixPercent = duration * 0.06; // Used to get a better visual on the end of the slider
+      initialDurationRef.current = duration - fixPercent;
       const startTime = Date.now();
       updateProgress(startTime);
       let timeoutId;

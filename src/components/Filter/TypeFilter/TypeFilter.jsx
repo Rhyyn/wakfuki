@@ -3,15 +3,12 @@ import cssModule from "./TypeFilter.module.scss";
 import Image from "next/image";
 import { checkDataExists } from "../../../services/data-service.jsx";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
-import string_to_item_types from "../../../data/string_to_item_types.json";
+import { useTranslation } from "next-i18next";
 import tablenames from "../../../data/tablenames.json";
-
-// TODO
-// Create modal for errors
-// Add titles
 
 const TypeFilter = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
+  const { t, i18n } = useTranslation();
   const selectedTypesRefs = useRef([]);
   const iconsRefs = useRef({});
 
@@ -19,15 +16,16 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     iconsRefs.current[type] = element;
   };
 
-  const handleImageClick = (type, types) => {
-    console.log(types);
-    if (selectedTypesRefs.current.includes(type)) {
-      selectedTypesRefs.current = selectedTypesRefs.current.filter((typeName) => typeName !== type);
+  const handleImageClick = (typeName, typesIds) => {
+    if (selectedTypesRefs.current.some((obj) => obj.typeName === typeName)) {
+      selectedTypesRefs.current = selectedTypesRefs.current.filter(
+        (obj) => obj.typeName !== typeName
+      );
     } else {
-      selectedTypesRefs.current.push(type);
+      selectedTypesRefs.current.push({ typeName: typeName, typesIds: typesIds });
     }
 
-    const iconRef = iconsRefs.current[type];
+    const iconRef = iconsRefs.current[typeName];
     if (iconRef) {
       iconRef.classList.toggle(cssModule["selected"]);
     }
@@ -47,8 +45,8 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     let size = Object.keys(globalFilterState.type).length;
     if (size > 0) {
       setTimeout(() => {
-        globalFilterState.type.forEach((type) => {
-          const iconRef = iconsRefs.current[type];
+        globalFilterState.type.forEach((obj) => {
+          const iconRef = iconsRefs.current[obj.typeName];
           if (iconRef) {
             iconRef.classList.toggle(cssModule["selected"]);
           }
@@ -63,6 +61,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   // instead of x
   let timer;
   const handlePassingTypeChange = (newSelectedTypes) => {
+    console.log(newSelectedTypes);
     clearTimeout(timer);
     timer = setTimeout(() => {
       dispatch({
@@ -72,17 +71,9 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     }, 600);
   };
 
-  // Object.keys(tablenames).map((tableName) => {
-  //   console.log("---");
-  //   console.log(tableName);
-  //   console.log(tablenames[tableName].tablename);
-  //   console.log(tablenames[tableName].types);
-  //   console.log("---");
-  // });
-
   useEffect(() => {
-    selectedTypesRefs.current.forEach((element) =>
-      iconsRefs.current[element].classList.toggle(cssModule["selected"])
+    selectedTypesRefs.current.forEach((obj) =>
+      iconsRefs.current[obj.typeName].classList.toggle(cssModule["selected"])
     );
     selectedTypesRefs.current = [];
   }, [resetFiltersFlag]);
@@ -91,21 +82,22 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     <div className={cssModule["type-container"]}>
       <div className={cssModule["horizontal-separator"]}></div>
       <div className={cssModule["type-row-icon-container"]}>
-        {Object.keys(tablenames).map((tableName) => (
+        {Object.keys(tablenames).map((typeName) => (
           <div
-            key={tableName}
-            onClick={() => handleImageClick(tableName, tablenames[tableName].types)}
-            data-image-name={tableName}
-            ref={(element) => setIconsRefs(tableName, element)}
+            key={typeName}
+            onClick={() => handleImageClick(typeName, tablenames[typeName].types)}
+            data-image-name={typeName}
+            ref={(element) => setIconsRefs(typeName, element)}
             className={cssModule["icon-container"]}
+            title={t(typeName)}
           >
             <Image
               className={cssModule["icon"]}
-              src={`/itemTypes/${tableName}.png`}
+              src={`/itemTypes/${typeName}.png`}
               width={28}
               height={28}
               unoptimized
-              alt={tableName}
+              alt={typeName}
             />
           </div>
         ))}
