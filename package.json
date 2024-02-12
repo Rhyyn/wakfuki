@@ -30,7 +30,7 @@
     "eslint-plugin-next": "^0.0.0"
   },
   "prettier": {
-    "printWidth": 120,
+    "printWidth": 100,
     "useTabs": false,
     "tabWidth": 2,
     "trailingComma": "es5",
@@ -40,6 +40,7 @@
     "arrowParens": "always",
     "jsxSingleQuote": false,
     "bracketSameLine": false,
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "singleAttributePerLine": true
   }
 }
