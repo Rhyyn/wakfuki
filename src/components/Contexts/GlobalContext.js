@@ -12,10 +12,9 @@ const globalFilterState = {
 const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
-  const [globalFilterState, dispatch] = useReducer(globalReducer, globalFilterState);
-  // console.log("GlobalContext", globalFilterState);
+  const [state, dispatch] = useReducer(globalReducer, globalFilterState);
   return (
-    <GlobalContext.Provider value={{ globalFilterState, dispatch }}>
+    <GlobalContext.Provider value={{ globalFilterState: state, dispatch }}>
       {children}
     </GlobalContext.Provider>
   );
