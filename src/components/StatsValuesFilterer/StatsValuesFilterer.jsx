@@ -65,7 +65,10 @@ const StatsValuesFilterer = ({
         {selectedStats &&
           selectedStats.length > 0 &&
           selectedStats.map((element) => (
-            <div key={element.property} className={cssModule["value-editor"]}>
+            <div
+              key={element.property}
+              className={cssModule["value-editor"]}
+            >
               <Image
                 alt={element.property}
                 width={24}
