@@ -6,7 +6,6 @@ import { useGlobalContext } from "../../Contexts/GlobalContext";
 import { useTranslation } from "next-i18next";
 import tablenames from "../../../data/tablenames.json";
 
-
 const TypeFilter = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
