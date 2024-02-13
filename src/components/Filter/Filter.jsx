@@ -9,6 +9,7 @@ import TypeFilter from "./TypeFilter/TypeFilter";
 import StatsFilter from "./StatsFilter/StatsFilter";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDevice } from "../Contexts/DeviceContext";
+import { useGlobalContext } from "../Contexts/GlobalContext";
 
 // NEED A WAY TO CHECK IF TABLE OF TYPE IS ALREADY POPULATED
 // IF NOT GO POPULATE
@@ -21,6 +22,7 @@ const Filter = ({
   resetFiltersFlag,
   updateStatsFlag,
 }) => {
+  const { globalFilterState, dispatch } = useGlobalContext();
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const dropdownRef = useRef(null);
   const dropdownContainerRef = useRef(null);
@@ -97,9 +99,18 @@ const Filter = ({
       exit={{ opacity: 0 }}
     >
       {isComponentReady && (
-        <div className={cssModule["filter-container"]}>
+        <div
+          className={cssModule["filter-container"]}
+          style={
+            globalFilterState.stats.length > 0 && deviceType === "mobile"
+              ? { top: "140px" }
+              : { top: "110px" }
+          }
+        >
           <div className={cssModule["header-container"]}>
-            <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
+            {deviceType !== "mobile" && (
+              <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
+            )}
             {deviceType === "desktop" && (
               <div className={cssModule["header-icons-container"]}>
                 <Image
@@ -138,41 +149,31 @@ const Filter = ({
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
-                    onClick={() =>
-                      handleSortingOptionsClick("level.descending")
-                    }
+                    onClick={() => handleSortingOptionsClick("level.descending")}
                   >
                     Level descending
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
-                    onClick={() =>
-                      handleSortingOptionsClick("alphabetical.ascending")
-                    }
+                    onClick={() => handleSortingOptionsClick("alphabetical.ascending")}
                   >
                     Name ascending
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
-                    onClick={() =>
-                      handleSortingOptionsClick("alphabetical.descending")
-                    }
+                    onClick={() => handleSortingOptionsClick("alphabetical.descending")}
                   >
                     Name descending
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
-                    onClick={() =>
-                      handleSortingOptionsClick("rarity.ascending")
-                    }
+                    onClick={() => handleSortingOptionsClick("rarity.ascending")}
                   >
                     Rarity ascending
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
-                    onClick={() =>
-                      handleSortingOptionsClick("rarity.descending")
-                    }
+                    onClick={() => handleSortingOptionsClick("rarity.descending")}
                   >
                     Rarity descending
                   </span>
@@ -180,22 +181,12 @@ const Filter = ({
               </div>
             )}
           </div>
-          {deviceType !== "mobile" && (
-            <div className={cssModule["horizontal-separator"]}></div>
-          )}
-          <RarityFilter
-            resetFiltersFlag={resetFiltersFlag}
-          />
-          <SearchBar
-            resetFiltersFlag={resetFiltersFlag}
-          />
+          {deviceType !== "mobile" && <div className={cssModule["horizontal-separator"]}></div>}
+          <RarityFilter resetFiltersFlag={resetFiltersFlag} />
+          <SearchBar resetFiltersFlag={resetFiltersFlag} />
           <div className={cssModule["horizontal-separator"]}></div>
-          <LevelFilter
-            resetFiltersFlag={resetFiltersFlag}
-          />
-          <TypeFilter
-            resetFiltersFlag={resetFiltersFlag}
-          />
+          <LevelFilter resetFiltersFlag={resetFiltersFlag} />
+          <TypeFilter resetFiltersFlag={resetFiltersFlag} />
           <StatsFilter
             handleStatsChange={handleStatsChange}
             resetFiltersFlag={resetFiltersFlag}

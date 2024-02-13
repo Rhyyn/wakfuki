@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import stats from "../../../data/stats.json";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
+import { useModal } from "../../ModalComponents/Modal/ModalContext";
 
 // TODO
 // need a max number of selected stats
@@ -20,6 +21,8 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   const setstatsRefs = (statID, element) => {
     statsRefs.current[statID] = element;
   };
+  const { openModal } = useModal();
+  const { closeModal } = useModal();
 
   useEffect(() => {
     setLang(localStorage.getItem("language"));
@@ -29,6 +32,10 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     31, 41, 191, 160, 1055, 1052, 1053, 1068, 184, 180, 150, 149, 26, 173, 175, 988, 20, 39, 85, 83,
     82, 84, 171, 177, 2001,
   ];
+
+  const handleModal = () => {
+    let modalId = openModal(t("maxStatsErrorPrefix"), 3000);
+  };
 
   // triggered when values of stats are changed by the user
   // inside StatsValuesFilterer.jsx
@@ -88,10 +95,28 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     }
   }, []);
 
+  // handle the selected stats and call the passing function to update Global state
+  const handleSelectedStatsRefs = (statID) => {
+    let updatedStatsRefs = [...selectedStatsRefs.current]; // this is needed to avoid mutating the state
+    const index = updatedStatsRefs.findIndex((stat) => stat.property === statID);
+    if (index !== -1) {
+      // if the stat exists, remove it || if the stat doesn't exist, add it
+      updatedStatsRefs.splice(index, 1);
+    } else {
+      updatedStatsRefs.push({ property: statID, value: 1 });
+    }
+    selectedStatsRefs.current = updatedStatsRefs;
+    handlePassingStatsChange();
 
+    const statRef = statsRefs.current[statID];
+    if (statRef) {
+      statRef.classList.toggle(cssModule["selected"]);
+    }
+  };
   // global state update
   let timer;
   const handlePassingStatsChange = () => {
+    console.log(selectedStatsRefs.current);
     clearTimeout(timer);
     timer = setTimeout(() => {
       dispatch({
@@ -100,63 +125,49 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
       });
     }, 500);
   };
-
-  // handle the selected stats and call the passing function to update Global state
-  const handleSelectedStatsRefs = (statID) => {
-    if (globalFilterState.stats.some((stat) => stat.property === statID)) {
-      selectedStatsRefs.current = globalFilterState.stats.filter(
-        (stat) => stat.property !== statID
-      );
-    } else {
-      selectedStatsRefs.current.push({ property: statID, value: 1 });
-    }
-
-    handlePassingStatsChange();
-
-    const statRef = statsRefs.current[statID];
-    if (statRef) {
-      statRef.classList.toggle(cssModule["selected"]);
-    }
-  };
-
   // Used to check distance/melee if multi-elements is selected and vice versa
   // using states because !.includes on refs array doesn't work for some reason
   // this is a hack, probably needs refactoring later
   const [isDistanceChecked, setIsDistanceChecked] = useState(false);
   const [isMeleeChecked, setIsMeleeChecked] = useState(false);
   const toggle_stat = (statID) => {
-    const handleAndSet = (statID) => {
-      handleSelectedStatsRefs(statID);
-      // handleConstructedRefObject(statID);
-    };
-
-    if (statID === 1053) {
-      if (isDistanceChecked) {
-        handleAndSet(statID);
-        setIsDistanceChecked(false);
-      } else {
-        // needs a separate func to check array since {property: X, value: 1}
-        if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-          handleAndSet(statID);
-        } else {
-          [1068, statID].forEach(handleAndSet);
-        }
-        setIsDistanceChecked(true);
-      }
-    } else if (statID === 1052) {
-      if (isMeleeChecked) {
-        handleAndSet(statID);
-        setIsMeleeChecked(false);
-      } else {
-        if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-          handleAndSet(statID);
-        } else {
-          [1068, statID].forEach(handleAndSet);
-        }
-        setIsMeleeChecked(true);
-      }
+    console.log(globalFilterState.stats.length);
+    if (globalFilterState.stats.length + 1 >= 7) {
+      // need to first check if checked
+      // 5 is the max number of stats filtered at once
+      handleModal();
     } else {
-      handleAndSet(statID);
+      const handleAndSet = (statID) => {
+        handleSelectedStatsRefs(statID);
+        // handleConstructedRefObject(statID);
+      };
+      if (statID === 1053) {
+        if (isDistanceChecked) {
+          handleAndSet(statID);
+          setIsDistanceChecked(false);
+        } else {
+          if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
+            handleAndSet(statID);
+          } else {
+            [1068, statID].forEach(handleAndSet);
+          }
+          setIsDistanceChecked(true);
+        }
+      } else if (statID === 1052) {
+        if (isMeleeChecked) {
+          handleAndSet(statID);
+          setIsMeleeChecked(false);
+        } else {
+          if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
+            handleAndSet(statID);
+          } else {
+            [1068, statID].forEach(handleAndSet);
+          }
+          setIsMeleeChecked(true);
+        }
+      } else {
+        handleAndSet(statID);
+      }
     }
   };
 

@@ -30,5 +30,7 @@
     "sublimation": "Sublimations",
     "familiers": "Familiers",
     "montures": "Montures",
-    "emblemes": "Emblemes"
+    "emblemes": "Emblemes",
+    "maxStatsErrorPrefix": "Nombre maximum de stats filtrées: 5",
+    "maxStatsErrorSuffix": "reached"
 }

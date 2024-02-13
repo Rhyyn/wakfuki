@@ -61,7 +61,7 @@ const globalReducer = (globalFilterState, action) => {
       console.log("Error while trying to set type", action.payload);
       return globalFilterState;
     case "UPDATE_STATS":
-      if (typeof action.payload == "object") {
+      if (Array.isArray(action.payload)) {
         console.log("setting stats: ", action.payload);
         return { ...globalFilterState, stats: action.payload };
       }
