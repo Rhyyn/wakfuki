@@ -132,7 +132,8 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   const [isMeleeChecked, setIsMeleeChecked] = useState(false);
   const toggle_stat = (statID) => {
     console.log(globalFilterState.stats.length);
-    if (globalFilterState.stats.length + 1 >= 6) {
+    if (globalFilterState.stats.length + 1 >= 7) {
+      // need to first check if checked
       // 5 is the max number of stats filtered at once
       handleModal();
     } else {

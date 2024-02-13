@@ -17,6 +17,9 @@
     width: 100%;
     position: fixed;
     top: 110px;
+    height: 80vh;
+    // left: 50%; USED TO CENTER IF WE WANT TO REDUCE WIDTH
+    // transform: translateX(-50%);
   }
 }
 
@@ -31,7 +34,6 @@
   .header-container {
     margin-top: 20px;
   }
-  
 }
 
 .header-icon {
@@ -62,8 +64,6 @@
   border-radius: 12px;
   margin: 0 auto;
 }
-
-
 
 .header-icons-container {
   display: flex;
