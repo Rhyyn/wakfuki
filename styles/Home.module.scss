@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-    // min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .cat-buttons {
@@ -26,12 +26,10 @@
   }
 }
 
-
 .item-list {
   background-color: v.$background-deep;
   flex-grow: 0;
   position: relative;
-  top: 60px;
   width: 100%;
   min-height: calc(100% - 110px);
 }
