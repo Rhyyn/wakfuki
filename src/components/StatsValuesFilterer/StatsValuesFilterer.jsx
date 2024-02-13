@@ -50,17 +50,6 @@ const StatsValuesFilterer = ({
 
   return (
     <div className={cssModule["items-values-filtering-container"]}>
-      <div className={cssModule["filter-icon-container"]}>
-        {deviceType !== "desktop" && (
-          <Image
-            src="/UI-icons/Header/filter.svg"
-            alt="menu icon"
-            width={30}
-            height={30}
-            onClick={() => setIsMobileFilterShowing(!isMobileFilterShowing)}
-          />
-        )}
-      </div>
       <div className={cssModule["items-values-editor-container"]}>
         {selectedStats &&
           selectedStats.length > 0 &&
@@ -92,28 +81,56 @@ const StatsValuesFilterer = ({
           ))}
       </div>
       <div className={cssModule["items-sorting-container"]}>
-        <Image
-          className={cssModule["header-icon"]}
-          src="/reset_icon_yellow.png"
-          width={32}
-          height={32}
-          unoptimized
-          alt="reset-icon"
-          title={t("Mise à zéro des Filtres")}
-          onClick={() => handleResetFilters()}
-        />
+        {deviceType !== "desktop" && !isMobileFilterShowing && (
+          <div className={cssModule["icon-container"]}>
+            <Image
+              src="/UI-icons/Header/filter-yellow.svg"
+              alt="menu icon"
+              width={30}
+              height={30}
+              onClick={() => setIsMobileFilterShowing(!isMobileFilterShowing)}
+            />
+          </div>
+        )}
+        {deviceType !== "desktop" && isMobileFilterShowing && (
+          <div className={`${cssModule["icon-container"]} ${cssModule["selected"]}`}>
+            <Image
+              src="/UI-icons/Header/filter-black.svg"
+              alt="menu icon"
+              width={30}
+              height={30}
+              onClick={() => setIsMobileFilterShowing(!isMobileFilterShowing)}
+            />
+          </div>
+        )}
+
+        {deviceType != "desktop" && <div className={cssModule["vertical-separator"]}></div>}
+        <div className={cssModule["icon-container"]}>
+          <Image
+            className={cssModule["header-icon"]}
+            src="/reset_icon_yellow.png"
+            width={32}
+            height={32}
+            unoptimized
+            alt="reset-icon"
+            title={t("Mise à zéro des Filtres")}
+            onClick={() => handleResetFilters()}
+          />
+        </div>
         <div className={cssModule["vertical-separator"]}></div>
-        <Image
-          className={cssModule["header-icon"]}
-          src="/sort_icon_yellow.png"
-          width={32}
-          height={32}
-          unoptimized
-          alt="sort-icon"
-          title={t("Trier par")}
-          // onClick={handleSortingOptionsDropdown}
-          // ref={dropdownRef}
-        />
+        <div className={cssModule["icon-container"]}>
+          <Image
+            className={cssModule["header-icon"]}
+            src="/sort_icon_yellow.png"
+            width={32}
+            height={32}
+            unoptimized
+            alt="sort-icon"
+            title={t("Trier par")}
+            // onClick={handleSortingOptionsDropdown}
+            // ref={dropdownRef}
+          />
+        </div>
       </div>
     </div>
   );

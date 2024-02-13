@@ -1,12 +1,12 @@
 @use "../../../styles/variables.scss" as v;
 
-
 .items-values-filtering-container {
   display: flex;
   flex-direction: row;
   position: fixed;
   width: calc(100% - 230px);
-  height: 50px;
+  min-height: 50px;
+  max-height: 150px;
   top: 60px;
   background-color: v.$background-off;
   border-bottom: 3px solid v.$background-light;
@@ -16,42 +16,59 @@
 @media screen and (max-width: 600px) {
   .items-values-filtering-container {
     width: 100%;
+    flex-direction: column;
   }
 }
 
 .filter-icon-container {
-  padding-left: 5px;
-  width: 50px;
-  height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
+  width: 50px;
   z-index: 3;
+  -webkit-tap-highlight-color: transparent;
+  padding-left: 5px;
+  // width: 50px;
+  // height: 100%;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // align-content: center;
+  // justify-content: center;
+  // z-index: 3;
 }
 
 .items-values-editor-container {
+  width: 75%;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-left: 10px;
   z-index: 3;
 }
 
+@media screen and (max-width: 600px) {
+  .items-values-editor-container {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0px;
+  }
+}
+
 .value-editor {
   width: 100%;
   max-width: 100px;
-  height: 35px;
-  background-color: v.$background-deep;
+  height: 30px;
+  background-color: v.$background;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-around;
   align-items: center;
-  border-radius: 8px;
-  margin: 0 4px 0 4px;
+  border-radius: 4px;
+  margin: 2px;
 }
 
 .value-input {
@@ -68,15 +85,45 @@
   cursor: pointer;
 }
 
-
 // Right side container for reset / sorting
 .items-sorting-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 85px;
+  min-width: 85px;
   z-index: 3;
   -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .items-sorting-container {
+    width: 65%;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.icon-container {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  background-color: v.$background;
+  align-items: center;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    background-color: v.$background-light;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icon-container {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 .vertical-separator {
@@ -85,4 +132,12 @@
   border-radius: 12px;
   background-color: v.$background-deep;
   margin: 0 4px 0 4px;
+}
+
+.selected {
+  background-color: v.$primary-yellow;
+}
+
+.not-selected {
+  background-color: v.$background;
 }
