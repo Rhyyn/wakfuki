@@ -156,7 +156,10 @@ const Home = () => {
             handleResetFilters={handleResetFilters}
           />
 
-          <div className={cssModule["item-list"]}>
+          <div
+            className={cssModule["item-list"]}
+            style={globalFilterState.stats.length > 0 ? { top: "130px" } : { top: "65px" }}
+          >
             {globalFilterState.type && globalFilterState.type.length !== 0 && (
               <ItemList
                 key={globalFilterState.type}
