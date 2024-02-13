@@ -15,18 +15,9 @@ const Header = ({ setIsModalShowing }) => {
   return (
     <div className={cssModule["header-container"]}>
       <div
-        className={cssModule["menu-icon-container"]}
+        className={cssModule["menu-icon-container"]} // not used for now but needed for layout
         style={{ paddingLeft: "10px" }}
-      >
-        {isComponentReady && deviceType === "mobile" && (
-          <Image
-            src="/UI-icons/Header/filter.svg"
-            alt="menu icon"
-            width={40}
-            height={40}
-          />
-        )}
-      </div>
+      ></div>
       <div className={cssModule["title-container"]}>
         <h2 className={cssModule["first-part-title"]}>Wakfu</h2>
         <h1 className={cssModule["second-part-title"]}>KI</h1>
