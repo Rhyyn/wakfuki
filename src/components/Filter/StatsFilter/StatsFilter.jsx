@@ -23,6 +23,8 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   };
   const { openModal } = useModal();
   const { closeModal } = useModal();
+  const [isDistanceChecked, setIsDistanceChecked] = useState(false);
+  const [isMeleeChecked, setIsMeleeChecked] = useState(false);
 
   useEffect(() => {
     setLang(localStorage.getItem("language"));
@@ -103,7 +105,7 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
       // if the stat exists, remove it || if the stat doesn't exist, add it
       updatedStatsRefs.splice(index, 1);
     } else {
-      updatedStatsRefs.push({ property: statID, value: 1 });
+      updatedStatsRefs.push({ property: statID, value: 1 }); // Maybe make property an array ?
     }
     selectedStatsRefs.current = updatedStatsRefs;
     handlePassingStatsChange();
@@ -116,7 +118,6 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   // global state update
   let timer;
   const handlePassingStatsChange = () => {
-    console.log(selectedStatsRefs.current);
     clearTimeout(timer);
     timer = setTimeout(() => {
       dispatch({
@@ -125,54 +126,97 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
       });
     }, 500);
   };
-  // Used to check distance/melee if multi-elements is selected and vice versa
-  // using states because !.includes on refs array doesn't work for some reason
-  // this is a hack, probably needs refactoring later
-  const [isDistanceChecked, setIsDistanceChecked] = useState(false);
-  const [isMeleeChecked, setIsMeleeChecked] = useState(false);
-  const toggle_stat = (statID) => {
-    console.log(globalFilterState.stats.length);
-    if (globalFilterState.stats.length + 1 >= 7) {
-      // need to first check if checked
-      // 5 is the max number of stats filtered at once
-      handleModal();
+
+  const handleAndSet = (statID) => {
+    handleSelectedStatsRefs(statID);
+  };
+
+  const handleDistanceStat = (statID) => {
+    if (isDistanceChecked) {
+      handleAndSet(statID);
+      setIsDistanceChecked(false);
     } else {
-      const handleAndSet = (statID) => {
-        handleSelectedStatsRefs(statID);
-        // handleConstructedRefObject(statID);
-      };
-      if (statID === 1053) {
-        if (isDistanceChecked) {
-          handleAndSet(statID);
-          setIsDistanceChecked(false);
-        } else {
-          if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-            handleAndSet(statID);
-          } else {
-            [1068, statID].forEach(handleAndSet);
-          }
-          setIsDistanceChecked(true);
-        }
-      } else if (statID === 1052) {
-        if (isMeleeChecked) {
-          handleAndSet(statID);
-          setIsMeleeChecked(false);
-        } else {
-          if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-            handleAndSet(statID);
-          } else {
-            [1068, statID].forEach(handleAndSet);
-          }
-          setIsMeleeChecked(true);
-        }
-      } else {
+      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
         handleAndSet(statID);
+      } else {
+        [1068, statID].forEach(handleAndSet);
       }
+      setIsDistanceChecked(true);
     }
   };
 
-  const handleClick = (statID) => {
-    toggle_stat(statID);
+  const handleMeleeStat = (statID) => {
+    if (isMeleeChecked) {
+      handleAndSet(statID);
+      setIsMeleeChecked(false);
+    } else {
+      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
+        handleAndSet(statID);
+      } else {
+        [1068, statID].forEach(handleAndSet);
+      }
+      setIsMeleeChecked(true);
+    }
+  };
+
+  const handleMultiElementsStat = (statID) => {
+    // line 108: make property a list so a single stat can represent multi-elements
+    // ex : {property: [1068, 122, 123, 124, 125], value: 1} where value represent the value of the first element
+    // and we only show the first element of the list as selected / editable
+    // so when Mastery with X elements is selected, cards with Earth/Water/... and X Elemental mastery will also be shown
+    if (isMeleeChecked) {
+      handleAndSet(statID);
+      setIsMeleeChecked(false);
+    } else {
+      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
+        handleAndSet(statID);
+      } else {
+        [1068, statID].forEach(handleAndSet);
+      }
+      setIsMeleeChecked(true);
+    }
+  };
+
+  const handleResistanceStat = (statID) => {
+    if (isMeleeChecked) {
+      handleAndSet(statID);
+      setIsMeleeChecked(false);
+    } else {
+      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
+        handleAndSet(statID);
+      } else {
+        [1068, statID].forEach(handleAndSet);
+      }
+      setIsMeleeChecked(true);
+    }
+  };
+
+  // Used to check distance/melee if multi-elements is selected and vice versa
+  // using states because !.includes on refs array doesn't work for some reason
+  // this is a hack, probably needs refactoring later
+  const toggle_stat = (e, statID) => {
+    if (statID === 1053) {
+      handleDistanceStat(statID);
+    } else if (statID === 1052) {
+      handleMeleeStat(statID);
+    } else if (statID === 1068) {
+      handleMultiElementsStat(statID);
+    } else {
+      handleAndSet(statID);
+    }
+  };
+
+  const handleClick = (e, statID) => {
+    const classList = Array.from(e.currentTarget.classList);
+    if (classList.some((className) => className.includes("selected"))) {
+      toggle_stat(e, statID);
+    } else {
+      if (globalFilterState.stats.length + 1 >= 7) {
+        handleModal();
+      } else {
+        toggle_stat(e, statID);
+      }
+    }
   };
 
   return (
@@ -187,7 +231,7 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
               ref={(element) => setstatsRefs(id, element)}
               className={cssModule["icon-container"]}
               data-id={id}
-              onClick={(e) => handleClick(id)}
+              onClick={(e) => handleClick(e, id)}
               title={lang === "fr" ? stats[id].fr : stats[id].en}
             >
               <Image
