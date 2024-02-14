@@ -4,7 +4,7 @@
   width: 230px;
   background-color: v.$background;
   position: fixed;
-  top: 0px;
+  // top: 0px;
   left: 0px;
   height: 100vh;
   overflow-y: auto;
@@ -16,7 +16,7 @@
   .filter-container {
     width: 100%;
     position: fixed;
-    top: 110px;
+    // top: 110px;
     height: 80vh;
     // left: 50%; USED TO CENTER IF WE WANT TO REDUCE WIDTH
     // transform: translateX(-50%);

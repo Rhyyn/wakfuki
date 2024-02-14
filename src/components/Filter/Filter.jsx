@@ -102,9 +102,11 @@ const Filter = ({
         <div
           className={cssModule["filter-container"]}
           style={
-            globalFilterState.stats.length > 0 && deviceType === "mobile"
+            deviceType === "mobile" && globalFilterState.stats.length > 3
               ? { top: "140px" }
-              : { top: "110px" }
+              : deviceType !== "mobile"
+              ? { top: "0px" }
+              : { top: "105px" }
           }
         >
           <div className={cssModule["header-container"]}>
