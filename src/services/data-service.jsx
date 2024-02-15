@@ -81,7 +81,9 @@ const filterByStatsQuery = (itemsQuery, stats) => {
     return itemsQuery.filter((item) => {
       const result = stats.every((stat) =>
         item.equipEffects.some(
-          (effect) => effect.effect.stats.property === stat.property && effect.effect.stats.value >= stat.value
+          (effect) =>
+            effect.effect.stats.property === stat.property &&
+            effect.effect.stats.value >= stat.value
         )
       );
       return result;
@@ -96,15 +98,69 @@ const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
     // anyOfIgnoreCase does not seem to want to index properly
     // const langIndex = `title.${lang}`;
     // return itemsQuery.where(langIndex).anyOfIgnoreCase(searchQuery);
-    return itemsQuery.filter((o) => o.title[lang].toLowerCase().includes(searchQuery.toLowerCase()));
+    return itemsQuery.filter((o) =>
+      o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
+    );
   }
   return itemsQuery;
+};
+
+const ComputeRecipe = async (db, itemList) => {
+  let recipeResultList = await db
+    .table("recipeResults.json")
+    .filter((r) => itemList.map((i) => i.id).includes(r.productedItemId))
+    .toArray();
+  let recipeList = await db
+    .table("recipes.json")
+    .filter((r) => recipeResultList.map((rr) => rr.recipeId).includes(r.id))
+    .toArray();
+  let recipeIngredientList = await db
+    .table("recipeIngredients.json")
+    .filter((ri) => recipeList.map((r) => r.id).includes(ri.recipeId))
+    .toArray();
+  let recipeAllRessourceList = await db
+    .table("allRessources.json")
+    .filter((ar) => recipeIngredientList.map((r) => r.itemId).includes(ar.id))
+    .toArray();
+  let recipeAllEquipmentList = await db
+    .table("allItems.json")
+    .filter((ae) => recipeIngredientList.map((r) => r.itemId).includes(ae.id))
+    .toArray();
+
+  let computedRecipeList = recipeResultList.map((rr) => ({
+    itemId: rr.productedItemId,
+    recipe: recipeList
+      .filter((r) => r.id == rr.recipeId)
+      ?.map((r) =>
+        recipeIngredientList
+          .filter((ri) => ri.recipeId == r.id)
+          ?.map((ri) => ({
+            quantity: ri.quantity,
+            item: recipeAllRessourceList
+              .concat(recipeAllEquipmentList)
+              .find((ar) => ar.id == ri.itemId),
+          }))
+      ),
+  }));
+
+  return itemList.map((i) => ({
+    ...i,
+    recipes: computedRecipeList.filter((r) => r.itemId == i.id).flatMap((r) => r.recipe),
+  }));
 };
 
 const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
   await waitForDbInitialization();
   try {
     const tableNames = filterState.type.map((obj) => db.table(obj.typeName + ".json"));
+    tableNames.push(
+      "recipeResults.json",
+      "recipes.json",
+      "recipeIngredients.json",
+      "resources.json",
+      "allRessources.json",
+      "allItems.json"
+    );
     await openDB();
     return Promise.resolve(
       await db.transaction("r", tableNames, async () => {
@@ -128,9 +184,11 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
 
           itemsQuery = itemsQuery.limit(itemsPerPage);
 
-          let completeQuery = await itemsQuery.toArray();
+          let itemList = await itemsQuery.toArray();
 
-          combinedItems.push(completeQuery);
+          let itemListWithRecipes = await ComputeRecipe(db, itemList);
+
+          combinedItems.push(itemListWithRecipes);
         }
 
         const flattenedItems = combinedItems.flat();
@@ -214,7 +272,9 @@ const checkFileLength = async (fileName, db) => {
         let randomNumber = random(1, expectedItemCount);
         return true;
       } else {
-        console.log(`${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`);
+        console.log(
+          `${fileName} Table not valid : expected ${expectedItemCount} length and got : ${count}`
+        );
         return false;
       }
     }
@@ -341,7 +401,15 @@ const initializeDexieDatabase = async function (fileNames) {
       }
       console.log("All files processed");
     }
+
+    //TODO: Include in regular routines instead of here
     await storeFile("recipes.json");
+    await storeFile("recipeCategories.json");
+    await storeFile("recipeIngredients.json");
+    await storeFile("recipeResults.json");
+    await storeFile("resources.json");
+    await storeFile("allRessources.json");
+    await storeFile("allItems.json");
     db.close();
     isDbInitialized = true;
     console.log("Database closed.");

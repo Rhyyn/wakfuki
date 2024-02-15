@@ -2,6 +2,7 @@ import cssModule from "./card.module.scss";
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import RecipeCard from "./RecipeCard/RecipeCard";
 
 // TODO: Add stats img to localstorage
 // Fix missing stats img
@@ -121,7 +122,6 @@ const Card = ({ item, lang }) => {
   const rarityIcon = `/rarities/${item.baseParams.rarity}.png`;
   const handleClick = (e) => {
     const propertyValue = e.currentTarget.dataset.id;
-    console.log(propertyValue);
   };
 
   return (
@@ -188,8 +188,8 @@ const Card = ({ item, lang }) => {
         className={`${cssModule["middle-card-container"]} ${
           triToggle === 0 ? cssModule["visible"] : cssModule["hidden"]
         }`}
-      >
-        <span>Pas de recette!</span>
+      >        
+        <RecipeCard item={item}/>
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
