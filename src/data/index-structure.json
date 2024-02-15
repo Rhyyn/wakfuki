@@ -118,6 +118,12 @@
         "keyPath": [
           "recipeId"
         ]
+      },
+      {
+        "name": "recipeResults_indexByProductedItemId",
+        "keyPath": [
+          "productedItemId"
+        ]
       }
     ]
   },
@@ -1009,6 +1015,36 @@
         "name": "outils_indexByEquipEffects",
         "keyPath": [
           "equipEffects"
+        ]
+      }
+    ]
+  },
+  "resources.json": {
+    "indexes": [
+      {
+        "name": "outils_indexById",
+        "keyPath": [
+          "definition.id"
+        ]
+      }
+    ]
+  },
+  "allRessources.json": {
+    "indexes": [
+      {
+        "name": "outils_indexById",
+        "keyPath": [
+          "id"
+        ]
+      }
+    ]
+  },
+  "allItems.json": {
+    "indexes": [
+      {
+        "name": "outils_indexById",
+        "keyPath": [
+          "id"
         ]
       }
     ]

@@ -29,6 +29,7 @@ const ItemList = ({ filterState }) => {
       baseParams: item.baseParams,
       equipEffects: item.equipEffects,
       gfxId: item.gfxId,
+      recipes: item.recipes
     }));
   };
 
