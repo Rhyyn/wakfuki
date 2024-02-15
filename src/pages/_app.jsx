@@ -39,6 +39,9 @@ const fileNames = [
   "emblemes.json",
   "montures.json",
   "outils.json",
+  "resources.json",
+  "allRessources.json",
+  "allItems.json"
 ];
 
 function MyApp({ Component, pageProps }) {
