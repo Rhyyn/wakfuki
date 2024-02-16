@@ -61,7 +61,6 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   // instead of x
   let timer;
   const handlePassingTypeChange = (newSelectedTypes) => {
-    console.log(newSelectedTypes);
     clearTimeout(timer);
     timer = setTimeout(() => {
       dispatch({

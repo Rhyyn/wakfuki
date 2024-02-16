@@ -8,7 +8,7 @@ import { useGlobalContext } from "../Contexts/GlobalContext";
 // TODO : add sorting dropdown
 
 const StatsValuesFilterer = ({
-  updateStats,
+  setUpdateStatsFlag,
   handleStatsValuesFiltererInputChange,
   setIsMobileFilterShowing,
   isMobileFilterShowing,
@@ -21,7 +21,6 @@ const StatsValuesFilterer = ({
   const [selectedStats, setSelectedStats] = useState([]);
   useEffect(() => {
     let newStats = [];
-    console.log(globalFilterState.stats);
     globalFilterState.stats.forEach((stat) => {
       newStats.push(stat);
     });
@@ -39,6 +38,7 @@ const StatsValuesFilterer = ({
 
   // Update state when user click the cross delete button
   const updateState = (element) => {
+    setUpdateStatsFlag(true);
     const newElements = globalFilterState.stats.filter(
       (stat) => stat.property !== element.property
     );

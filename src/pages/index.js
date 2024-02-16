@@ -79,17 +79,6 @@ const Home = () => {
   };
 
   const [updateStatsFlag, setUpdateStatsFlag] = useState(false);
-  const updateStats = (elementProperty) => {
-    const updatedStats = globalFilterState.stats.filter(
-      (stat) => stat.property !== elementProperty
-    );
-
-    dispatch({
-      type: "UPDATE_STATS",
-      payload: updatedStats,
-    });
-    setUpdateStatsFlag(true);
-  };
 
   useEffect(() => {
     setUpdateStatsFlag(false);
@@ -103,6 +92,8 @@ const Home = () => {
       }
       return stat;
     });
+    console.log("bingo");
+    setUpdateStatsFlag(true);
 
     dispatch({
       type: "UPDATE_STATS",
@@ -149,8 +140,8 @@ const Home = () => {
         <div className={cssModule["global-container"]}>
           <Header setIsModalShowing={setIsModalShowing} />
           <StatsValuesFilterer
-            updateStats={updateStats}
             handleStatsValuesFiltererInputChange={handleStatsValuesFiltererInputChange}
+            setUpdateStatsFlag={setUpdateStatsFlag}
             setIsMobileFilterShowing={setIsMobileFilterShowing}
             isMobileFilterShowing={isMobileFilterShowing}
             handleResetFilters={handleResetFilters}
