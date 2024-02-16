@@ -176,7 +176,10 @@ const Card = ({ item, lang }) => {
       >
         {item.droprates ? (
           Object.entries(item.droprates).map(([key, value], index) => (
-            <div key={index} className={cssModule["item-drop-container"]}>
+            <div
+              key={index}
+              className={cssModule["item-drop-container"]}
+            >
               <span className={cssModule["item-drop"]}>{`${key}: ${value}`}</span>
             </div>
           ))
@@ -188,8 +191,8 @@ const Card = ({ item, lang }) => {
         className={`${cssModule["middle-card-container"]} ${
           triToggle === 0 ? cssModule["visible"] : cssModule["hidden"]
         }`}
-      >        
-        <RecipeCard item={item}/>
+      >
+        <RecipeCard item={item} />
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
@@ -270,7 +273,12 @@ const Card = ({ item, lang }) => {
               src="/UI-icons/Card/Footer/stats-yellow.png"
             />
           ) : (
-            <Image alt="Stats" width={30} height={30} src="/UI-icons/Card/Footer/stats-white.png" />
+            <Image
+              alt="Stats"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/stats-white.png"
+            />
           )}
         </div>
         <div
@@ -279,9 +287,19 @@ const Card = ({ item, lang }) => {
           title={t("copyToClipBoard")}
         >
           {triToggle === 2 ? (
-            <Image alt="Copy" width={30} height={30} src="/UI-icons/Card/Footer/paste-yellow.png" />
+            <Image
+              alt="Copy"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/paste-yellow.png"
+            />
           ) : (
-            <Image alt="Copy" width={30} height={30} src="/UI-icons/Card/Footer/paste-white.png" />
+            <Image
+              alt="Copy"
+              width={30}
+              height={30}
+              src="/UI-icons/Card/Footer/paste-white.png"
+            />
           )}
         </div>
         <div
@@ -311,7 +329,12 @@ const Card = ({ item, lang }) => {
           title="Disabled, coming soon!"
           style={{ opacity: 0.2 }}
         >
-          <Image alt="Add" width={30} height={30} src="/UI-icons/Card/Footer/plus-white.png" />
+          <Image
+            alt="Add"
+            width={30}
+            height={30}
+            src="/UI-icons/Card/Footer/plus-white.png"
+          />
         </div>
       </div>
     </div>
