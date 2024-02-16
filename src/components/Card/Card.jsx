@@ -191,7 +191,6 @@ const Card = ({ item, lang }) => {
         className={`${cssModule["middle-card-container"]} ${
           triToggle === 0 ? cssModule["visible"] : cssModule["hidden"]
         }`}
-      >
         <RecipeCard item={item} />
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
