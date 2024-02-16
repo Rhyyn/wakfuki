@@ -103,23 +103,5 @@
     "types": [
       646
     ]
-  },
-  "resources": {
-    "tablename": "resources",
-    "types": [
-      1
-    ]
-  },
-  "allRessources": {
-    "tablename": "allRessources",
-    "types": [
-      2
-    ]
-  },
-  "allItems": {
-    "tablename": "allItems",
-    "types": [
-      3
-    ]
   }
 }
