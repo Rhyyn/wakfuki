@@ -9,7 +9,7 @@ import { useGlobalContext } from "../Contexts/GlobalContext.js";
 // rarities does not get added on top of the list ?
 // Pages and infinite scrolling
 
-const ItemList = ({ filterState }) => {
+const ItemList = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,57 +29,33 @@ const ItemList = ({ filterState }) => {
       baseParams: item.baseParams,
       equipEffects: item.equipEffects,
       gfxId: item.gfxId,
-      recipes: item.recipes
+      recipes: item.recipes,
     }));
   };
-
-  useEffect(() => {
-    console.log("filterState changed");
-    // console.log(filterState);
-    // const fetchItems = async () => {
-    // 	lang = localStorage.getItem("language");
-    // 	let DATA = await fetchData(
-    // 		filterState,
-    // 		currentPage,
-    // 		itemsPerPage,
-    // 		lang
-    // 	);
-    // 	let slimmedDownData = transformDataForDisplay(DATA);
-    // 	setItems(slimmedDownData);
-    // 	setIsLoading(false);
-    // };
-
-    // if (filterState !== null) {
-    // 	// setCurrentPage(1); // Reset page to 1 when a new type is selected\
-    // 	setIsLoading(true);
-    // 	fetchItems();
-
-    // 	// console.log(isLoading);
-    // 	// console.log(items);
-    // }
-  }, [currentPage, filterState]);
 
   let timer;
   useEffect(() => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       const fetchItems = async () => {
-        console.log("GlobalFilterState changed", globalFilterState);
+        // console.log("GlobalFilterState changed", globalFilterState);
         lang = localStorage.getItem("language");
         let DATA = await fetchData(globalFilterState, currentPage, itemsPerPage, lang);
         let slimmedDownData = transformDataForDisplay(DATA);
         setItems(slimmedDownData);
         setIsLoading(false);
       };
-      if (filterState !== null) {
+      if (globalFilterState !== null && !resetFiltersFlag) {
         // setCurrentPage(1); // Reset page to 1 when a new type is selected\
         setIsLoading(true);
         fetchItems();
 
         // console.log(isLoading);
         // console.log(items);
+      } else {
+        setItems([]);
       }
-    }, 500);
+    }, 1000);
   }, [globalFilterState]);
 
   useEffect(() => {
@@ -111,7 +87,14 @@ const ItemList = ({ filterState }) => {
   return (
     <div className={cssModule["cards-container"]}>
       {isLoading && <p>Loading...</p>}
-      {!isLoading && items.map((item) => <Card key={item.id} item={item} lang={lang} />)}
+      {!isLoading &&
+        items.map((item) => (
+          <Card
+            key={item.id}
+            item={item}
+            lang={lang}
+          />
+        ))}
     </div>
   );
 };

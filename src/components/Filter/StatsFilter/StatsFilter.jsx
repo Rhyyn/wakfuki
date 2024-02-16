@@ -60,15 +60,13 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   // resets filters
   useEffect(() => {
     if (!isInitialMount.current) {
-      console.log("resetFiltersFlag");
-      // needs to iterate differently since {property: X, value: 1}
-      selectedStatsRefs.current.forEach((element) =>
-        statsRefs.current[element].classList.toggle(cssModule["selected"])
-      );
+      selectedStatsRefs.current.forEach((stat) => {
+        const element = statsRefs.current[stat.property];
+        if (element) {
+          element.classList.remove(cssModule["selected"]);
+        }
+      });
       selectedStatsRefs.current = [];
-      selectedStatsConstructedRefs.current = [];
-      setIsDistanceChecked(false);
-      setIsMeleeChecked(false);
     }
   }, [resetFiltersFlag]);
 

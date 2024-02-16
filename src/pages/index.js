@@ -32,20 +32,24 @@ const Home = () => {
 
   const [resetFiltersFlag, setResetFiltersFlag] = useState(false);
   const handleResetFilters = () => {
-    console.log("handleResetFilters called");
-    setFilterState({
-      searchQuery: "",
-      rarity: [],
-      levelRange: { from: 0, to: 230 },
-      type: [],
-      stats: [],
-      sortBy: { type: "level", order: "ascending" },
+    dispatch({
+      type: "UPDATE_GLOBAL_globalFilterState",
+      payload: {
+        searchQuery: "",
+        rarity: [],
+        levelRange: { from: 0, to: 230 },
+        type: [],
+        stats: [],
+        sortBy: { type: "level", order: "ascending" },
+      },
     });
     setResetFiltersFlag(true);
   };
 
   useEffect(() => {
-    setResetFiltersFlag(false);
+    setTimeout(() => {
+      setResetFiltersFlag(false);
+    }, 500);
   }, [resetFiltersFlag]);
 
   const handleSortingOptionsChange = (newSortingOption) => {
@@ -152,10 +156,7 @@ const Home = () => {
             style={globalFilterState.stats.length > 0 ? { top: "130px" } : { top: "65px" }}
           >
             {globalFilterState.type && globalFilterState.type.length !== 0 && (
-              <ItemList
-                key={globalFilterState.type}
-                filterState={globalFilterState}
-              />
+              <ItemList resetFiltersFlag={resetFiltersFlag} />
             )}
           </div>
         </div>
