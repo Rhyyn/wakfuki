@@ -75,18 +75,63 @@ const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
   return itemsQuery;
 };
 
-// TODO : add invidivual elemental if global elemental selected
+const combineStats = (stats) => {
+  const propertyMap = new Map();
+
+  stats.forEach((stat) => {
+    propertyMap.set(stat.property, stat.value);
+    switch (stat.property) {
+      case 1068:
+        // Random elements
+        propertyMap.set(120, stat.value);
+        propertyMap.set(122, stat.value);
+        propertyMap.set(123, stat.value);
+        propertyMap.set(124, stat.value);
+        propertyMap.set(125, stat.value);
+        return propertyMap;
+      case 1053:
+        // Distance
+        propertyMap.set(1068, stat.value);
+        propertyMap.set(120, stat.value);
+        propertyMap.set(122, stat.value);
+        propertyMap.set(123, stat.value);
+        propertyMap.set(124, stat.value);
+        propertyMap.set(125, stat.value);
+        return propertyMap;
+      case 1052:
+        // Melee
+        propertyMap.set(1068, stat.value);
+        propertyMap.set(120, stat.value);
+        propertyMap.set(122, stat.value);
+        propertyMap.set(123, stat.value);
+        propertyMap.set(124, stat.value);
+        propertyMap.set(125, stat.value);
+        return propertyMap;
+      case 1069:
+        // Random Resistance
+        propertyMap.set(82, stat.value);
+        propertyMap.set(83, stat.value);
+        propertyMap.set(84, stat.value);
+        propertyMap.set(85, stat.value);
+        return propertyMap;
+      default:
+        return propertyMap;
+    }
+  });
+
+  return propertyMap;
+};
+
 const filterByStatsQuery = (itemsQuery, stats) => {
   if (stats && stats.length > 0) {
+    const propertyMap = combineStats(stats);
     return itemsQuery.filter((item) => {
-      const result = stats.every((stat) =>
-        item.equipEffects.some(
-          (effect) =>
-            effect.effect.stats.property === stat.property &&
-            effect.effect.stats.value >= stat.value
-        )
-      );
-      return result;
+      return [...propertyMap.entries()].some(([property, value]) => {
+        return item.equipEffects.some((effect) => {
+          const { stats: itemStats } = effect.effect;
+          return itemStats.property === property && itemStats.value >= value;
+        });
+      });
     });
   }
   return itemsQuery;

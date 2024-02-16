@@ -39,26 +39,21 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     let modalId = openModal(t("maxStatsErrorPrefix"), 3000);
   };
 
-  // triggered when values of stats are changed by the user
+  // triggered when values of stats are changed / deleted by the user
   // inside StatsValuesFilterer.jsx
   useEffect(() => {
     if (!isInitialMount.current) {
-      console.log("updateStatsFlag");
-      // needs to iterate differently since {property: X, value: 1}
-      const missingElements = selectedStatsRefs.current.filter(
-        (element) => !globalFilterState.some((stat) => stat.property === element)
-      );
-
-      missingElements.forEach((missingElement) => {
-        statsRefs.current[missingElement].classList.toggle(cssModule["selected"]);
+      const prevSelectedStatsRefs = [...selectedStatsRefs.current];
+      selectedStatsRefs.current = [...globalFilterState.stats];
+      prevSelectedStatsRefs.forEach((prevStat) => {
+        if (!globalFilterState.stats.some((stat) => stat.property === prevStat.property)) {
+          // check if stats are removed
+          const element = statsRefs.current[prevStat.property];
+          if (element) {
+            element.classList.remove(cssModule["selected"]);
+          }
+        }
       });
-
-      const updatedSelectedStatsRefs = selectedStatsRefs.current.filter((element) =>
-        globalFilterState.some((stat) => stat.property === element)
-      );
-
-      selectedStatsRefs.current = updatedSelectedStatsRefs;
-      selectedStatsConstructedRefs.current = globalFilterState;
     }
   }, [updateStatsFlag]);
 
@@ -127,83 +122,8 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     }, 500);
   };
 
-  const handleAndSet = (statID) => {
-    handleSelectedStatsRefs(statID);
-  };
-
-  const handleDistanceStat = (statID) => {
-    if (isDistanceChecked) {
-      handleAndSet(statID);
-      setIsDistanceChecked(false);
-    } else {
-      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-        handleAndSet(statID);
-      } else {
-        [1068, statID].forEach(handleAndSet);
-      }
-      setIsDistanceChecked(true);
-    }
-  };
-
-  const handleMeleeStat = (statID) => {
-    if (isMeleeChecked) {
-      handleAndSet(statID);
-      setIsMeleeChecked(false);
-    } else {
-      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-        handleAndSet(statID);
-      } else {
-        [1068, statID].forEach(handleAndSet);
-      }
-      setIsMeleeChecked(true);
-    }
-  };
-
-  const handleMultiElementsStat = (statID) => {
-    // line 108: make property a list so a single stat can represent multi-elements
-    // ex : {property: [1068, 122, 123, 124, 125], value: 1} where value represent the value of the first element
-    // and we only show the first element of the list as selected / editable
-    // so when Mastery with X elements is selected, cards with Earth/Water/... and X Elemental mastery will also be shown
-    if (isMeleeChecked) {
-      handleAndSet(statID);
-      setIsMeleeChecked(false);
-    } else {
-      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-        handleAndSet(statID);
-      } else {
-        [1068, statID].forEach(handleAndSet);
-      }
-      setIsMeleeChecked(true);
-    }
-  };
-
-  const handleResistanceStat = (statID) => {
-    if (isMeleeChecked) {
-      handleAndSet(statID);
-      setIsMeleeChecked(false);
-    } else {
-      if (globalFilterState.stats.some((stat) => stat.property === 1068)) {
-        handleAndSet(statID);
-      } else {
-        [1068, statID].forEach(handleAndSet);
-      }
-      setIsMeleeChecked(true);
-    }
-  };
-
-  // Used to check distance/melee if multi-elements is selected and vice versa
-  // using states because !.includes on refs array doesn't work for some reason
-  // this is a hack, probably needs refactoring later
   const toggle_stat = (e, statID) => {
-    if (statID === 1053) {
-      handleDistanceStat(statID);
-    } else if (statID === 1052) {
-      handleMeleeStat(statID);
-    } else if (statID === 1068) {
-      handleMultiElementsStat(statID);
-    } else {
-      handleAndSet(statID);
-    }
+    handleSelectedStatsRefs(statID);
   };
 
   const handleClick = (e, statID) => {
