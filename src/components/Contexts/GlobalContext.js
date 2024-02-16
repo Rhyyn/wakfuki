@@ -31,7 +31,7 @@ export const useGlobalContext = () => {
 const globalReducer = (globalFilterState, action) => {
   switch (action.type) {
     case "UPDATE_GLOBAL_globalFilterState":
-      return { ...globalFilterState, globalFilterState: action.payload };
+      return { ...action.payload };
     case "UPDATE_SEARCH_QUERY":
       if (typeof action.payload === "string") {
         console.log("setting search query: ", action.payload);
