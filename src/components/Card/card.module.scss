@@ -3,7 +3,7 @@
 /* ---TOP CONTAINER STARTS--- */
 
 .card {
-  width: 310px;
+  width: 340px;
   color: v.$text-offwhite;
   display: flex;
   flex-direction: column;
@@ -11,9 +11,15 @@
   align-items: stretch;
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    width: 350px;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .card {
-    width: 330px;
+    width: 340px;
   }
 }
 
@@ -180,9 +186,10 @@
 .middle-card-container {
   background-color: v.$background;
   height: 100%;
-  padding: 15px 12px 15px 12px;
-  border-left: 3px solid v.$background;
-  border-right: 3px solid v.$background;
+  padding: 8px;
+  padding-left: 12px;
+  // border-left: 3px solid v.$background;
+  // border-right: 3px solid v.$background;
   border-bottom: 3px solid v.$background;
 }
 
@@ -218,13 +225,12 @@
 }
 
 .stat-string-value {
-  width: 38px;
+  width: 42px;
   font-size: 17px;
   color: v.$text;
   text-align: center;
   font-weight: 500;
 }
-
 
 /* ---MIDDLE CONTAINER ENDS--- */
 

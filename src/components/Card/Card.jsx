@@ -37,11 +37,10 @@ const Card = ({ item, lang }) => {
   const logNonSortedStats = (priority_order) => {
     item.equipEffects.forEach((element) => {
       if (!priority_order.includes(element.effect.stats.property)) {
-        console.log(
-          element.effect.stats.property,
-          element.effect.stats.display.en,
-          "Is not sorted"
-        );
+        console.log("One stat is missing or not sorted : "),
+          console.log("Item.id : ", item.id),
+          console.log("Item.equipEffects : ", item.equipEffects),
+          console.log("------------");
       }
     });
   };
@@ -199,42 +198,50 @@ const Card = ({ item, lang }) => {
           triToggle === 1 ? cssModule["visible"] : cssModule["hidden"]
         }`}
       >
-        {item.equipEffects.map((effect, index) => (
-          <div
-            key={index}
-            className={cssModule["item-stat-container"]}
-            data-id={effect.effect.stats.display.property}
-            onClick={(e) => handleClick(e)}
-          >
-            <Image
-              alt={effect.effect.stats.stat_string_desc[lang]}
-              width={20}
-              height={18}
-              style={{ height: "auto" }}
-              src={`/stats/${effect.effect.stats.property}.png`}
-            />
-            <span
-              className={cssModule["stat-string-value"]}
-              style={{
-                color: effect.effect.stats.stat_string_value.startsWith("-")
-                  ? "#FF6347"
-                  : "#ffffff",
-              }}
-            >
-              {effect.effect.stats.stat_string_value}
-            </span>
-            <span
-              className={cssModule["stat-string-desc"]}
-              style={{
-                color: effect.effect.stats.stat_string_value.startsWith("-")
-                  ? "#FF6347"
-                  : "#C2C2C2",
-              }}
-            >
-              {effect.effect.stats.stat_string_desc[lang]}
-            </span>
-          </div>
-        ))}
+        {item.equipEffects.map(
+          (effect, index) =>
+            effect.effect.stats.value !== 0 &&
+            effect.effect.stats.property !== 0 && (
+              <div
+                key={index}
+                className={cssModule["item-stat-container"]}
+                data-id={effect.effect.stats.display.property}
+                onClick={(e) => handleClick(e)}
+              >
+                <Image
+                  alt={effect.effect.stats.stat_string_desc[lang]}
+                  width="0"
+                  height="0"
+                  unoptimized
+                  style={{ width: "20px", height: "auto" }}
+                  src={`/stats/${effect.effect.stats.property}.png`}
+                />
+                <span
+                  className={cssModule["stat-string-value"]}
+                  style={{
+                    color: effect.effect.stats.stat_string_value.startsWith("-")
+                      ? "#FF6347"
+                      : "#ffffff",
+                    fontSize: effect.effect.stats.stat_string_value.startsWith("-")
+                      ? "16px"
+                      : "17px",
+                  }}
+                >
+                  {effect.effect.stats.stat_string_value}
+                </span>
+                <span
+                  className={cssModule["stat-string-desc"]}
+                  style={{
+                    color: effect.effect.stats.stat_string_value.startsWith("-")
+                      ? "#FF6347"
+                      : "#C2C2C2",
+                  }}
+                >
+                  {effect.effect.stats.stat_string_desc[lang]}
+                </span>
+              </div>
+            )
+        )}
       </div>
       <div className={cssModule["footer-container"]}>
         <div
