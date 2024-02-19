@@ -150,6 +150,13 @@ const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
   return itemsQuery;
 };
 
+const filterByTypesQuery = (itemsQuery, type) => {
+  if (type) {
+    return itemsQuery.filter((o) => type.typesIds.includes(o.baseParams.itemTypeId));
+  }
+  return itemsQuery;
+};
+
 const ComputeRecipe = async (db, itemList) => {
   let recipeResultList = await db
     .table("recipeResults.json")
@@ -197,7 +204,7 @@ const ComputeRecipe = async (db, itemList) => {
 const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
   await waitForDbInitialization();
   try {
-    const tableNames = filterState.type.map((obj) => db.table(obj.typeName + ".json"));
+    const tableNames = filterState.type.map((obj) => db.table(obj.tablename + ".json"));
     tableNames.push(
       "recipeResults.json",
       "recipes.json",
@@ -213,11 +220,13 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
         const combinedItems = [];
 
         for (const type of filterState.type) {
-          let itemsQuery = db.table(type.typeName + ".json");
+          let itemsQuery = db.table(type.tablename + ".json");
 
           if (offset > 0) {
             itemsQuery = itemsQuery.offset(offset);
           }
+
+          itemsQuery = filterByTypesQuery(itemsQuery, type);
 
           itemsQuery = filterByRarityQuery(itemsQuery, filterState.rarity);
 
@@ -310,8 +319,6 @@ const checkFileLength = async (fileName, db) => {
     if (fileName === file) {
       let expectedItemCount = filesLength[file];
       let count = await db.table(fileName).count();
-      console.log("expectedItemCount : ", expectedItemCount);
-      console.log(`count of ${fileName} : `, count);
       if (count == expectedItemCount) {
         // TODO : maybe check for random object?
         let randomNumber = random(1, expectedItemCount);
@@ -333,8 +340,7 @@ const checkDataExists = async (selectedTypes, index) => {
     if (selectedTypes) {
       // for (let i = 0; i < selectedTypes.length; i++) {
       selectedTypes.forEach(async (obj) => {
-        console.log("data ext:", obj.typeName);
-        let storeName = obj.typeName + ".json";
+        let storeName = obj.tablename + ".json";
         await db.open();
         if (db.table(storeName)) {
           let isDataValid = await checkFileLength(storeName, db);

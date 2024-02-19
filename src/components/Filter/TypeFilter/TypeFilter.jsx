@@ -16,13 +16,17 @@ const TypeFilter = ({ resetFiltersFlag }) => {
     iconsRefs.current[type] = element;
   };
 
-  const handleImageClick = (typeName, typesIds) => {
+  const handleImageClick = (typeName, typesIds, tablename) => {
     if (selectedTypesRefs.current.some((obj) => obj.typeName === typeName)) {
       selectedTypesRefs.current = selectedTypesRefs.current.filter(
         (obj) => obj.typeName !== typeName
       );
     } else {
-      selectedTypesRefs.current.push({ typeName: typeName, typesIds: typesIds });
+      selectedTypesRefs.current.push({
+        typeName: typeName,
+        typesIds: typesIds,
+        tablename: tablename,
+      });
     }
 
     const iconRef = iconsRefs.current[typeName];
@@ -84,7 +88,9 @@ const TypeFilter = ({ resetFiltersFlag }) => {
         {Object.keys(tablenames).map((typeName) => (
           <div
             key={typeName}
-            onClick={() => handleImageClick(typeName, tablenames[typeName].types)}
+            onClick={() =>
+              handleImageClick(typeName, tablenames[typeName].types, tablenames[typeName].tablename)
+            }
             data-image-name={typeName}
             ref={(element) => setIconsRefs(typeName, element)}
             className={cssModule["icon-container"]}
