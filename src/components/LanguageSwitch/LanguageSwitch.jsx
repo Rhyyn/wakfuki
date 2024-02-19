@@ -8,7 +8,6 @@ const LanguageSwitch = React.memo(() => {
   const [flagToggle, setFlagToggle] = useState();
   const { i18n } = useTranslation();
 
-
   const changeLanguageAndSave = (newLanguage, v) => {
     setFlagToggle(v);
     localStorage.setItem("language", newLanguage);
@@ -53,7 +52,7 @@ const LanguageSwitch = React.memo(() => {
         unoptimized
         onClick={() => changeLanguageAndSave("fr", 1)}
         alt="france-flag"
-        style={{ padding: "10px"}}
+        style={{ marginRight: "10px", cursor: "pointer" }}
       />
       <Image
         className={`${cssModule["flag-icon"]} ${
@@ -65,7 +64,7 @@ const LanguageSwitch = React.memo(() => {
         unoptimized
         onClick={() => changeLanguageAndSave("en", 2)}
         alt="uk-flag"
-        style={{ padding: "10px"}}
+        style={{ marginLeft: "10px", cursor: "pointer" }}
       />
     </div>
   );
