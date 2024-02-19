@@ -32,5 +32,11 @@
     "montures": "Mounts",
     "emblemes": "Emblems",
     "maxStatsErrorPrefix": "Max number of filtered stats: 5",
-    "maxStatsErrorSuffix": "reached"
+    "maxStatsErrorSuffix": "reached",
+    "warning-text": "If you encounter a bug with the items, please delete the database and try again.",
+    "delete-button-text": "Delete the database",
+    "feedback-text": "If your problem persists or you want to share feedback with us abpitthe project, you can do so via the form below:",
+    "feedback-form-title": "Title..",
+    "feedback-form-description": "Describe your problem, or leave a comment, 300 characters maximum",
+    "submit-button-text": "Submit"
 }
