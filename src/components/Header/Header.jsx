@@ -24,7 +24,7 @@ const Header = ({ setIsModalShowing }) => {
       </div>
       <div className={cssModule["menu-icon-container"]}>
         <Image
-          style={{ paddingRight: "10px", height: "auto" }}
+          style={{ paddingRight: "10px", height: "auto", cursor: "pointer" }}
           src="/UI-icons/Header/cog.svg"
           alt="menu icon"
           width={55}

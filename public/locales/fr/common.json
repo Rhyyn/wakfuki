@@ -32,5 +32,11 @@
     "montures": "Montures",
     "emblemes": "Emblemes",
     "maxStatsErrorPrefix": "Nombre maximum de stats filtrées: 5",
-    "maxStatsErrorSuffix": "reached"
+    "maxStatsErrorSuffix": "reached",
+    "warning-text": "Si vous rencontrez un problème lié aux objets, veuillez supprimer la base de donnée puis réessayer.",
+    "delete-button-text": "Supprimer la base de donnée",
+    "feedback-text": "Si votre problème persiste ou vous souhaitez nous partager un retour sur le projet, vous pouvez nous contacter via le formulaire suivant :",
+    "feedback-form-title": "Titre..",
+    "feedback-form-description": "Décrivez votre problème, ou laissez un commentaire, 300 caractères maximum",
+    "submit-button-text": "Envoyer"
 }
