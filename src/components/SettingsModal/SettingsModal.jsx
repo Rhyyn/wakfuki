@@ -2,7 +2,9 @@ import React from "react";
 import cssModule from "./SettingsModal.module.scss";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { deleteDB } from "../../services/data-service";
 
 const SettingsModal = ({ setIsModalShowing }) => {
   const { t, i18n } = useTranslation();
@@ -25,7 +27,12 @@ const SettingsModal = ({ setIsModalShowing }) => {
         </div>
         <div className={cssModule["body-container"]}>
           <span className={cssModule["warning-text"]}>{t("warning-text")}</span>
-          <button className={cssModule["delete-button"]}>{t("delete-button-text")}</button>
+          <button
+            className={cssModule["delete-button"]}
+            onClick={deleteDB}
+          >
+            {t("delete-button-text")}
+          </button>
           <span className={cssModule["feedback-text"]}>{t("feedback-text")}</span>
           <form className={cssModule["form-container"]}>
             <input
@@ -55,44 +62,83 @@ const SettingsModal = ({ setIsModalShowing }) => {
         </div>
         <div className={cssModule["footer-container"]}>
           <div className={cssModule["footer-github-container"]}>
-            <Image
-              width="0"
-              height="0"
-              style={{ width: "30px", height: "auto" }}
-              alt="Github logo/button"
-              src={"/UI-icons/Settings/github-yellow.svg"}
-            />
-            <span
-              className={cssModule["footer-github-text"]}
-              style={{ fontSize: "16px" }}
+            <Link
+              href={"https://github.com/rhyyn"}
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{ maxHeight: "30px" }}
             >
-              Rhyn
-            </span>
+              <Image
+                width="0"
+                height="0"
+                style={{ width: "30px", height: "auto" }}
+                alt="Github logo/button"
+                src={"/UI-icons/Settings/github-yellow.svg"}
+              />
+            </Link>
+            <Link
+              href={"https://github.com/rhyyn"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                className={cssModule["footer-github-text"]}
+                style={{ fontSize: "16px" }}
+              >
+                Rhyn
+              </span>
+            </Link>
           </div>
           <div className={cssModule["footer-github-container"]}>
-            <Image
-              width="0"
-              height="0"
-              style={{ width: "40px", height: "auto" }}
-              alt="Github logo/button"
-              src={"/UI-icons/Settings/github-yellow.svg"}
-            />
-            <span className={cssModule["footer-github-text"]}>WakfuKI</span>
+            <Link
+              href={"https://github.com/Rhyyn/wakfuki"}
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{ maxHeight: "40px" }}
+            >
+              <Image
+                width="0"
+                height="0"
+                style={{ width: "40px", height: "auto" }}
+                alt="Github logo/button"
+                src={"/UI-icons/Settings/github-yellow.svg"}
+              />
+            </Link>
+            <Link
+              href={"https://github.com/Rhyyn/wakfuki"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className={cssModule["footer-github-text"]}>WakfuKI</span>
+            </Link>
           </div>
           <div className={cssModule["footer-github-container"]}>
-            <Image
-              width="0"
-              height="0"
-              style={{ width: "30px", height: "auto" }}
-              alt="Github logo/button"
-              src={"/UI-icons/Settings/github-yellow.svg"}
-            />
-            <span
-              className={cssModule["footer-github-text"]}
-              style={{ fontSize: "16px" }}
+            <Link
+              href={"https://github.com/kerro"}
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{ maxHeight: "30px" }}
             >
-              Kerro
-            </span>
+              <Image
+                width="0"
+                height="0"
+                style={{ width: "30px", height: "auto" }}
+                alt="Github logo/button"
+                src={"/UI-icons/Settings/github-yellow.svg"}
+              />
+            </Link>
+            <Link
+              href={"https://github.com/kerro"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                className={cssModule["footer-github-text"]}
+                style={{ fontSize: "16px" }}
+              >
+                Kerro
+              </span>
+            </Link>
           </div>
         </div>
       </div>
