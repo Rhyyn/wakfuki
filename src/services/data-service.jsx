@@ -294,6 +294,21 @@ const getDBInstance = async function (startIndex) {
   console.log("DB Does not exists");
 };
 
+const deleteDB = () => {
+  if (doesDBExists()) {
+    db.delete()
+      .then(() => {
+        console.log("DB deleted");
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        window.location.reload();
+      });
+  }
+};
+
 const closeDB = () => {
   if (doesDBExists()) {
     db.close();
@@ -505,4 +520,5 @@ export {
   getDBInstance,
   setupDatabaseCloseListener,
   fetchData,
+  deleteDB,
 };
