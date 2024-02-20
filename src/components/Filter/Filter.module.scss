@@ -8,7 +8,7 @@
   left: 0px;
   height: 100vh;
   overflow-y: auto;
-  z-index: 2;
+  z-index: 4;
   padding: 0;
 }
 
@@ -16,8 +16,8 @@
   .filter-container {
     width: 100%;
     position: fixed;
-    // top: 110px;
     height: 80vh;
+    z-index: 2;
     // left: 50%; USED TO CENTER IF WE WANT TO REDUCE WIDTH
     // transform: translateX(-50%);
   }
@@ -34,10 +34,6 @@
   .header-container {
     margin-top: 20px;
   }
-}
-
-.header-icon {
-  cursor: pointer;
 }
 
 .header-title {
@@ -68,34 +64,38 @@
 .header-icons-container {
   display: flex;
   flex-direction: row;
-  width: 80px;
+  width: 70px;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 20px;
+  justify-content: space-around;
 }
 
-// .vertical-separator {
-//   width: 3px;
-//   height: 24px;
-//   border-radius: 12px;
-//   background-color: v.$primary-yellow;
-//   margin: 0 4px 0 4px;
-// }
+.reset-icon,
+.sort-icon {
+  cursor: pointer;
+  background-color: v.$background-off;
+  border-radius: 4px;
+  &:hover {
+    background-color: v.$background-deep;
+  }
+}
 
 .sorting-options-container {
   position: fixed;
   z-index: 10;
-  width: 180px;
-  height: 170px;
+  width: 220px;
+  height: 112px;
   left: 230px;
-  top: 20px;
+  top: 0px;
   background-color: v.$background;
   border: 3px solid v.$background-light;
   display: flex;
   flex-direction: column;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 4px 4px 0;
   justify-content: center;
   align-items: center;
   text-align: left;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .sorting-option {
@@ -108,8 +108,7 @@
 
 .sorting-option:hover {
   background-color: v.$background-light;
-  color: v.$text-offwhite;
-  border-radius: 0 12px 12px 0;
+  color: v.$text;
 }
 
 .selected {

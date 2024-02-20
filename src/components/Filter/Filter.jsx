@@ -37,30 +37,10 @@ const Filter = ({
 
   const handleSortingOptionsClick = (value) => {
     if (value) {
-      if (value == "level.ascending") {
-        handleSortingOptionsChange({ type: "level", order: "ascending" });
-      }
-      if (value == "level.descending") {
-        handleSortingOptionsChange({ type: "level", order: "descending" });
-      }
-      if (value == "alphabetical.ascending") {
-        handleSortingOptionsChange({
-          type: "alphabetical",
-          order: "ascending",
-        });
-      }
-      if (value == "alphabetical.descending") {
-        handleSortingOptionsChange({
-          type: "alphabetical",
-          order: "descending",
-        });
-      }
-      if (value == "rarity.ascending") {
-        handleSortingOptionsChange({ type: "rarity", order: "ascending" });
-      }
-      if (value == "rarity.descending") {
-        handleSortingOptionsChange({ type: "rarity", order: "descending" });
-      }
+      dispatch({
+        type: "UPDATE_SORT_BY",
+        payload: { type: value.split(".")[0], order: value.split(".")[1] },
+      });
     }
     setShowSortDropdown(false);
   };
@@ -116,7 +96,7 @@ const Filter = ({
             {deviceType === "desktop" && (
               <div className={cssModule["header-icons-container"]}>
                 <Image
-                  className={cssModule["header-icon"]}
+                  className={cssModule["reset-icon"]}
                   src="/reset_icon_yellow.png"
                   width={32}
                   height={32}
@@ -127,7 +107,7 @@ const Filter = ({
                 />
                 <div className={cssModule["vertical-separator"]}></div>
                 <Image
-                  className={cssModule["header-icon"]}
+                  className={cssModule["sort-icon"]}
                   src="/sort_icon_yellow.png"
                   width={32}
                   height={32}
@@ -147,37 +127,25 @@ const Filter = ({
                     className={cssModule["sorting-option"]}
                     onClick={() => handleSortingOptionsClick("level.ascending")}
                   >
-                    Level ascending
+                    {t("level.ascending")}
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
                     onClick={() => handleSortingOptionsClick("level.descending")}
                   >
-                    Level descending
-                  </span>
-                  <span
-                    className={cssModule["sorting-option"]}
-                    onClick={() => handleSortingOptionsClick("alphabetical.ascending")}
-                  >
-                    Name ascending
-                  </span>
-                  <span
-                    className={cssModule["sorting-option"]}
-                    onClick={() => handleSortingOptionsClick("alphabetical.descending")}
-                  >
-                    Name descending
+                    {t("level.descending")}
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
                     onClick={() => handleSortingOptionsClick("rarity.ascending")}
                   >
-                    Rarity ascending
+                    {t("rarity.ascending")}
                   </span>
                   <span
                     className={cssModule["sorting-option"]}
                     onClick={() => handleSortingOptionsClick("rarity.descending")}
                   >
-                    Rarity descending
+                    {t("rarity.descending")}
                   </span>
                 </div>
               </div>

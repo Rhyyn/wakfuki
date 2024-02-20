@@ -83,6 +83,7 @@
 
 .header-icon {
   cursor: pointer;
+  @include v.no-select();
 }
 
 // Right side container for reset / sorting
@@ -113,6 +114,8 @@
   background-color: v.$background;
   align-items: center;
   border-radius: 4px;
+  @include v.no-select();
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     cursor: pointer;
     background-color: v.$background-light;
@@ -140,4 +143,42 @@
 
 .not-selected {
   background-color: v.$background;
+}
+
+.sorting-options-container {
+  position: fixed;
+  z-index: 10;
+  width: 220px;
+  height: 112px;
+  right: 0px;
+  top: 112px;
+  background-color: v.$background;
+  border: 3px solid v.$background-light;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 4px 4px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.sorting-option {
+  width: 100%;
+  cursor: pointer;
+  color: v.$text-offwhite-nofocus;
+  padding-left: 7px;
+  font-size: 0.9rem;
+}
+
+.sorting-option:hover {
+  background-color: v.$background-light;
+  color: v.$text;
+}
+
+.selected-sort {
+  visibility: visible;
+}
+
+.hide-sort {
+  visibility: hidden;
 }
