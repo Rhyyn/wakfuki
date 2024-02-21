@@ -69,6 +69,7 @@ const filterByRarityQuery = (itemsQuery, rarity) => {
 };
 
 const filterByLevelRangeQuery = (itemsQuery, levelRange) => {
+  console.log(itemsQuery);
   if (levelRange.from > 0 || levelRange.to < 230) {
     return itemsQuery.filter((o) => o.level >= levelRange.from && o.level <= levelRange.to);
   }
@@ -216,17 +217,25 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
     await openDB();
     return Promise.resolve(
       await db.transaction("r", tableNames, async () => {
-        const offset = (currentPage - 1) * itemsPerPage;
+        let offset = 0;
+        if (currentPage === 1) {
+          offset = 40;
+        } else {
+          offset = (currentPage - 1) * itemsPerPage;
+        }
+        // console.log(offset);
         const combinedItems = [];
 
         for (const type of filterState.type) {
           let itemsQuery = db.table(type.tablename + ".json");
-
-          if (offset > 0) {
-            itemsQuery = itemsQuery.offset(offset);
-          }
+          let itemsQueryLength = await itemsQuery.count();
+          // Need to isolate only items tables from these : "recipeResults.json","recipes.json","recipeIngredients.json","resources.json","allRessources.json","allItems.json"
 
           itemsQuery = filterByTypesQuery(itemsQuery, type);
+          itemsQuery = await itemsQuery.toArray();
+          itemsQuery = sortData(itemsQuery, filterState.sortBy);
+          // console.log(itemsQuery);
+          // console.log(currentPage);
 
           itemsQuery = filterByRarityQuery(itemsQuery, filterState.rarity);
 
@@ -236,13 +245,26 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
 
           itemsQuery = filterBySearchQuery(itemsQuery, lang, filterState.searchQuery);
 
-          itemsQuery = itemsQuery.limit(itemsPerPage);
+          // itemsQuery = itemsQuery.limit(itemsPerPage);
 
-          let itemList = await itemsQuery.toArray();
+          // let itemList = await itemsQuery.toArray();
+          if (offset > 0 && offset < itemsQueryLength && currentPage >= 2) {
+            // console.log("offset", offset, "itemsPerPage", itemsPerPage);
+            let index = offset + itemsPerPage;
+            itemsQuery = itemsQuery.slice(offset, index);
+            console.log(itemsQuery);
+          } else if (offset > itemsQueryLength) {
+            // need to check difference between offset and itemsQueryLength and itemsperPage to find if
+            // need to fetch more or end of fetch
+            itemsQuery = itemsQuery.slice(offset - itemsQueryLength);
+          } else {
+            console.log("bingo");
+            itemsQuery = itemsQuery.slice(0, itemsPerPage);
+          }
+          // let itemListWithRecipes = await ComputeRecipe(db, itemsQuery);
 
-          let itemListWithRecipes = await ComputeRecipe(db, itemList);
-
-          combinedItems.push(itemListWithRecipes);
+          // console.log(itemListWithRecipes);
+          combinedItems.push(itemsQuery);
         }
 
         const flattenedItems = combinedItems.flat();
@@ -469,6 +491,7 @@ const initializeDexieDatabase = async function (fileNames) {
     }
 
     //TODO: Include in regular routines instead of here
+    // Need to check if exists first
     await storeFile("recipes.json");
     await storeFile("recipeCategories.json");
     await storeFile("recipeIngredients.json");

@@ -49,31 +49,37 @@ const ItemList = ({ resetFiltersFlag }) => {
         // setCurrentPage(1); // Reset page to 1 when a new type is selected\
         setIsLoading(true);
         fetchItems();
-
-        // console.log(isLoading);
-        // console.log(items);
       } else {
+        console.log("this should not trigger");
         setItems([]);
       }
     }, 1000);
   }, [globalFilterState]);
 
+  const isFetchingRef = useRef(false);
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
-      // console.log("scrollTop", Math.abs(scrollTop));
-      // console.log("clientHeight", clientHeight);
-      // console.log("scrollHeight", scrollHeight);
-      // console.log(Math.abs(scrollHeight - clientHeight - scrollTop) < 1);
-      if (scrollTop + clientHeight >= scrollHeight - scrollThreshold && !isFetching) {
-        console.log("scrolled", isFetching);
-        setCurrentPage((prevPage) => prevPage + 1);
-        setIsFetching(true);
+      const fetchItems = async (page) => {
+        lang = localStorage.getItem("language");
+        let DATA = await fetchData(globalFilterState, page, itemsPerPage, lang);
+        let slimmedDownData = transformDataForDisplay(DATA);
+        const newItems = items.concat(slimmedDownData);
+        setItems(newItems);
+        isFetchingRef.current = false;
+      };
 
-        setTimeout(() => {
-          setIsFetching(false);
-        }, 5000);
+      // scrollTop / scrollHeight * 100
+      const percent = Math.floor((scrollTop / (scrollHeight - clientHeight)) * 100);
+      // console.log(percent);
+      if (percent >= 78 && !isFetchingRef.current) {
+        console.log("here");
+        isFetchingRef.current = true;
+
+        let page = currentPage + 1;
+        fetchItems(page);
+        setCurrentPage((prevPage) => prevPage + 1);
       }
     };
 
@@ -82,7 +88,11 @@ const ItemList = ({ resetFiltersFlag }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isFetching]);
+  }, [items]);
+
+  useEffect(() => {
+    console.log(items);
+  }, [items]);
 
   return (
     <div className={cssModule["cards-container"]}>

@@ -5,6 +5,9 @@ const RecipeCard = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
 
   //TODO: translation, better card presentation
+  // if (item.recipes.length != 0) {
+  //   item.recipes[0].map((recipeItem, index) => console.log(recipeItem, item));
+  // }
 
   return (
     <div>

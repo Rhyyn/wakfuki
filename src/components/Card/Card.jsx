@@ -15,7 +15,6 @@ import RecipeCard from "./RecipeCard/RecipeCard";
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
   const [triToggle, setTriToggle] = useState(1);
-
   const handleTriToggleClick = (value) => {
     setTriToggle(value);
   };
@@ -35,14 +34,18 @@ const Card = ({ item, lang }) => {
   };
 
   const logNonSortedStats = (priority_order) => {
-    item.equipEffects.forEach((element) => {
-      if (!priority_order.includes(element.effect.stats.property)) {
-        console.log("One stat is missing or not sorted : "),
-          console.log("Item.id : ", item.id),
-          console.log("Item.equipEffects : ", item.equipEffects),
-          console.log("------------");
-      }
-    });
+    // console.log(item);
+    // console.log(item.equipEffects);
+    if (item.equipEffect) {
+      item.equipEffects.forEach((element) => {
+        if (!priority_order.includes(element.effect.stats.property)) {
+          console.log("One stat is missing or not sorted : "),
+            console.log("Item.id : ", item.id),
+            console.log("Item.equipEffects : ", item.equipEffects),
+            console.log("------------");
+        }
+      });
+    }
   };
 
   const sortEffectsWithPriority = (item) => {
@@ -108,12 +111,14 @@ const Card = ({ item, lang }) => {
       96, // - Earth Resistance
     ];
     logNonSortedStats(priority_order);
-    item.equipEffects.sort((a, b) => {
-      const firstIndex = priority_order.indexOf(a.effect.stats.property);
-      const secondIndex = priority_order.indexOf(b.effect.stats.property);
+    if (item.equipEffects) {
+      item.equipEffects.sort((a, b) => {
+        const firstIndex = priority_order.indexOf(a.effect.stats.property);
+        const secondIndex = priority_order.indexOf(b.effect.stats.property);
 
-      return (firstIndex === -1 ? 25 : firstIndex) - (secondIndex === -1 ? 25 : secondIndex);
-    });
+        return (firstIndex === -1 ? 25 : firstIndex) - (secondIndex === -1 ? 25 : secondIndex);
+      });
+    }
   };
   sortEffectsWithPriority(item);
 
@@ -192,6 +197,7 @@ const Card = ({ item, lang }) => {
         }`}
       >
         <RecipeCard item={item} />
+        <span>test</span>
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
