@@ -11,7 +11,7 @@ const RecipeCard = ({ item, lang }) => {
 
   return (
     <div>
-      {item.recipes.length != 0 ? (
+      {item.recipes && item.recipes.length != 0 ? (
         item.recipes[0].map((recipeItem, index) => (
           <div
             key={`${item.id}-${index}`}
