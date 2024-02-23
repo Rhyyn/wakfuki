@@ -202,18 +202,6 @@ const StatsValuesFilterer = ({
           >
             {t("level.descending")}
           </span>
-          <span
-            className={cssModule["sorting-option"]}
-            onClick={() => handleSortingOptionsClick("rarity.ascending")}
-          >
-            {t("rarity.ascending")}
-          </span>
-          <span
-            className={cssModule["sorting-option"]}
-            onClick={() => handleSortingOptionsClick("rarity.descending")}
-          >
-            {t("rarity.descending")}
-          </span>
         </div>
       </div>
     )
