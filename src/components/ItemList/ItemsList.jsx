@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { waitForDbInitialization, getDBInstance, fetchData } from "../../services/data-service.jsx";
+import { fetchData } from "../../services/data-service.jsx";
 import Card from "../Card/Card.jsx";
 import cssModule from "./ItemList.module.scss";
 import { useTranslation } from "react-i18next";
 import { useGlobalContext } from "../Contexts/GlobalContext.js";
-
-// TODO :
-// rarities does not get added on top of the list ?
-// Pages and infinite scrolling
 
 const ItemList = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -15,9 +11,8 @@ const ItemList = ({ resetFiltersFlag }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isFetching, setIsFetching] = useState(false);
   const itemsPerPage = 40;
-  const scrollThreshold = 100;
+  const [lastSort, setLastSort] = useState(globalFilterState.sortBy); // used to tell if sorting has changed
   let lang = localStorage.getItem("language");
 
   const transformDataForDisplay = (rawData) => {
@@ -33,27 +28,35 @@ const ItemList = ({ resetFiltersFlag }) => {
     }));
   };
 
+  // need to refactor the timeout to make isLoading true before 700ms
+  // otherwise there is a blank then a loading before the data is displayed
   let timer;
   useEffect(() => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       const fetchItems = async () => {
-        // console.log("GlobalFilterState changed", globalFilterState);
         lang = localStorage.getItem("language");
-        let DATA = await fetchData(globalFilterState, currentPage, itemsPerPage, lang);
+        let DATA = [];
+        if (lastSort !== globalFilterState.sortBy) {
+          // used for sorting reset if sorting has changed
+          DATA = await fetchData(globalFilterState, 1, itemsPerPage, lang, lastSort);
+          setCurrentPage(1);
+          setLastSort(globalFilterState.sortBy);
+        } else {
+          DATA = await fetchData(globalFilterState, currentPage, itemsPerPage, lang);
+        }
         let slimmedDownData = transformDataForDisplay(DATA);
         setItems(slimmedDownData);
         setIsLoading(false);
       };
       if (globalFilterState !== null && !resetFiltersFlag) {
-        // setCurrentPage(1); // Reset page to 1 when a new type is selected\
         setIsLoading(true);
         fetchItems();
       } else {
-        console.log("this should not trigger");
+        // why?
         setItems([]);
       }
-    }, 1000);
+    }, 700);
   }, [globalFilterState]);
 
   const isFetchingRef = useRef(false);
@@ -70,13 +73,10 @@ const ItemList = ({ resetFiltersFlag }) => {
         isFetchingRef.current = false;
       };
 
-      // scrollTop / scrollHeight * 100
+      // percent of the scroll is at least 78%
       const percent = Math.floor((scrollTop / (scrollHeight - clientHeight)) * 100);
-      // console.log(percent);
       if (percent >= 78 && !isFetchingRef.current) {
-        console.log("here");
         isFetchingRef.current = true;
-
         let page = currentPage + 1;
         fetchItems(page);
         setCurrentPage((prevPage) => prevPage + 1);
@@ -90,9 +90,10 @@ const ItemList = ({ resetFiltersFlag }) => {
     };
   }, [items]);
 
-  useEffect(() => {
-    console.log(items);
-  }, [items]);
+  // used for debugging
+  // useEffect(() => {
+  //   console.log(items);
+  // }, [items]);
 
   return (
     <div className={cssModule["cards-container"]}>
