@@ -67,6 +67,14 @@ const ItemList = ({ resetFiltersFlag }) => {
       const fetchItems = async (page) => {
         lang = localStorage.getItem("language");
         let DATA = await fetchData(globalFilterState, page, itemsPerPage, lang);
+        if (lastSort !== globalFilterState.sortBy) {
+          // used for sorting reset if sorting has changed
+          DATA = await fetchData(globalFilterState, 1, itemsPerPage, lang, lastSort);
+          setCurrentPage(1);
+          setLastSort(globalFilterState.sortBy);
+        } else {
+          DATA = await fetchData(globalFilterState, page, itemsPerPage, lang, lastSort);
+        }
         let slimmedDownData = transformDataForDisplay(DATA);
         const newItems = items.concat(slimmedDownData);
         setItems(newItems);
