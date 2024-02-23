@@ -187,7 +187,7 @@ const StatsValuesFilterer = ({
               ? globalFilterState.stats.length <= 3
                 ? { top: "160px", left: "50%", transform: "translateX(-50%)" }
                 : { top: "190px", left: "50%", transform: "translateX(-50%)" }
-              : { top: "120px", left: "50%", transform: "translateX(-50%)" }
+              : { top: "120px", right: "10px" }
           }
         >
           <span
@@ -201,18 +201,6 @@ const StatsValuesFilterer = ({
             onClick={() => handleSortingOptionsClick("level.descending")}
           >
             {t("level.descending")}
-          </span>
-          <span
-            className={cssModule["sorting-option"]}
-            onClick={() => handleSortingOptionsClick("rarity.ascending")}
-          >
-            {t("rarity.ascending")}
-          </span>
-          <span
-            className={cssModule["sorting-option"]}
-            onClick={() => handleSortingOptionsClick("rarity.descending")}
-          >
-            {t("rarity.descending")}
           </span>
         </div>
       </div>

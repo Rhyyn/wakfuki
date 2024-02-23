@@ -5,10 +5,13 @@ const RecipeCard = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
 
   //TODO: translation, better card presentation
+  // if (item.recipes.length != 0) {
+  //   item.recipes[0].map((recipeItem, index) => console.log(recipeItem, item));
+  // }
 
   return (
     <div>
-      {item.recipes.length != 0 ? (
+      {item.recipes && item.recipes.length != 0 ? (
         item.recipes[0].map((recipeItem, index) => (
           <div
             key={`${item.id}-${index}`}

@@ -8,7 +8,6 @@ let db = new Dexie("WakfuKiDatabase");
 
 // TODO :
 // Add version.json do the DB to check when user loads
-// Fix bouclier.json
 // Fix sublimations
 
 const sortItemsByLevel = (data, order) => {
@@ -20,37 +19,12 @@ const sortItemsByLevel = (data, order) => {
   });
 };
 
-const sortItemsAlphabetically = (data, order) => {
-  return data.sort((a, b) => {
-    const aValue = a.title.fr.toLowerCase();
-    const bValue = b.title.fr.toLowerCase();
-
-    return order === "ascending" ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
-  });
-};
-
-const sortItemsByRarity = (data, order) => {
-  return data.sort((a, b) => {
-    const aValue = a.baseParams.rarity;
-    const bValue = b.baseParams.rarity;
-
-    return order === "ascending" ? aValue - bValue : bValue - aValue;
-  });
-};
-
 const sortData = (data, sortOption) => {
   if (data && sortOption) {
     const { type, order } = sortOption;
     switch (type) {
       case "level":
         return sortItemsByLevel(data, order);
-
-      case "alphabetical":
-        return sortItemsAlphabetically(data, order);
-
-      case "rarity":
-        return sortItemsByRarity(data, order);
-
       default:
         console.log("Invalid sorting type");
         return data;
@@ -201,7 +175,7 @@ const ComputeRecipe = async (db, itemList) => {
   }));
 };
 
-const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
+const fetchData = async (filterState, currentPage, itemsPerPage, lang, lastSort) => {
   await waitForDbInitialization();
   try {
     const tableNames = filterState.type.map((obj) => db.table(obj.tablename + ".json"));
@@ -216,17 +190,32 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
     await openDB();
     return Promise.resolve(
       await db.transaction("r", tableNames, async () => {
-        const offset = (currentPage - 1) * itemsPerPage;
+        let offset = 0;
+        if (currentPage === 1) {
+          // if sortBy different then reset
+          offset = 40;
+        } else if (lastSort === filterState.sortBy) {
+          offset = (currentPage - 1) * itemsPerPage;
+        } else {
+          offset = 40;
+        }
+
         const combinedItems = [];
 
         for (const type of filterState.type) {
           let itemsQuery = db.table(type.tablename + ".json");
 
-          if (offset > 0) {
-            itemsQuery = itemsQuery.offset(offset);
-          }
+          let itemsQueryLength = await itemsQuery.count();
+
+          // Currently we are also apply filters to tables such as recipes
+          // which is not ideal since they do not hold any values used by the filters
+          // Need to separate them in the future, probably?
 
           itemsQuery = filterByTypesQuery(itemsQuery, type);
+
+          itemsQuery = await itemsQuery.toArray();
+
+          itemsQuery = sortData(itemsQuery, filterState.sortBy);
 
           itemsQuery = filterByRarityQuery(itemsQuery, filterState.rarity);
 
@@ -236,13 +225,25 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang) => {
 
           itemsQuery = filterBySearchQuery(itemsQuery, lang, filterState.searchQuery);
 
-          itemsQuery = itemsQuery.limit(itemsPerPage);
+          // itemsQuery = itemsQuery.limit(itemsPerPage);
+          // let itemList = await itemsQuery.toArray();
 
-          let itemList = await itemsQuery.toArray();
+          // This is used to properly handle offset for infinite scroll
+          // may need a refactor as it is very ugly
+          if (offset > 0 && offset < itemsQueryLength && currentPage >= 2) {
+            let index = offset + itemsPerPage;
+            itemsQuery = itemsQuery.slice(offset, index);
+          } else if (offset > itemsQueryLength) {
+            // need to handle end of list if no more items
+            itemsQuery = itemsQuery.slice(offset - itemsQueryLength);
+          } else {
+            itemsQuery = itemsQuery.slice(0, itemsPerPage);
+          }
 
-          let itemListWithRecipes = await ComputeRecipe(db, itemList);
+          // let itemListWithRecipes = await ComputeRecipe(db, itemsQuery);
 
-          combinedItems.push(itemListWithRecipes);
+          // console.log(itemListWithRecipes);
+          combinedItems.push(itemsQuery);
         }
 
         const flattenedItems = combinedItems.flat();
@@ -353,7 +354,6 @@ const checkDataExists = async (selectedTypes, index) => {
   let recursionIndex = 0 + index;
   if (recursionIndex < 3) {
     if (selectedTypes) {
-      // for (let i = 0; i < selectedTypes.length; i++) {
       selectedTypes.forEach(async (obj) => {
         let storeName = obj.tablename + ".json";
         await db.open();
@@ -386,19 +386,18 @@ const storeFile = async (fileName) => {
   try {
     console.log("fileName received is : ", fileName);
     const response = await fetch(`/api/${fileName}`);
-    // console.log("type of response",typeof response);
     const compressedData = await response.arrayBuffer();
-    // console.log(compressedData);
     const decompressedBlob = await DecompressBlob(compressedData);
     const text = await blobToText(decompressedBlob);
-    // console.log(text.length);
     const jsonDataArray = JSON.parse(text);
     const jsonDataArrayLength = jsonDataArray.length;
     console.log(`"data from ${fileName} : ", ${jsonDataArrayLength}`);
     console.log("calling db.open..");
     await db.open();
     console.log("db now opened");
+
     console.log(`Transaction called for fileName: ${fileName}`);
+
     await db.transaction("rw", db.table(fileName), async (tx) => {
       console.log(`Opened transaction for ${fileName}`);
 
@@ -413,7 +412,6 @@ const storeFile = async (fileName) => {
 
     console.log(`Transaction complete for ${fileName}`);
   } catch (error) {
-    // console.error(`Error storing ${test}:`, error);
     console.error(`Error storing`, error);
   }
 };
@@ -423,9 +421,6 @@ const initializeDexieDatabase = async function (fileNames) {
 
   if (dbExists) {
     console.log("Database exists:", "WakfuKiDatabase");
-    // CHECK IF DATA VALID HERE
-    // let size = Object.keys(jsonDataArray).length;
-    // const db = new Dexie("WakfuKiDatabase");
     isDbInitialized = true;
     console.log("isDbInitialized is now true");
   } else {
@@ -442,26 +437,10 @@ const initializeDexieDatabase = async function (fileNames) {
         const fieldsString = fields.join(", ");
 
         console.log("db versioning + stores for : ", fileName);
-        // Define version for the current file
+
         db.version(index).stores({
           [fileName]: fieldsString,
         });
-        // NEED TO FRONT LOAD FILES :
-        // recipeIngredients, recipes, recipeResults, recipeCategories, actions
-        // NEED LOADING SCREEN
-
-        // await db.open();
-        // console.log(
-        //     "calling fetchAndStoreData for : ",
-        //     fileName,
-        //     "version of the db is : ",
-        //     index
-        // );
-        // await fetchAndStoreData(db, fileName);
-        // console.log(
-        //     "fetchAndStoreData Processing complete for:",
-        //     fileName
-        // );
       } else {
         console.log(`Structure not found for ${fileName}`);
       }
@@ -469,6 +448,7 @@ const initializeDexieDatabase = async function (fileNames) {
     }
 
     //TODO: Include in regular routines instead of here
+    // Need to check if exists first
     await storeFile("recipes.json");
     await storeFile("recipeCategories.json");
     await storeFile("recipeIngredients.json");
