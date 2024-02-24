@@ -2,17 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import stats from "../../../data/stats.json";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
+import { useDevice } from "../../Contexts/DeviceContext";
 import { useModal } from "../../ModalComponents/Modal/ModalContext";
-
-// TODO
-// need a max number of selected stats
-// need to combine selectedStatsRefs with selectedStatsConstructedRefs
-// for better readability - need a way to combine the id with the name for fetch table
+import all_positives_stats from "../../../data/all_positives_stats.json";
+import all_negatives_stats from "../../../data/all_negatives_stats.json";
 
 const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
+  const { deviceType } = useDevice();
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
   const [lang, setLang] = useState();
@@ -22,18 +20,16 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     statsRefs.current[statID] = element;
   };
   const { openModal } = useModal();
-  const { closeModal } = useModal();
-  const [isDistanceChecked, setIsDistanceChecked] = useState(false);
-  const [isMeleeChecked, setIsMeleeChecked] = useState(false);
+  const selectBtnRef = useRef(null);
+  const customDropdownRef = useRef(null);
+  const selectDropdownRef = useRef(null);
+  const isDropdownOpen = useRef(false);
 
   useEffect(() => {
     setLang(localStorage.getItem("language"));
   }, [t]);
 
-  const stat_order = [
-    31, 41, 191, 160, 1055, 1052, 1053, 1068, 184, 180, 150, 149, 26, 173, 175, 988, 20, 39, 85, 83,
-    82, 84, 171, 177, 2001,
-  ];
+  const stat_order = [31, 41, 191, 160, 1055, 1052, 1053, 1068, 184, 180, 150, 149];
 
   const handleModal = () => {
     let modalId = openModal(t("maxStatsErrorPrefix"), 3000);
@@ -49,8 +45,10 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
         if (!globalFilterState.stats.some((stat) => stat.property === prevStat.property)) {
           // check if stats are removed
           const element = statsRefs.current[prevStat.property];
-          if (element) {
+          if (element && element.nodeName === "DIV") {
             element.classList.remove(cssModule["selected"]);
+          } else if (element && element.nodeName === "INPUT") {
+            element.checked = !element.checked;
           }
         }
       });
@@ -62,8 +60,10 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     if (!isInitialMount.current) {
       selectedStatsRefs.current.forEach((stat) => {
         const element = statsRefs.current[stat.property];
-        if (element) {
+        if (element && element.nodeName === "DIV") {
           element.classList.remove(cssModule["selected"]);
+        } else if (element && element.nodeName === "INPUT") {
+          element.checked = !element.checked;
         }
       });
       selectedStatsRefs.current = [];
@@ -82,8 +82,11 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
         updatedRefs.forEach((stat) => {
           selectedStatsRefs.current.push(stat);
           const statRef = statsRefs.current[stat.property];
-          if (statRef) {
-            statRef.classList.toggle(cssModule["selected"]);
+          if (statRef && statRef.nodeName === "DIV") {
+            console.log("statRef", statRef);
+            statRef.classList.add(cssModule["selected"]);
+          } else if (statRef && statRef.nodeName === "INPUT") {
+            statRef.checked = !statRef.checked;
           }
         });
       }
@@ -129,12 +132,23 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
     if (classList.some((className) => className.includes("selected"))) {
       toggle_stat(e, statID);
     } else {
+      // used to trigger error modal
       if (globalFilterState.stats.length + 1 >= 7) {
         handleModal();
       } else {
         toggle_stat(e, statID);
       }
     }
+  };
+
+  const handleShowStatsDropdown = () => {
+    isDropdownOpen.current = !isDropdownOpen.current;
+    selectDropdownRef.current.classList.toggle(cssModule["active"]);
+    selectBtnRef.current.classList.toggle(cssModule["select-button-active"]);
+    selectBtnRef.current.setAttribute(
+      "aria-expanded",
+      selectBtnRef.current.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
   };
 
   return (
@@ -150,7 +164,7 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
               className={cssModule["icon-container"]}
               data-id={id}
               onClick={(e) => handleClick(e, id)}
-              title={lang === "fr" ? stats[id].fr : stats[id].en}
+              title={lang === "fr" ? all_positives_stats[id].fr : all_positives_stats[id].en}
             >
               <Image
                 className={cssModule["icon"]}
@@ -158,10 +172,86 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
                 width={24}
                 height={24}
                 unoptimized
-                alt={lang === "fr" ? stats[id].fr : stats[id].en}
+                alt={lang === "fr" ? all_positives_stats[id].fr : all_positives_stats[id].en}
               />
             </div>
           ))}
+        </div>
+        <div
+          className={cssModule["custom-dropdown"]}
+          ref={customDropdownRef}
+        >
+          <button
+            className={cssModule["select-button"]}
+            role="combobox"
+            aria-labelledby="select button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="select-dropdown"
+            onClick={() => handleShowStatsDropdown()}
+            ref={selectBtnRef}
+          >
+            <span className="selected-value">More Stats</span>
+            <span className="arrow"></span>
+          </button>
+          <ul
+            role="listbox"
+            id={cssModule["select-dropdown"]}
+            style={{
+              bottom: "252px",
+              maxHeight: "212px",
+              ...(deviceType === "mobile" ? { width: "230px" } : { width: "210px" }),
+            }}
+            ref={selectDropdownRef}
+          >
+            {Object.keys(all_positives_stats)
+              .filter((key) => !stat_order.includes(parseInt(key)))
+              .map((key) => (
+                <li
+                  key={key}
+                  role="option"
+                >
+                  <input
+                    type="checkbox"
+                    id={key}
+                    name={all_positives_stats[key][lang]}
+                    ref={(element) => setstatsRefs(parseInt(key), element)}
+                    onClick={(e) => handleClick(e, parseInt(key))}
+                  />
+                  <label
+                    htmlFor={key}
+                    style={deviceType !== "mobile" ? { maxWidth: "140px" } : { maxWidth: "180px" }}
+                  >
+                    {all_positives_stats[key][lang]}
+                  </label>
+                </li>
+              ))}
+            {Object.keys(all_negatives_stats)
+              .filter((key) => !stat_order.includes(parseInt(key)))
+              .map((key) => (
+                <li
+                  key={key}
+                  role="option"
+                >
+                  <input
+                    type="checkbox"
+                    id={key}
+                    name={all_negatives_stats[key][lang]}
+                    ref={(element) => setstatsRefs(key, element)}
+                    onClick={(e) => handleClick(e, key)}
+                  />
+                  <label
+                    htmlFor={key}
+                    style={{
+                      color: "#FF6347",
+                      ...(deviceType !== "mobile" ? { maxWidth: "140px" } : { maxWidth: "180px" }),
+                    }}
+                  >
+                    {all_negatives_stats[key][lang]}
+                  </label>
+                </li>
+              ))}
+          </ul>
         </div>
       </div>
     </div>
