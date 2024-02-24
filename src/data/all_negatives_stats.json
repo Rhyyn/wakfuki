@@ -1,0 +1,98 @@
+{
+  "21": {
+    "fr": "- PV",
+    "en": "- HP"
+  },
+  "130": {
+    "fr": "- Maîtrise Élémentaire",
+    "en": "- Elemental Mastery"
+  },
+  "132": {
+    "fr": "- Maîtrise Feu",
+    "en": "- Feu Mastery"
+  },
+  "1060": {
+    "fr": "- Maîtrise Distance",
+    "en": "- Distance Mastery"
+  },
+  "1059": {
+    "fr": "- Maîtrise Mêlée",
+    "en": "- Melee Mastery"
+  },
+  "1061": {
+    "fr": "- Maîtrise Berserk",
+    "en": "- Berserk Mastery"
+  },
+  "181": {
+    "fr": "- Maîtrise Dos",
+    "en": "- Rear Mastery"
+  },
+  "1056": {
+    "fr": "- Maîtrise Critique",
+    "en": "- Critical Mastery"
+  },
+  "168": {
+    "fr": "- Chance Critique (%)",
+    "en": "- Critical Chance (%)"
+  },
+  "56": {
+    "fr": "- PA",
+    "en": "- AP"
+  },
+  "161": {
+    "fr": "- Portée",
+    "en": "- Range"
+  },
+  "57": {
+    "fr": "- PM",
+    "en": "- MP"
+  },
+  "192": {
+    "fr": "- PW",
+    "en": "- WP"
+  },
+  "174": {
+    "fr": "- Tacle",
+    "en": "- Lock"
+  },
+  "176": {
+    "fr": "- Esquive",
+    "en": "- Dodge"
+  },
+  "172": {
+    "fr": "- Initiative",
+    "en": "- Initiative"
+  },
+  "876": {
+    "fr": "- Parade",
+    "en": "- Block"
+  },
+  "1063": {
+    "fr": "- Résistance Dos",
+    "en": "- Rear Resistance"
+  },
+  "1062": {
+    "fr": "- Résistance Critique",
+    "en": "- Critical Resistance"
+  },
+  "90": {
+    "fr": "- Résistance Élémentaire ?",
+    "en": "- Elemental Resistance ?"
+  },
+  "100": {
+    "fr": "- Résistance Élémentaire ?",
+    "en": "- Elemental Resistance ?"
+  },
+  "97": {
+    "fr": "- Résistance Feu",
+    "en": "- Fire Resistance"
+  },
+  "98": {
+    "fr": "- Résistance Eau",
+    "en": "- Water Resistance"
+  },
+  "96": {
+    "fr": "- Résistance Terre",
+    "en": "- Earth Resistance"
+  }
+}

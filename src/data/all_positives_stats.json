@@ -1,0 +1,142 @@
+{
+  "20": {
+    "fr": "PV",
+    "en": "HP"
+  },
+  "1068": {
+    "fr": "Maîtrise dans X éléments",
+    "en": "Mastery in X randoms elements"
+  },
+  "120": {
+    "fr": "Maîtrise Élémentaire",
+    "en": "Elemental Mastery"
+  },
+  "122": {
+    "fr": "Maîtrise Feu",
+    "en": "Fire Mastery"
+  },
+  "123": {
+    "fr": "Maîtrise Terre",
+    "en": "Earth Mastery"
+  },
+  "124": {
+    "fr": "Maîtrise Eau",
+    "en": "Water Mastery"
+  },
+  "125": {
+    "fr": "Maîtrise Air",
+    "en": "Air Mastery"
+  },
+  "1053": {
+    "fr": "Maîtrise Distance",
+    "en": "Distance Mastery"
+  },
+  "1052": {
+    "fr": "Maîtrise Mêlée",
+    "en": "Melee Mastery"
+  },
+  "1055": {
+    "fr": "Maîtrise Berserk",
+    "en": "Berserk Mastery"
+  },
+  "180": {
+    "fr": "Maîtrise Dos",
+    "en": "Rear Mastery"
+  },
+  "26": {
+    "fr": "Maîtrise Soin",
+    "en": "Healing Mastery"
+  },
+  "149": {
+    "fr": "Maîtrise Critique",
+    "en": "Critical Mastery"
+  },
+  "150": {
+    "fr": "Coup Critique (%)",
+    "en": "Critical Chance (%)"
+  },
+  "160": {
+    "fr": "Portée",
+    "en": "Range"
+  },
+  "31": {
+    "fr": "PA",
+    "en": "AP"
+  },
+  "41": {
+    "fr": "PM",
+    "en": "MP"
+  },
+  "191": {
+    "fr": "PW",
+    "en": "WP"
+  },
+  "173": {
+    "fr": "Tacle",
+    "en": "Lock"
+  },
+  "175": {
+    "fr": "Esquive",
+    "en": "Dodge"
+  },
+  "171": {
+    "fr": "Initiative",
+    "en": "Initiative"
+  },
+  "177": {
+    "fr": "Sagesse",
+    "en": "Force of Will"
+  },
+  "184": {
+    "fr": "Contrôle",
+    "en": "Control"
+  },
+  "875": {
+    "fr": "Parade",
+    "en": "Block"
+  },
+  "39": {
+    "fr": "Armure donnée",
+    "en": "Armor given"
+  },
+  "988": {
+    "fr": "Résistance Critique",
+    "en": "Critical Resistance"
+  },
+  "80": {
+    "fr": "Résistance Élémentaire",
+    "en": "Elemental Resistance"
+  },
+  "71": {
+    "fr": "Résistance Dos",
+    "en": "Rear Resistance"
+  },
+  "1069": {
+    "fr": "Résistance dans X éléments",
+    "en": "Random Resistance"
+  },
+  "82": {
+    "fr": "Résistance Feu",
+    "en": "Fire Resistance"
+  },
+  "83": {
+    "fr": "Résistance Eau",
+    "en": "Water Resistance"
+  },
+  "84": {
+    "fr": "Résistance Terre",
+    "en": "Earth Resistance"
+  },
+  "85": {
+    "fr": "Résistance Air",
+    "en": "Air Resistance"
+  },
+  "979": {
+    "fr": "Niveau pour sorts élémentaires",
+    "en": "Lvl to elemental spells"
+  },
+  "2001": {
+    "fr": "Quantité de Récolte",
+    "en": "Harvesting Quantity"
+  }
+}
