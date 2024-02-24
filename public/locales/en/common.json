@@ -42,5 +42,6 @@
     "feedback-text": "If your problem persists or you want to share feedback with us abpitthe project, you can do so via the form below:",
     "feedback-form-title": "Title..",
     "feedback-form-description": "Describe your problem, or leave a comment, 300 characters maximum",
-    "submit-button-text": "Submit"
+    "submit-button-text": "Submit",
+    "ShowStatsButton": "More Stats.."
 }

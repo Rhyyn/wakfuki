@@ -42,5 +42,6 @@
     "feedback-text": "Si votre problème persiste ou vous souhaitez nous partager un retour sur le projet, vous pouvez nous contacter via le formulaire suivant :",
     "feedback-form-title": "Titre..",
     "feedback-form-description": "Décrivez votre problème, ou laissez un commentaire, 300 caractères maximum",
-    "submit-button-text": "Envoyer"
+    "submit-button-text": "Envoyer",
+    "ShowStatsButton": "Plus de stats.."
 }
