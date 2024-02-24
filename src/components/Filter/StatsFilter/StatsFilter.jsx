@@ -191,8 +191,9 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
             onClick={() => handleShowStatsDropdown()}
             ref={selectBtnRef}
           >
-            <span className="selected-value">More Stats</span>
+            <span className="selected-value">{t("ShowStatsButton")}</span>
             <span className="arrow"></span>
+            {/* ^^^ add down arrow later */}
           </button>
           <ul
             role="listbox"
