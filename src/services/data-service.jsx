@@ -1,7 +1,6 @@
 import Dexie from "dexie";
-import indexStructure from "../data/index-structure.json";
 import filesLength from "../data/files_length.json";
-import tablenames from "../data/tablenames.json";
+import indexStructure from "../data/index-structure.json";
 
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
@@ -131,7 +130,61 @@ const filterByTypesQuery = (itemsQuery, type) => {
   return itemsQuery;
 };
 
-const ComputeRecipe = async (db, itemList) => {
+const fetchRecipe = async (item) => {
+  await openDB();
+
+  const recipeResultList = await db
+    .table("recipeResults.json")
+    .where("productedItemId")
+    .equals(item.id)
+    .toArray();
+
+  if (recipeResultList.length === 0) {
+    return undefined;
+  }
+
+  const recipeIds = recipeResultList.map((rr) => rr.recipeId);
+
+  const recipeList = await db.table("recipes.json").where("id").anyOf(recipeIds).toArray();
+
+  const recipeIngredientList = await db
+    .table("recipeIngredients.json")
+    .where("recipeId")
+    .anyOf(recipeIds)
+    .toArray();
+
+  const itemIds = recipeIngredientList.map((ri) => ri.itemId);
+
+  const recipeAllResourcesList = await db
+    .table("allRessources.json")
+    .where("id")
+    .anyOf(itemIds)
+    .toArray();
+
+  const recipeAllItemsList = await db.table("allItems.json").where("id").anyOf(itemIds).toArray();
+
+  const computedRecipeList = recipeResultList.map((rr) => {
+    const recipe = recipeList.find((r) => r.id === rr.recipeId);
+    const ingredients = recipeIngredientList
+      .filter((ri) => ri.recipeId === rr.recipeId)
+      .map((ri) => ({
+        quantity: ri.quantity,
+        item:
+          recipeAllResourcesList.find((r) => r.id === ri.itemId) ||
+          recipeAllItemsList.find((r) => r.id === ri.itemId),
+      }));
+
+    return { itemId: rr.productedItemId, recipe: { ...recipe, ingredients } };
+  });
+
+  const completeRecipes = computedRecipeList
+    .filter((r) => r.itemId === item.id)
+    .map((r) => r.recipe);
+
+  return completeRecipes;
+};
+
+const computeRecipe = async (db, itemList) => {
   let recipeResultList = await db
     .table("recipeResults.json")
     .filter((r) => itemList.map((i) => i.id).includes(r.productedItemId))
@@ -492,13 +545,14 @@ async function blobToText(blob) {
 }
 
 export {
-  initializeDexieDatabase,
-  waitForDbInitialization,
-  db,
-  storeFile,
   checkDataExists,
-  getDBInstance,
-  setupDatabaseCloseListener,
-  fetchData,
+  db,
   deleteDB,
+  fetchData,
+  fetchRecipe,
+  getDBInstance,
+  initializeDexieDatabase,
+  setupDatabaseCloseListener,
+  storeFile,
+  waitForDbInitialization,
 };
