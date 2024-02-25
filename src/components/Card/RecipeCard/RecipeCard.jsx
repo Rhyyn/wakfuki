@@ -1,37 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { fetchRecipe } from "../../../services/data-service.jsx";
 
 const RecipeCard = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
   const [isRecipeLoading, setIsRecipeLoading] = useState(true);
-  const [cardItem, setItem] = useState(item);
+  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    const fetchCardRecipe = async (item) => {
-      let fetchRecipeRes = await fetchRecipe(item);
-      if (fetchRecipeRes !== undefined) {
-        item.recipes = fetchRecipeRes;
+    const fetchRecipes = async () => {
+      let fetchedRecipes = await fetchRecipe(item);
+      if (fetchedRecipes !== undefined) {
+        setRecipes(fetchedRecipes);
       }
       setIsRecipeLoading(false);
-      setItem(item);
     };
-    fetchCardRecipe(item);
-  }, []);
+    fetchRecipes();
+  }, [item]);
 
   return (
     <div>
       {isRecipeLoading ? (
         <div>Recipe is loading, please wait a few seconds...</div>
-      ) : cardItem.recipes && cardItem.recipes.length != 0 ? (
-        cardItem.recipes[0].map((recipeItem, index) => (
-          <div
-            key={`${item.id}-${index}`}
-            data-id={`${item.id}-${index}`}
-          >
-            {recipeItem.quantity} x {recipeItem.item.title.fr} ({recipeItem.item.rarity})
-          </div>
-        ))
+      ) : recipes && recipes.length !== 0 ? (
+        recipes.map((recipe) =>
+          recipe.ingredients.map((ingredient, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              data-id={`${item.id}-${index}`}
+            >
+              {ingredient.quantity} x {ingredient.item.title[lang]} ({ingredient.item.rarity})
+            </div>
+          ))
+        )
       ) : (
         <div>Pas de recette</div>
       )}
