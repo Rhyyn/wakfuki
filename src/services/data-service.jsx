@@ -132,59 +132,58 @@ const filterByTypesQuery = (itemsQuery, type) => {
 };
 
 const fetchRecipe = async (item) => {
-  const tableNames = [
-    "recipeResults.json",
-    "recipes.json",
-    "recipeIngredients.json",
-    "resources.json",
-    "allRessources.json",
-    "allItems.json",
-  ];
   await openDB();
-  return Promise.resolve(
-    await db.transaction("r", tableNames, async () => {
-      let recipeResultList = await db
-        .table("recipeResults.json")
-        .filter((r) => item.id == r.productedItemId)
-        .toArray();
 
-      if (recipeResultList.length === 0) return undefined;
-      let recipeList = await db
-        .table("recipes.json")
-        .filter((r) => recipeResultList.map((rr) => rr.recipeId).includes(r.id))
-        .toArray();
-      let recipeIngredientList = await db
-        .table("recipeIngredients.json")
-        .filter((ri) => recipeList.map((r) => r.id).includes(ri.recipeId))
-        .toArray();
-      let recipeAllRessourceList = await db
-        .table("allRessources.json")
-        .filter((ar) => recipeIngredientList.map((r) => r.itemId).includes(ar.id))
-        .toArray();
-      let recipeAllEquipmentList = await db
-        .table("allItems.json")
-        .filter((ae) => recipeIngredientList.map((r) => r.itemId).includes(ae.id))
-        .toArray();
+  const recipeResultList = await db
+    .table("recipeResults.json")
+    .where("productedItemId")
+    .equals(item.id)
+    .toArray();
 
-      let computedRecipeList = recipeResultList.map((rr) => ({
-        itemId: rr.productedItemId,
-        recipe: recipeList
-          .filter((r) => r.id == rr.recipeId)
-          ?.map((r) =>
-            recipeIngredientList
-              .filter((ri) => ri.recipeId == r.id)
-              ?.map((ri) => ({
-                quantity: ri.quantity,
-                item: recipeAllRessourceList
-                  .concat(recipeAllEquipmentList)
-                  .find((ar) => ar.id == ri.itemId),
-              }))
-          ),
+  if (recipeResultList.length === 0) {
+    console.timeEnd("fetchRecipe");
+    return undefined;
+  }
+
+  const recipeIds = recipeResultList.map((rr) => rr.recipeId);
+
+  const recipeList = await db.table("recipes.json").where("id").anyOf(recipeIds).toArray();
+
+  const recipeIngredientList = await db
+    .table("recipeIngredients.json")
+    .where("recipeId")
+    .anyOf(recipeIds)
+    .toArray();
+
+  const itemIds = recipeIngredientList.map((ri) => ri.itemId);
+
+  const recipeAllResourcesList = await db
+    .table("allRessources.json")
+    .where("id")
+    .anyOf(itemIds)
+    .toArray();
+
+  const recipeAllItemsList = await db.table("allItems.json").where("id").anyOf(itemIds).toArray();
+
+  const computedRecipeList = recipeResultList.map((rr) => {
+    const recipe = recipeList.find((r) => r.id === rr.recipeId);
+    const ingredients = recipeIngredientList
+      .filter((ri) => ri.recipeId === rr.recipeId)
+      .map((ri) => ({
+        quantity: ri.quantity,
+        item:
+          recipeAllResourcesList.find((r) => r.id === ri.itemId) ||
+          recipeAllItemsList.find((r) => r.id === ri.itemId),
       }));
 
-      return computedRecipeList.filter((r) => r.itemId == item.id).flatMap((r) => r.recipe);
-    })
-  );
+    return { itemId: rr.productedItemId, recipe: { ...recipe, ingredients } };
+  });
+
+  const completeRecipes = computedRecipeList
+    .filter((r) => r.itemId === item.id)
+    .map((r) => r.recipe);
+
+  return completeRecipes;
 };
 
 const computeRecipe = async (db, itemList) => {
