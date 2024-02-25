@@ -131,7 +131,63 @@ const filterByTypesQuery = (itemsQuery, type) => {
   return itemsQuery;
 };
 
-const ComputeRecipe = async (db, itemList) => {
+const fetchRecipe = async (item) => {
+  const tableNames = [
+    "recipeResults.json",
+    "recipes.json",
+    "recipeIngredients.json",
+    "resources.json",
+    "allRessources.json",
+    "allItems.json",
+  ];
+  await openDB();
+  return Promise.resolve(
+    await db.transaction("r", tableNames, async () => {
+      let recipeResultList = await db
+        .table("recipeResults.json")
+        .filter((r) => item.id == r.productedItemId)
+        .toArray();
+
+      if (recipeResultList.length === 0) return undefined;
+      let recipeList = await db
+        .table("recipes.json")
+        .filter((r) => recipeResultList.map((rr) => rr.recipeId).includes(r.id))
+        .toArray();
+      let recipeIngredientList = await db
+        .table("recipeIngredients.json")
+        .filter((ri) => recipeList.map((r) => r.id).includes(ri.recipeId))
+        .toArray();
+      let recipeAllRessourceList = await db
+        .table("allRessources.json")
+        .filter((ar) => recipeIngredientList.map((r) => r.itemId).includes(ar.id))
+        .toArray();
+      let recipeAllEquipmentList = await db
+        .table("allItems.json")
+        .filter((ae) => recipeIngredientList.map((r) => r.itemId).includes(ae.id))
+        .toArray();
+
+      let computedRecipeList = recipeResultList.map((rr) => ({
+        itemId: rr.productedItemId,
+        recipe: recipeList
+          .filter((r) => r.id == rr.recipeId)
+          ?.map((r) =>
+            recipeIngredientList
+              .filter((ri) => ri.recipeId == r.id)
+              ?.map((ri) => ({
+                quantity: ri.quantity,
+                item: recipeAllRessourceList
+                  .concat(recipeAllEquipmentList)
+                  .find((ar) => ar.id == ri.itemId),
+              }))
+          ),
+      }));
+
+      return computedRecipeList.filter((r) => r.itemId == item.id).flatMap((r) => r.recipe);
+    })
+  );
+};
+
+const computeRecipe = async (db, itemList) => {
   let recipeResultList = await db
     .table("recipeResults.json")
     .filter((r) => itemList.map((i) => i.id).includes(r.productedItemId))
@@ -501,4 +557,5 @@ export {
   setupDatabaseCloseListener,
   fetchData,
   deleteDB,
+  fetchRecipe,
 };

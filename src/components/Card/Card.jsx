@@ -197,7 +197,6 @@ const Card = ({ item, lang }) => {
         }`}
       >
         <RecipeCard item={item} />
-        <span>test</span>
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
