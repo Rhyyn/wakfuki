@@ -3,14 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import RecipeCard from "./RecipeCard/RecipeCard";
-
-// TODO: Add stats img to localstorage
-// Fix missing stats img
-// Figure out CDN for item img
-// Cache image to localStorage maybe?
-// Figure out global container div for middle container
-// so it doesnt change height if no recipe
-// when clicked on a start add to filter
+import { fetchRecipe } from "../../services/data-service";
 
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();
@@ -196,7 +189,12 @@ const Card = ({ item, lang }) => {
           triToggle === 0 ? cssModule["visible"] : cssModule["hidden"]
         }`}
       >
-        <RecipeCard item={item} />
+        {triToggle === 0 && (
+          <RecipeCard
+            item={item}
+            lang={lang}
+          />
+        )}
       </div>
       <div // STATS - TODO : Maybe add onClick to filter by this stat?
         className={`${cssModule["middle-card-container"]} ${
