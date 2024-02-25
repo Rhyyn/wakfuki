@@ -1,9 +1,8 @@
-import cssModule from "./card.module.scss";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import RecipeCard from "./RecipeCard/RecipeCard";
-import { fetchRecipe } from "../../services/data-service";
+import cssModule from "./card.module.scss";
 
 const Card = ({ item, lang }) => {
   const { t, i18n } = useTranslation();

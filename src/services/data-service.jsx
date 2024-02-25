@@ -1,7 +1,6 @@
 import Dexie from "dexie";
-import indexStructure from "../data/index-structure.json";
 import filesLength from "../data/files_length.json";
-import tablenames from "../data/tablenames.json";
+import indexStructure from "../data/index-structure.json";
 
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
@@ -141,7 +140,6 @@ const fetchRecipe = async (item) => {
     .toArray();
 
   if (recipeResultList.length === 0) {
-    console.timeEnd("fetchRecipe");
     return undefined;
   }
 
@@ -547,14 +545,14 @@ async function blobToText(blob) {
 }
 
 export {
-  initializeDexieDatabase,
-  waitForDbInitialization,
-  db,
-  storeFile,
   checkDataExists,
-  getDBInstance,
-  setupDatabaseCloseListener,
-  fetchData,
+  db,
   deleteDB,
+  fetchData,
   fetchRecipe,
+  getDBInstance,
+  initializeDexieDatabase,
+  setupDatabaseCloseListener,
+  storeFile,
+  waitForDbInitialization,
 };
