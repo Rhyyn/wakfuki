@@ -6,6 +6,7 @@ import fetchItemsById from "../components/QueryItemTypes/QueryItemTypes";
 import ItemList from "../components/ItemList/ItemsList.jsx";
 import { storeFile } from "../services/data-service.jsx";
 import { Filter } from "../components/Filter/Filter.jsx";
+import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header.jsx";
 import StatsValuesFilterer from "../components/StatsValuesFilterer/StatsValuesFilterer";
 import SettingsModal from "../components/SettingsModal/SettingsModal";
@@ -130,7 +131,8 @@ const Home = () => {
       {isModalShowing && <SettingsModal setIsModalShowing={setIsModalShowing} />}
       <div>
         {(deviceType !== "mobile" || isMobileFilterShowing) && (
-          <AnimatePresence>
+          <div>
+            <Navbar></Navbar>
             <Filter
               handleStatsChange={handleStatsChange}
               handleResetFilters={handleResetFilters}
@@ -138,7 +140,7 @@ const Home = () => {
               resetFiltersFlag={resetFiltersFlag}
               updateStatsFlag={updateStatsFlag}
             ></Filter>
-          </AnimatePresence>
+          </div>
         )}
 
         <div className={cssModule["global-container"]}>

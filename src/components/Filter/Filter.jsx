@@ -85,7 +85,7 @@ const Filter = ({
             deviceType === "mobile" && globalFilterState.stats.length > 3
               ? { top: "140px" }
               : deviceType !== "mobile"
-              ? { top: "0px" }
+              ? { top: "60px" }
               : { top: "105px" }
           }
         >

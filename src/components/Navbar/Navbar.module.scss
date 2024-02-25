@@ -1,0 +1,11 @@
+@use "../../../styles/variables.scss" as v;
+
+.navbar-container {
+  width: 48px;
+  position: fixed;
+  left: 0px;
+  top: 60px;
+  height: calc(100vh - 60px);
+  background-color: v.$background-off;
+  z-index: 4;
+}

@@ -4,9 +4,9 @@
   width: 230px;
   background-color: v.$background;
   position: fixed;
-  // top: 0px;
-  left: 0px;
-  height: 100vh;
+  top: 60px;
+  left: 48px;
+  height: calc(100vh - 60px);
   overflow-y: auto;
   z-index: 4;
   padding: 0;
