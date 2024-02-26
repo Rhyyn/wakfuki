@@ -27,11 +27,10 @@
   }
 }
 
-.home-container {
+.item-list {
   background-color: v.$background-deep;
   flex-grow: 0;
   position: relative;
-  width: calc(100% - 48px);
-  margin-left: 48px;
+  width: 100%;
   min-height: calc(100% - 110px);
 }
