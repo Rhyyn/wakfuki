@@ -95,7 +95,6 @@ const Items = () => {
       }
       return stat;
     });
-    console.log("bingo");
     setUpdateStatsFlag(true);
 
     dispatch({
