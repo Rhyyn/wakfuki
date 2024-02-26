@@ -116,7 +116,10 @@
   border-radius: 4px;
   @include v.no-select();
   -webkit-tap-highlight-color: transparent;
-  &:hover {
+}
+
+@media (hover: hover) {
+  .icon-container:hover {
     cursor: pointer;
     background-color: v.$background-light;
   }
