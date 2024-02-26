@@ -3,49 +3,57 @@
     "tablename": "casque",
     "types": [
       134
-    ]
+    ],
+    "iconId": 134
   },
   "epaulettes": {
     "tablename": "epaulettes",
     "types": [
       138
-    ]
+    ],
+    "iconId": 138
   },
   "amulette": {
     "tablename": "amulette",
     "types": [
       120
-    ]
+    ],
+    "iconId": 120
   },
   "plastron": {
     "tablename": "plastron",
     "types": [
       136
-    ]
+    ],
+    "iconId": 136
   },
   "cape": {
     "tablename": "cape",
     "types": [
       132
-    ]
+    ],
+    "iconId": 132
   },
   "anneau": {
     "tablename": "anneau",
     "types": [
       103
-    ]
+    ],
+    "iconId": 103
   },
   "ceinture": {
     "tablename": "ceinture",
     "types": [
       133
-    ]
+    ],
+    "iconId": 133
   },
   "bottes": {
     "tablename": "bottes",
     "types": [
       119
-    ]
+    ],
+    "iconId": 119
   },
   "arme1main": {
     "tablename": "arme1main",
@@ -55,7 +63,8 @@
       110,
       115,
       113
-    ]
+    ],
+    "iconId": 254
   },
   "arme2main": {
     "tablename": "arme2main",
@@ -66,42 +75,49 @@
       111,
       253,
       117
-    ]
+    ],
+    "iconId": 223
   },
   "secondemain": {
     "tablename": "secondemain",
     "types": [
       112
-    ]
+    ],
+    "iconId": 112
   },
   "bouclier": {
     "tablename": "secondemain",
     "types": [
       189
-    ]
+    ],
+    "iconId": 189
   },
   "sublimation": {
     "tablename": "sublimation",
     "types": [
       812
-    ]
+    ],
+    "iconId": 812
   },
   "familiers": {
     "tablename": "familiers",
     "types": [
       582
-    ]
+    ],
+    "iconId": 582
   },
   "montures": {
     "tablename": "montures",
     "types": [
       611
-    ]
+    ],
+    "iconId": 611
   },
   "emblemes": {
     "tablename": "emblemes",
     "types": [
       646
-    ]
+    ],
+    "iconId": 646
   }
 }
