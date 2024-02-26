@@ -59,19 +59,114 @@ const Filter = ({ handleResetFilters, handleStatsChange, resetFiltersFlag, updat
     };
   }, [showSortDropdown]);
 
-  return deviceType === "mobile" ? (
-    <motion.div
-      key="unique-key"
-      initial={{
-        opacity: 0,
-        y: -100,
-        transition: { duration: 0.3 },
-      }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100, transition: { duration: 0.3 } }}
-    >
-      {isComponentReady && (
-        <div
+  return (
+    <>
+      {deviceType === "mobile" && (
+        <motion.div
+          key="unique-key"
+          initial={{
+            opacity: 0,
+            y: -100,
+            transition: { duration: 0.3 },
+          }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100, transition: { duration: 0.3 } }}
+          className={cssModule["filter-container"]}
+          style={
+            deviceType === "mobile" && globalFilterState.stats.length > 3
+              ? { top: "140px" }
+              : deviceType !== "mobile"
+              ? { top: "60px" }
+              : { top: "105px" }
+          }
+        >
+          {isComponentReady && (
+            <div className={cssModule["header-container"]}>
+              {deviceType !== "mobile" && (
+                <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>
+              )}
+              {deviceType === "desktop" && (
+                <div className={cssModule["header-icons-container"]}>
+                  <Image
+                    className={cssModule["reset-icon"]}
+                    src="/reset_icon_yellow.png"
+                    width={32}
+                    height={32}
+                    unoptimized
+                    alt="reset-icon"
+                    title={t("Mise à zéro des Filtres")}
+                    onClick={() => handleResetFilters()}
+                  />
+                  <div className={cssModule["vertical-separator"]}></div>
+                  <Image
+                    className={cssModule["sort-icon"]}
+                    src="/sort_icon_yellow.png"
+                    width={32}
+                    height={32}
+                    unoptimized
+                    alt="sort-icon"
+                    title={t("Trier par")}
+                    onClick={handleSortingOptionsDropdown}
+                    ref={dropdownRef}
+                  />
+                  <div
+                    className={`${cssModule["sorting-options-container"]} ${
+                      showSortDropdown ? cssModule["selected"] : cssModule["hide"]
+                    }`}
+                    ref={dropdownContainerRef}
+                  >
+                    <span
+                      className={cssModule["sorting-option"]}
+                      onClick={() => handleSortingOptionsClick("level.ascending")}
+                    >
+                      {t("level.ascending")}
+                    </span>
+                    <span
+                      className={cssModule["sorting-option"]}
+                      onClick={() => handleSortingOptionsClick("level.descending")}
+                    >
+                      {t("level.descending")}
+                    </span>
+                    <span
+                      className={cssModule["sorting-option"]}
+                      onClick={() => handleSortingOptionsClick("rarity.ascending")}
+                    >
+                      {t("rarity.ascending")}
+                    </span>
+                    <span
+                      className={cssModule["sorting-option"]}
+                      onClick={() => handleSortingOptionsClick("rarity.descending")}
+                    >
+                      {t("rarity.descending")}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+          {deviceType !== "mobile" && <div className={cssModule["horizontal-separator"]}></div>}
+          <RarityFilter resetFiltersFlag={resetFiltersFlag} />
+          <SearchBar resetFiltersFlag={resetFiltersFlag} />
+          <div className={cssModule["horizontal-separator"]}></div>
+          <LevelFilter resetFiltersFlag={resetFiltersFlag} />
+          <TypeFilter resetFiltersFlag={resetFiltersFlag} />
+          <StatsFilter
+            handleStatsChange={handleStatsChange}
+            resetFiltersFlag={resetFiltersFlag}
+            updateStatsFlag={updateStatsFlag}
+          />
+        </motion.div>
+      )}
+      {deviceType === "desktop" && (
+        <motion.div
+          key="unique-key"
+          initial={{
+            opacity: 0,
+            y: 0,
+            x: -10,
+            transition: { duration: 0.3 },
+          }}
+          animate={{ opacity: 1, y: 0, x: 0 }}
           className={cssModule["filter-container"]}
           style={
             deviceType === "mobile" && globalFilterState.stats.length > 3
@@ -154,102 +249,9 @@ const Filter = ({ handleResetFilters, handleStatsChange, resetFiltersFlag, updat
             resetFiltersFlag={resetFiltersFlag}
             updateStatsFlag={updateStatsFlag}
           />
-        </div>
+        </motion.div>
       )}
-    </motion.div>
-  ) : (
-    isComponentReady && (
-      <motion.div
-        key="unique-key"
-        initial={{
-          opacity: 0,
-          y: 0,
-          x: -10,
-          transition: { duration: 0.3 },
-        }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        className={cssModule["filter-container"]}
-        style={
-          deviceType === "mobile" && globalFilterState.stats.length > 3
-            ? { top: "140px" }
-            : deviceType !== "mobile"
-            ? { top: "60px" }
-            : { top: "105px" }
-        }
-      >
-        <div className={cssModule["header-container"]}>
-          {deviceType !== "mobile" && <h2 className={cssModule["header-title"]}>{t("Filtres")}</h2>}
-          {deviceType === "desktop" && (
-            <div className={cssModule["header-icons-container"]}>
-              <Image
-                className={cssModule["reset-icon"]}
-                src="/reset_icon_yellow.png"
-                width={32}
-                height={32}
-                unoptimized
-                alt="reset-icon"
-                title={t("Mise à zéro des Filtres")}
-                onClick={() => handleResetFilters()}
-              />
-              <div className={cssModule["vertical-separator"]}></div>
-              <Image
-                className={cssModule["sort-icon"]}
-                src="/sort_icon_yellow.png"
-                width={32}
-                height={32}
-                unoptimized
-                alt="sort-icon"
-                title={t("Trier par")}
-                onClick={handleSortingOptionsDropdown}
-                ref={dropdownRef}
-              />
-              <div
-                className={`${cssModule["sorting-options-container"]} ${
-                  showSortDropdown ? cssModule["selected"] : cssModule["hide"]
-                }`}
-                ref={dropdownContainerRef}
-              >
-                <span
-                  className={cssModule["sorting-option"]}
-                  onClick={() => handleSortingOptionsClick("level.ascending")}
-                >
-                  {t("level.ascending")}
-                </span>
-                <span
-                  className={cssModule["sorting-option"]}
-                  onClick={() => handleSortingOptionsClick("level.descending")}
-                >
-                  {t("level.descending")}
-                </span>
-                <span
-                  className={cssModule["sorting-option"]}
-                  onClick={() => handleSortingOptionsClick("rarity.ascending")}
-                >
-                  {t("rarity.ascending")}
-                </span>
-                <span
-                  className={cssModule["sorting-option"]}
-                  onClick={() => handleSortingOptionsClick("rarity.descending")}
-                >
-                  {t("rarity.descending")}
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
-        {deviceType !== "mobile" && <div className={cssModule["horizontal-separator"]}></div>}
-        <RarityFilter resetFiltersFlag={resetFiltersFlag} />
-        <SearchBar resetFiltersFlag={resetFiltersFlag} />
-        <div className={cssModule["horizontal-separator"]}></div>
-        <LevelFilter resetFiltersFlag={resetFiltersFlag} />
-        <TypeFilter resetFiltersFlag={resetFiltersFlag} />
-        <StatsFilter
-          handleStatsChange={handleStatsChange}
-          resetFiltersFlag={resetFiltersFlag}
-          updateStatsFlag={updateStatsFlag}
-        />
-      </motion.div>
-    )
+    </>
   );
 };
 

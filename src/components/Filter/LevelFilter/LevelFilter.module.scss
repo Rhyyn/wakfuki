@@ -1,20 +1,140 @@
 @use "../../../../styles/variables" as v;
 
 .level-filter-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .dropdown {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .dropdown-select {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
+.modulation-text {
+  font-size: 16px;
+  margin-right: 6px;
+}
 
+/* CUSTOM DROPDOWN */
+.custom-dropdown {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#select-dropdown {
+  list-style-type: none;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-30%);
+  background-color: v.$background-off;
+  border-radius: 4px;
+  transition: 0.5s ease;
+  opacity: 0;
+  max-width: 120px;
+  visibility: hidden;
+  min-height: 140px;
+  text-align: center;
+}
+
+#select-dropdown li {
+  list-style-type: none;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#select-dropdown li:hover {
+  background-color: v.$background-mid;
+  cursor: pointer;
+}
+
+#select-dropdown input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#select-dropdown label {
+  cursor: pointer;
+  max-width: 100%;
+  width: 150px;
+  margin-left: 4px;
+  @include v.no-select();
+  vertical-align: middle;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#select-dropdown input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: v.$background-deep;
+  margin: 0 4px 0 4px;
+  vertical-align: middle;
+}
+
+#select-dropdown input[type="checkbox"]:checked {
+  background-color: v.$primary-yellow;
+}
+
+#select-dropdown input[type="checkbox"]:focus {
+  outline: none;
+}
+
+#select-dropdown input[type="checkbox"]:focus-visible {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.select-button {
+  width: 140px;
+  min-height: 40px;
+  background-color: v.$background-off;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.5s ease;
+}
+
+@media (hover: hover) {
+  .select-button:hover {
+    background-color: v.$primary-yellow;
+    color: v.$background-deep;
+  }
+}
+
+.select-button-active {
+  background-color: v.$background-light;
+  color: v.$background-deep;
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scaleY(1) !important;
+}

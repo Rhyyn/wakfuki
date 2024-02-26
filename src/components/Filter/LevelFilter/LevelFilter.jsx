@@ -1,17 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDevice } from "../../Contexts/DeviceContext";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
 import cssModule from "./LevelFilter.module.scss";
 import RangeSlider from "./RangeSlider";
-import { useGlobalContext } from "../../Contexts/GlobalContext";
 
 // TODO : Maybe add an opacity to the selected range if not used
 
 const LevelFilter = ({ resetFiltersFlag }) => {
+  const { deviceType } = useDevice();
   const { globalFilterState, dispatch } = useGlobalContext();
   const isInitialRender = useRef(true);
+  const selectDropdownRef = useRef(null);
+  const customDropdownRef = useRef(null);
   const [selectedRange, setSelectedRange] = useState({
     from: globalFilterState.levelRange.from,
     to: globalFilterState.levelRange.to,
   });
+  const selectBtnRef = useRef(null);
+  const isDropdownOpen = useRef(false);
   const ranges_dict = {
     20: { from: 0, to: 20 },
     35: { from: 21, to: 35 },
@@ -32,6 +38,9 @@ const LevelFilter = ({ resetFiltersFlag }) => {
 
   const handleRangeChange = (e) => {
     const selectedKey = e.target.value;
+    if (isDropdownOpen.current) {
+      handleShowStatsDropdown();
+    }
     const selectedRangeValue = ranges_dict[selectedKey];
     dispatch({
       type: "UPDATE_LEVEL_RANGE",
@@ -58,20 +67,64 @@ const LevelFilter = ({ resetFiltersFlag }) => {
     }
   }, [resetFiltersFlag]);
 
+  const handleShowStatsDropdown = () => {
+    isDropdownOpen.current = !isDropdownOpen.current;
+    selectDropdownRef.current.classList.toggle(cssModule["active"]);
+    selectBtnRef.current.classList.toggle(cssModule["select-button-active"]);
+    selectBtnRef.current.setAttribute(
+      "aria-expanded",
+      selectBtnRef.current.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
+  };
+
   return (
     <div className={cssModule["level-filter-container"]}>
-      <div className={cssModule["dropdown"]}>
-        <select
-          className={cssModule["dropdown-select"]}
-          value={selectedKey}
-          onChange={handleRangeChange}
+      <div
+        className={cssModule["custom-dropdown"]}
+        ref={customDropdownRef}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        {/* <span className={cssModule["modulation-text"]}>Modulation : </span> */}
+        <button
+          className={cssModule["select-button"]}
+          role="combobox"
+          aria-labelledby="select button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="select-dropdown"
+          onClick={() => handleShowStatsDropdown()}
+          ref={selectBtnRef}
+        >
+          Modulation - {selectedKey}
+        </button>
+        <ul
+          role="listbox"
+          id={cssModule["select-dropdown"]}
+          style={{
+            bottom: "185px",
+            maxHeight: "130px",
+            ...(deviceType === "mobile" ? { width: "230px" } : { width: "210px" }),
+          }}
+          ref={selectDropdownRef}
         >
           {Object.keys(ranges_dict).map((key) => (
-            <option key={key} value={key}>
-              {key}
-            </option>
+            <li
+              key={`level-${key}`}
+              id={`level-${key}`}
+              role="option"
+              onClick={() => handleRangeChange({ target: { value: key } })}
+              value={key}
+              aria-selected={key === selectedKey}
+            >
+              <label
+                // htmlFor={`level-${key}`}
+                style={deviceType !== "mobile" ? { maxWidth: "140px" } : { maxWidth: "180px" }}
+              >
+                {key}
+              </label>
+            </li>
           ))}
-        </select>
+        </ul>
       </div>
       <RangeSlider resetFiltersFlag={resetFiltersFlag} />
     </div>
@@ -79,3 +132,20 @@ const LevelFilter = ({ resetFiltersFlag }) => {
 };
 
 export default LevelFilter;
+
+{
+  /* <select
+  className={cssModule["dropdown-select"]}
+  value={selectedKey}
+  onChange={handleRangeChange}
+>
+  {Object.keys(ranges_dict).map((key) => (
+    <option
+      key={key}
+      value={key}
+    >
+      {key}
+    </option>
+  ))}
+</select> */
+}

@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import tablenames from "../../../data/tablenames.json";
 import { checkDataExists } from "../../../services/data-service.jsx";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
@@ -11,6 +11,10 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   const { t, i18n } = useTranslation();
   const selectedTypesRefs = useRef([]);
   const iconsRefs = useRef({});
+  const [isComponentReady, setIsComponentReady] = useState(false);
+  useEffect(() => {
+    setIsComponentReady(true);
+  }, []);
 
   const setIconsRefs = (type, element) => {
     iconsRefs.current[type] = element;
@@ -82,32 +86,38 @@ const TypeFilter = ({ resetFiltersFlag }) => {
   }, [resetFiltersFlag]);
 
   return (
-    <div className={cssModule["type-container"]}>
-      <div className={cssModule["horizontal-separator"]}></div>
-      <div className={cssModule["type-row-icon-container"]}>
-        {Object.keys(tablenames).map((typeName) => (
-          <div
-            key={typeName}
-            onClick={() =>
-              handleImageClick(typeName, tablenames[typeName].types, tablenames[typeName].tablename)
-            }
-            data-image-name={typeName}
-            ref={(element) => setIconsRefs(typeName, element)}
-            className={cssModule["icon-container"]}
-            title={t(typeName)}
-          >
-            <Image
-              className={cssModule["icon"]}
-              src={`/itemTypes/${tablenames[typeName].iconId}.png`}
-              width={28}
-              height={28}
-              unoptimized
-              alt={typeName}
-            />
-          </div>
-        ))}
+    isComponentReady && (
+      <div className={cssModule["type-container"]}>
+        <div className={cssModule["horizontal-separator"]}></div>
+        <div className={cssModule["type-row-icon-container"]}>
+          {Object.keys(tablenames).map((typeName) => (
+            <div
+              key={typeName}
+              onClick={() =>
+                handleImageClick(
+                  typeName,
+                  tablenames[typeName].types,
+                  tablenames[typeName].tablename
+                )
+              }
+              data-image-name={typeName}
+              ref={(element) => setIconsRefs(typeName, element)}
+              className={cssModule["icon-container"]}
+              title={t(tablenames[typeName].title[i18n.language])}
+            >
+              <Image
+                className={cssModule["icon"]}
+                src={`/itemTypes/${tablenames[typeName].iconId}.png`}
+                width={28}
+                height={28}
+                unoptimized
+                alt={typeName}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    )
   );
 };
 
