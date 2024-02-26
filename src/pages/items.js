@@ -183,7 +183,7 @@ const Items = () => {
 
         <div
           className={cssModule["item-list"]}
-          style={globalFilterState.stats.length > 0 ? { top: "130px" } : { top: "65px" }}
+          style={globalFilterState.stats.length > 0 ? { top: "130px" } : { top: "80px" }}
         >
           {globalFilterState.type && globalFilterState.type.length !== 0 && (
             <ItemList resetFiltersFlag={resetFiltersFlag} />
