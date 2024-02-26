@@ -7,9 +7,10 @@
   top: 60px;
   left: 48px;
   height: calc(100vh - 60px);
-  overflow-y: auto;
+  overflow-y: hidden;
   z-index: 4;
   padding: 0;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 600px) {
