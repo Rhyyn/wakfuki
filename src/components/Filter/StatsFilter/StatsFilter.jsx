@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import cssModule from "./StatsFilter.module.scss";
 import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../Contexts/GlobalContext";
-import { useDevice } from "../../Contexts/DeviceContext";
-import { useModal } from "../../ModalComponents/Modal/ModalContext";
-import all_positives_stats from "../../../data/all_positives_stats.json";
 import all_negatives_stats from "../../../data/all_negatives_stats.json";
+import all_positives_stats from "../../../data/all_positives_stats.json";
+import { useDevice } from "../../Contexts/DeviceContext";
+import { useGlobalContext } from "../../Contexts/GlobalContext";
+import { useModal } from "../../ModalComponents/Modal/ModalContext";
+import cssModule from "./StatsFilter.module.scss";
 
 const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -214,13 +214,13 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
                 >
                   <input
                     type="checkbox"
-                    id={key}
+                    id={`positive-stat-${key}`}
                     name={all_positives_stats[key][lang]}
                     ref={(element) => setstatsRefs(parseInt(key), element)}
                     onClick={(e) => handleClick(e, parseInt(key))}
                   />
                   <label
-                    htmlFor={key}
+                    htmlFor={`positive-stat-${key}`}
                     style={deviceType !== "mobile" ? { maxWidth: "140px" } : { maxWidth: "180px" }}
                   >
                     {all_positives_stats[key][lang]}
@@ -231,18 +231,18 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
               .filter((key) => !stat_order.includes(parseInt(key)))
               .map((key) => (
                 <li
-                  key={key}
+                  key={`negative-stat-${key}`}
                   role="option"
                 >
                   <input
                     type="checkbox"
-                    id={key}
+                    id={`negative-stat-${key}`}
                     name={all_negatives_stats[key][lang]}
                     ref={(element) => setstatsRefs(key, element)}
                     onClick={(e) => handleClick(e, key)}
                   />
                   <label
-                    htmlFor={key}
+                    htmlFor={`negative-stat-${key}`}
                     style={{
                       color: "#FF6347",
                       ...(deviceType !== "mobile" ? { maxWidth: "140px" } : { maxWidth: "180px" }),
