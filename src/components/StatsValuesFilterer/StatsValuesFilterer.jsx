@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import cssModule from "./StatsValuesFilterer.module.scss";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 import { useDevice } from "../Contexts/DeviceContext";
 import { useGlobalContext } from "../Contexts/GlobalContext";
+import cssModule from "./StatsValuesFilterer.module.scss";
 
 // TODO : add sorting dropdown
 
@@ -94,7 +94,10 @@ const StatsValuesFilterer = ({
 
   return (
     isComponentReady && (
-      <div className={cssModule["items-values-filtering-container"]}>
+      <div
+        className={cssModule["items-values-filtering-container"]}
+        style={deviceType === "mobile" ? { left: "0px" } : { left: "278px" }}
+      >
         <div className={cssModule["items-values-editor-container"]}>
           {selectedStats &&
             selectedStats.length > 0 &&
