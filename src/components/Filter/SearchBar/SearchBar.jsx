@@ -1,13 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import cssModule from "./SearchBar.module.scss";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
+import cssModule from "./SearchBar.module.scss";
 
-const SearchBar = ({
-  handleSearchChange,
-  filterStateSearchQuery,
-  resetFiltersFlag,
-}) => {
+const SearchBar = ({ handleSearchChange, filterStateSearchQuery, resetFiltersFlag }) => {
   const { t, i18n } = useTranslation();
   const isInitialMount = useRef(true);
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -48,7 +44,7 @@ const SearchBar = ({
 
   useEffect(() => {
     if (!isInitialMount.current) {
-      console.log("useEffect in SearchBar triggered");
+      // console.log("useEffect in SearchBar triggered");
       if (userInput.length > 0) {
         setUserInput("");
       }
