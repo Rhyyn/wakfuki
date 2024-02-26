@@ -10,9 +10,9 @@ import cssModule from "./StatsValuesFilterer.module.scss";
 const StatsValuesFilterer = ({
   setUpdateStatsFlag,
   handleStatsValuesFiltererInputChange,
-  setIsMobileFilterShowing,
   isMobileFilterShowing,
   handleResetFilters,
+  handleShowFilter,
 }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t } = useTranslation();
@@ -136,7 +136,7 @@ const StatsValuesFilterer = ({
                 alt="menu icon"
                 width={30}
                 height={30}
-                onClick={() => setIsMobileFilterShowing(!isMobileFilterShowing)}
+                onClick={() => handleShowFilter()}
               />
             </div>
           )}
@@ -147,7 +147,7 @@ const StatsValuesFilterer = ({
                 alt="menu icon"
                 width={30}
                 height={30}
-                onClick={() => setIsMobileFilterShowing(!isMobileFilterShowing)}
+                onClick={() => handleShowFilter()}
               />
             </div>
           )}

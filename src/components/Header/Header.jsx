@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import cssModule from "./Header.module.scss";
-import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
-import { useDevice } from "../Contexts/DeviceContext";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { useDevice } from "../Contexts/DeviceContext";
+import cssModule from "./Header.module.scss";
 
-const Header = ({ setIsModalShowing }) => {
+const Header = ({ setIsModalShowing, handleMobileNav }) => {
   const { deviceType } = useDevice();
   const [isComponentReady, setIsComponentReady] = useState(false);
 
@@ -15,9 +14,20 @@ const Header = ({ setIsModalShowing }) => {
   return (
     <div className={cssModule["header-container"]}>
       <div
-        className={cssModule["menu-icon-container"]} // not used for now but needed for layout
+        className={cssModule["menu-icon-container"]}
         style={{ paddingLeft: "10px" }}
-      ></div>
+      >
+        {isComponentReady && deviceType === "mobile" && (
+          <Image
+            style={{ cursor: "pointer" }}
+            src="/UI-icons/Header/menu.svg"
+            alt="menu icon"
+            width={55}
+            height={55}
+            onClick={() => handleMobileNav()}
+          />
+        )}
+      </div>
       <div className={cssModule["title-container"]}>
         <h2 className={cssModule["first-part-title"]}>Wakfu</h2>
         <h1 className={cssModule["second-part-title"]}>KI</h1>
@@ -31,11 +41,6 @@ const Header = ({ setIsModalShowing }) => {
           height={55}
           onClick={() => setIsModalShowing(true)}
         />
-        {/* <LanguageSwitch /> */}
-        {/* {isComponentReady && deviceType === "desktop" && <LanguageSwitch />} */}
-        {/* {isComponentReady && deviceType === "mobile" && (
-          
-        )} */}
       </div>
     </div>
   );

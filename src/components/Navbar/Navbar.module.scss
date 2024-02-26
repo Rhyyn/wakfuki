@@ -1,6 +1,6 @@
 @use "../../../styles/variables.scss" as v;
 
-.navbar-container {
+.navbar-desktop-container {
   width: 48px;
   position: fixed;
   left: 0px;
@@ -8,4 +8,54 @@
   height: calc(100vh - 60px);
   background-color: v.$background-off;
   z-index: 4;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+@media (hover: hover) {
+  .nav-container:hover {
+    background-color: v.$background-mid !important;
+  }
+}
+
+.active {
+  background-color: v.$background-light;
+}
+
+/* MOBILE */
+
+.navbar-mobile-container {
+  width: 240px;
+  position: fixed;
+  top: 200px;
+  height: 200px;
+  left: calc(50% - 119px);
+  transform: translateX(-50%);
+  background-color: v.$background-off;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.nav-title {
+  width: 120px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    width: 240px;
+    justify-content: space-around;
+    border-radius: 4px;
+  }
 }
