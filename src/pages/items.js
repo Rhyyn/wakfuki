@@ -112,8 +112,6 @@ const Items = () => {
   };
 
   const handleShowFilter = () => {
-    console.log("trigger");
-    console.log(isMobileFilterShowing);
     if (isMobileNavVisible) {
       setIsMobileNavVisible(!isMobileNavVisible);
     }
