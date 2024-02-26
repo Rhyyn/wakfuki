@@ -60,7 +60,7 @@ const LevelFilter = ({ resetFiltersFlag }) => {
       return;
     }
 
-    console.log("useEffectresetFiltersFlag inside LevelFilter triggered", resetFiltersFlag);
+    // console.log("useEffectresetFiltersFlag inside LevelFilter triggered", resetFiltersFlag);
 
     if (resetFiltersFlag) {
       setSelectedRange({ from: 0, to: 230 });
