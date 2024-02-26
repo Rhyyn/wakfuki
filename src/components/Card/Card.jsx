@@ -137,7 +137,7 @@ const Card = ({ item, lang }) => {
           <div className={cssModule["item-type-level-container"]}>
             <div className={cssModule["item-type-icon-container"]}>
               <Image
-                src="/itemTypes/120-amulette.png"
+                src={`/itemTypes/${item.baseParams.itemTypeId}.png`}
                 className={cssModule["item-type-icon"]}
                 alt="amulette"
                 width={24}

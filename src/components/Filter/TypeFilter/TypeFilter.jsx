@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import cssModule from "./TypeFilter.module.scss";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import tablenames from "../../../data/tablenames.json";
 import { checkDataExists } from "../../../services/data-service.jsx";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
-import { useTranslation } from "next-i18next";
-import tablenames from "../../../data/tablenames.json";
+import cssModule from "./TypeFilter.module.scss";
 
 const TypeFilter = ({ resetFiltersFlag }) => {
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -98,7 +98,7 @@ const TypeFilter = ({ resetFiltersFlag }) => {
           >
             <Image
               className={cssModule["icon"]}
-              src={`/itemTypes/${typeName}.png`}
+              src={`/itemTypes/${tablenames[typeName].iconId}.png`}
               width={28}
               height={28}
               unoptimized
