@@ -2,15 +2,14 @@ import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import { useState } from "react";
-import cssModule from "../../styles/Home.module.scss";
-import { useDevice } from "../components/Contexts/DeviceContext";
-import { useGlobalContext } from "../components/Contexts/GlobalContext";
+import cssModule from "../../styles/Faq.module.scss";
+import { useDevice } from "../components/Contexts/DeviceContext.js";
+import { useGlobalContext } from "../components/Contexts/GlobalContext.js";
 import Header from "../components/Header/Header.jsx";
-import Navbar from "../components/Navbar/Navbar";
-import SettingsModal from "../components/SettingsModal/SettingsModal";
-import "./i18n";
+import Navbar from "../components/Navbar/Navbar.jsx";
+import "./i18n.js";
 
-const Home = () => {
+const FAQ = () => {
   const { globalFilterState, dispatch } = useGlobalContext();
   const { t } = useTranslation();
   const { deviceType } = useDevice();
@@ -40,10 +39,16 @@ const Home = () => {
         />
       </Head>
       {isModalShowing && <SettingsModal setIsModalShowing={setIsModalShowing} />}
-
       {(deviceType !== "mobile" || isMobileFilterShowing) && (
         <div>
           <Navbar></Navbar>
+          {/* <Filter
+              handleStatsChange={handleStatsChange}
+              handleResetFilters={handleResetFilters}
+              handleSortingOptionsChange={handleSortingOptionsChange}
+              resetFiltersFlag={resetFiltersFlag}
+              updateStatsFlag={updateStatsFlag}
+            ></Filter> */}
         </div>
       )}
       <AnimatePresence>
@@ -56,12 +61,12 @@ const Home = () => {
           setIsModalShowing={setIsModalShowing}
           handleMobileNav={handleMobileNav}
         />
-        <div className={cssModule["home-container"]}>
-          <h1>Welcome to Wakfuki</h1>
+        <div className={cssModule["faq-container"]}>
+          <h1>Hello this is FAQ</h1>
         </div>
       </div>
     </>
   );
 };
 
-export default Home;
+export default FAQ;

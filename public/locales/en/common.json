@@ -43,5 +43,9 @@
     "feedback-form-title": "Title..",
     "feedback-form-description": "Describe your problem, or leave a comment, 300 characters maximum",
     "submit-button-text": "Submit",
-    "ShowStatsButton": "More Stats.."
+    "ShowStatsButton": "More Stats..",
+    "page-home": "Home",
+    "page-items": "Items",
+    "page-resources": "Resources",
+    "page-faq": "F.A.Q"
 }
