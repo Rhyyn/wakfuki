@@ -1,64 +1,113 @@
 {
   "casque": {
     "tablename": "casque",
+    "title": {
+      "fr": "Casque",
+      "en": "Helmet"
+    },
     "types": [
       134
-    ]
+    ],
+    "iconId": 134
   },
   "epaulettes": {
     "tablename": "epaulettes",
+    "title": {
+      "fr": "Epaulettes",
+      "en": "Epaulettes"
+    },
     "types": [
       138
-    ]
+    ],
+    "iconId": 138
   },
   "amulette": {
     "tablename": "amulette",
+    "title": {
+      "fr": "Amulette",
+      "en": "Amulet"
+    },
     "types": [
       120
-    ]
+    ],
+    "iconId": 120
   },
   "plastron": {
     "tablename": "plastron",
+    "title": {
+      "fr": "Plastron",
+      "en": "Breastplate"
+    },
     "types": [
       136
-    ]
+    ],
+    "iconId": 136
   },
   "cape": {
     "tablename": "cape",
+    "title": {
+      "fr": "Cape",
+      "en": "Cloak"
+    },
     "types": [
       132
-    ]
+    ],
+    "iconId": 132
   },
   "anneau": {
     "tablename": "anneau",
+    "title": {
+      "fr": "Anneau",
+      "en": "Ring"
+    },
     "types": [
       103
-    ]
+    ],
+    "iconId": 103
   },
   "ceinture": {
     "tablename": "ceinture",
+    "title": {
+      "fr": "Ceinture",
+      "en": "Belt"
+    },
     "types": [
       133
-    ]
+    ],
+    "iconId": 133
   },
   "bottes": {
     "tablename": "bottes",
+    "title": {
+      "fr": "Bottes",
+      "en": "Boots"
+    },
     "types": [
       119
-    ]
+    ],
+    "iconId": 119
   },
   "arme1main": {
     "tablename": "arme1main",
+    "title": {
+      "fr": "Arme à 1 main",
+      "en": "One-Handed Weapon"
+    },
     "types": [
       254,
       108,
       110,
       115,
       113
-    ]
+    ],
+    "iconId": 254
   },
   "arme2main": {
     "tablename": "arme2main",
+    "title": {
+      "fr": "Arme à 2 mains",
+      "en": "Two-Handed Weapon"
+    },
     "types": [
       223,
       114,
@@ -66,42 +115,73 @@
       111,
       253,
       117
-    ]
+    ],
+    "iconId": 223
   },
   "secondemain": {
     "tablename": "secondemain",
+    "title": {
+      "fr": "Seconde main",
+      "en": "Off-hand"
+    },
     "types": [
       112
-    ]
+    ],
+    "iconId": 112
   },
   "bouclier": {
     "tablename": "secondemain",
+    "title": {
+      "fr": "Bouclier",
+      "en": "Shield"
+    },
     "types": [
       189
-    ]
+    ],
+    "iconId": 189
   },
   "sublimation": {
     "tablename": "sublimation",
+    "title": {
+      "fr": "Sublimation",
+      "en": "Sublimation"
+    },
     "types": [
       812
-    ]
+    ],
+    "iconId": 812
   },
   "familiers": {
     "tablename": "familiers",
+    "title": {
+      "fr": "Familiers",
+      "en": "Pets"
+    },
     "types": [
       582
-    ]
+    ],
+    "iconId": 582
   },
   "montures": {
     "tablename": "montures",
+    "title": {
+      "fr": "Montures",
+      "en": "Mounts"
+    },
     "types": [
       611
-    ]
+    ],
+    "iconId": 611
   },
   "emblemes": {
     "tablename": "emblemes",
+    "title": {
+      "fr": "Emblemes",
+      "en": "Emblems"
+    },
     "types": [
       646
-    ]
+    ],
+    "iconId": 646
   }
 }
