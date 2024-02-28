@@ -5,9 +5,10 @@ import indexStructure from "../data/index-structure.json";
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
 
+const currentDBdevVersion = 2802024;
+
 // TODO :
-// Add version.json do the DB to check when user loads
-// Fix sublimations
+// Fix / Add Sublimations
 
 const sortItemsByLevel = (data, order) => {
   return data.sort((a, b) => {
@@ -112,10 +113,6 @@ const filterByStatsQuery = (itemsQuery, stats) => {
 
 const filterBySearchQuery = (itemsQuery, lang, searchQuery) => {
   if (searchQuery && searchQuery.length > 0) {
-    // .where() does not work because
-    // anyOfIgnoreCase does not seem to want to index properly
-    // const langIndex = `title.${lang}`;
-    // return itemsQuery.where(langIndex).anyOfIgnoreCase(searchQuery);
     return itemsQuery.filter((o) =>
       o.title[lang].toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -184,50 +181,6 @@ const fetchRecipe = async (item) => {
   return completeRecipes;
 };
 
-const computeRecipe = async (db, itemList) => {
-  let recipeResultList = await db
-    .table("recipeResults.json")
-    .filter((r) => itemList.map((i) => i.id).includes(r.productedItemId))
-    .toArray();
-  let recipeList = await db
-    .table("recipes.json")
-    .filter((r) => recipeResultList.map((rr) => rr.recipeId).includes(r.id))
-    .toArray();
-  let recipeIngredientList = await db
-    .table("recipeIngredients.json")
-    .filter((ri) => recipeList.map((r) => r.id).includes(ri.recipeId))
-    .toArray();
-  let recipeAllRessourceList = await db
-    .table("allRessources.json")
-    .filter((ar) => recipeIngredientList.map((r) => r.itemId).includes(ar.id))
-    .toArray();
-  let recipeAllEquipmentList = await db
-    .table("allItems.json")
-    .filter((ae) => recipeIngredientList.map((r) => r.itemId).includes(ae.id))
-    .toArray();
-
-  let computedRecipeList = recipeResultList.map((rr) => ({
-    itemId: rr.productedItemId,
-    recipe: recipeList
-      .filter((r) => r.id == rr.recipeId)
-      ?.map((r) =>
-        recipeIngredientList
-          .filter((ri) => ri.recipeId == r.id)
-          ?.map((ri) => ({
-            quantity: ri.quantity,
-            item: recipeAllRessourceList
-              .concat(recipeAllEquipmentList)
-              .find((ar) => ar.id == ri.itemId),
-          }))
-      ),
-  }));
-
-  return itemList.map((i) => ({
-    ...i,
-    recipes: computedRecipeList.filter((r) => r.itemId == i.id).flatMap((r) => r.recipe),
-  }));
-};
-
 const fetchData = async (filterState, currentPage, itemsPerPage, lang, lastSort) => {
   await waitForDbInitialization();
   try {
@@ -260,10 +213,6 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang, lastSort)
 
           let itemsQueryLength = await itemsQuery.count();
 
-          // Currently we are also apply filters to tables such as recipes
-          // which is not ideal since they do not hold any values used by the filters
-          // Need to separate them in the future, probably?
-
           itemsQuery = filterByTypesQuery(itemsQuery, type);
 
           itemsQuery = await itemsQuery.toArray();
@@ -278,9 +227,6 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang, lastSort)
 
           itemsQuery = filterBySearchQuery(itemsQuery, lang, filterState.searchQuery);
 
-          // itemsQuery = itemsQuery.limit(itemsPerPage);
-          // let itemList = await itemsQuery.toArray();
-
           // This is used to properly handle offset for infinite scroll
           // may need a refactor as it is very ugly
           if (offset > 0 && offset < itemsQueryLength && currentPage >= 2) {
@@ -293,9 +239,6 @@ const fetchData = async (filterState, currentPage, itemsPerPage, lang, lastSort)
             itemsQuery = itemsQuery.slice(0, itemsPerPage);
           }
 
-          // let itemListWithRecipes = await ComputeRecipe(db, itemsQuery);
-
-          // console.log(itemListWithRecipes);
           combinedItems.push(itemsQuery);
         }
 
@@ -435,6 +378,16 @@ const checkDataExists = async (selectedTypes, index) => {
   }
 };
 
+// Store the version file for the first time
+const storeVersion = async () => {
+  await db.open();
+  await db.transaction("rw", db.table("version.json"), async (tx) => {
+    console.log(`Opened transaction for version.json`);
+    await tx.table("version.json").add({ version: currentDBdevVersion });
+    console.log(`Transaction for version.json finished`);
+  });
+};
+
 const storeFile = async (fileName) => {
   try {
     console.log("fileName received is : ", fileName);
@@ -454,10 +407,7 @@ const storeFile = async (fileName) => {
     await db.transaction("rw", db.table(fileName), async (tx) => {
       console.log(`Opened transaction for ${fileName}`);
 
-      // Clear existing data in the store (if needed)
       await tx.table(fileName).clear();
-
-      // Insert new data into the store
       await tx.table(fileName).bulkPut(jsonDataArray);
 
       console.log(`Data stored for ${fileName}`);
@@ -469,13 +419,46 @@ const storeFile = async (fileName) => {
   }
 };
 
+// Used to check that each table has its indexes correctly setup
+// NOT TESTED - may cause issues int the future
+const checkTableStructure = async (fileName) => {
+  const structure = indexStructure[fileName].indexes;
+  await openDB();
+
+  const result = await db.transaction("r", db.table(fileName), async (tx) => {
+    const indexes = tx.table(fileName).schema.indexes || [];
+
+    if (indexes.length !== structure.length) {
+      console.log(`Table Structure of ${fileName} is missing indexes..`);
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  return result;
+};
+
 const initializeDexieDatabase = async function (fileNames) {
   const dbExists = await Dexie.exists("WakfuKiDatabase");
-
   if (dbExists) {
     console.log("Database exists:", "WakfuKiDatabase");
+    await db.open();
+    // check if client DB is up to date
+    db.transaction("rw", [db.table("version.json")], async (tx) => {
+      let dbVersion = await tx.table("version.json").toArray();
+      if (dbVersion[0].version !== currentDBdevVersion) {
+        // deleting the DB and reloading the page
+        deleteDB();
+        // await tx.table("version.json").update(1, { version: currentDevVersion });
+        // console.log(`DB version changed to ${currentDevVersion} up to date`);
+      }
+    });
+    // check table indexes integrity
+    for (const fileName of fileNames) {
+      await checkTableStructure(fileName);
+    }
     isDbInitialized = true;
-    console.log("isDbInitialized is now true");
   } else {
     console.log("Database does not exist. Initializing...");
     for (const fileName of fileNames) {
@@ -500,6 +483,7 @@ const initializeDexieDatabase = async function (fileNames) {
       console.log("All files processed");
     }
 
+    await storeVersion();
     //TODO: Include in regular routines instead of here
     // Need to check if exists first
     await storeFile("recipes.json");

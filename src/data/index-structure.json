@@ -1,4 +1,14 @@
 {
+  "version.json": {
+    "indexes": [
+      {
+        "version": "version_indexByVersionNumber",
+        "keyPath": [
+          "version"
+        ]
+      }
+    ]
+  },
   "states.json": {
     "indexes": [
       {

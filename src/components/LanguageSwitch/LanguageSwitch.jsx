@@ -15,7 +15,7 @@ const LanguageSwitch = React.memo(() => {
     i18n.changeLanguage(newLanguage);
   };
 
-  const retrieveLanguageFromCookie = () => {
+  const retrieveLanguage = () => {
     const hasLanguageBeenSet = localStorage.getItem("languageSet");
     let savedLanguage;
     if (!hasLanguageBeenSet) {
@@ -35,7 +35,7 @@ const LanguageSwitch = React.memo(() => {
   };
 
   useEffect(() => {
-    retrieveLanguageFromCookie();
+    retrieveLanguage();
   }, []);
 
   const { t } = useTranslation("common");
