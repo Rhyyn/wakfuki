@@ -5,6 +5,8 @@ import indexStructure from "../data/index-structure.json";
 let isDbInitialized = false;
 let db = new Dexie("WakfuKiDatabase");
 
+const currentDBdevVersion = 2802024;
+
 // TODO :
 // Fix / Add Sublimations
 
@@ -381,7 +383,7 @@ const storeVersion = async () => {
   await db.open();
   await db.transaction("rw", db.table("version.json"), async (tx) => {
     console.log(`Opened transaction for version.json`);
-    await tx.table("version.json").add({ version: 1 });
+    await tx.table("version.json").add({ version: currentDBdevVersion });
     console.log(`Transaction for version.json finished`);
   });
 };
@@ -405,10 +407,7 @@ const storeFile = async (fileName) => {
     await db.transaction("rw", db.table(fileName), async (tx) => {
       console.log(`Opened transaction for ${fileName}`);
 
-      // Clear existing data in the store (if needed)
       await tx.table(fileName).clear();
-
-      // Insert new data into the store
       await tx.table(fileName).bulkPut(jsonDataArray);
 
       console.log(`Data stored for ${fileName}`);
@@ -448,10 +447,11 @@ const initializeDexieDatabase = async function (fileNames) {
     // check if client DB is up to date
     db.transaction("rw", [db.table("version.json")], async (tx) => {
       let dbVersion = await tx.table("version.json").toArray();
-      let currentDevVersion = 1;
-      if (dbVersion[0].version !== currentDevVersion) {
-        await tx.table("version.json").update(1, { version: currentDevVersion });
-        console.log(`DB version changed to ${currentDevVersion} up to date`);
+      if (dbVersion[0].version !== currentDBdevVersion) {
+        // deleting the DB and reloading the page
+        deleteDB();
+        // await tx.table("version.json").update(1, { version: currentDevVersion });
+        // console.log(`DB version changed to ${currentDevVersion} up to date`);
       }
     });
     // check table indexes integrity
