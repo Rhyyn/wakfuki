@@ -13,6 +13,7 @@ import {
   setupDatabaseCloseListener,
   waitForDbInitialization,
 } from "../services/data-service.jsx";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
@@ -131,6 +132,7 @@ function MyApp({ Component, pageProps }) {
           <GlobalContextProvider>
             <ModalProvider>
               <Component {...pageProps} />
+              <GoogleTagManager gtmId="GTM-K8NNNNJX" />
               <Modal />
             </ModalProvider>
           </GlobalContextProvider>
