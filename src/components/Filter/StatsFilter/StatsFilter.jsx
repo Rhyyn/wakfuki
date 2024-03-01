@@ -211,6 +211,7 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
                 <li
                   key={key}
                   role="option"
+                  aria-selected="false"
                 >
                   <input
                     type="checkbox"
@@ -233,6 +234,7 @@ const TypeFilter = ({ resetFiltersFlag, updateStatsFlag }) => {
                 <li
                   key={`negative-stat-${key}`}
                   role="option"
+                  aria-selected="false"
                 >
                   <input
                     type="checkbox"

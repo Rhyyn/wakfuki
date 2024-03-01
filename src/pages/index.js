@@ -8,7 +8,7 @@ import { useGlobalContext } from "../components/Contexts/GlobalContext";
 import Header from "../components/Header/Header.jsx";
 import Navbar from "../components/Navbar/Navbar";
 import SettingsModal from "../components/SettingsModal/SettingsModal";
-import "./i18n";
+import "../config/i18n";
 
 const Home = () => {
   const { globalFilterState, dispatch } = useGlobalContext();

@@ -5,9 +5,10 @@ import { useState } from "react";
 import cssModule from "../../styles/Resources.module.scss";
 import { useDevice } from "../components/Contexts/DeviceContext.js";
 import { useGlobalContext } from "../components/Contexts/GlobalContext.js";
+import SettingsModal from "../components/SettingsModal/SettingsModal";
 import Header from "../components/Header/Header.jsx";
 import Navbar from "../components/Navbar/Navbar.jsx";
-import "./i18n.js";
+import "../config/i18n";
 
 const Resources = () => {
   const { globalFilterState, dispatch } = useGlobalContext();

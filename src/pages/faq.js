@@ -7,7 +7,8 @@ import { useDevice } from "../components/Contexts/DeviceContext.js";
 import { useGlobalContext } from "../components/Contexts/GlobalContext.js";
 import Header from "../components/Header/Header.jsx";
 import Navbar from "../components/Navbar/Navbar.jsx";
-import "./i18n.js";
+import SettingsModal from "../components/SettingsModal/SettingsModal";
+import "../config/i18n";
 
 const FAQ = () => {
   const { globalFilterState, dispatch } = useGlobalContext();

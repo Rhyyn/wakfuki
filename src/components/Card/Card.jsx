@@ -31,10 +31,10 @@ const Card = ({ item, lang }) => {
     if (item.equipEffect) {
       item.equipEffects.forEach((element) => {
         if (!priority_order.includes(element.effect.stats.property)) {
-          console.log("One stat is missing or not sorted : "),
-            console.log("Item.id : ", item.id),
-            console.log("Item.equipEffects : ", item.equipEffects),
-            console.log("------------");
+          console.log("One stat is missing or not sorted : ");
+          console.log("Item.id : ", item.id);
+          console.log("Item.equipEffects : ", item.equipEffects);
+          console.log("------------");
         }
       });
     }

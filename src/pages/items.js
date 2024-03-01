@@ -11,7 +11,7 @@ import ItemList from "../components/ItemList/ItemsList.jsx";
 import Navbar from "../components/Navbar/Navbar";
 import SettingsModal from "../components/SettingsModal/SettingsModal";
 import StatsValuesFilterer from "../components/StatsValuesFilterer/StatsValuesFilterer";
-import "./i18n";
+import "../config/i18n";
 
 const Items = () => {
   const { globalFilterState, dispatch } = useGlobalContext();
@@ -182,7 +182,9 @@ const Items = () => {
 
         <div
           className={cssModule["item-list"]}
-          style={globalFilterState.stats.length > 0 ? { top: "130px" } : { top: "80px" }}
+          style={globalFilterState.stats.length > 0
+            ? { top: "130px" }
+            : { top: "80px" }}
         >
           {globalFilterState.type && globalFilterState.type.length !== 0 && (
             <ItemList resetFiltersFlag={resetFiltersFlag} />
