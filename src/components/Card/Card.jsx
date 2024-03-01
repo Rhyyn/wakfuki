@@ -120,6 +120,17 @@ const Card = ({ item, lang }) => {
     const propertyValue = e.currentTarget.dataset.id;
   };
 
+  let imageId = "";
+  if (item.baseParams.itemTypeId) {
+    if ([223, 114, 101, 111, 253, 117].includes(item.baseParams.itemTypeId)) {
+      imageId = "223.png";
+    } else if ([254, 108, 110, 115, 113].includes(item.baseParams.itemTypeId)) {
+      imageId = "254.png";
+    } else {
+      imageId = item.baseParams.itemTypeId + ".png";
+    }
+  }
+
   return (
     <div className={cssModule["card"]}>
       <div className={cssModule["top-card-container"]}>
@@ -137,9 +148,9 @@ const Card = ({ item, lang }) => {
           <div className={cssModule["item-type-level-container"]}>
             <div className={cssModule["item-type-icon-container"]}>
               <Image
-                src={`/itemTypes/${item.baseParams.itemTypeId}.png`}
+                src={`/itemTypes/${imageId}`}
+                alt={`/itemTypes/${imageId}`}
                 className={cssModule["item-type-icon"]}
-                alt="amulette"
                 width={24}
                 height={24}
               ></Image>
