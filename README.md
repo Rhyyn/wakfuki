@@ -9,6 +9,9 @@ It also includes formatting by reconstructing objects based on the original data
 
 As of 08.02.2024 for the Wakfuki's website itself, it has working filters for both desktop and mobile, all the main tables for the Indexed DB are set up and ready to use, most of the front-end work is done.
 
+###
+UPDATE 27/01/2025, Wakfuki is down waiting for it's V2 release in the upcoming months.
+
 All commits are currently done in the [layout-css-refactor branch](https://github.com/Rhyyn/wakfuki/tree/layout-css-refactor).
 
 What it lacks is: 
